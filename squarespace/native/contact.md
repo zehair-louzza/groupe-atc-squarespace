@@ -8,7 +8,7 @@ Un dépannage, des travaux ou une proposition d’entretien ? Quelques informati
 
 Téléphone : [01 84 80 93 85](tel:+33184809385)
 
-Courriel communiqué : contact@aneleggroupe.com
+Courriel : [contact@anelecgroupe.com](mailto:contact@anelecgroupe.com)
 
 Adresse postale : 9 RUE DES COLONNES, 75002 PARIS.
 
@@ -26,11 +26,9 @@ Professionnels et particuliers. Aucun délai d’intervention ni service d’urg
 
 Ne transmettez pas de codes d’accès, mots de passe, données sensibles ou informations inutiles à l’étude du besoin.
 
-## Formulaire en préparation
+## Votre demande, par écrit
 
-Le formulaire natif et son routage seront finalisés après confirmation de l’adresse de réception et des paramètres de confidentialité. Ce brouillon ne propose pas d’envoi automatique et n’affiche aucune fausse confirmation.
-
-Le courriel contact@aneleggroupe.com est conservé exactement comme communiqué. Son domaine diffère d’anelecgroupe.com ; cette différence reste à confirmer avant l’activation.
+Vous pouvez nous écrire directement à [contact@anelecgroupe.com](mailto:contact@anelecgroupe.com) pour décrire votre besoin.
 
 ## Une demande n’est pas une commande
 

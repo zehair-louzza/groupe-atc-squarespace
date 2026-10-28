@@ -3,3 +3,4 @@ node_modules/
 !site/assets/anelec-original.png
 *.log
 .DS_Store
+docs/native-snapshots/

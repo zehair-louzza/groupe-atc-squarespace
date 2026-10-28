@@ -6,7 +6,7 @@ Version actualisée le 28 octobre 2026 après vos confirmations, l’envoi des l
 
 Le nouveau site présente **GROUPE ATC**, développé exactement en « GROUPE ANELEC TECHNIQUE ET CONCEPTE ». Vous avez confirmé un simple renommage d’ANELEC, sans création de filiale, et le maintien du domaine `anelecgroupe.com` ; la dénomination juridique inscrite au registre reste à distinguer de cette marque.
 
-Les coordonnées demandées sont `+33184809385`, `contact@aneleggroupe.com` et `9 RUE DES COLONNES, 75002 PARIS`. Le courriel est conservé tel que communiqué, sans correction automatique ; son domaine diffère de celui du site et doit être confirmé avant activation des envois.
+Les coordonnées confirmées sont `+33184809385`, `contact@anelecgroupe.com` et `9 RUE DES COLONNES, 75002 PARIS`. L’utilisateur a corrigé explicitement l’ancienne saisie du courriel ; le domaine de messagerie correspond à celui du site.
 
 La recommandation est un site vitrine natif Squarespace 7.1, administrable dans Fluid Engine, et non la conversion intégrale d’un projet React en un grand bloc de code. Fluid Engine est l’éditeur principal de la version 7.1 ; le dispositif historique Developer Platform et son accès aux fichiers de modèles concernent la version 7.0, pas la création de modèles 7.1 ([documentation Fluid Engine](https://support.squarespace.com/hc/en-us/articles/6421525446541-Edit-your-site-with-Fluid-Engine), [limites de Developer Platform](https://support.squarespace.com/hc/en-us/articles/206545717-Squarespace-Developer-Platform-FAQ)).
 
@@ -57,7 +57,7 @@ Les constats de cette section proviennent de `PRESENTATION-ANELEC.png` et du PDF
 | Logos de références | Le PNG affiche notamment Auchan, Carrefour, Végézi, Alésia et Levallois-Perret. | Ne pas les republier comme clients directs de GROUPE ATC avant vérification de la relation et des droits d’usage. |
 | Déplacement à 40 € | Conditions fiscales, géographiques et majorations non détaillées. | Ne pas afficher ce prix en lancement sans barème complet validé. |
 | Main-d’œuvre à 42 € | Aucune unité de facturation explicite ; HT ou TTC non précisé. | Ne surtout pas transformer la mention en « 42 €/h » par supposition. |
-| Courriel | Les supports anciens divergent ; votre nouvelle instruction donne `contact@aneleggroupe.com`. | Conserver exactement l’instruction actuelle et confirmer le domaine de messagerie avant activation. |
+| Courriel | Votre correction explicite confirme `contact@anelecgroupe.com`. | Utiliser cette adresse dans tous les contenus et dans la configuration de réception. |
 | Adresse | Vous confirmez `9 RUE DES COLONNES, 75002 PARIS`. | Utiliser cette adresse postale, sans annoncer d’accueil du public sans rendez-vous. |
 | Téléphone | Vous confirmez `+33184809385`. | Afficher 01 84 80 93 85 ; les horaires de prise d’appel restent à définir. |
 | Dates du PDF | Couverture datée du 25 février 2026 ; pieds de page portant « May 28, 2038 ». | Supprimer ces dates de gabarit ; ne pas les interpréter comme historique de l’entreprise. |
@@ -436,7 +436,7 @@ Vous avez confirmé le renommage d’ANELEC, la signification du sigle et le mai
 
 - **Marque :** GROUPE ATC, soit GROUPE ANELEC TECHNIQUE ET CONCEPTE, selon l’orthographe demandée.
 - **Domaine :** anelecgroupe.com, sans bascule DNS effectuée.
-- **Contacts :** +33184809385 et 9 RUE DES COLONNES, 75002 PARIS ; courriel contact@aneleggroupe.com conservé exactement.
+- **Contacts :** +33184809385 et 9 RUE DES COLONNES, 75002 PARIS ; courriel corrigé : contact@anelecgroupe.com.
 - **Maintenance :** trois propositions de fréquence et un document de périmètre et de conditions ont été préparés, sans contrat activé.
 - **Réalisations :** architecture présente dans le code, données vides, publication désactivée.
 - **Brouillons autorisés :** six pages créées, contenus enregistrés et désactivation confirmée ; GROUPE ATC est configuré comme nom affiché.

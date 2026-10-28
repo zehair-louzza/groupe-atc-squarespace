@@ -8,7 +8,7 @@ test('User-confirmed identity and contacts are copied exactly',()=>{
   assert.equal(config.brandFull,'GROUPE ANELEC TECHNIQUE ET CONCEPTE');
   assert.equal(config.formerBrand,'ANELEC');
   assert.equal(config.domain,'anelecgroupe.com');
-  assert.equal(config.email,'contact@aneleggroupe.com');
+  assert.equal(config.email,'contact@anelecgroupe.com');
   assert.equal(config.phone,'+33184809385');
   assert.equal(config.address,'9 RUE DES COLONNES, 75002 PARIS');
 });

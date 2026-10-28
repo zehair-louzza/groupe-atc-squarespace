@@ -13,11 +13,11 @@ ANELEC a été renommée GROUPE ATC. Ce changement de marque ne vaut pas preuve 
 ## Coordonnées communiquées
 
 - Téléphone : +33184809385.
-- Courriel : contact@aneleggroupe.com.
+- Courriel : contact@anelecgroupe.com.
 - Adresse postale : 9 RUE DES COLONNES, 75002 PARIS.
 - Domaine conservé : anelecgroupe.com.
 
-Le domaine de messagerie est à confirmer avant activation des envois.
+L’adresse de contact est contact@anelecgroupe.com, confirmée par l’entreprise.
 
 ## Mentions légales à compléter
 

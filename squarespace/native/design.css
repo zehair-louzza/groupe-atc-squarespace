@@ -1,0 +1,133 @@
+@import url('https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700&f[]=general-sans@500,600&display=swap');
+
+/* Styles des six brouillons uniquement, via leur injection d’en-tête de page. */
+:root {
+  --atc-ink: #142536;
+  --atc-muted: #526373;
+  --atc-paper: #f5f6f3;
+  --atc-white: #ffffff;
+  --atc-wash: #e9edf0;
+  --atc-blue: #2451c4;
+  --atc-line: rgb(20 37 54 / 16%);
+  --atc-body: 'Switzer', Arial, sans-serif;
+  --atc-display: 'General Sans', 'Switzer', Arial, sans-serif;
+  --atc-small: clamp(.875rem, .82rem + .2vw, 1rem);
+  --atc-base: clamp(1rem, .96rem + .2vw, 1.125rem);
+  --atc-heading: clamp(1.75rem, 1.3rem + 1.4vw, 2.75rem);
+  --atc-hero: clamp(2.6rem, 1.5rem + 3.2vw, 5rem);
+  --atc-space-2: .5rem;
+  --atc-space-4: 1rem;
+  --atc-space-6: 1.5rem;
+  --atc-space-8: 2rem;
+  --atc-space-12: 3rem;
+  --atc-space-16: 4rem;
+  --atc-gutter: clamp(1.25rem, 4vw, 4rem);
+}
+
+body { background: var(--atc-paper); color: var(--atc-ink); }
+#siteWrapper { background: var(--atc-paper); }
+#header { background: var(--atc-paper) !important; }
+#header .header-background { background: var(--atc-paper) !important; }
+#header .header-title-text a {
+  font-family: var(--atc-display);
+  font-size: clamp(1.3rem, 1rem + .7vw, 1.8rem);
+  font-weight: 600;
+  letter-spacing: -.04em;
+  color: var(--atc-ink) !important;
+}
+#header .header-nav a {
+  color: var(--atc-ink) !important;
+  font-family: var(--atc-body);
+  font-size: var(--atc-small);
+}
+#header .header-inner { max-width: 1280px; margin-inline: auto; padding: var(--atc-space-6) var(--atc-gutter); }
+#page .page-section .content-wrapper {
+  max-width: 1280px !important;
+  padding-inline: var(--atc-gutter) !important;
+}
+#page .page-section .section-background { background: var(--atc-paper) !important; }
+#page .page-section:nth-of-type(even) .section-background { background: var(--atc-white) !important; }
+#page .page-section:first-of-type .section-background { background: var(--atc-ink) !important; }
+#page .page-section:first-of-type .markdown-block :is(h1,h2,h3,p,li,a,strong) { color: var(--atc-white); }
+#page .markdown-block { color: var(--atc-ink); }
+#page .markdown-block :is(p,li) {
+  font-family: var(--atc-body);
+  font-size: var(--atc-base);
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+#page .markdown-block :is(h1,h2,h3) {
+  font-family: var(--atc-display);
+  font-weight: 600;
+  letter-spacing: -.04em;
+  line-height: 1.12;
+  text-wrap: balance;
+}
+#page .markdown-block h1 {
+  font-size: var(--atc-hero);
+  max-width: 18ch;
+  margin: 0 0 var(--atc-space-8);
+}
+#page .markdown-block h2 { font-size: var(--atc-heading); margin: 0 0 var(--atc-space-6); }
+#page .markdown-block h3 { font-size: clamp(1.2rem, 1rem + .6vw, 1.6rem); margin-block: var(--atc-space-8) var(--atc-space-4); break-after: avoid-column; }
+#page .markdown-block p { margin-block: 0 var(--atc-space-6); max-width: 70ch; }
+#page .markdown-block small { font-size: var(--atc-small); font-family: var(--atc-body); }
+#footer-sections .section-background { background: var(--atc-ink) !important; }
+#footer-sections :is(h2,h3,p,li,a,strong) { color: var(--atc-white); font-family: var(--atc-body); }
+#footer-sections h2 { font-family: var(--atc-display); font-weight: 600; }
+#footer-sections :is(p,li,a) { font-size: var(--atc-small); line-height: 1.7; }
+#footer-sections a { text-underline-offset: .2em; }
+#page .markdown-block :is(ul,ol) { padding-inline-start: var(--atc-space-6); }
+#page .markdown-block li { padding-block: var(--atc-space-2); }
+#page .markdown-block a {
+  color: var(--atc-blue);
+  font-family: var(--atc-body);
+  text-underline-offset: .25em;
+  text-decoration-thickness: 1px;
+}
+#page .markdown-block p:has(> a:only-child[href^="/groupe-atc-"]) { margin-top: var(--atc-space-8); }
+#page .markdown-block p > a:only-child[href^="/groupe-atc-"] {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: var(--atc-space-4) var(--atc-space-6);
+  border: 1px solid currentColor;
+  border-radius: 2px;
+  font-size: var(--atc-small);
+  font-weight: 600;
+  text-decoration: none;
+}
+#page .sqs-block-button .sqs-block-button-element {
+  background: var(--atc-blue) !important;
+  color: var(--atc-white) !important;
+  border: 1px solid var(--atc-blue) !important;
+  border-radius: 2px !important;
+  font-family: var(--atc-body);
+  font-size: var(--atc-small);
+  min-height: 48px;
+}
+#page .image-block figcaption { font-family: var(--atc-body); font-size: var(--atc-small); }
+#page .form-wrapper :is(label,input,textarea,select,button) { font-family: var(--atc-body); font-size: var(--atc-base); }
+#page .form-wrapper :is(input,textarea,select) { border-radius: 2px; min-height: 48px; }
+#page .form-wrapper .title { color: var(--atc-ink); }
+#page a:focus-visible, #page button:focus-visible { outline: 3px solid var(--atc-blue); outline-offset: 4px; }
+#page .page-section:first-of-type a:focus-visible { outline-color: var(--atc-white); }
+
+@media (min-width: 900px) {
+  #page .page-section:not(:first-of-type) .markdown-block .sqs-block-content {
+    column-count: 2;
+    column-gap: var(--atc-space-16);
+  }
+  #page .page-section:not(:first-of-type) .markdown-block h2 { column-span: all; }
+  #page .markdown-block :is(h3,p,li) { break-inside: avoid; }
+}
+@media (max-width: 767px) {
+  #header .header-inner { padding-block: var(--atc-space-4); }
+  #page .markdown-block h1 { font-size: clamp(2.4rem, 9vw, 3.4rem); max-width: 16ch; }
+  #page .markdown-block h2 { font-size: clamp(1.7rem, 6vw, 2.2rem); }
+  #page .markdown-block p > a:only-child[href^="/groupe-atc-"] { max-width: 100%; }
+  #page .form-wrapper :is(input,textarea,select) { font-size: 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #page *, #page *::before, #page *::after { scroll-behavior: auto !important; }
+}

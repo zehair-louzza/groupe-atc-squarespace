@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-28",
+  "complete": false,
+  "publicationPerformed": false,
+  "blocker": "Comet extension gone (ws_closed); recovery also failed.",
+  "cleanup": {
+    "headerCartRemoved": true,
+    "headerBookingButtonRemoved": true,
+    "shopMovedOffNavigation": true,
+    "shopDisabled": false,
+    "commerceDataDeleted": false
+  },
+  "email": {
+    "confirmed": "contact@anelecgroupe.com",
+    "sourceFilesCorrected": true,
+    "previewPagesCorrected": true,
+    "nativeEmailSaved": ["Accueil", "Groupe"],
+    "nativeFinalCheckPending": ["Contact", "Informations", "Pied de page"]
+  },
+  "nativePages": [
+    {"name": "Accueil", "savedSections": 4, "nativeImage": true, "finalVisualQA": false},
+    {"name": "Maintenance", "savedSections": 4, "finalVisualQA": false},
+    {"name": "Métiers", "savedSections": 5, "desktopH1AndOverflowCheck": true, "finalVisualQA": false},
+    {"name": "Groupe", "savedSections": 4, "desktopH1AndOverflowCheck": true, "finalVisualQA": false},
+    {"name": "Contact", "status": "Interrupted during edit; latest persistence unconfirmed"},
+    {"name": "Informations", "status": "Previous editorial draft; new composition pending"}
+  ],
+  "remaining": [
+    "Reconcile and save Contact",
+    "Recompose Informations and verify email",
+    "Replace generic footer content",
+    "Apply latest Accueil style and visible illustration caption",
+    "Place historical logo natively without modification",
+    "Create and configure native form",
+    "Final desktop and mobile QA and disabled-state check"
+  ],
+  "remoteGitPush": false,
+  "vercelDeployment": false,
+  "dnsChanges": false
+}

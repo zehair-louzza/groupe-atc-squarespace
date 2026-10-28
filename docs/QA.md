@@ -58,3 +58,17 @@ Cette étape ultérieure est distincte de la réception de la prévisualisation 
 - **Limites :** les captures Comet expirent ; le contrôle mobile de Maintenance n’a pas pu être stabilisé. Métiers, Groupe et Informations n’ont pas reçu de contrôle mobile final.
 
 Les données de cette étape sont dans `native-squarespace-results.json`. La saisie éditoriale est terminée, mais la reproduction graphique complète de la maquette, ses blocs d’image et boutons, le formulaire et la réception visuelle native restent à effectuer ; ne pas déclarer le nouveau site prêt à publier.
+
+## Mise à jour : correction du courriel et reprise graphique
+
+Cette mise à jour remplace les anciennes indications sur le courriel et la conservation du panier, de Réserver et de Boutique dans le menu. Le bon courriel est contact@anelecgroupe.com, confirmé explicitement par l’utilisateur.
+
+- **Prévisualisation :** douze affichages rejoués, soit six pages à 1440 × 1000 et 375 × 812, avec chargement effectif des images avant capture ; aucun débordement, ancien courriel, H1 en double ou image manquante.
+- **Parcours :** menu mobile, huit accordéons, trois formules, validations vide et invalide, récapitulatif, copie et modification rejoués par interaction.
+- **Hors parcours :** demande longue, balises inertes, paramètres inconnus et repli d’image indisponible contrôlés ; aucune exception JavaScript et aucun message externe envoyé.
+- **Tests :** quatre tests automatisés passent ; le script reproductible est `tests/browser-qa.mjs`, avec les résultats dans `browser-results-updated.json`.
+- **Nettoyage natif :** panier et Réserver retirés ; Boutique hors navigation, mais pas désactivée et aucune donnée supprimée.
+- **Mise en page native :** Accueil, Maintenance, Métiers et Groupe enregistrés avec respectivement quatre, quatre, cinq et quatre sections ; image native sur Accueil.
+- **Limite de connexion :** déconnexion de Comet pendant Contact ; la tentative de récupération échoue également. Contact, Informations, pied de page, formulaire, placement du logo et réception native finale ne sont pas déclarés terminés.
+
+L’état détaillé actuel est dans `etat-integration-squarespace.md` et `native-layout-status.json`. Les captures de la prévisualisation ne constituent pas une réception graphique des pages natives.

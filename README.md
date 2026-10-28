@@ -17,7 +17,7 @@ Exécuter `npm run build`, puis `npm test`. La prévisualisation fonctionne avec
 
 ## Contraintes conservées
 
-Le domaine final est `anelecgroupe.com`. Le courriel fourni est exactement `contact@aneleggroupe.com`, avec un domaine différent ; il n’a pas été corrigé par supposition et sa destination doit être confirmée avant activation d’un formulaire.
+Le domaine final est `anelecgroupe.com`. Le courriel confirmé et corrigé par l’utilisateur est `contact@anelecgroupe.com` ; l’ancienne saisie avec deux « g » est à écarter.
 
 Le logo ANELEC est préservé sans modification et présenté comme historique. La palette du site est indépendante des couleurs de cet ancien logo. Les photographies sont des illustrations et ne sont pas des références de chantier.
 
@@ -39,4 +39,8 @@ Six pages ont été créées dans le site Squarespace existant avec les textes d
 
 Les slugs réels des brouillons portent le préfixe `/groupe-atc-` pour préserver les adresses existantes. Leur contenu et leur désactivation ont été vérifiés ; les contrôles et leurs limites sont documentés dans `docs/QA.md` et `docs/native-squarespace-results.json`.
 
-Cette étape est une intégration éditoriale native, pas la reproduction graphique achevée de la prévisualisation. La mise en page finale, les visuels et boutons dédiés, le formulaire et la réception graphique complète restent à effectuer avant tout accord de publication.
+La reprise graphique native est enregistrée pour Accueil (4 sections), Maintenance (4), Métiers (5) et Groupe (4), avec des styles propres aux pages et un bloc image natif sur Accueil. La connexion à Comet a été interrompue pendant Contact ; les dernières modifications de cette page ne sont pas confirmées, et Informations, le pied de page, le formulaire et la réception native finale restent à terminer.
+
+Le panier et le bouton Réserver ont été retirés de l’en-tête. La boutique est hors navigation, sans suppression de données ; sa désactivation n’a pas été obtenue. Les six nouvelles pages n’ont pas été activées.
+
+`squarespace/native/design.css` et `layout.json` décrivent la composition préparée, pas une preuve d’enregistrement de toutes les pages. Le rapport `docs/etat-integration-squarespace.md` fait foi sur l’avancement réel ; la prévisualisation privée reste distincte de l’intégration native.

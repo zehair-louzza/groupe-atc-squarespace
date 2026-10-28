@@ -23,15 +23,11 @@ Plomberie, électricité, serrurerie et rénovation intérieure : nous étudions
 
 Nous étudions les demandes des professionnels et des particuliers en Île-de-France. L’adresse postale communiquée est 9 RUE DES COLONNES, 75002 PARIS ; aucun accueil du public sans rendez-vous n’est annoncé.
 
-## Notre ancien nom : ANELEC
+## D’ANELEC à GROUPE ATC
 
-Les supports et le logo ANELEC fournis constituent des éléments historiques. Ils ne sont pas présentés comme le logo d’une filiale et ne sont pas modifiés pour fabriquer un nouveau logo.
+ANELEC est désormais GROUPE ATC : GROUPE ANELEC TECHNIQUE ET CONCEPTE.
 
-Le nom affiché aujourd’hui est GROUPE ATC.
-
-## Nos réalisations
-
-Les références de chantiers seront ajoutées ultérieurement, avec description, attribution et photographies autorisées. Aucun chantier fictif ni logo client non validé n’est présenté.
+Vous pouvez continuer à nous joindre sur anelecgroupe.com et à l’adresse contact@anelecgroupe.com.
 
 ## Échangeons sur votre besoin
 
@@ -39,4 +35,4 @@ Les références de chantiers seront ajoutées ultérieurement, avec description
 
 Téléphone : [01 84 80 93 85](tel:+33184809385)
 
-Courriel communiqué : contact@aneleggroupe.com
+Courriel : [contact@anelecgroupe.com](mailto:contact@anelecgroupe.com)

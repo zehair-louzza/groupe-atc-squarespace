@@ -132,6 +132,6 @@ Cette présentation ne doit être publiée comme une offre commercialement dispo
 
 ## Coordonnées et points à lever
 
-Les coordonnées communiquées sont : +33184809385 et 9 RUE DES COLONNES, 75002 PARIS. Le courriel demandé est exactement `contact@aneleggroupe.com`, alors que le domaine conservé pour le site est `anelecgroupe.com` ; cette différence doit être confirmée avant tout routage de demandes.
+Les coordonnées confirmées sont : +33184809385, `contact@anelecgroupe.com` et 9 RUE DES COLONNES, 75002 PARIS. Le domaine conservé pour le site est `anelecgroupe.com` ; le courriel intègre la correction explicite communiquée par l’utilisateur.
 
 Restent à finaliser : identité juridique contractante, personnes habilitées à engager l’entreprise, capacités disponibles, audit initial, prix, assurances applicables, conditions de résiliation et adaptation B2C si des particuliers sont concernés. Aucun de ces éléments n’est présenté comme déjà vérifié.

@@ -1,0 +1,151 @@
+{
+  "base": "http://127.0.0.1:3000/",
+  "pages": [
+    {
+      "file": "index",
+      "width": 1440,
+      "h1": 1,
+      "overflow": false,
+      "wrongEmail": false,
+      "email": [
+        "mailto:contact@anelecgroupe.com"
+      ],
+      "brokenImages": 0
+    },
+    {
+      "file": "maintenance",
+      "width": 1440,
+      "h1": 1,
+      "overflow": false,
+      "wrongEmail": false,
+      "email": [
+        "mailto:contact@anelecgroupe.com"
+      ],
+      "brokenImages": 0
+    },
+    {
+      "file": "metiers",
+      "width": 1440,
+      "h1": 1,
+      "overflow": false,
+      "wrongEmail": false,
+      "email": [
+        "mailto:contact@anelecgroupe.com"
+      ],
+      "brokenImages": 0
+    },
+    {
+      "file": "groupe",
+      "width": 1440,
+      "h1": 1,
+      "overflow": false,
+      "wrongEmail": false,
+      "email": [
+        "mailto:contact@anelecgroupe.com"
+      ],
+      "brokenImages": 0
+    },
+    {
+      "file": "contact",
+      "width": 1440,
+      "h1": 1,
+      "overflow": false,
+      "wrongEmail": false,
+      "email": [
+        "mailto:contact@anelecgroupe.com",
+        "mailto:contact@anelecgroupe.com",
+        "mailto:contact@anelecgroupe.com"
+      ],
+      "brokenImages": 0
+    },
+    {
+      "file": "informations",
+      "width": 1440,
+      "h1": 1,
+      "overflow": false,
+      "wrongEmail": false,
+      "email": [
+        "mailto:contact@anelecgroupe.com"
+      ],
+      "brokenImages": 0
+    },
+    {
+      "file": "index",
+      "width": 375,
+      "h1": 1,
+      "overflow": false,
+      "wrongEmail": false,
+      "email": [
+        "mailto:contact@anelecgroupe.com"
+      ],
+      "brokenImages": 0
+    },
+    {
+      "file": "maintenance",
+      "width": 375,
+      "h1": 1,
+      "overflow": false,
+      "wrongEmail": false,
+      "email": [
+        "mailto:contact@anelecgroupe.com"
+      ],
+      "brokenImages": 0
+    },
+    {
+      "file": "metiers",
+      "width": 375,
+      "h1": 1,
+      "overflow": false,
+      "wrongEmail": false,
+      "email": [
+        "mailto:contact@anelecgroupe.com"
+      ],
+      "brokenImages": 0
+    },
+    {
+      "file": "groupe",
+      "width": 375,
+      "h1": 1,
+      "overflow": false,
+      "wrongEmail": false,
+      "email": [
+        "mailto:contact@anelecgroupe.com"
+      ],
+      "brokenImages": 0
+    },
+    {
+      "file": "contact",
+      "width": 375,
+      "h1": 1,
+      "overflow": false,
+      "wrongEmail": false,
+      "email": [
+        "mailto:contact@anelecgroupe.com",
+        "mailto:contact@anelecgroupe.com",
+        "mailto:contact@anelecgroupe.com"
+      ],
+      "brokenImages": 0
+    },
+    {
+      "file": "informations",
+      "width": 375,
+      "h1": 1,
+      "overflow": false,
+      "wrongEmail": false,
+      "email": [
+        "mailto:contact@anelecgroupe.com"
+      ],
+      "brokenImages": 0
+    }
+  ],
+  "flows": [
+    "Menu mobile : ouverture, fermeture, navigation et retour au bureau.",
+    "8 accordéons ouverts et refermés.",
+    "Trois formules : préremplissage correct du contact.",
+    "Validation vide et courriel invalide ; récapitulatif, copie et modification sans envoi.",
+    "Demande longue et balises inertes ; paramètres inconnus ignorés.",
+    "Image indisponible : repli visible."
+  ],
+  "errors": [],
+  "externalMessagesSent": 0
+}

@@ -54,7 +54,7 @@ GROUPE ATC signifie GROUPE ANELEC TECHNIQUE ET CONCEPTE. Il s’agit du nouveau 
 
 Téléphone : [01 84 80 93 85](tel:+33184809385)
 
-Courriel communiqué : contact@aneleggroupe.com
+Courriel : [contact@anelecgroupe.com](mailto:contact@anelecgroupe.com)
 
 Adresse postale : 9 RUE DES COLONNES, 75002 PARIS.
 
