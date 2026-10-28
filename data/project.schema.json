@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Réalisation GROUPE ATC",
+  "type": "object",
+  "required": ["slug", "title", "location", "services", "description", "photos", "approved", "rightsConfirmed", "attribution"],
+  "properties": {
+    "slug": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+    "title": {"type": "string", "minLength": 1},
+    "location": {"type": "string", "minLength": 1},
+    "services": {"type": "array", "items": {"type": "string"}},
+    "description": {"type": "string"},
+    "photos": {"type": "array", "items": {"type": "object", "required": ["src", "alt"], "properties": {"src": {"type": "string"}, "alt": {"type": "string"}}}},
+    "approved": {"type": "boolean"},
+    "rightsConfirmed": {"type": "boolean"},
+    "attribution": {"type": "string", "minLength": 1}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,80 @@
+[
+  {
+    "file": "index.html",
+    "title": "Maintenance & travaux en Île-de-France",
+    "description": "GROUPE ATC, anciennement ANELEC : plomberie, électricité, serrurerie et rénovation intérieure en Île-de-France.",
+    "slug": "/",
+    "status": "draft",
+    "suggestedBlocks": [
+      "text",
+      "image",
+      "button",
+      "form-where-applicable"
+    ]
+  },
+  {
+    "file": "maintenance.html",
+    "title": "Maintenance multitechnique",
+    "description": "Proposition de maintenance avec 2, 4 ou 12 visites par an, périmètre écrit et suivi. Offre à adapter après audit.",
+    "slug": "/maintenance",
+    "status": "draft",
+    "suggestedBlocks": [
+      "text",
+      "image",
+      "button",
+      "form-where-applicable"
+    ]
+  },
+  {
+    "file": "metiers.html",
+    "title": "Travaux TCE, dépannage et métiers",
+    "description": "Plomberie, électricité, serrurerie et rénovation intérieure : des prestations définies selon votre besoin.",
+    "slug": "/metiers",
+    "status": "draft",
+    "suggestedBlocks": [
+      "text",
+      "image",
+      "button",
+      "form-where-applicable"
+    ]
+  },
+  {
+    "file": "groupe.html",
+    "title": "ANELEC devient GROUPE ATC",
+    "description": "Notre marque évolue. Découvrez GROUPE ATC et son approche de la maintenance et des travaux en Île-de-France.",
+    "slug": "/groupe",
+    "status": "draft",
+    "suggestedBlocks": [
+      "text",
+      "image",
+      "button",
+      "form-where-applicable"
+    ]
+  },
+  {
+    "file": "contact.html",
+    "title": "Contact et demande de devis",
+    "description": "Décrivez votre besoin de dépannage, de travaux ou de maintenance en Île-de-France.",
+    "slug": "/contact",
+    "status": "draft",
+    "suggestedBlocks": [
+      "text",
+      "image",
+      "button",
+      "form-where-applicable"
+    ]
+  },
+  {
+    "file": "informations.html",
+    "title": "Informations et confidentialité",
+    "description": "Cadre de la prévisualisation, données du formulaire et conditions de la proposition de maintenance.",
+    "slug": "/informations",
+    "status": "draft",
+    "suggestedBlocks": [
+      "text",
+      "image",
+      "button",
+      "form-where-applicable"
+    ]
+  }
+]

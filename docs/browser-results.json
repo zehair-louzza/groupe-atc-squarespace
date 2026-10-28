@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-28",
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "width": 375,
+      "height": 812
+    }
+  ],
+  "pages": [
+    "index.html",
+    "maintenance.html",
+    "metiers.html",
+    "groupe.html",
+    "contact.html",
+    "informations.html"
+  ],
+  "outcomes": [
+    "Menu, Échap et aller-retour mobile/bureau : OK",
+    "8 accordéons : ouverture/fermeture OK",
+    "Trois liens de formules et préremplissage : OK",
+    "Formulaire : vide, courriel invalide, retour, récapitulatif, copie et modification OK ; balises neutralisées",
+    "Presse-papiers indisponible : sélection manuelle proposée",
+    "Image indisponible : repli visible, y compris erreur précoce avant le script",
+    "Largeur 320 px et fenêtre bureau courte : aucun débordement",
+    "Navigation principale et quatre ancres métiers activées"
+  ],
+  "contrastAudits": [
+    {
+      "file": "index.html",
+      "smallCount": 54,
+      "minRatio": 6.2490250263660405,
+      "under": [],
+      "tooSmall": []
+    },
+    {
+      "file": "maintenance.html",
+      "smallCount": 65,
+      "minRatio": 6.2490250263660405,
+      "under": [],
+      "tooSmall": []
+    },
+    {
+      "file": "metiers.html",
+      "smallCount": 40,
+      "minRatio": 6.653252780418044,
+      "under": [],
+      "tooSmall": []
+    },
+    {
+      "file": "groupe.html",
+      "smallCount": 26,
+      "minRatio": 6.653252780418044,
+      "under": [],
+      "tooSmall": []
+    },
+    {
+      "file": "contact.html",
+      "smallCount": 26,
+      "minRatio": 6.2490250263660405,
+      "under": [],
+      "tooSmall": []
+    },
+    {
+      "file": "informations.html",
+      "smallCount": 21,
+      "minRatio": 6.653252780418044,
+      "under": [],
+      "tooSmall": []
+    }
+  ],
+  "brokenLinks": [],
+  "jsErrors": [],
+  "scope": "Local preview only; no messages sent or remote site modified"
+}
