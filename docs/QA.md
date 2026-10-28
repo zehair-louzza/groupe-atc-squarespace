@@ -35,3 +35,11 @@ La validation porte sur la prévisualisation statique, pas sur un formulaire Squ
 - **Références :** zéro projet publié, liste de données vide, fonctionnalité et menu Réalisations désactivés.
 
 Les captures de contrôle sont conservées localement dans `docs/screenshots/`, hors du dossier web déployé. Cette réception ne vaut ni audit d’accessibilité exhaustif, ni contrôle juridique, ni validation de capacité opérationnelle des formules.
+
+## Contrôle de la prévisualisation hébergée
+
+Après le déploiement privé, une nouvelle session de navigateur cloud a ouvert la version hébergée. Le parcours Accueil → Maintenance → Suivi → Contact → Récapitulatif a été réalisé avec les contrôles visibles et des coordonnées fictives.
+
+Le préremplissage, le changement d’étape, la conservation de la formule et l’affichage du récapitulatif sont corrects, sans débordement horizontal. Le résultat indique explicitement qu’aucun message n’a été envoyé ; aucun bouton de messagerie ni appel téléphonique n’a été activé.
+
+Les quatre tests automatisés passent également. Le code est enregistré dans un commit local, sans envoi au dépôt GitHub distant ; la prévisualisation ne constitue pas une intégration native Squarespace et aucun déploiement Vercel n’a été lancé.
