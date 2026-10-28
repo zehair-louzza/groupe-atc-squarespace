@@ -1,6 +1,6 @@
 # GROUPE ATC : cahier de création du nouveau site Squarespace
 
-Version actualisée le 28 octobre 2026 après vos confirmations et l’envoi des logos. Ce dossier réunit le positionnement, l’architecture, les textes, une direction graphique indépendante des anciennes couleurs et les instructions de réalisation dans le site Squarespace existant.
+Version actualisée le 28 octobre 2026 après vos confirmations, l’envoi des logos et l’enregistrement des six brouillons autorisés. Ce dossier réunit le positionnement, l’architecture, les textes, une direction graphique indépendante des anciennes couleurs et les instructions de réalisation dans le site Squarespace existant.
 
 ## Décision de conception
 
@@ -120,18 +120,20 @@ Pied de page :
 └── Coordonnées communiquées
 ```
 
-### Pages et adresses proposées
+### Pages créées et adresses des brouillons
 
-Les adresses ci-dessous sont des slugs de conception pour la version Squarespace, et non des pages déjà créées dans cet éditeur. La prévisualisation emploie des fichiers `.html` pour sa navigation ; la page d’accueil finale sera portée par le domaine conservé `anelecgroupe.com`.
+Les six pages ci-dessous sont maintenant créées dans l’éditeur Squarespace existant, hors navigation et désactivées. Le préfixe `/groupe-atc-` évite de remplacer les pages et adresses existantes ; ces adresses de brouillon ne constituent pas une décision de redirection ou de mise en ligne.
 
-| Page préparée | Adresse Squarespace de départ | Contenu |
+| Page créée | Adresse du brouillon Squarespace | Contenu enregistré |
 |---|---|---|
-| Accueil | `/` | Offre, besoins, métiers, méthode et territoire. |
-| Maintenance | `/maintenance` | Essentiel, Suivi, Continuité, périmètre et conditions proposées. |
-| Travaux & métiers | `/metiers` | Quatre métiers avec ancres et rubrique dépannage. |
-| Le groupe | `/groupe` | Intitulé complet, renommage et ancien logo attribué. |
-| Contact | `/contact` | Coordonnées et parcours de qualification en deux étapes. |
-| Informations & confidentialité | `/informations` | Cadre de préparation, mentions et données à compléter avant ouverture publique. |
+| GROUPE ATC \| Accueil | `/groupe-atc-accueil` | Offre, besoins, métiers, méthode et territoire. |
+| GROUPE ATC \| Maintenance | `/groupe-atc-maintenance` | Essentiel, Suivi, Continuité, périmètre et conditions proposées. |
+| GROUPE ATC \| Métiers | `/groupe-atc-metiers` | Quatre métiers et rubrique dépannage. |
+| GROUPE ATC \| Groupe | `/groupe-atc-groupe` | Intitulé complet, renommage et présentation. |
+| GROUPE ATC \| Contact | `/groupe-atc-contact` | Coordonnées et informations nécessaires pour qualifier une demande ; pas de formulaire actif. |
+| GROUPE ATC \| Informations | `/groupe-atc-informations` | Cadre de préparation, mentions et données à compléter avant ouverture publique. |
+
+Les textes sont enregistrés dans des blocs Markdown natifs de sections Fluid Engine. La mise en page graphique complète de la prévisualisation, les blocs d’image, les boutons dédiés et le formulaire natif ne sont pas encore reproduits ; la prévisualisation conserve ses fichiers `.html` et le domaine final demandé reste `anelecgroupe.com`.
 
 ### Évolutions possibles de l’arborescence
 
@@ -330,14 +332,18 @@ GitHub peut servir à versionner le cahier de création, les textes validés et 
 
 Vercel peut être conservé comme environnement de maquette distinct si cela devient utile. Pour ce projet, la cible recommandée reste Squarespace ; aucun changement d’hébergement, redirection de domaine ou bascule DNS n’est nécessaire au stade du présent dossier.
 
-État de préparation au 28 octobre 2026 :
+État d’avancement au 28 octobre 2026 :
 
 - **GitHub :** le dépôt Groupe-ATC-new a été cloné pour préparer une branche locale ; aucun envoi de ces nouveaux contenus vers le dépôt public n’est effectué sans accord ([dépôt cible](https://github.com/zehair-louzza/Groupe-ATC-new)).
 - **Vercel :** la configuration consultée référence un projet `groupe-atc` lié au dépôt existant ; la récupération publique de son alias n’a pas permis de vérifier le rendu du site.
-- **Squarespace :** le connecteur expose le commerce ; l’éditeur existant a ensuite été retrouvé dans Comet à l’adresse `https://mandolin-jaguar-flrs.squarespace.com/config/pages`, en version 7.1.
-- **Actions effectuées :** préparation locale du code et des contenus ; aucun déploiement Vercel, produit, page Squarespace, domaine ou paramètre DNS modifié.
+- **Squarespace :** le connecteur expose le commerce ; [l’éditeur du site existant](https://mandolin-jaguar-flrs.squarespace.com/config/pages) a ensuite été retrouvé dans Comet, en version 7.1.
+- **Pages Squarespace :** six pages créées et leurs textes enregistrés ; toutes sont hors navigation, avec « Activer la page » désactivé dans leurs paramètres.
+- **Identité affichée :** le titre générique a été remplacé par GROUPE ATC dans l’en-tête et le titre du site ; l’intitulé complet est présent dans les nouveaux contenus.
+- **Périmètre préservé :** aucune suppression ni réorganisation de la navigation existante, aucun déploiement Vercel et aucune modification de domaine ou de DNS ; aucune des six nouvelles pages n’a été activée.
 
-Le site cible et son éditeur sont désormais identifiés. La prochaine étape est l’autorisation d’enregistrer les brouillons dans cet espace, sans confondre ce travail avec une mise en ligne publique ou une connexion de domaine.
+Votre autorisation de créer les brouillons et d’afficher GROUPE ATC a donc été appliquée. La prochaine étape est la mise en page native complète, puis la configuration et le test autorisé du formulaire ; la publication des nouvelles pages reste une décision séparée.
+
+Le contenu et la désactivation des six pages ont été relus après enregistrement, avec un titre principal par page et sans débordement horizontal détecté au bureau. Le contrôle structurel mobile natif est réalisé pour Accueil et Contact seulement ; les captures Comet ayant échoué et le changement de vue n’étant pas stable sur Maintenance, la réception graphique complète des six pages reste à effectuer.
 
 ## Formulaire de devis et traitement des demandes
 
@@ -433,6 +439,7 @@ Vous avez confirmé le renommage d’ANELEC, la signification du sigle et le mai
 - **Contacts :** +33184809385 et 9 RUE DES COLONNES, 75002 PARIS ; courriel contact@aneleggroupe.com conservé exactement.
 - **Maintenance :** trois propositions de fréquence et un document de périmètre et de conditions ont été préparés, sans contrat activé.
 - **Réalisations :** architecture présente dans le code, données vides, publication désactivée.
-- **Validation restante :** confirmer le domaine de messagerie, finaliser les mentions juridiques et les moyens de l’offre, puis autoriser les brouillons Squarespace et, séparément, la publication.
+- **Brouillons autorisés :** six pages créées, contenus enregistrés et désactivation confirmée ; GROUPE ATC est configuré comme nom affiché.
+- **Validation restante :** confirmer le domaine de messagerie, finaliser les mentions juridiques et les moyens de l’offre, terminer la mise en page et les contrôles, puis autoriser séparément la publication.
 
-La nouvelle prévisualisation est une base éditoriale et visuelle, pas un site déjà installé dans Fluid Engine. Ce dossier et l’offre de maintenance accompagnent le code préparé pour la prochaine étape.
+La prévisualisation reste la référence graphique ; les six brouillons natifs constituent désormais une base éditoriale réellement enregistrée dans Fluid Engine, et non sa reproduction graphique achevée. Ce dossier, le compte rendu d’intégration et l’offre de maintenance précisent les éléments réalisés et ceux qui restent à finaliser.

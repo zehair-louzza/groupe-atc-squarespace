@@ -43,3 +43,18 @@ Après le déploiement privé, une nouvelle session de navigateur cloud a ouvert
 Le préremplissage, le changement d’étape, la conservation de la formule et l’affichage du récapitulatif sont corrects, sans débordement horizontal. Le résultat indique explicitement qu’aucun message n’a été envoyé ; aucun bouton de messagerie ni appel téléphonique n’a été activé.
 
 Les quatre tests automatisés passent également. Le code est enregistré dans un commit local, sans envoi au dépôt GitHub distant ; la prévisualisation ne constitue pas une intégration native Squarespace et aucun déploiement Vercel n’a été lancé.
+
+## Réception des brouillons natifs Squarespace
+
+Cette étape ultérieure est distincte de la réception de la prévisualisation ci-dessus. L’autorisation donnée couvre six brouillons désactivés et le nom affiché GROUPE ATC, pas la publication de ces pages.
+
+- **Identité :** GROUPE ATC enregistré dans l’en-tête et confirmé après sortie de l’éditeur ; le titre du document affiche également GROUPE ATC.
+- **Pages :** les six adresses `/groupe-atc-…` ont été ouvertes après enregistrement et leur titre principal correspond au contenu attendu.
+- **Protection :** « Activer la page » est décoché dans les six dialogues Général ; les pages sont rangées Hors navigation, sans confondre ce rangement avec la désactivation.
+- **Navigation :** les entrées existantes Mentions légales, Boutique, Services, À propos, Contact et l’action Réserver sont conservées ; aucune nouvelle page n’y a été ajoutée.
+- **Structure bureau :** un titre principal par page et aucun débordement horizontal détecté dans les six pages contrôlées.
+- **Mobile partiel :** Accueil et Contact contrôlés dans la vue téléphone Squarespace, avec une largeur de document de 413 px ; aucun débordement horizontal ni dépassement du contenu Markdown hors de son bloc.
+- **Formulaire :** aucun formulaire natif de collecte n’a été activé ; l’adresse de réception reste à confirmer.
+- **Limites :** les captures Comet expirent ; le contrôle mobile de Maintenance n’a pas pu être stabilisé. Métiers, Groupe et Informations n’ont pas reçu de contrôle mobile final.
+
+Les données de cette étape sont dans `native-squarespace-results.json`. La saisie éditoriale est terminée, mais la reproduction graphique complète de la maquette, ses blocs d’image et boutons, le formulaire et la réception visuelle native restent à effectuer ; ne pas déclarer le nouveau site prêt à publier.

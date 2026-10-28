@@ -8,7 +8,7 @@ GROUPE ATC signifie « GROUPE ANELEC TECHNIQUE ET CONCEPTE », selon l’orthogr
 - `src/templates.mjs` : contenus et gabarits éditables.
 - `site/` : prévisualisation statique privée, six pages.
 - `data/projects.json` et `data/project.schema.json` : architecture de réalisations différées, sans exemples inventés.
-- `squarespace/` : manifeste de pages et consignes de reconstruction native.
+- `squarespace/` : manifeste de conception, consignes d’intégration et sources des six brouillons natifs enregistrés.
 - `docs/` : inventaire de réception.
 
 ## Commandes
@@ -32,3 +32,11 @@ Le formulaire prépare localement un récapitulatif et un lien de messagerie. Il
 Le site inclut `noindex,nofollow`. Les mentions légales finales doivent être complétées avant publication publique ; la page Informations actuelle n’est pas une politique définitive.
 
 Aucun DNS, abonnement, dépôt distant ou déploiement Vercel n’est modifié par les commandes locales. Cette base n’est pas une conversion automatique en pages Fluid Engine.
+
+## Brouillons natifs enregistrés
+
+Six pages ont été créées dans le site Squarespace existant avec les textes de `squarespace/native/`, hors navigation et désactivées. Le nom GROUPE ATC est enregistré dans l’en-tête et le titre du site.
+
+Les slugs réels des brouillons portent le préfixe `/groupe-atc-` pour préserver les adresses existantes. Leur contenu et leur désactivation ont été vérifiés ; les contrôles et leurs limites sont documentés dans `docs/QA.md` et `docs/native-squarespace-results.json`.
+
+Cette étape est une intégration éditoriale native, pas la reproduction graphique achevée de la prévisualisation. La mise en page finale, les visuels et boutons dédiés, le formulaire et la réception graphique complète restent à effectuer avant tout accord de publication.

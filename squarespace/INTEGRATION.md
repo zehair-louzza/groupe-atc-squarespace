@@ -4,16 +4,28 @@
 
 Site existant : `https://mandolin-jaguar-flrs.squarespace.com/config/pages`. Domaine final demandé : `anelecgroupe.com`. Ne pas créer un second site, changer un abonnement, toucher aux DNS ou remplacer les pages existantes sans accord sur l’étape correspondante.
 
+## État réel au 28 octobre 2026
+
+L’utilisateur a autorisé les six brouillons désactivés et l’affichage du nom GROUPE ATC. Les six pages sont créées hors navigation, leurs textes sont enregistrés dans des blocs Markdown natifs et leur état désactivé a été relu dans les paramètres Général.
+
+Le titre du site et son en-tête affichent GROUPE ATC. La navigation et les anciennes pages sont conservées ; aucun bouton de publication n’a été utilisé et aucune nouvelle page n’a été activée.
+
+Les textes sources effectivement saisis sont dans `native/`. Les adresses réelles des brouillons emploient `/groupe-atc-accueil`, `/groupe-atc-maintenance`, `/groupe-atc-metiers`, `/groupe-atc-groupe`, `/groupe-atc-contact` et `/groupe-atc-informations`, et non les adresses finales de conception du manifeste.
+
+La reproduction graphique complète de la maquette n’est pas achevée : il reste notamment les compositions multisections, les images, les boutons dédiés, le formulaire natif et la réception graphique finale. Aucun formulaire de collecte n’est actif dans les six pages.
+
+Les données de contrôle sont dans `../docs/native-squarespace-results.json`. Les six contenus et les six états désactivés ont été vérifiés ; les mesures mobiles natives portent uniquement sur Accueil et Contact, sans débordement horizontal ni contenu de bloc tronqué détecté. Les captures Comet échouent par expiration et la vue mobile de Maintenance ne se stabilise pas ; ne pas présenter cette étape comme une validation visuelle complète.
+
 ## Avant les modifications
 
-1. Confirmer le périmètre d’enregistrement des brouillons.
+1. Conserver l’autorisation déjà donnée pour les six brouillons ; demander un accord distinct pour la publication.
 2. Relever les pages existantes et leurs paramètres ; ne supprimer ni Boutique, ni Services, ni les mentions existantes.
 3. Préparer des pages désactivées ou un environnement à accès restreint. Ne pas considérer « Hors navigation » comme une protection d’accès.
 4. Valider le courriel `contact@aneleggroupe.com`, différent du domaine du site.
 
 ## Construction des pages
 
-Les fichiers `pages.json` donnent les titres et les adresses de départ. Les contenus de `src/templates.mjs` sont la base éditoriale, à reproduire avec des blocs natifs : texte, image, bouton et formulaire.
+Le fichier `pages.json` donne les titres et adresses finales de conception ; le dossier `native/` décrit les brouillons réellement enregistrés sans remplacement des pages existantes. Les contenus de `src/templates.mjs` restent la référence visuelle et éditoriale pour la mise en page à terminer avec des blocs natifs : texte, image, bouton et formulaire.
 
 - Accueil : premier écran en deux colonnes, trois besoins en lignes, quatre métiers, méthode et territoire.
 - Maintenance : proposition non activée, tableau des trois formules, périmètre, compte rendu et conditions.

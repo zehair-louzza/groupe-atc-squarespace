@@ -1,0 +1,608 @@
+{
+  "date": "2026-10-28",
+  "site": "https://mandolin-jaguar-flrs.squarespace.com/config/pages",
+  "brand": "GROUPE ATC",
+  "screenshots": "Indisponibles : expiration de capture Comet, contrôle DOM responsive uniquement.",
+  "pages": [
+    {
+      "name": "Contact",
+      "enabled": false,
+      "mobile": {
+        "blocks": [
+          {
+            "contentHeight": 2024.8499755859375,
+            "height": 2024.8499755859375,
+            "width": 361.45001220703125
+          }
+        ],
+        "brand": [
+          "GROUPE ATC",
+          "GROUPE ATC"
+        ],
+        "characters": 5652,
+        "forms": 0,
+        "h1": [
+          "Contact GROUPE ATC"
+        ],
+        "links": [
+          {
+            "href": "tel:+33184809385",
+            "text": "01 84 80 93 85"
+          },
+          {
+            "href": "mailto:contact@aneleggroupe.com",
+            "text": "contact@aneleggroupe.com"
+          },
+          {
+            "href": "mailto:contact@aneleggroupe.com",
+            "text": "contact@aneleggroupe.com"
+          },
+          {
+            "href": "/groupe-atc-maintenance",
+            "text": "Consulter les propositions de maintenance"
+          },
+          {
+            "href": "/groupe-atc-metiers",
+            "text": "Découvrir les métiers"
+          }
+        ],
+        "navigation": [
+          {
+            "href": "/mentions-legales",
+            "label": "Mentions légales"
+          },
+          {
+            "href": "/shop",
+            "label": "Boutique"
+          },
+          {
+            "href": "/services-content",
+            "label": "Services"
+          },
+          {
+            "href": "/about",
+            "label": "À propos"
+          },
+          {
+            "href": "/contact",
+            "label": "Contact"
+          },
+          {
+            "href": "/appointments",
+            "label": "Réserver"
+          }
+        ],
+        "path": "/groupe-atc-contact",
+        "scrollWidth": 413,
+        "width": 413
+      },
+      "desktop": {
+        "blocks": [
+          {
+            "contentHeight": 1651.7750244140625,
+            "height": 1654.1500244140625,
+            "width": 870.1000366210938
+          }
+        ],
+        "brand": [
+          "GROUPE ATC",
+          "GROUPE ATC"
+        ],
+        "characters": 7622,
+        "forms": 0,
+        "h1": [
+          "Contact GROUPE ATC"
+        ],
+        "links": [
+          {
+            "href": "tel:+33184809385",
+            "text": "01 84 80 93 85"
+          },
+          {
+            "href": "mailto:contact@aneleggroupe.com",
+            "text": "contact@aneleggroupe.com"
+          },
+          {
+            "href": "mailto:contact@aneleggroupe.com",
+            "text": "contact@aneleggroupe.com"
+          },
+          {
+            "href": "/groupe-atc-maintenance",
+            "text": "Consulter les propositions de maintenance"
+          },
+          {
+            "href": "/groupe-atc-metiers",
+            "text": "Découvrir les métiers"
+          }
+        ],
+        "navigation": [
+          {
+            "href": "/mentions-legales",
+            "label": "Mentions légales"
+          },
+          {
+            "href": "/shop",
+            "label": "Boutique"
+          },
+          {
+            "href": "/services-content",
+            "label": "Services"
+          },
+          {
+            "href": "/about",
+            "label": "À propos"
+          },
+          {
+            "href": "/contact",
+            "label": "Contact"
+          },
+          {
+            "href": "/appointments",
+            "label": "Réserver"
+          }
+        ],
+        "path": "/groupe-atc-contact",
+        "scrollWidth": 1905,
+        "width": 1905
+      }
+    },
+    {
+      "name": "Accueil",
+      "enabled": false,
+      "settings": {
+        "enabled": false,
+        "fields": [
+          "GROUPE ATC | Accueil",
+          "GROUPE ATC | Accueil",
+          "groupe-atc-accueil"
+        ]
+      },
+      "desktop": {
+        "blocks": [
+          {
+            "contentHeight": 2273.612548828125,
+            "height": 2273.612548828125,
+            "width": 705.6124877929688
+          }
+        ],
+        "brand": [
+          "GROUPE ATC",
+          "GROUPE ATC"
+        ],
+        "characters": 4499,
+        "forms": 0,
+        "h1": [
+          "GROUPE ATC"
+        ],
+        "links": [
+          {
+            "href": "/groupe-atc-contact",
+            "text": "Présenter mon besoin"
+          },
+          {
+            "href": "/groupe-atc-maintenance",
+            "text": "Découvrir les formules proposées"
+          },
+          {
+            "href": "/groupe-atc-metiers",
+            "text": "Découvrir nos métiers"
+          },
+          {
+            "href": "/groupe-atc-groupe",
+            "text": "Découvrir le groupe"
+          },
+          {
+            "href": "tel:+33184809385",
+            "text": "01 84 80 93 85"
+          },
+          {
+            "href": "mailto:contact@aneleggroupe.com",
+            "text": "contact@aneleggroupe.com"
+          },
+          {
+            "href": "/groupe-atc-contact",
+            "text": "Décrire mon besoin"
+          }
+        ],
+        "navigation": [
+          {
+            "href": "/mentions-legales",
+            "label": "Mentions légales"
+          },
+          {
+            "href": "/shop",
+            "label": "Boutique"
+          },
+          {
+            "href": "/services-content",
+            "label": "Services"
+          },
+          {
+            "href": "/about",
+            "label": "À propos"
+          },
+          {
+            "href": "/contact",
+            "label": "Contact"
+          },
+          {
+            "href": "/appointments",
+            "label": "Réserver"
+          }
+        ],
+        "path": "/groupe-atc-accueil",
+        "scrollWidth": 1547,
+        "width": 1547
+      },
+      "mobile": {
+        "blocks": [
+          {
+            "contentHeight": 4617.91259765625,
+            "height": 4617.91259765625,
+            "width": 185.4499969482422
+          }
+        ],
+        "brand": [
+          "GROUPE ATC",
+          "GROUPE ATC"
+        ],
+        "characters": 8865,
+        "forms": 0,
+        "h1": [
+          "GROUPE ATC"
+        ],
+        "links": [
+          {
+            "href": "/groupe-atc-contact",
+            "text": "Présenter mon besoin"
+          },
+          {
+            "href": "/groupe-atc-maintenance",
+            "text": "Découvrir les formules proposées"
+          },
+          {
+            "href": "/groupe-atc-metiers",
+            "text": "Découvrir nos métiers"
+          },
+          {
+            "href": "/groupe-atc-groupe",
+            "text": "Découvrir le groupe"
+          },
+          {
+            "href": "tel:+33184809385",
+            "text": "01 84 80 93 85"
+          },
+          {
+            "href": "mailto:contact@aneleggroupe.com",
+            "text": "contact@aneleggroupe.com"
+          },
+          {
+            "href": "/groupe-atc-contact",
+            "text": "Décrire mon besoin"
+          }
+        ],
+        "navigation": [
+          {
+            "href": "/mentions-legales",
+            "label": "Mentions légales"
+          },
+          {
+            "href": "/shop",
+            "label": "Boutique"
+          },
+          {
+            "href": "/services-content",
+            "label": "Services"
+          },
+          {
+            "href": "/about",
+            "label": "À propos"
+          },
+          {
+            "href": "/contact",
+            "label": "Contact"
+          },
+          {
+            "href": "/appointments",
+            "label": "Réserver"
+          }
+        ],
+        "path": "/groupe-atc-accueil",
+        "scrollWidth": 413,
+        "width": 413
+      }
+    },
+    {
+      "name": "Maintenance",
+      "enabled": false,
+      "settings": {
+        "enabled": false,
+        "fields": [
+          "GROUPE ATC | Maintenance",
+          "GROUPE ATC | Maintenance",
+          "groupe-atc-maintenance"
+        ]
+      },
+      "desktop": {
+        "blocks": [
+          {
+            "contentHeight": 2966.400146484375,
+            "height": 2966.400146484375,
+            "width": 705.6124877929688
+          }
+        ],
+        "brand": [
+          "GROUPE ATC",
+          "GROUPE ATC"
+        ],
+        "characters": 6054,
+        "forms": 0,
+        "h1": [
+          "Maintenance multitechnique"
+        ],
+        "links": [
+          {
+            "href": "/groupe-atc-contact",
+            "text": "Étudier une formule"
+          },
+          {
+            "href": "/groupe-atc-contact",
+            "text": "Demander une étude de maintenance"
+          }
+        ],
+        "navigation": [
+          {
+            "href": "/mentions-legales",
+            "label": "Mentions légales"
+          },
+          {
+            "href": "/shop",
+            "label": "Boutique"
+          },
+          {
+            "href": "/services-content",
+            "label": "Services"
+          },
+          {
+            "href": "/about",
+            "label": "À propos"
+          },
+          {
+            "href": "/contact",
+            "label": "Contact"
+          },
+          {
+            "href": "/appointments",
+            "label": "Réserver"
+          }
+        ],
+        "path": "/groupe-atc-maintenance",
+        "scrollWidth": 1547,
+        "width": 1547
+      },
+      "mobile": null,
+      "mobileStatus": "Contrôle mobile natif non terminé ; réception visuelle finale à effectuer."
+    },
+    {
+      "name": "Métiers",
+      "enabled": false,
+      "settings": {
+        "enabled": false,
+        "fields": [
+          "GROUPE ATC | Métiers",
+          "GROUPE ATC | Métiers",
+          "groupe-atc-metiers"
+        ]
+      },
+      "desktop": {
+        "blocks": [
+          {
+            "contentHeight": 2081.97509765625,
+            "height": 2081.97509765625,
+            "width": 705.6124877929688
+          }
+        ],
+        "brand": [
+          "GROUPE ATC",
+          "GROUPE ATC"
+        ],
+        "characters": 4681,
+        "forms": 0,
+        "h1": [
+          "Travaux TCE et métiers"
+        ],
+        "links": [
+          {
+            "href": "/groupe-atc-contact",
+            "text": "Présenter mon projet"
+          },
+          {
+            "href": "tel:+33184809385",
+            "text": "01 84 80 93 85"
+          }
+        ],
+        "navigation": [
+          {
+            "href": "/mentions-legales",
+            "label": "Mentions légales"
+          },
+          {
+            "href": "/shop",
+            "label": "Boutique"
+          },
+          {
+            "href": "/services-content",
+            "label": "Services"
+          },
+          {
+            "href": "/about",
+            "label": "À propos"
+          },
+          {
+            "href": "/contact",
+            "label": "Contact"
+          },
+          {
+            "href": "/appointments",
+            "label": "Réserver"
+          }
+        ],
+        "path": "/groupe-atc-metiers",
+        "scrollWidth": 1547,
+        "width": 1547
+      },
+      "mobile": null,
+      "mobileStatus": "Contrôle mobile natif non terminé ; réception visuelle finale à effectuer."
+    },
+    {
+      "name": "Groupe",
+      "enabled": false,
+      "settings": {
+        "enabled": false,
+        "fields": [
+          "GROUPE ATC | Groupe",
+          "GROUPE ATC | Groupe",
+          "groupe-atc-groupe"
+        ]
+      },
+      "desktop": {
+        "blocks": [
+          {
+            "contentHeight": 1686.2874755859375,
+            "height": 1686.2874755859375,
+            "width": 705.6124877929688
+          }
+        ],
+        "brand": [
+          "GROUPE ATC",
+          "GROUPE ATC"
+        ],
+        "characters": 4030,
+        "forms": 0,
+        "h1": [
+          "GROUPE ATC"
+        ],
+        "links": [
+          {
+            "href": "/groupe-atc-contact",
+            "text": "Prendre contact"
+          },
+          {
+            "href": "tel:+33184809385",
+            "text": "01 84 80 93 85"
+          },
+          {
+            "href": "mailto:contact@aneleggroupe.com",
+            "text": "contact@aneleggroupe.com"
+          }
+        ],
+        "navigation": [
+          {
+            "href": "/mentions-legales",
+            "label": "Mentions légales"
+          },
+          {
+            "href": "/shop",
+            "label": "Boutique"
+          },
+          {
+            "href": "/services-content",
+            "label": "Services"
+          },
+          {
+            "href": "/about",
+            "label": "À propos"
+          },
+          {
+            "href": "/contact",
+            "label": "Contact"
+          },
+          {
+            "href": "/appointments",
+            "label": "Réserver"
+          }
+        ],
+        "path": "/groupe-atc-groupe",
+        "scrollWidth": 1547,
+        "width": 1547
+      },
+      "mobile": null,
+      "mobileStatus": "Contrôle mobile natif non terminé ; réception visuelle finale à effectuer."
+    },
+    {
+      "name": "Informations",
+      "enabled": false,
+      "settings": {
+        "enabled": false,
+        "fields": [
+          "GROUPE ATC | Informations",
+          "GROUPE ATC | Informations",
+          "groupe-atc-informations"
+        ]
+      },
+      "desktop": {
+        "blocks": [
+          {
+            "contentHeight": 2010.5750732421875,
+            "height": 2010.5750732421875,
+            "width": 705.6124877929688
+          }
+        ],
+        "brand": [
+          "GROUPE ATC",
+          "GROUPE ATC"
+        ],
+        "characters": 4770,
+        "forms": 0,
+        "h1": [
+          "Informations et confidentialité"
+        ],
+        "links": [
+          {
+            "href": "mailto:contact@aneleggroupe.com",
+            "text": "contact@aneleggroupe.com"
+          }
+        ],
+        "navigation": [
+          {
+            "href": "/mentions-legales",
+            "label": "Mentions légales"
+          },
+          {
+            "href": "/shop",
+            "label": "Boutique"
+          },
+          {
+            "href": "/services-content",
+            "label": "Services"
+          },
+          {
+            "href": "/about",
+            "label": "À propos"
+          },
+          {
+            "href": "/contact",
+            "label": "Contact"
+          },
+          {
+            "href": "/appointments",
+            "label": "Réserver"
+          }
+        ],
+        "path": "/groupe-atc-informations",
+        "scrollWidth": 1547,
+        "width": 1547
+      },
+      "mobile": null,
+      "mobileStatus": "Contrôle mobile natif non terminé ; réception visuelle finale à effectuer."
+    }
+  ],
+  "nativeMobileComplete": false,
+  "notes": [
+    "Six contenus natifs enregistrés et relus ; état Activer la page désactivé vérifié dans chaque dialogue Général.",
+    "Nom de site GROUPE ATC enregistré dans l’en-tête et le titre du document.",
+    "Contrôle DOM mobile accompli pour Accueil et Contact seulement ; la commande de vue mobile ne se stabilise pas pour Maintenance.",
+    "Capture Comet impossible, réception graphique native finale à effectuer.",
+    "Navigation principale d’origine inchangée ; aucun bouton PUBLIER utilisé."
+  ]
+}
