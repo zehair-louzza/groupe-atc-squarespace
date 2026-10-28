@@ -67,6 +67,7 @@ Cette mise à jour remplace les anciennes indications sur le courriel et la cons
 - **Parcours :** menu mobile, huit accordéons, trois formules, validations vide et invalide, récapitulatif, copie et modification rejoués par interaction.
 - **Hors parcours :** demande longue, balises inertes, paramètres inconnus et repli d’image indisponible contrôlés ; aucune exception JavaScript et aucun message externe envoyé.
 - **Tests :** quatre tests automatisés passent ; le script reproductible est `tests/browser-qa.mjs`, avec les résultats dans `browser-results-updated.json`.
+- **Version hébergée :** les douze affichages et l’ensemble des parcours ci-dessus ont également été rejoués dans un contexte neuf après le déploiement privé, sans exception JavaScript ni envoi externe.
 - **Nettoyage natif :** panier et Réserver retirés ; Boutique hors navigation, mais pas désactivée et aucune donnée supprimée.
 - **Mise en page native :** Accueil, Maintenance, Métiers et Groupe enregistrés avec respectivement quatre, quatre, cinq et quatre sections ; image native sur Accueil.
 - **Limite de connexion :** déconnexion de Comet pendant Contact ; la tentative de récupération échoue également. Contact, Informations, pied de page, formulaire, placement du logo et réception native finale ne sont pas déclarés terminés.

@@ -6,7 +6,7 @@ export async function runPreviewQA(browser, base='http://127.0.0.1:3000/') {
   const page=await context.newPage();
   const errors=[];
   page.on('pageerror',e=>errors.push(e.message));
-  const result={base,pages:[],flows:[],errors};
+  const result={base:base.startsWith('http://127.0.0.1:')?base:'hosted-private-preview',pages:[],flows:[],errors};
   const directory='/home/user/workspace/groupe-atc-site/docs/screenshots';
   await fs.mkdir(directory,{recursive:true});
   const url=file=>new URL(file,base).href;
@@ -38,6 +38,7 @@ export async function runPreviewQA(browser, base='http://127.0.0.1:3000/') {
   await menu.click();assert.equal(await menu.getAttribute('aria-expanded'),'true');
   await page.keyboard.press('Escape');assert.equal(await menu.getAttribute('aria-expanded'),'false');
   await menu.click();await page.locator('#navigation a[href="./maintenance.html"]').click();
+  await page.waitForLoadState('load');
   assert.ok(page.url().includes('maintenance.html'));
   await page.setViewportSize({width:1440,height:1000});
   assert.equal(await menu.getAttribute('aria-expanded'),'false');
@@ -55,6 +56,8 @@ export async function runPreviewQA(browser, base='http://127.0.0.1:3000/') {
   for(const [i,name] of ['Essentiel','Suivi','Continuité'].entries()) {
     await page.goto(url('maintenance.html'));
     await page.getByRole('link',{name:'Étudier cette formule'}).nth(i).click();
+    await page.waitForLoadState('load');
+    await page.waitForFunction(expected=>document.querySelector('#plan')?.value===expected,name);
     assert.equal(await page.locator('#need').inputValue(),'Maintenance');
     assert.equal(await page.locator('#plan').inputValue(),name);
   }
