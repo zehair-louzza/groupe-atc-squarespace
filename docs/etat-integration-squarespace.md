@@ -10,6 +10,8 @@ Le lettrage du logo fourni est remplacé par « GROUPE ATC », en conservant les
 - **Sources autonomes :** le nouveau logo SVG est présent dans les six en-têtes et pieds de page, ainsi que dans la présentation du groupe. PNG transparent disponible pour les éditeurs qui n’acceptent pas le SVG.
 - **Archives :** les fichiers originaux restent inchangés. L’image historique native du corps de page Groupe n’est pas le logo principal ; elle reste explicitement identifiée comme ancienne.
 - **Palette et périmètre :** les couleurs de la mise en page ne changent pas. Aucun réglage de visibilité, DNS, domaine ou hébergement n’est modifié.
+- **Portée de la sauvegarde :** le nouvel en-tête s’applique aussi aux pages déjà activées, conformément à la demande d’afficher ce logo sur le site. Cela ne remplace pas l’accueil, ne change pas la navigation et ne publie pas de nouvelles pages.
+- **Recette et dépôt :** onze tests unitaires et douze rendus passent. Les quinze groupes de parcours ont été rejoués après le redéploiement de la même prévisualisation ; les sources du logo et sa configuration native sont synchronisées dans le dépôt GitHub privé dédié.
 
 ## Identité et équipe enregistrées
 

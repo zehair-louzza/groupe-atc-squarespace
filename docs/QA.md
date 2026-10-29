@@ -4,6 +4,7 @@
 
 - **Fichiers :** symbole original extrait sans redessin, nouveau lettrage vectorisé GROUPE ATC, SVG autonome sans ressource externe et PNG transparent 2 100 × 500 px, 43 323 octets. Les originaux ANELEC sont conservés.
 - **Tests locaux :** onze tests automatisés passent. Les douze rendus de six pages à 1 440 et 375 px passent, ainsi que quinze groupes de parcours, dont les logos chargés, leurs proportions et les liens de retour à l’accueil.
+- **Version hébergée :** la même prévisualisation a été redéployée, puis ses douze rendus et quinze groupes de parcours ont été rejoués dans des contextes neufs. Aucune exception JavaScript et aucun message externe ; le relevé courant `docs/browser-results-updated.json` masque l’URL temporaire.
 - **Squarespace :** logo principal enregistré dans l’en-tête natif ; texte alternatif GROUPE ATC, hauteur constatée 48 px sur ordinateur et 40 px en vue mobile, image chargée depuis le CDN Squarespace. Le résultat est consigné dans `docs/native-logo-verification.json`.
 - **Cohérence :** mentions de logo et de visibilité corrigées dans les paragraphes natifs de Groupe et Informations. Les fichiers historiques restent identifiés comme tels ; aucun réglage d’activation ne change.
 
@@ -33,7 +34,7 @@ La nouvelle fonction du site autonome comporte six carrousels indépendants avec
 - **Périmètre :** les injections de données et la photo absente sont uniquement des simulations dans le navigateur de recette, jamais des données publiées. Zéro demande transmise et zéro photo de chantier ajoutée.
 - **Intégration native :** aucun changement Squarespace ni synchronisation distante pour cette nouvelle fonction ; les preuves natives ci-dessous portent sur l'état antérieur à une image par service.
 
-Le relevé courant du site autonome est `docs/browser-results-updated.json`. Après déploiement dans la même prévisualisation privée, une session neuve a également validé les douze rendus, les dix groupes de parcours et les sept familles de vérifications des carrousels, sans erreur JavaScript ni message transmis.
+Le relevé courant du site autonome est `docs/browser-results-updated.json`. La dernière passe hébergée, après l’intégration du logo, valide douze rendus, quinze groupes de parcours et les sept familles de vérifications des carrousels, sans erreur JavaScript ni message transmis.
 
 ## Complétude de Services et demande de trois colonnes
 
