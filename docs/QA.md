@@ -13,7 +13,7 @@ La nouvelle fonction du site autonome comporte six carrousels indépendants avec
 - **Périmètre :** les injections de données et la photo absente sont uniquement des simulations dans le navigateur de recette, jamais des données publiées. Zéro demande transmise et zéro photo de chantier ajoutée.
 - **Intégration native :** aucun changement Squarespace ni synchronisation distante pour cette nouvelle fonction ; les preuves natives ci-dessous portent sur l'état antérieur à une image par service.
 
-Le relevé courant du site autonome est `docs/browser-results-updated.json`. La validation hébergée est à effectuer après le déploiement de cette révision.
+Le relevé courant du site autonome est `docs/browser-results-updated.json`. Après déploiement dans la même prévisualisation privée, une session neuve a également validé les douze rendus, les dix groupes de parcours et les sept familles de vérifications des carrousels, sans erreur JavaScript ni message transmis.
 
 ## Complétude de Services et demande de trois colonnes
 

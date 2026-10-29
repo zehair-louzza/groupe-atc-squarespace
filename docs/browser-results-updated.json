@@ -1,5 +1,5 @@
 {
-  "base": "http://127.0.0.1:3000/",
+  "base": "hosted-private-preview",
   "pages": [
     {
       "file": "index",
@@ -139,8 +139,8 @@
     }
   ],
   "flows": [
-    "Six services et six photos : trois colonnes, deux rangées.",
-    "Six services et six photos : une colonne mobile.",
+    "Six services et six galeries : trois colonnes, deux rangées.",
+    "Six services et six galeries : une colonne mobile.",
     "Les six liens métier préremplissent le contact avec la bonne prestation.",
     "Six carrousels : flèches, boucle, indépendance, clavier, tactile et replis.",
     "Menu mobile : ouverture, fermeture, navigation et retour au bureau.",
