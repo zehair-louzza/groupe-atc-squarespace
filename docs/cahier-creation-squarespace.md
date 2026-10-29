@@ -8,7 +8,13 @@ La page Services reprend les six familles documentées dans les pièces ANELEC :
 
 Votre dernière demande est appliquée à l’affichage de consultation : trois services par ligne sur ordinateur, soit deux lignes pour les six familles, et une colonne sur mobile. Les emplacements indiquent « PHOTO À AJOUTER » jusqu’à l’insertion de vos images. L’offre récurrente et les conditions restent des propositions distinctes à valider ; le brouillon Maintenance n’est pas activé.
 
-Le nouveau site présente **GROUPE ATC**, développé exactement en « GROUPE ANELEC TECHNIQUE ET CONCEPTE ». Vous avez confirmé un simple renommage d’ANELEC, sans création de filiale, et le maintien du domaine `anelecgroupe.com` ; la dénomination juridique inscrite au registre reste à distinguer de cette marque.
+Le nouveau site présente **GROUPE ATC**, développé exactement en « GROUPE ANELEC TECHNIQUE ET CONCEPTE ». Vous avez confirmé qu’il s’agit de la même société qu’ANELEC, dont la dénomination sociale est devenue GROUPE ATC, avec une nouvelle présidence, sans création d’entreprise ou de filiale et en conservant `anelecgroupe.com` ; le registre confirme la dénomination sociale actuelle ([Annuaire des Entreprises](https://annuaire-entreprises.data.gouv.fr/entreprise/933108607)).
+
+Les informations légales fournies sont désormais renseignées : SAS au capital de 3 000 €, SIREN 933 108 607, SIRET du siège 933 108 607 00021, TVA FR20933108607, code APE 41.20B et présidente Najoua Boughrara ; les inscriptions Sirene du 21 août 2024 et RNE du 8 novembre 2024 restent distinguées ([Annuaire des Entreprises](https://annuaire-entreprises.data.gouv.fr/entreprise/933108607), [fiche Pappers](https://www.pappers.fr/entreprise/anelec-technique-et-concept-933108607)).
+
+Vous avez confirmé que vos techniciens et votre directeur de travaux disposent de plus de 10 ans d’expérience dans leur domaine. Cette expérience des personnes est mise en avant sans l’attribuer à l’ancienneté de la société ; les références à vingt ans d’expérience et à une certification ISO non justifiée sont retirées d’À propos.
+
+Les pages existantes Mentions légales et À propos et les pages hors navigation Accueil, Groupe et Informations ont été mises à jour. Les trois pages hors navigation contrôlées étaient déjà activées ; leur état a été conservé, sans les présenter comme des brouillons désactivés.
 
 Les coordonnées confirmées sont `+33184809385`, `contact@anelecgroupe.com` et `9 RUE DES COLONNES, 75002 PARIS`. L’utilisateur a corrigé explicitement l’ancienne saisie du courriel ; le domaine de messagerie correspond à celui du site.
 

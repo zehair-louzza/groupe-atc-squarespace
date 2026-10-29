@@ -4,7 +4,9 @@
 
 Entretenir, dépanner, rénover. Les métiers du bâtiment, avec un suivi clair.
 
-Plomberie, électricité, serrurerie et rénovation intérieure, pour les professionnels et les particuliers en Île-de-France.
+Plomberie, électricité, serrurerie, rénovation intérieure, maçonnerie et menuiserie, pour les professionnels et les particuliers en Île-de-France.
+
+Nos techniciens et notre directeur de travaux disposent de plus de 10 ans d’expérience dans leur domaine.
 
 [Présenter mon besoin](/groupe-atc-contact)
 

@@ -29,6 +29,19 @@ export async function runPreviewQA(browser, base='http://127.0.0.1:3000/') {
       }));
       assert.equal(state.h1,1);assert.equal(state.overflow,false);assert.equal(state.wrongEmail,false);assert.equal(state.brokenImages,0);
       assert.ok(state.email.length>0&&state.email.every(v=>v==='mailto:contact@anelecgroupe.com'));
+      if(file==='informations'){
+        const text=await page.locator('main').innerText();
+        for(const value of ['933 108 607 00021','FR20933108607','3 000 €','Najoua Boughrara','21 août 2024','8 novembre 2024','même société','nouvelle présidence'])assert.ok(text.includes(value),value);
+        assert.equal(await page.locator('.company-identification>div').count(),13);
+        assert.equal(await page.getByRole('link',{name:'l’Annuaire des Entreprises',exact:true}).getAttribute('href'),'https://annuaire-entreprises.data.gouv.fr/entreprise/933108607');
+        if(width===1440)result.flows.push('Identité légale complète, dates Sirene/RNE distinctes et référence officielle.');
+      }
+      if(['index','groupe'].includes(file)){
+        const text=await page.locator('main').innerText();
+        assert.ok(text.includes('Nos techniciens et notre directeur de travaux disposent de plus de 10 ans d’expérience dans leur domaine.'));
+        if(file==='groupe'){assert.ok(text.includes('la même société'));assert.ok(text.includes('nouvelle présidence'))}
+        if(width===1440)result.flows.push(`${file==='index'?'Accueil':'Groupe'} : expérience des personnes et contenu confirmé.`);
+      }
       result.pages.push({file,width,...state});
       if(file==='metiers'){
         const cards=await page.locator('.service-card').evaluateAll(es=>es.map(e=>{const r=e.getBoundingClientRect();return{x:r.x,y:r.y}}));

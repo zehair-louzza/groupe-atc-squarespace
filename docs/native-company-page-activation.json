@@ -1,0 +1,11 @@
+{
+  "observedOn": "2026-10-29",
+  "changed": false,
+  "control": "Paramètres de la page > Général > Activer la page",
+  "pages": [
+    {"page": "Informations", "enabled": true, "inMainNavigation": false},
+    {"page": "Groupe", "enabled": true, "inMainNavigation": false},
+    {"page": "Accueil", "enabled": true, "inMainNavigation": false}
+  ],
+  "note": "Pages déjà activées lors du contrôle. Aucun commutateur d’activation n’a été modifié."
+}

@@ -1,0 +1,41 @@
+{
+  "verifiedOn": "2026-10-29",
+  "registeredName": "GROUPE ATC",
+  "formerRegisteredName": "ANELEC TECHNIQUE ET CONCEPT",
+  "formerNameAsProvidedByUser": "ANELEC TECHNIQUE ET CONCEPTE",
+  "sameLegalEntityAfterRename": true,
+  "changeType": "Changement de dénomination sociale et de présidence, sans création d’une nouvelle société.",
+  "legalForm": "SAS",
+  "legalFormFull": "Société par actions simplifiée",
+  "capitalEUR": 3000,
+  "siren": "933108607",
+  "sirenDisplay": "933 108 607",
+  "headquartersSiret": "93310860700021",
+  "headquartersSiretDisplay": "933 108 607 00021",
+  "vatNumber": "FR20933108607",
+  "rcs": "933 108 607 RCS Paris",
+  "apeCode": "41.20B",
+  "apeLabel": "Construction d’autres bâtiments",
+  "declaredActivity": "Travaux d’aménagement et rénovation, maintenance TCE secteur tertiaire et logement individuel",
+  "president": "Najoua Boughrara",
+  "sireneRegistrationDate": "2024-08-21",
+  "sireneRegistrationDisplay": "21 août 2024",
+  "rneRegistrationDate": "2024-11-08",
+  "rneRegistrationDisplay": "8 novembre 2024",
+  "publicationDirector": null,
+  "finalHostingLegalDetails": null,
+  "sources": {
+    "official": "https://annuaire-entreprises.data.gouv.fr/entreprise/933108607",
+    "registryAggregator": "https://www.pappers.fr/entreprise/anelec-technique-et-concept-933108607",
+    "userFiles": ["image.png", "image-2.png"],
+    "officialFields": ["registeredName", "siren", "headquartersSiret", "legalForm", "capitalEUR", "apeCode", "sireneRegistrationDate", "rneRegistrationDate"],
+    "userAndAggregatorFields": ["vatNumber", "declaredActivity", "president"],
+    "aggregatorFields": ["rcs", "formerRegisteredName"]
+  },
+  "editorialExclusions": [
+    "La convention collective présentée comme déduite ne prouve pas un effectif.",
+    "Le code APE ne vaut pas preuve de certifications, qualifications, assurances ou prestations supplémentaires.",
+    "La présidence ne vaut pas confirmation fournie du rôle de direction de publication.",
+    "L’intitulé développé de marque reste celui demandé par l’utilisateur ; il ne remplace pas la dénomination sociale."
+  ]
+}

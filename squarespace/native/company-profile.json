@@ -1,0 +1,128 @@
+{
+  "verifiedOn": "2026-10-29",
+  "legalSource": "../../data/legal.json",
+  "experienceSource": "../../data/site.json",
+  "publicAbout": {
+    "path": "/about",
+    "edits": [
+      {
+        "blockId": "block-5b60113dda784e70b84f",
+        "selector": "h1",
+        "text": "À propos de GROUPE ATC"
+      },
+      {
+        "blockId": "block-c935c510ac36430fc0a9",
+        "selector": "p",
+        "index": 0,
+        "text": "Nos techniciens et notre directeur de travaux disposent de plus de 10 ans d’expérience dans leur domaine. GROUPE ATC intervient en travaux d’aménagement et de rénovation et en maintenance TCE pour les espaces tertiaires et les logements individuels, en Île-de-France."
+      },
+      {
+        "blockId": "block-c935c510ac36430fc0a9",
+        "selector": "p",
+        "index": 1,
+        "text": "GROUPE ATC est la nouvelle dénomination sociale d’ANELEC : la même société, identifiée par le SIREN 933 108 607, avec une nouvelle présidence assurée par Najoua Boughrara. Son siège est situé au 9 RUE DES COLONNES, 75002 PARIS. Ce changement ne correspond pas à la création d’une nouvelle entreprise ou d’une filiale."
+      }
+    ],
+    "ctaHeading": {
+      "blockId": "block-dfc79043b07ae057a84a",
+      "level": 2,
+      "text": "Parlons de votre projet"
+    }
+  },
+  "publicLegal": {
+    "path": "/mentions-legales",
+    "collectionId": "collection-6ae0c929bed7c15b44ce691a",
+    "heading": {
+      "blockId": "block-c0958e0164c576292d37",
+      "level": 1,
+      "text": "Mentions légales"
+    },
+    "rows": [
+      {
+        "labelBlock": "block-64ed87c76f80c3a7d512",
+        "valueBlock": "block-8f74a4a7d2e7126941b7",
+        "label": "Dénomination sociale",
+        "value": "GROUPE ATC"
+      },
+      {
+        "labelBlock": "block-cb9521c70470904bfbf9",
+        "valueBlock": "block-09bf74e8bb727df1efc6",
+        "label": "Siège social",
+        "value": "9 RUE DES COLONNES, 75002 PARIS"
+      },
+      {
+        "labelBlock": "block-ca3f6767893c50623845",
+        "valueBlock": "block-78a6b96996341c2d6130",
+        "label": "Téléphone",
+        "value": "01 84 80 93 85"
+      },
+      {
+        "labelBlock": "block-790da941cdb368c7f0d0",
+        "valueBlock": "block-30266a23023b4c7adea6",
+        "label": "Adresse électronique",
+        "value": "contact@anelecgroupe.com"
+      },
+      {
+        "labelBlock": "block-5b126ce388a1afb2c614",
+        "valueBlock": "block-2db4f066a468a674932f",
+        "label": "Présidente",
+        "value": "Najoua Boughrara"
+      },
+      {
+        "labelBlock": "block-4d65911a36823ddfef14",
+        "valueBlock": "block-4992c74d26943362b873",
+        "label": "TVA intracommunautaire",
+        "value": "FR20933108607"
+      },
+      {
+        "labelBlock": "block-f58aecbf04e7cc49a254",
+        "valueBlock": "block-f6740207cd95fa54a2c5",
+        "label": "SIREN et RCS",
+        "value": "933 108 607 · RCS Paris"
+      },
+      {
+        "labelBlock": "block-28a80c0d5299997f53b7",
+        "valueBlock": "block-aede90c8998c2d846bf6",
+        "label": "Forme juridique et capital",
+        "value": "Société par actions simplifiée (SAS) au capital de 3 000 €"
+      },
+      {
+        "labelBlock": "block-f34905a59f4c4e2a12fb",
+        "valueBlock": "block-9ff55e4187d31ec53c53",
+        "label": "SIRET du siège",
+        "value": "933 108 607 00021"
+      },
+      {
+        "labelBlock": "block-681b8566842b8e696fc4",
+        "valueBlock": "block-5564411e947a9a889f57",
+        "label": "Activité principale déclarée",
+        "value": "Travaux d’aménagement et rénovation, maintenance TCE secteur tertiaire et logement individuel"
+      },
+      {
+        "labelBlock": "block-9c53942c15ef9e384ff1",
+        "valueBlock": "block-efa929c0d6b769494a4b",
+        "label": "Code APE / NAF",
+        "value": "41.20B · Construction d’autres bâtiments"
+      },
+      {
+        "labelBlock": "block-7d7f8f49b8a7d3dc3486",
+        "valueBlock": "block-0f76d4aac676bc88aa9d",
+        "label": "Inscription Sirene (Insee)",
+        "value": "21 août 2024"
+      },
+      {
+        "labelBlock": "block-17d73492d0cb6418f0d1",
+        "valueBlock": "block-1228aeba7871958c15f6",
+        "label": "Immatriculation RNE (INPI)",
+        "value": "8 novembre 2024"
+      },
+      {
+        "labelBlock": "block-e07df8928f21334ddb38",
+        "valueBlock": "block-5cdc6764bd43cab4d896",
+        "label": "Compléments à finaliser",
+        "value": "La direction de publication et les coordonnées légales complètes de l’hébergeur restent à confirmer. Les modalités de traitement des demandes seront précisées avant l’activation des nouveaux formulaires."
+      }
+    ]
+  },
+  "nativeCarousels": "Intégration toujours en attente ; cette mise à jour concerne les informations de l’entreprise."
+}

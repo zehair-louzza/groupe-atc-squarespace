@@ -1,0 +1,15 @@
+/* Mentions existantes : les textes restent des blocs Squarespace natifs. */
+body:not(:has(.sqs-block-editable))#collection-6ae0c929bed7c15b44ce691a article .page-section{min-height:0!important}
+body:not(:has(.sqs-block-editable))#collection-6ae0c929bed7c15b44ce691a article .page-section>.content-wrapper{width:100%!important;max-width:1150px!important;padding:64px 32px!important;margin-inline:auto!important}
+body:not(:has(.sqs-block-editable))#collection-6ae0c929bed7c15b44ce691a article .fluid-engine{display:grid!important;grid-template-columns:minmax(0,.8fr) minmax(0,1.35fr)!important;grid-template-rows:auto!important;grid-auto-flow:row!important;gap:24px 48px!important}
+body:not(:has(.sqs-block-editable))#collection-6ae0c929bed7c15b44ce691a article .fe-block{grid-area:auto!important;height:auto!important;min-height:0!important;min-width:0;align-self:start}
+body:not(:has(.sqs-block-editable))#collection-6ae0c929bed7c15b44ce691a article .fe-block:not(:has(.sqs-html-content)){display:none!important}
+body:not(:has(.sqs-block-editable))#collection-6ae0c929bed7c15b44ce691a article .fe-block:has(h1){grid-column:1/-1!important;margin-bottom:24px}
+body:not(:has(.sqs-block-editable))#collection-6ae0c929bed7c15b44ce691a article h1{font-size:clamp(40px,4.5vw,64px);line-height:1.1;margin:0}
+body:not(:has(.sqs-block-editable))#collection-6ae0c929bed7c15b44ce691a article p{font-size:17px;line-height:1.6;margin:0;overflow-wrap:anywhere}
+body:not(:has(.sqs-block-editable))#collection-6ae0c929bed7c15b44ce691a article strong{font-weight:600}
+@media(max-width:767px){
+  body:not(:has(.sqs-block-editable))#collection-6ae0c929bed7c15b44ce691a article .page-section>.content-wrapper{padding:40px 24px!important}
+  body:not(:has(.sqs-block-editable))#collection-6ae0c929bed7c15b44ce691a article .fluid-engine{grid-template-columns:minmax(0,1fr)!important;gap:12px!important}
+  body:not(:has(.sqs-block-editable))#collection-6ae0c929bed7c15b44ce691a article .fe-block:has(strong){margin-top:20px}
+}

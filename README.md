@@ -1,12 +1,20 @@
 # GROUPE ATC : site web et intégration Squarespace
 
-GROUPE ATC signifie « GROUPE ANELEC TECHNIQUE ET CONCEPTE », selon l’orthographe communiquée le 28 octobre 2026. ANELEC a simplement été renommée ; aucune filiale nouvelle n’est présentée.
+GROUPE ATC signifie « GROUPE ANELEC TECHNIQUE ET CONCEPTE », selon l’orthographe communiquée. Il s’agit de la même société qu’ANELEC, avec une nouvelle dénomination sociale et une nouvelle présidence, et non d’une création de société ou de filiale.
+
+## Identité de l’entreprise actualisée
+
+Les captures fournies le 29 octobre sont reprises dans `data/legal.json` et recoupées avec l’[Annuaire des Entreprises](https://annuaire-entreprises.data.gouv.fr/entreprise/933108607) et la [fiche Pappers](https://www.pappers.fr/entreprise/anelec-technique-et-concept-933108607). Les identifiants, la SAS au capital de 3 000 €, la présidente Najoua Boughrara et les deux inscriptions distinctes Sirene/RNE sont renseignés.
+
+La mention « Nos techniciens et notre directeur de travaux disposent de plus de 10 ans d’expérience dans leur domaine » est une confirmation explicite de l’entreprise. Elle ne décrit pas l’ancienneté de la société.
+
+Les pages natives Mentions légales et À propos, ainsi que les pages hors navigation Accueil, Groupe et Informations, sont enregistrées et contrôlées au bureau et sur téléphone. Les trois dernières étaient déjà activées et leur activation n’a pas été modifiée ; elles ne doivent pas être décrites comme des brouillons désactivés. La direction de publication et les coordonnées légales complètes de l’hébergeur restent à confirmer.
 
 ## Nouvelle préparation des galeries photo
 
 Le site autonome propose maintenant un carrousel avec flèches pour chacun des six services, conformément au choix utilisateur. Les trois emplacements de démonstration par métier restent clairement identifiés ; aucune photo de chantier n'a encore été fournie. Les galeries prennent en charge les photos autorisées via `data/services.json`, le clavier, les flèches et le balayage tactile, sans défilement automatique.
 
-Cette nouvelle fonction n'a pas encore été intégrée au site Squarespace ni synchronisée au dépôt distant pendant cette passe. Le mode d'emploi et la distinction avec les six blocs image natifs existants sont détaillés dans `docs/carrousels-photos.md`.
+Cette fonction n’est pas encore intégrée au site Squarespace : ses six blocs image natifs restent à une image. Les sources autonomes sont conservées dans le dépôt dédié ; le mode d'emploi et cette distinction sont détaillés dans `docs/carrousels-photos.md`.
 
 ## Dernière correction de périmètre
 

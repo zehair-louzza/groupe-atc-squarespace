@@ -34,7 +34,7 @@ Après ajout, reconstruire avec `npm run build`, exécuter `npm test` et relance
 
 ## Distinction entre prévisualisation et site natif
 
-Cette nouvelle fonction est implémentée dans le site autonome destiné à la prévisualisation puis, ultérieurement, à Hostinger. Elle n'a pas été enregistrée dans Squarespace ni envoyée au dépôt distant pendant cette passe ; les relevés natifs antérieurs restent historiques.
+Cette nouvelle fonction est implémentée dans le site autonome destiné à la prévisualisation puis, ultérieurement, à Hostinger. Elle n'a pas été enregistrée dans Squarespace ; les sources sont conservées dans le dépôt dédié lors de la synchronisation de la mise à jour de l’entreprise. Les relevés natifs antérieurs restent historiques.
 
 Les six blocs image natifs actuellement présents dans Services restent des blocs à une image. Leur remplacement par une solution multi-image doit faire l'objet d'une intégration et d'une vérification dans l'éditeur, sans supprimer les descriptions de services ni le formulaire, et sans activer les nouveaux brouillons.
 

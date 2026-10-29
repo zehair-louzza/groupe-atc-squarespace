@@ -1,16 +1,20 @@
 # GROUPE ATC
 
-## Un nouveau nom. La même exigence de terrain.
+## Un nouveau nom. La même entreprise.
 
 GROUPE ATC signifie GROUPE ANELEC TECHNIQUE ET CONCEPTE.
 
-ANELEC devient GROUPE ATC, en conservant le domaine anelecgroupe.com. Ce changement de marque ne correspond pas à la création d’une filiale distincte.
+GROUPE ATC est la nouvelle dénomination sociale d’ANELEC, avec une nouvelle présidence. Il s’agit de la même société, identifiée par le même SIREN 933 108 607, et non d’une nouvelle entreprise ou d’une filiale. Le domaine anelecgroupe.com est conservé.
 
 ## Entretenir les lieux. Clarifier les interventions.
 
 Le bâtiment réunit plusieurs métiers. Notre rôle est de rendre le besoin compréhensible, le périmètre lisible et le suivi des interventions plus clair.
 
-Plomberie, électricité, serrurerie et rénovation intérieure : nous étudions vos demandes avec une proposition définie et une restitution des actions réalisées.
+Travaux d’aménagement et de rénovation, maintenance TCE pour les espaces tertiaires et les logements individuels : nous étudions vos demandes avec une proposition définie et une restitution des actions réalisées.
+
+Les métiers concernés sont la plomberie, l’électricité, la serrurerie, la rénovation intérieure, la maçonnerie et la menuiserie, dans le périmètre défini avec vous.
+
+Nos techniciens et notre directeur de travaux disposent de plus de 10 ans d’expérience dans leur domaine.
 
 ## Notre approche
 
@@ -23,9 +27,13 @@ Plomberie, électricité, serrurerie et rénovation intérieure : nous étudions
 
 Nous étudions les demandes des professionnels et des particuliers en Île-de-France. L’adresse postale communiquée est 9 RUE DES COLONNES, 75002 PARIS ; aucun accueil du public sans rendez-vous n’est annoncé.
 
+GROUPE ATC est une SAS au capital de 3 000 €, immatriculée sous le SIREN 933 108 607 et présidée par Najoua Boughrara. Le SIRET du siège est 933 108 607 00021.
+
+Informations d’identification : [Annuaire des Entreprises](https://annuaire-entreprises.data.gouv.fr/entreprise/933108607). Présidence et RCS : [fiche Pappers](https://www.pappers.fr/entreprise/anelec-technique-et-concept-933108607).
+
 ## D’ANELEC à GROUPE ATC
 
-ANELEC est désormais GROUPE ATC : GROUPE ANELEC TECHNIQUE ET CONCEPTE.
+ANELEC est désormais GROUPE ATC : la même entreprise, avec une nouvelle dénomination sociale et une nouvelle présidence. L’intitulé développé communiqué est GROUPE ANELEC TECHNIQUE ET CONCEPTE.
 
 Vous pouvez continuer à nous joindre sur anelecgroupe.com et à l’adresse contact@anelecgroupe.com.
 

@@ -4,26 +4,37 @@
 
 Cette page est un brouillon de préparation, et non des mentions légales définitives. Elle doit être complétée avant toute ouverture publique des nouvelles pages.
 
-## Identité de marque
+## Identité de l’entreprise
 
 GROUPE ATC signifie GROUPE ANELEC TECHNIQUE ET CONCEPTE, selon l’intitulé communiqué.
 
-ANELEC a été renommée GROUPE ATC. Ce changement de marque ne vaut pas preuve d’une modification de la dénomination sociale au registre.
+GROUPE ATC est la nouvelle dénomination sociale d’ANELEC. Il s’agit de la même société, identifiée par le même SIREN 933 108 607, avec une nouvelle présidence, et non d’une nouvelle entreprise ou d’une filiale. L’intitulé développé de marque est distinct de la dénomination sociale.
 
-## Coordonnées communiquées
+## Coordonnées et identifiants
 
 - Téléphone : +33184809385.
 - Courriel : contact@anelecgroupe.com.
 - Adresse postale : 9 RUE DES COLONNES, 75002 PARIS.
 - Domaine conservé : anelecgroupe.com.
+- Forme juridique : société par actions simplifiée (SAS).
+- Capital social : 3 000 €.
+- SIREN : 933 108 607.
+- SIRET du siège : 933 108 607 00021.
+- RCS : 933 108 607 RCS Paris.
+- TVA intracommunautaire : FR20933108607.
+- Présidente : Najoua Boughrara.
+- Code APE / NAF : 41.20B, construction d’autres bâtiments.
+- Activité principale déclarée : travaux d’aménagement et rénovation, maintenance TCE secteur tertiaire et logement individuel.
+- Inscription au répertoire Sirene (Insee) : 21 août 2024.
+- Immatriculation au RNE (INPI) : 8 novembre 2024.
 
-L’adresse de contact est contact@anelecgroupe.com, confirmée par l’entreprise.
+Les dates Sirene et RNE correspondent à deux inscriptions distinctes. Les identifiants et ces deux dates sont vérifiables dans [l’Annuaire des Entreprises](https://annuaire-entreprises.data.gouv.fr/entreprise/933108607) ; la présidence, l’activité déclarée et le RCS figurent également sur [la fiche Pappers](https://www.pappers.fr/entreprise/anelec-technique-et-concept-933108607).
 
 ## Mentions légales à compléter
 
-L’entité juridique éditrice, sa forme, son immatriculation, le SIREN, les informations de TVA applicables, le directeur de publication et les informations d’hébergement restent à renseigner avec des éléments vérifiés.
+La direction de publication et les coordonnées légales complètes de l’hébergeur du site final restent à confirmer. Le rôle de présidente ne constitue pas à lui seul une confirmation fournie du rôle de direction de publication.
 
-Aucune qualification, assurance, certification ou date de création n’est inventée dans ces contenus.
+Aucune qualification, assurance, certification ou ancienneté non justifiée n’est annoncée. La convention collective présentée comme déduite n’est pas reprise comme preuve d’un effectif.
 
 ## Données des demandes
 

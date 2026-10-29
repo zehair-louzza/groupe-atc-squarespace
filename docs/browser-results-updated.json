@@ -1,5 +1,5 @@
 {
-  "base": "hosted-private-preview",
+  "base": "http://127.0.0.1:3000/",
   "pages": [
     {
       "file": "index",
@@ -65,6 +65,7 @@
       "overflow": false,
       "wrongEmail": false,
       "email": [
+        "mailto:contact@anelecgroupe.com",
         "mailto:contact@anelecgroupe.com"
       ],
       "brokenImages": 0
@@ -133,13 +134,17 @@
       "overflow": false,
       "wrongEmail": false,
       "email": [
+        "mailto:contact@anelecgroupe.com",
         "mailto:contact@anelecgroupe.com"
       ],
       "brokenImages": 0
     }
   ],
   "flows": [
+    "Accueil : expérience des personnes et contenu confirmé.",
     "Six services et six galeries : trois colonnes, deux rangées.",
+    "Groupe : expérience des personnes et contenu confirmé.",
+    "Identité légale complète, dates Sirene/RNE distinctes et référence officielle.",
     "Six services et six galeries : une colonne mobile.",
     "Les six liens métier préremplissent le contact avec la bonne prestation.",
     "Six carrousels : flèches, boucle, indépendance, clavier, tactile et replis.",

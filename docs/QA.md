@@ -1,5 +1,18 @@
 # Inventaire de réception
 
+## Identité légale, continuité et expérience : 29 octobre 2026
+
+Les nouvelles pièces et les confirmations utilisateur renseignent l’entreprise et l’expérience des personnes. Le nom GROUPE ATC correspond à un changement de dénomination sociale de la même société, avec une nouvelle présidence, non à une création d’entreprise ou de filiale.
+
+- **Données :** source dédiée `data/legal.json`, identifiants et dates Sirene/RNE distinctes, sources externes conservées ; rôle de direction de publication et hébergement final non inventés.
+- **Expérience :** affirmation explicite « Nos techniciens et notre directeur de travaux disposent de plus de 10 ans d’expérience dans leur domaine », sans l’attribuer à l’ancienneté de la société.
+- **Squarespace :** cinq pages enregistrées et rouvertes, dix vues à 1 531/409 px, un H1 par page, aucun débordement ni texte sortant de sa section. Les quatorze paires de champs des mentions ne comportent plus de valeurs fictives.
+- **Visibilité :** les trois pages hors navigation contrôlées étaient déjà activées ; aucun commutateur d’activation n’a été changé.
+- **Source autonome :** neuf tests unitaires et douze rendus ; treize groupes de parcours comprenant identité, expérience, contact, navigation, propositions de maintenance et les six carrousels.
+- **Régression :** les six métiers et dix-sept lignes de prestations restent conservés. Aucune référence client inventée, aucun transfert d’hébergement et aucun envoi de formulaire.
+
+Les relevés natifs sont `docs/native-company-update-verification.json` et `docs/native-company-page-activation.json`. Les constats précédents ci-dessous sont historiques et ne doivent pas être utilisés pour présenter les trois pages contrôlées comme désactivées.
+
 ## Carrousels photo : préparation du 29 octobre 2026
 
 La nouvelle fonction du site autonome comporte six carrousels indépendants avec flèches. Les photos réelles restent à fournir ; chaque galerie comporte trois réservations explicitement comptées comme emplacements, sans publication de faux chantiers.

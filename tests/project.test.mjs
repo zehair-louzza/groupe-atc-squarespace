@@ -32,6 +32,37 @@ test('Schedules are proposals, with explicit bounded time',()=>{
   assert.equal(config.formMode,'local-summary');
 });
 
+test('Identité légale : même société, identifiants et dates distinctes',()=>{
+  const legal=JSON.parse(fs.readFileSync('data/legal.json','utf8'));
+  assert.equal(legal.registeredName,'GROUPE ATC');
+  assert.equal(legal.sameLegalEntityAfterRename,true);
+  assert.equal(legal.siren,'933108607');
+  assert.equal(legal.headquartersSiret,'93310860700021');
+  assert.equal(legal.vatNumber,'FR20933108607');
+  assert.equal(legal.capitalEUR,3000);
+  assert.equal(legal.president,'Najoua Boughrara');
+  assert.equal(legal.sireneRegistrationDate,'2024-08-21');
+  assert.equal(legal.rneRegistrationDate,'2024-11-08');
+  assert.equal(legal.publicationDirector,null);
+  const html=fs.readFileSync('site/informations.html','utf8');
+  for(const value of ['933 108 607','933 108 607 00021','FR20933108607','3 000 €','Najoua Boughrara','21 août 2024','8 novembre 2024','même société','nouvelle présidence'])assert.ok(html.includes(value),value);
+  assert.ok(html.includes(legal.sources.official));
+  assert.doesNotMatch(html,/ne vaut pas preuve|SIREN.*reste à compléter/);
+  const native=JSON.parse(fs.readFileSync('squarespace/native/company-profile.json','utf8'));
+  assert.equal(native.publicLegal.rows.length,14);
+  assert.equal(new Set(native.publicLegal.rows.flatMap(r=>[r.labelBlock,r.valueBlock])).size,28);
+  assert.doesNotMatch(native.publicLegal.rows.map(r=>r.value).join(' '),/exemple|FRXX|12345|555555/i);
+});
+
+test('Plus de dix ans : expérience des techniciens et du directeur, non de la société',()=>{
+  const statement='Nos techniciens et notre directeur de travaux disposent de plus de 10 ans d’expérience dans leur domaine.';
+  assert.equal(config.teamExperienceStatement,statement);
+  for(const file of ['site/index.html','site/groupe.html','squarespace/native/accueil.md','squarespace/native/groupe.md'])assert.ok(fs.readFileSync(file,'utf8').includes(statement),file);
+  const native=JSON.parse(fs.readFileSync('squarespace/native/company-profile.json','utf8'));
+  assert.ok(native.publicAbout.edits.some(e=>e.text.includes(statement)));
+  assert.doesNotMatch(native.publicAbout.edits.map(e=>e.text).join(' '),/20 ans|ISO 9001/);
+});
+
 test('Rendered offers and native sources stay within the confirmed trade scope',()=>{
   const excluded=/\bcvc\b|chauffage|ventilation|climatis|nettoy|netyage|propret[eé]|g[eé]nie climatique|facility\s*management|d[eé]senfum|frigor|pompe [aà] chaleur/i;
   for(const page of ['index','maintenance','metiers','groupe','contact','informations']){

@@ -1,6 +1,21 @@
 # GROUPE ATC : état d’intégration dans Squarespace
 
-Mise à jour du 29 octobre 2026 : la page Services existante est complétée et enregistrée dans Squarespace avec six rubriques, six emplacements photo et un affichage de trois services par ligne sur ordinateur. La maçonnerie et la menuiserie, présentes page 2 du PDF mais omises dans la première passe, sont désormais prises en compte.
+Mise à jour du 29 octobre 2026 : les informations légales, la continuité de la société et l’expérience des équipes sont renseignées dans les pages Squarespace et les sources autonomes. La page Services conserve ses six rubriques et sa grille de trois colonnes sur ordinateur.
+
+## Informations légales et expérience de l’équipe
+
+GROUPE ATC est la nouvelle dénomination sociale de la même entreprise auparavant connue comme ANELEC, avec une nouvelle présidence, sans création d’une société ou d’une filiale. La dénomination actuelle et les identifiants ont été recoupés avec l’[Annuaire des Entreprises](https://annuaire-entreprises.data.gouv.fr/entreprise/933108607) et la [fiche Pappers](https://www.pappers.fr/entreprise/anelec-technique-et-concept-933108607).
+
+- **Pages enregistrées :** Mentions légales et À propos, ainsi que les pages hors navigation Accueil, Groupe et Informations ; dix contrôles de vue au total à 1 531 et 409 px.
+- **Identifiants :** SAS au capital de 3 000 €, SIREN 933 108 607, SIRET du siège 933 108 607 00021 et TVA FR20933108607 ([Annuaire des Entreprises](https://annuaire-entreprises.data.gouv.fr/entreprise/933108607), [fiche Pappers](https://www.pappers.fr/entreprise/anelec-technique-et-concept-933108607)).
+- **Présidence :** Najoua Boughrara est indiquée comme présidente ; aucune attribution automatique du rôle de direction de publication n’est ajoutée ([fiche Pappers](https://www.pappers.fr/entreprise/anelec-technique-et-concept-933108607)).
+- **Dates :** inscription Sirene le 21 août 2024 et immatriculation RNE le 8 novembre 2024, sous des libellés distincts ([Annuaire des Entreprises](https://annuaire-entreprises.data.gouv.fr/entreprise/933108607)).
+- **Expérience confirmée par l’entreprise :** « Nos techniciens et notre directeur de travaux disposent de plus de 10 ans d’expérience dans leur domaine. » L’ancienneté des personnes n’est pas attribuée à la société.
+- **Nettoyage éditorial :** les identifiants fictifs de la page de mentions et les anciennes références d’À propos à vingt ans d’expérience et à une certification ISO non justifiée sont retirés.
+- **Visibilité constatée :** les pages hors navigation Accueil, Groupe et Informations étaient déjà activées. Aucun commutateur n’a été modifié ; les mentions historiques ci-dessous parlant de brouillons désactivés ne décrivent pas cet état actuel.
+- **Reste à confirmer :** direction de publication, coordonnées légales complètes de l’hébergeur et modalités du traitement des formulaires avant activation des nouveaux dispositifs.
+
+Les carrousels avec flèches appartiennent à la prévisualisation autonome ; ils ne sont pas installés dans les six blocs image natifs de Services. Aucun transfert Hostinger, changement de DNS, publication Vercel ou envoi de formulaire n’est effectué.
 
 ## Services complets et photos
 
