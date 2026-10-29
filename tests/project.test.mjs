@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { publishableProjects } from '../build.mjs';
+import { serviceGallery } from '../src/templates.mjs';
 const config=JSON.parse(fs.readFileSync(new URL('../data/site.json',import.meta.url)));
 test('User-confirmed identity and contacts are copied exactly',()=>{
   assert.equal(config.brand,'GROUPE ATC');
@@ -63,4 +64,30 @@ test('les six métiers et leurs emplacements photo sont complets dans la page au
     fs.accessSync(new URL(`../site/assets/photo-${f.id}-a-ajouter.png`,import.meta.url));
   }
   assert.equal(data.photosAreClientReferences,false);
+});
+
+test('Carrousels : six galeries indépendantes et aucune photo non autorisée',()=>{
+  const data=JSON.parse(fs.readFileSync('data/services.json','utf8'));
+  const html=fs.readFileSync('site/metiers.html','utf8');
+  assert.equal(data.gallery.mode,'carousel');
+  assert.equal(data.gallery.autoplay,false);
+  assert.equal(data.gallery.placeholderCount,3);
+  assert.equal((html.match(/data-carousel /g)||[]).length,6);
+  assert.ok(data.families.every(f=>Array.isArray(f.photos)&&f.photos.length===0));
+  const family=data.families[0];
+  const photo={src:'./assets/photo-plomberie-a-ajouter.png',alt:'Vue de test <non publiée>',caption:'Détail de test',approved:true,rightsConfirmed:true};
+  const single=serviceGallery({...family,photos:[photo]});
+  assert.ok(single.includes('Photo 1 / 1'));
+  assert.ok(single.includes('disabled'));
+  assert.ok(single.includes('Vue de test &lt;non publiée&gt;'));
+  for(const rejected of [
+    {...photo,approved:false},{...photo,rightsConfirmed:false},
+    {...photo,alt:''},{...photo,src:'javascript:alert(1)'},
+    {...photo,src:'https://example.invalid/non-autorisee.jpg'},
+    {...photo,src:'./assets/../prive.jpg'}
+  ]){
+    const markup=serviceGallery({...family,photos:[rejected]});
+    assert.ok(markup.includes('Emplacement 1 / 3'));
+  }
+  assert.ok(serviceGallery({...family,photos:[photo,photo]}).includes('Photo 1 / 2'));
 });

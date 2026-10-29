@@ -4,12 +4,13 @@
     {"file": "01022026-2.pdf", "pages": [2, 3], "scope": "Métiers et détail des interventions ; maçonnerie et menuiserie nommées page 2"}
   ],
   "photosAreClientReferences": false,
+  "gallery": {"mode": "carousel", "placeholderCount": 3, "autoplay": false},
   "families": [
-    {"id": "plomberie", "title": "Plomberie", "formValue": "Plomberie", "items": ["Dépannage", "Recherche de fuite", "Installation sanitaire", "Mise en sécurité"]},
-    {"id": "electricite", "title": "Électricité", "formValue": "Électricité", "items": ["Dépannage électrique", "Installation électrique", "Tableau électrique", "Levée de réserves"]},
-    {"id": "serrurerie", "title": "Serrurerie", "formValue": "Serrurerie", "items": ["Ouverture de porte", "Remplacement de serrure", "Mise en sécurité"]},
-    {"id": "renovation", "title": "Rénovation intérieure", "formValue": "Rénovation intérieure", "items": ["Peinture", "Plaques de plâtre (placo)", "Carrelage", "Petits travaux de bricolage"]},
-    {"id": "maconnerie", "title": "Maçonnerie", "formValue": "Maçonnerie", "items": ["Travaux de maçonnerie"], "note": "Périmètre défini après étude de votre besoin."},
-    {"id": "menuiserie", "title": "Menuiserie", "formValue": "Menuiserie", "items": ["Travaux de menuiserie"], "note": "Périmètre défini après étude de votre besoin."}
+    {"id": "plomberie", "title": "Plomberie", "formValue": "Plomberie", "photos": [], "items": ["Dépannage", "Recherche de fuite", "Installation sanitaire", "Mise en sécurité"]},
+    {"id": "electricite", "title": "Électricité", "formValue": "Électricité", "photos": [], "items": ["Dépannage électrique", "Installation électrique", "Tableau électrique", "Levée de réserves"]},
+    {"id": "serrurerie", "title": "Serrurerie", "formValue": "Serrurerie", "photos": [], "items": ["Ouverture de porte", "Remplacement de serrure", "Mise en sécurité"]},
+    {"id": "renovation", "title": "Rénovation intérieure", "formValue": "Rénovation intérieure", "photos": [], "items": ["Peinture", "Plaques de plâtre (placo)", "Carrelage", "Petits travaux de bricolage"]},
+    {"id": "maconnerie", "title": "Maçonnerie", "formValue": "Maçonnerie", "photos": [], "items": ["Travaux de maçonnerie"], "note": "Périmètre défini après étude de votre besoin."},
+    {"id": "menuiserie", "title": "Menuiserie", "formValue": "Menuiserie", "photos": [], "items": ["Travaux de menuiserie"], "note": "Périmètre défini après étude de votre besoin."}
   ]
 }

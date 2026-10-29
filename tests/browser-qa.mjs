@@ -39,7 +39,7 @@ export async function runPreviewQA(browser, base='http://127.0.0.1:3000/') {
           assert.ok(cards[3].y>cards[0].y);
           assert.ok(cards[0].x<cards[1].x&&cards[1].x<cards[2].x);
         }else assert.ok(cards.every(c=>Math.abs(c.x-cards[0].x)<1));
-        result.flows.push(`Six services et six photos : ${width===1440?'trois colonnes, deux rangées':'une colonne mobile'}.`);
+        result.flows.push(`Six services et six galeries : ${width===1440?'trois colonnes, deux rangées':'une colonne mobile'}.`);
       }
       await page.screenshot({path:`${directory}/updated-${file}-${width}.png`,fullPage:true});
     }
@@ -55,6 +55,8 @@ export async function runPreviewQA(browser, base='http://127.0.0.1:3000/') {
     assert.equal(await page.locator('#need').inputValue(),'Travaux');
   }
   result.flows.push('Les six liens métier préremplissent le contact avec la bonne prestation.');
+  result.carousel=await runCarouselQA(browser,base);
+  result.flows.push('Six carrousels : flèches, boucle, indépendance, clavier, tactile et replis.');
   await page.setViewportSize({width:375,height:812});
   await page.goto(url('index.html'));
   const menu=page.locator('.menu-toggle');
@@ -126,4 +128,111 @@ export async function runPreviewQA(browser, base='http://127.0.0.1:3000/') {
   await fs.writeFile('/home/user/workspace/groupe-atc-site/docs/browser-results-updated.json',JSON.stringify(result,null,2)+'\n');
   await context.close();
   return result;
+}
+
+export async function runCarouselQA(browser,base='http://127.0.0.1:3000/'){
+  const context=await browser.newContext({viewport:{width:1440,height:1000}});
+  const page=await context.newPage();
+  const errors=[];
+  page.on('pageerror',e=>errors.push(e.message));
+  const result={galleries:6,placeholderCount:3,photoUploads:0,checks:[]};
+  const target=new URL('metiers.html',base).href;
+  try{
+    await page.goto(target);
+    const fixtureSource=await page.content();
+    const galleries=page.locator('[data-carousel]');
+    assert.equal(await galleries.count(),6);
+    for(let i=0;i<6;i++){
+      const g=galleries.nth(i),next=g.locator('.carousel-next'),previous=g.locator('.carousel-previous');
+      assert.equal(await g.locator('.carousel-counter').textContent(),'Emplacement 1 / 3');
+      await next.click();assert.equal(await g.getAttribute('data-index'),'1');
+      await next.click();assert.equal(await g.getAttribute('data-index'),'2');
+      await next.click();assert.equal(await g.getAttribute('data-index'),'0');
+      await previous.click();assert.equal(await g.getAttribute('data-index'),'2');
+      await next.click();assert.equal(await g.getAttribute('data-index'),'0');
+      for(let j=0;j<6;j++)if(i!==j)assert.equal(await galleries.nth(j).getAttribute('data-index'),'0');
+      const box=await next.boundingBox();
+      assert.ok(box.width>=44&&box.height>=44);
+    }
+    result.checks.push('Douze flèches, boucle aller-retour et six index indépendants.');
+    const first=galleries.first(),next=first.locator('.carousel-next');
+    await next.focus();await page.keyboard.press('ArrowRight');assert.equal(await first.getAttribute('data-index'),'1');
+    await page.keyboard.press('End');assert.equal(await first.getAttribute('data-index'),'2');
+    await page.keyboard.press('Home');assert.equal(await first.getAttribute('data-index'),'0');
+    await page.keyboard.press('ArrowLeft');assert.equal(await first.getAttribute('data-index'),'2');
+    assert.equal(await next.evaluate(e=>getComputedStyle(e).outlineStyle),'solid');
+    await page.keyboard.press('Home');
+    result.checks.push('Clavier gauche/droite, Début/Fin et indicateur de focus visible.');
+    await next.click();
+    await page.setViewportSize({width:375,height:812});
+    await next.click();assert.equal(await first.getAttribute('data-index'),'2');
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+    await page.screenshot({path:'/home/user/workspace/groupe-atc-site/docs/screenshots/carousel-mobile.png',fullPage:true});
+    await page.setViewportSize({width:1440,height:1000});
+    await next.click();assert.equal(await first.getAttribute('data-index'),'0');
+    await first.locator('.carousel-previous').click();
+    await page.screenshot({path:'/home/user/workspace/groupe-atc-site/docs/screenshots/carousel-desktop.png',fullPage:true});
+    result.checks.push('Bureau → téléphone → bureau, état conservé et aucun débordement.');
+    const touchContext=await browser.newContext({viewport:{width:375,height:812},isMobile:true,hasTouch:true});
+    try{
+      const mobile=await touchContext.newPage();
+      await mobile.goto(target);
+      const g=mobile.locator('[data-carousel]').first(),viewport=g.locator('.carousel-viewport');
+      await viewport.scrollIntoViewIfNeeded();
+      const rect=await viewport.boundingBox();
+      const session=await touchContext.newCDPSession(mobile);
+      const x1=rect.x+rect.width*.8,x2=rect.x+rect.width*.2,y=rect.y+rect.height*.5;
+      await session.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:x1,y}]});
+      await session.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:x2,y}]});
+      await session.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});
+      assert.equal(await g.getAttribute('data-index'),'1');
+      await session.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:x2,y}]});
+      await session.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:x1,y}]});
+      await session.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});
+      assert.equal(await g.getAttribute('data-index'),'0');
+      await session.detach();
+    }finally{await touchContext.close()}
+    result.checks.push('Balayage tactile gauche/droite avec de vrais événements tactiles.');
+    const encode=s=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    const fixture=frames=>fixtureSource.replace(/data-frames="[^"]*"/,`data-frames="${encode(JSON.stringify(frames))}"`).replace('data-placeholder="true"','data-placeholder="false"');
+    const a={src:'./assets/photo-plomberie-a-ajouter.png',alt:'Image de test A',caption:'Légende de test, non publiée'};
+    const b={src:'./assets/photo-electricite-a-ajouter.png',alt:'Image de test B',caption:'Autre légende de test'};
+    let html=fixture([a]);
+    await page.route('**/metiers.html?carousel-qa=*',route=>route.fulfill({status:200,contentType:'text/html',body:html}));
+    await page.goto(`${target}?carousel-qa=single`);
+    assert.equal(await page.locator('[data-carousel]').first().locator('.carousel-counter').textContent(),'Photo 1 / 1');
+    assert.equal(await page.locator('[data-carousel]').first().locator('.carousel-next').isDisabled(),true);
+    assert.equal(await page.locator('[data-carousel]').first().locator('.carousel-previous').isDisabled(),true);
+    html=fixture([a,b]);
+    await page.goto(`${target}?carousel-qa=multiple`);
+    await page.locator('[data-carousel]').first().locator('.carousel-next').click();
+    assert.equal(await page.locator('[data-carousel]').first().locator('img').getAttribute('alt'),'Image de test B');
+    assert.equal(await page.locator('[data-carousel]').first().locator('.carousel-caption').textContent(),b.caption);
+    result.checks.push('Données de test locales : une photo désactive les flèches ; deux photos changent image, alt et légende.');
+    html=fixture([a,{...b,src:'./assets/qa-photo-absente.png'}]);
+    await page.route('**/assets/qa-photo-absente.png',route=>route.abort());
+    await page.goto(`${target}?carousel-qa=broken`);
+    const broken=page.locator('[data-carousel]').first();
+    await broken.locator('.carousel-next').click();
+    await broken.locator('.carousel-error').waitFor();
+    await page.screenshot({path:'/home/user/workspace/groupe-atc-site/docs/screenshots/carousel-error.png',fullPage:false});
+    await broken.locator('.carousel-next').click();
+    await broken.locator('img').waitFor({state:'visible'});
+    assert.equal(await broken.locator('.carousel-error').isHidden(),true);
+    result.checks.push('Photo indisponible : message lisible, flèches utilisables et retour à une image valide.');
+    const plainContext=await browser.newContext({javaScriptEnabled:false,viewport:{width:375,height:812}});
+    try{
+      const plain=await plainContext.newPage();
+      await plain.goto(target);
+      assert.equal(await plain.locator('.carousel-controls:visible').count(),0);
+      assert.equal(await plain.locator('.service-card').count(),6);
+      assert.equal(await plain.locator('.service-card a').count(),6);
+      await plain.locator('.service-card a').first().click();
+      assert.ok(plain.url().includes('contact.html'));
+    }finally{await plainContext.close()}
+    result.checks.push('Sans JavaScript : image de couverture, six services et liens de contact conservés, contrôles inactifs masqués.');
+    assert.deepEqual(errors,[]);
+    result.errors=errors;
+    return result;
+  }finally{await context.close()}
 }

@@ -8,6 +8,18 @@ const image = (filename, alt, cls = '') => `<figure class="photo ${cls}"><img sr
 const intro = (category, title, text) => `<section class="page-intro container">${label(category)}<h1>${title}</h1><p class="lead">${text}</p></section>`;
 const cta = () => `<section class="closing container"><div>${label('Parlons de votre besoin')}<h2>Un lieu à entretenir.<br>Un projet à faire avancer.</h2></div>${button('Décrire mon projet', './contact.html')}</section>`;
 
+export function serviceGallery(family) {
+  // Only approved, rights-confirmed local assets can become client photographs.
+  const photos=(family.photos||[]).filter(p=>p.approved===true&&p.rightsConfirmed===true&&typeof p.alt==='string'&&p.alt.trim()&&/^\.\/assets\/[a-zA-Z0-9/_-]+\.(?:webp|avif|jpe?g|png)$/i.test(p.src||''));
+  const placeholder=photos.length===0;
+  const frames=placeholder
+    ? Array.from({length:services.gallery.placeholderCount},()=>({src:`./assets/photo-${family.id}-a-ajouter.png`,alt:`Emplacement réservé à une future photo : ${family.title}`,caption:''}))
+    : photos.map(p=>({src:p.src,alt:p.alt,caption:typeof p.caption==='string'?p.caption:''}));
+  const first=frames[0],prefix=placeholder?'Emplacement':'Photo',id=`gallery-${family.id}`;
+  const chevron=direction=>`<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="${direction==='previous'?'M15 5l-7 7 7 7':'M9 5l7 7-7 7'}" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+  return `<figure class="service-photo-slot service-carousel" role="group" aria-roledescription="carrousel" aria-label="${esc(`Photos : ${family.title}`)}" data-carousel data-frames="${esc(JSON.stringify(frames))}" data-placeholder="${placeholder}" data-index="0"><div class="carousel-viewport" id="${esc(id)}"><img src="${esc(first.src)}" alt="${esc(first.alt)}" width="960" height="720" loading="lazy" decoding="async"><p class="carousel-error" hidden>Cette photo est indisponible. Vous pouvez consulter la suivante.</p></div><div class="carousel-controls" hidden><button class="carousel-arrow carousel-previous" type="button" data-direction="-1" aria-label="${esc(`Photo précédente : ${family.title}`)}" aria-controls="${esc(id)}"${frames.length===1?' disabled':''}>${chevron('previous')}</button><button class="carousel-arrow carousel-next" type="button" data-direction="1" aria-label="${esc(`Photo suivante : ${family.title}`)}" aria-controls="${esc(id)}"${frames.length===1?' disabled':''}>${chevron('next')}</button></div><figcaption class="carousel-footer"><span class="carousel-counter" role="status" aria-live="polite" aria-atomic="true">${prefix} 1 / ${frames.length}</span><span class="carousel-caption">${esc(first.caption)}</span></figcaption></figure>`;
+}
+
 export function shell(config, page, body, projectsEnabled = false) {
   const nav = [['index.html','Accueil'],['maintenance.html','Maintenance'],['metiers.html','Travaux & métiers'],['groupe.html','Le groupe']];
   if (projectsEnabled) nav.push(['realisations.html','Réalisations']);
@@ -36,7 +48,7 @@ export function maintenance(config) {
 
 export function trades() {
   return `${intro('Travaux TCE & métiers','Chaque métier.<br>Un périmètre précis.','Des interventions ciblées et des travaux intérieurs pour entretenir, remettre en état ou rénover vos espaces.')}
-<section class="services-grid container" aria-label="Nos prestations">${services.families.map((f,i)=>`<article class="service-card" id="${esc(f.id)}"><figure class="service-photo-slot"><img src="./assets/photo-${esc(f.id)}-a-ajouter.png" alt="Emplacement réservé à une future photo : ${esc(f.title)}" width="960" height="720" loading="lazy" decoding="async"></figure><div class="service-card-content">${label(String(i+1).padStart(2,'0'))}<h2>${esc(f.title)}</h2><ul>${f.items.map(item=>`<li>${esc(item)}</li>`).join('')}</ul>${f.note?`<p class="small">${esc(f.note)}</p>`:''}${button('Décrire mon besoin',`./contact.html?besoin=Travaux&metier=${encodeURIComponent(f.formValue)}`,true)}</div></article>`).join('')}</section>
+<section class="services-grid container" aria-label="Nos prestations">${services.families.map((f,i)=>`<article class="service-card" id="${esc(f.id)}">${serviceGallery(f)}<div class="service-card-content">${label(String(i+1).padStart(2,'0'))}<h2>${esc(f.title)}</h2><ul>${f.items.map(item=>`<li>${esc(item)}</li>`).join('')}</ul>${f.note?`<p class="small">${esc(f.note)}</p>`:''}${button('Décrire mon besoin',`./contact.html?besoin=Travaux&metier=${encodeURIComponent(f.formValue)}`,true)}</div></article>`).join('')}</section>
 <section class="container faq" id="depannage">${label('Dépannage')}<h2>Une panne ne se traite pas<br>avec une promesse vague.</h2><p class="lead">Indiquez le lieu, le métier et les symptômes. La disponibilité et les modalités d’intervention sont confirmées après échange.</p><p>En cas de danger immédiat, n’utilisez pas le formulaire pour attendre une prise en charge. Contactez les services d’urgence ou le gestionnaire du réseau concerné.</p>${button('Décrire la situation','./contact.html?besoin=Dépannage')}</section>${cta()}`;
 }
 

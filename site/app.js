@@ -21,6 +21,55 @@ document.querySelectorAll('.photo img').forEach(img=>{
   if(img.complete&&img.naturalWidth===0)showUnavailableImage(img);
 });
 
+document.querySelectorAll('[data-carousel]').forEach(gallery=>{
+  let frames;
+  try{frames=JSON.parse(gallery.dataset.frames)}catch{return}
+  if(!Array.isArray(frames)||!frames.length)return;
+  const img=gallery.querySelector('img'),counter=gallery.querySelector('.carousel-counter');
+  const caption=gallery.querySelector('.carousel-caption'),error=gallery.querySelector('.carousel-error');
+  const controls=gallery.querySelector('.carousel-controls'),viewport=gallery.querySelector('.carousel-viewport');
+  if(!img||!counter||!controls||!viewport)return;
+  let index=0,start=null;
+  const placeholder=gallery.dataset.placeholder==='true';
+  function show(next){
+    index=(next+frames.length)%frames.length;
+    gallery.dataset.index=String(index);
+    if(error)error.hidden=true;
+    img.hidden=false;
+    img.alt=frames[index].alt;
+    img.src=frames[index].src;
+    counter.textContent=`${placeholder?'Emplacement':'Photo'} ${index+1} / ${frames.length}`;
+    if(caption)caption.textContent=frames[index].caption||'';
+    if(img.complete&&img.naturalWidth===0)failed();
+  }
+  function failed(){img.hidden=true;if(error)error.hidden=false}
+  img.addEventListener('error',failed);
+  img.addEventListener('load',()=>{img.hidden=false;if(error)error.hidden=true});
+  if(img.complete&&img.naturalWidth===0)failed();
+  controls.querySelectorAll('[data-direction]').forEach(button=>{
+    button.disabled=frames.length<2;
+    button.addEventListener('click',()=>show(index+Number(button.dataset.direction)));
+  });
+  gallery.addEventListener('keydown',event=>{
+    const targets={ArrowLeft:index-1,ArrowRight:index+1,Home:0,End:frames.length-1};
+    if(Object.hasOwn(targets,event.key)){event.preventDefault();show(targets[event.key])}
+  });
+  viewport.addEventListener('pointerdown',event=>{
+    if(event.pointerType==='mouse')return;
+    start={x:event.clientX,y:event.clientY,id:event.pointerId};
+    viewport.setPointerCapture?.(event.pointerId);
+  });
+  viewport.addEventListener('pointerup',event=>{
+    if(!start||start.id!==event.pointerId)return;
+    const dx=event.clientX-start.x,dy=event.clientY-start.y;
+    start=null;
+    if(Math.abs(dx)>45&&Math.abs(dx)>Math.abs(dy)*1.3)show(index+(dx<0?1:-1));
+  });
+  viewport.addEventListener('pointercancel',()=>{start=null});
+  show(0);
+  controls.hidden=false;
+});
+
 const form=document.querySelector('#request-form');
 if(form){
   const query=new URLSearchParams(location.search);

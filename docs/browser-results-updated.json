@@ -1,5 +1,5 @@
 {
-  "base": "hosted-private-preview",
+  "base": "http://127.0.0.1:3000/",
   "pages": [
     {
       "file": "index",
@@ -142,6 +142,7 @@
     "Six services et six photos : trois colonnes, deux rangées.",
     "Six services et six photos : une colonne mobile.",
     "Les six liens métier préremplissent le contact avec la bonne prestation.",
+    "Six carrousels : flèches, boucle, indépendance, clavier, tactile et replis.",
     "Menu mobile : ouverture, fermeture, navigation et retour au bureau.",
     "8 accordéons ouverts et refermés.",
     "Trois formules : préremplissage correct du contact.",
@@ -150,5 +151,20 @@
     "Image indisponible : repli visible."
   ],
   "errors": [],
+  "carousel": {
+    "galleries": 6,
+    "placeholderCount": 3,
+    "photoUploads": 0,
+    "checks": [
+      "Douze flèches, boucle aller-retour et six index indépendants.",
+      "Clavier gauche/droite, Début/Fin et indicateur de focus visible.",
+      "Bureau → téléphone → bureau, état conservé et aucun débordement.",
+      "Balayage tactile gauche/droite avec de vrais événements tactiles.",
+      "Données de test locales : une photo désactive les flèches ; deux photos changent image, alt et légende.",
+      "Photo indisponible : message lisible, flèches utilisables et retour à une image valide.",
+      "Sans JavaScript : image de couverture, six services et liens de contact conservés, contrôles inactifs masqués."
+    ],
+    "errors": []
+  },
   "externalMessagesSent": 0
 }

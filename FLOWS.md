@@ -1,5 +1,15 @@
 # Parcours et réception de la finalisation native
 
+## Carrousels photo par service
+
+- Choix confirmé : un carrousel avec flèches pour chacun des six services, et non un défilement des services eux-mêmes.
+- Conserver trois services par ligne sur ordinateur et une colonne sur téléphone, les dix-sept lignes de prestations et les six liens de contact préremplis.
+- Dans la prévisualisation, parcourir les trois emplacements provisoires avec les flèches, revenir du dernier au premier et vérifier l'indépendance des six galeries.
+- Au clavier, vérifier les flèches gauche/droite et Début/Fin, avec un focus visible ; au tactile, vérifier un balayage horizontal sans bloquer le défilement vertical.
+- Pour zéro photo, afficher « Emplacement », jamais un nombre de chantiers. Pour une seule photo, désactiver les flèches ; pour plusieurs photos autorisées, afficher le compteur réel.
+- Vérifier l'absence de défilement automatique, les textes alternatifs, une image défaillante, JavaScript désactivé et les douze rendus des six pages.
+- Les photos réelles restent à fournir. La nouvelle fonction est préparée dans le site autonome ; ne pas modifier l'état constaté de Squarespace ni prétendre à une synchronisation distante non effectuée.
+
 ## Complétude de Services et zones photo
 
 - Sur la page Services existante, retrouver six rubriques distinctes : Plomberie, Électricité, Serrurerie, Rénovation intérieure, Maçonnerie et Menuiserie.

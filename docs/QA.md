@@ -1,5 +1,20 @@
 # Inventaire de réception
 
+## Carrousels photo : préparation du 29 octobre 2026
+
+La nouvelle fonction du site autonome comporte six carrousels indépendants avec flèches. Les photos réelles restent à fournir ; chaque galerie comporte trois réservations explicitement comptées comme emplacements, sans publication de faux chantiers.
+
+- **Tests unitaires :** sept réussites, dont la sélection des seules photos locales autorisées, le repli sur des emplacements et la protection des descriptions.
+- **Non-régression locale :** douze rendus des six pages à 1 440 et 375 px, dix groupes de parcours, aucun débordement horizontal, aucune image cassée et aucune exception JavaScript.
+- **Carrousels :** les douze flèches, les deux sens de boucle et l'indépendance des six index sont vérifiés par clics ; gauche/droite, Début/Fin et focus visible sont vérifiés au clavier.
+- **Téléphone :** balayages gauche et droite avec événements tactiles Chromium, puis aller-retour bureau/téléphone ; contrôle exploratoire supplémentaire à 320 px sans débordement.
+- **Cas limites :** une seule photo désactive les deux flèches, deux photos changent image/description/légende, une photo défaillante conserve la navigation et une session sans JavaScript conserve couverture, services et contact.
+- **Contrôle visuel :** captures des six pages, des carrousels au bureau et au téléphone, d'un état après interaction et du repli d'image indisponible ; compteurs lisibles à 12 px minimum.
+- **Périmètre :** les injections de données et la photo absente sont uniquement des simulations dans le navigateur de recette, jamais des données publiées. Zéro demande transmise et zéro photo de chantier ajoutée.
+- **Intégration native :** aucun changement Squarespace ni synchronisation distante pour cette nouvelle fonction ; les preuves natives ci-dessous portent sur l'état antérieur à une image par service.
+
+Le relevé courant du site autonome est `docs/browser-results-updated.json`. La validation hébergée est à effectuer après le déploiement de cette révision.
+
 ## Complétude de Services et demande de trois colonnes
 
 - **Documents relus :** présentation ANELEC et PDF de sept pages ; la page 2 établit aussi les métiers de maçonnerie et menuiserie.

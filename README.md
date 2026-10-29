@@ -1,5 +1,11 @@
 # GROUPE ATC : site web et intégration Squarespace
 
+## Nouvelle préparation des galeries photo
+
+Le site autonome propose maintenant un carrousel avec flèches pour chacun des six services, conformément au choix utilisateur. Les trois emplacements de démonstration par métier restent clairement identifiés ; aucune photo de chantier n'a encore été fournie. Les galeries prennent en charge les photos autorisées via `data/services.json`, le clavier, les flèches et le balayage tactile, sans défilement automatique.
+
+Cette nouvelle fonction n'a pas encore été intégrée au site Squarespace ni synchronisée au dépôt distant pendant cette passe. Le mode d'emploi et la distinction avec les six blocs image natifs existants sont détaillés dans `docs/carrousels-photos.md`.
+
 GROUPE ATC signifie « GROUPE ANELEC TECHNIQUE ET CONCEPTE », selon l’orthographe communiquée le 28 octobre 2026. ANELEC a simplement été renommée ; aucune filiale nouvelle n’est présentée.
 
 ## Dernière correction de périmètre
