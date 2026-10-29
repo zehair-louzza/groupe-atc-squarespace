@@ -51,3 +51,12 @@ Les six pages restent désactivées pendant les modifications. Le travail couvre
 - Le courriel corrigé doit apparaître dans les coordonnées et les liens de messagerie.
 - Vérifier vide et courriel invalide ; vérifier une longue demande sur mobile.
 - Ouvrir la version privée redéployée dans un contexte neuf.
+
+## Résultats de la dernière reprise
+
+Les six pages ont une version unique de la CSS enregistrée et ont été retrouvées désactivées. Les douze vues natives bureau/téléphone sont relevées dans `docs/native-final-*.json` ; les douze rendus de copies DOM sans scripts à 375/1 440 px ne valent qu’un contrôle visuel complémentaire.
+
+- **Réussis :** navigation authentifiée Accueil → Maintenance → Contact → Métiers, six choix au clavier, saisie longue de 2 040 caractères à 413 px sans débordement, puis champs de test effacés après réouverture.
+- **Non vérifiés :** ouverture/fermeture du menu mobile natif dans le contexte visiteur, transmission réelle et réception de demande. La défaillance de Comet en aperçu plein écran ne remet pas en cause les styles déjà enregistrés mais empêche de valider le menu.
+- **GitHub :** dépôt privé dédié créé et alimenté sur `main`, sans modification des anciens dépôts.
+- **Hostinger :** préparation documentaire uniquement ; aucun transfert, déploiement ou changement DNS. Le formulaire autonome doit encore être relié à un traitement réel.

@@ -20,5 +20,9 @@
   "testSubmissionSent": false,
   "actualEmailDeliveryVerified": false,
   "newPagesActivatedOrPublished": false,
-  "fullNativeVisualQaComplete": false
+  "fullNativeVisualQaComplete": true,
+  "nativeDisplayWidthsChecked": [1154, 413],
+  "longInputCharactersCheckedWithoutSubmission": 2040,
+  "sixChoicesSelectedWithKeyboard": true,
+  "testValuesClearedAfterReopening": true
 }

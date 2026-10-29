@@ -24,6 +24,8 @@ Le dépôt dédié est [groupe-atc-squarespace](https://github.com/zehair-louzza
 - **Hostinger :** préparation pour plus tard, sans connexion au compte Hostinger, transfert, publication ni modification du domaine aujourd’hui.
 - **Formulaire :** le bloc Squarespace ne migre pas avec les pages HTML ; la version autonome nécessite un vrai traitement de demande avant son lancement commercial.
 
+La procédure différée et les points de validation figurent dans [`docs/deploiement-hostinger.md`](docs/deploiement-hostinger.md). Aucun transfert Hostinger ni changement de domaine n’est lancé par la création de ce dépôt.
+
 ## Contraintes conservées
 
 Le domaine final est `anelecgroupe.com`. Le courriel confirmé et corrigé par l’utilisateur est `contact@anelecgroupe.com` ; l’ancienne saisie avec deux « g » est à écarter.
@@ -50,7 +52,7 @@ Les slugs réels des brouillons portent le préfixe `/groupe-atc-` pour préserv
 
 La composition native est enregistrée pour Accueil (4 sections), Maintenance (4), Métiers (5), Groupe (4), Contact (4) et Informations (5), soit 26 sections. Les styles sont propres aux pages ; l’illustration d’accueil, le logo historique de Groupe et le formulaire de Contact sont des blocs natifs. Le pied de page générique a été remplacé par l’identité et les coordonnées corrigées.
 
-La liste du formulaire a été corrigée selon `squarespace/native/form-spec.json` et les six choix ont été retrouvés après réouverture de Contact. La destination, l’inscription marketing décochée et le message post-envoi ont été relus ; aucun test de transmission n’a été effectué. La finalisation graphique reste incomplète après une nouvelle perte de connexion de Comet : la dernière révision CSS doit être réappliquée uniformément et la réception native complète reste à effectuer. Ne pas activer les pages.
+La liste du formulaire a été corrigée selon `squarespace/native/form-spec.json` et les six choix ont été retrouvés après réouverture de Contact. La destination, l’inscription marketing décochée et le message post-envoi ont été relus ; aucun test de transmission n’a été effectué. La dernière CSS a maintenant été enregistrée une seule fois sur chacune des six pages et leurs vues bureau/mobile ont été contrôlées, avec des captures et relevés `docs/native-final-*.json`. La navigation interne et une saisie longue sans envoi ont également été testées ; le menu mobile natif en aperçu plein écran n’a pas pu être validé après un blocage de Comet. Ne pas activer les pages.
 
 Le panier et le bouton Réserver ont été retirés de l’en-tête. La boutique est hors navigation, sans suppression de données ; sa désactivation n’a pas été obtenue. Les six nouvelles pages n’ont pas été activées.
 

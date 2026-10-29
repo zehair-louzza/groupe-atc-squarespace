@@ -1,0 +1,158 @@
+{
+  "scope": "Detached sanitized native DOM snapshots: visual/viewport checks only, not live navigation, scripts or email delivery",
+  "results": [
+    {
+      "slug": "accueil",
+      "width": 375,
+      "scrollWidth": 375,
+      "h1": [
+        "Le bâtiment, dans la durée."
+      ],
+      "styleCount": 1,
+      "images": [
+        {
+          "alt": "Façade de bureaux, illustration sans lien avec une réalisation de GROUPE ATC.",
+          "loaded": true
+        }
+      ],
+      "verticalTextClipping": []
+    },
+    {
+      "slug": "accueil",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1": [
+        "Le bâtiment, dans la durée."
+      ],
+      "styleCount": 1,
+      "images": [
+        {
+          "alt": "Façade de bureaux, illustration sans lien avec une réalisation de GROUPE ATC.",
+          "loaded": true
+        }
+      ],
+      "verticalTextClipping": []
+    },
+    {
+      "slug": "maintenance",
+      "width": 375,
+      "scrollWidth": 375,
+      "h1": [
+        "Maintenance multitechnique"
+      ],
+      "styleCount": 1,
+      "images": [],
+      "verticalTextClipping": []
+    },
+    {
+      "slug": "maintenance",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1": [
+        "Maintenance multitechnique"
+      ],
+      "styleCount": 1,
+      "images": [],
+      "verticalTextClipping": []
+    },
+    {
+      "slug": "metiers",
+      "width": 375,
+      "scrollWidth": 375,
+      "h1": [
+        "Travaux TCE et métiers"
+      ],
+      "styleCount": 1,
+      "images": [],
+      "verticalTextClipping": []
+    },
+    {
+      "slug": "metiers",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1": [
+        "Travaux TCE et métiers"
+      ],
+      "styleCount": 1,
+      "images": [],
+      "verticalTextClipping": []
+    },
+    {
+      "slug": "groupe",
+      "width": 375,
+      "scrollWidth": 375,
+      "h1": [
+        "GROUPE ATC"
+      ],
+      "styleCount": 1,
+      "images": [
+        {
+          "alt": "Ancien logo ANELEC GROUPE, conservé comme repère historique avant le changement de nom en GROUPE ATC.",
+          "loaded": true
+        }
+      ],
+      "verticalTextClipping": []
+    },
+    {
+      "slug": "groupe",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1": [
+        "GROUPE ATC"
+      ],
+      "styleCount": 1,
+      "images": [
+        {
+          "alt": "Ancien logo ANELEC GROUPE, conservé comme repère historique avant le changement de nom en GROUPE ATC.",
+          "loaded": true
+        }
+      ],
+      "verticalTextClipping": []
+    },
+    {
+      "slug": "contact",
+      "width": 375,
+      "scrollWidth": 375,
+      "h1": [
+        "Contact GROUPE ATC"
+      ],
+      "styleCount": 1,
+      "images": [],
+      "verticalTextClipping": []
+    },
+    {
+      "slug": "contact",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1": [
+        "Contact GROUPE ATC"
+      ],
+      "styleCount": 1,
+      "images": [],
+      "verticalTextClipping": []
+    },
+    {
+      "slug": "informations",
+      "width": 375,
+      "scrollWidth": 375,
+      "h1": [
+        "Informations et confidentialité"
+      ],
+      "styleCount": 1,
+      "images": [],
+      "verticalTextClipping": []
+    },
+    {
+      "slug": "informations",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1": [
+        "Informations et confidentialité"
+      ],
+      "styleCount": 1,
+      "images": [],
+      "verticalTextClipping": []
+    }
+  ],
+  "pageErrors": []
+}

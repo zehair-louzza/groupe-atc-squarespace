@@ -1,0 +1,178 @@
+{
+  "page": "Groupe",
+  "file": "groupe",
+  "disabled": {
+    "page": "Groupe",
+    "enabled": false,
+    "title": "GROUPE ATC | Groupe"
+  },
+  "desktop": {
+    "page": "Groupe",
+    "design": true,
+    "emailLinks": [
+      "mailto:contact@anelecgroupe.com",
+      "mailto:contact@anelecgroupe.com",
+      "mailto:contact@anelecgroupe.com"
+    ],
+    "formCount": 0,
+    "h1": [
+      "GROUPE ATC"
+    ],
+    "headerLinks": [
+      {
+        "href": "#page",
+        "text": "Passer au contenu"
+      },
+      {
+        "href": "/",
+        "text": "GROUPE ATC"
+      },
+      {
+        "href": "/mentions-legales",
+        "text": "Mentions légales"
+      },
+      {
+        "href": "/services-content",
+        "text": "Services"
+      },
+      {
+        "href": "/about",
+        "text": "À propos"
+      },
+      {
+        "href": "/contact",
+        "text": "Contact"
+      },
+      {
+        "href": "/",
+        "text": "GROUPE ATC"
+      },
+      {
+        "href": "/mentions-legales",
+        "text": "Mentions légales"
+      },
+      {
+        "href": "/services-content",
+        "text": "Services"
+      },
+      {
+        "href": "/about",
+        "text": "À propos"
+      },
+      {
+        "href": "/contact",
+        "text": "Contact"
+      },
+      {
+        "href": "/mentions-legales",
+        "text": "Mentions légales"
+      },
+      {
+        "href": "/services-content",
+        "text": "Services"
+      },
+      {
+        "href": "/about",
+        "text": "À propos"
+      },
+      {
+        "href": "/contact",
+        "text": "Contact"
+      }
+    ],
+    "images": [
+      {
+        "alt": "Ancien logo ANELEC GROUPE, conservé comme repère historique avant le changement de nom en GROUPE ATC.",
+        "loaded": true,
+        "src": "https://images.squarespace-cdn.com/content/v1/6ae0c8a7d4a29a78c6f38f28/266fdaf8-5511-423e-b7c1-d484ae52123d/anelec-logo-historique-original.png?format=500w"
+      }
+    ],
+    "oldEmail": false,
+    "overflow": false,
+    "placeholderFooter": false,
+    "sections": 4,
+    "width": 1154
+  },
+  "desktopMetrics": {
+    "clipping": [],
+    "form": [],
+    "frame": {
+      "bottom": 687.6000366210938,
+      "height": 616.6000366210938,
+      "right": 1510.4000244140625,
+      "width": 1168.4000244140625,
+      "x": 342,
+      "y": 71
+    },
+    "h1": [
+      "GROUPE ATC"
+    ],
+    "images": [
+      {
+        "alt": "Ancien logo ANELEC GROUPE, conservé comme repère historique avant le changement de nom en GROUPE ATC.",
+        "loaded": true,
+        "rect": {
+          "bottom": 1441.6499938964844,
+          "height": 261.8999938964844,
+          "right": 1033.6625366210938,
+          "width": 262,
+          "x": 771.6625366210938,
+          "y": 1179.75
+        }
+      }
+    ],
+    "mailto": [
+      "mailto:contact@anelecgroupe.com",
+      "mailto:contact@anelecgroupe.com",
+      "mailto:contact@anelecgroupe.com"
+    ],
+    "oldEmail": false,
+    "overlaps": [],
+    "placeholderFooter": false,
+    "scrollWidth": 1154,
+    "scrollY": 0,
+    "sections": 4,
+    "width": 1154
+  },
+  "mobile": {
+    "clipping": [],
+    "form": [],
+    "frame": {
+      "bottom": 687.6000366210938,
+      "height": 616.6000366210938,
+      "right": 1140.2000122070312,
+      "width": 428,
+      "x": 712.2000122070312,
+      "y": 71
+    },
+    "h1": [
+      "GROUPE ATC"
+    ],
+    "images": [
+      {
+        "alt": "Ancien logo ANELEC GROUPE, conservé comme repère historique avant le changement de nom en GROUPE ATC.",
+        "loaded": true,
+        "rect": {
+          "bottom": -218.01251220703125,
+          "height": 199,
+          "right": 305.9000015258789,
+          "width": 199,
+          "x": 106.9000015258789,
+          "y": -417.01251220703125
+        }
+      }
+    ],
+    "mailto": [
+      "mailto:contact@anelecgroupe.com",
+      "mailto:contact@anelecgroupe.com",
+      "mailto:contact@anelecgroupe.com"
+    ],
+    "oldEmail": false,
+    "overlaps": [],
+    "placeholderFooter": false,
+    "scrollWidth": 413,
+    "scrollY": 2386.39990234375,
+    "sections": 4,
+    "width": 413
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "page": "Accueil",
+  "file": "accueil",
+  "disabled": {
+    "page": "Accueil",
+    "enabled": false,
+    "title": "GROUPE ATC | Accueil"
+  },
+  "desktop": {
+    "page": "Accueil",
+    "design": true,
+    "emailLinks": [
+      "mailto:contact@anelecgroupe.com",
+      "mailto:contact@anelecgroupe.com"
+    ],
+    "formCount": 0,
+    "h1": [
+      "Le bâtiment, dans la durée."
+    ],
+    "headerLinks": [
+      {
+        "href": "#page",
+        "text": "Passer au contenu"
+      },
+      {
+        "href": "/",
+        "text": "GROUPE ATC"
+      },
+      {
+        "href": "/mentions-legales",
+        "text": "Mentions légales"
+      },
+      {
+        "href": "/services-content",
+        "text": "Services"
+      },
+      {
+        "href": "/about",
+        "text": "À propos"
+      },
+      {
+        "href": "/contact",
+        "text": "Contact"
+      },
+      {
+        "href": "/",
+        "text": "GROUPE ATC"
+      },
+      {
+        "href": "/mentions-legales",
+        "text": "Mentions légales"
+      },
+      {
+        "href": "/services-content",
+        "text": "Services"
+      },
+      {
+        "href": "/about",
+        "text": "À propos"
+      },
+      {
+        "href": "/contact",
+        "text": "Contact"
+      },
+      {
+        "href": "/mentions-legales",
+        "text": "Mentions légales"
+      },
+      {
+        "href": "/services-content",
+        "text": "Services"
+      },
+      {
+        "href": "/about",
+        "text": "À propos"
+      },
+      {
+        "href": "/contact",
+        "text": "Contact"
+      }
+    ],
+    "images": [
+      {
+        "alt": "Façade de bureaux, illustration sans lien avec une réalisation de GROUPE ATC.",
+        "loaded": true,
+        "src": "https://images.squarespace-cdn.com/content/v1/6ae0c8a7d4a29a78c6f38f28/ab4692cf-0b25-46e9-8cdd-323f94368a2e/groupe-atc-architecture-illustration.webp?format=1500w"
+      }
+    ],
+    "oldEmail": false,
+    "overflow": false,
+    "placeholderFooter": false,
+    "sections": 4,
+    "width": 1154
+  },
+  "desktopMetrics": {
+    "clipping": [],
+    "form": [],
+    "frame": {
+      "bottom": 687.6000366210938,
+      "height": 616.6000366210938,
+      "right": 1510.4000244140625,
+      "width": 1168.4000244140625,
+      "x": 342,
+      "y": 71
+    },
+    "h1": [
+      "Le bâtiment, dans la durée."
+    ],
+    "images": [
+      {
+        "alt": "Façade de bureaux, illustration sans lien avec une réalisation de GROUPE ATC.",
+        "loaded": true,
+        "rect": {
+          "bottom": 654.6750030517578,
+          "height": 467.5249938964844,
+          "right": 1060.1000061035156,
+          "width": 477.8000183105469,
+          "x": 582.2999877929688,
+          "y": 187.15000915527344
+        }
+      }
+    ],
+    "mailto": [
+      "mailto:contact@anelecgroupe.com",
+      "mailto:contact@anelecgroupe.com"
+    ],
+    "oldEmail": false,
+    "overlaps": [],
+    "placeholderFooter": false,
+    "scrollWidth": 1154,
+    "scrollY": 0,
+    "sections": 4,
+    "width": 1154
+  },
+  "mobile": {
+    "clipping": [],
+    "form": [],
+    "frame": {
+      "bottom": 687.6000366210938,
+      "height": 616.6000366210938,
+      "right": 1140.2000122070312,
+      "width": 428,
+      "x": 712.2000122070312,
+      "y": 71
+    },
+    "h1": [
+      "Le bâtiment, dans la durée."
+    ],
+    "images": [
+      {
+        "alt": "Façade de bureaux, illustration sans lien avec une réalisation de GROUPE ATC.",
+        "loaded": true,
+        "rect": {
+          "bottom": -2350.53759765625,
+          "height": 199,
+          "right": 367.1250114440918,
+          "width": 321.45001220703125,
+          "x": 45.67499923706055,
+          "y": -2549.53759765625
+        }
+      }
+    ],
+    "mailto": [
+      "mailto:contact@anelecgroupe.com",
+      "mailto:contact@anelecgroupe.com"
+    ],
+    "oldEmail": false,
+    "overlaps": [],
+    "placeholderFooter": false,
+    "scrollWidth": 413,
+    "scrollY": 3186.39990234375,
+    "sections": 4,
+    "width": 413
+  }
+}

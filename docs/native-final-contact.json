@@ -1,0 +1,288 @@
+{
+  "page": {
+    "name": "Contact",
+    "slug": "groupe-atc-contact",
+    "file": "contact"
+  },
+  "capture": {
+    "page": "Contact",
+    "design": true,
+    "emailLinks": [
+      "mailto:contact@anelecgroupe.com",
+      "mailto:contact@anelecgroupe.com",
+      "mailto:contact@anelecgroupe.com"
+    ],
+    "formCount": 1,
+    "h1": [
+      "Contact GROUPE ATC"
+    ],
+    "headerLinks": [
+      {
+        "href": "#page",
+        "text": "Passer au contenu"
+      },
+      {
+        "href": "/",
+        "text": "GROUPE ATC"
+      },
+      {
+        "href": "/mentions-legales",
+        "text": "Mentions légales"
+      },
+      {
+        "href": "/services-content",
+        "text": "Services"
+      },
+      {
+        "href": "/about",
+        "text": "À propos"
+      },
+      {
+        "href": "/contact",
+        "text": "Contact"
+      },
+      {
+        "href": "/",
+        "text": "GROUPE ATC"
+      },
+      {
+        "href": "/mentions-legales",
+        "text": "Mentions légales"
+      },
+      {
+        "href": "/services-content",
+        "text": "Services"
+      },
+      {
+        "href": "/about",
+        "text": "À propos"
+      },
+      {
+        "href": "/contact",
+        "text": "Contact"
+      },
+      {
+        "href": "/mentions-legales",
+        "text": "Mentions légales"
+      },
+      {
+        "href": "/services-content",
+        "text": "Services"
+      },
+      {
+        "href": "/about",
+        "text": "À propos"
+      },
+      {
+        "href": "/contact",
+        "text": "Contact"
+      }
+    ],
+    "images": [],
+    "oldEmail": false,
+    "overflow": false,
+    "placeholderFooter": false,
+    "sections": 4,
+    "width": 1154
+  },
+  "desktop": {
+    "clipping": [],
+    "form": [
+      {
+        "fields": [
+          {
+            "label": null,
+            "name": "fname",
+            "placeholder": null,
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": null,
+            "name": "lname",
+            "placeholder": null,
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": null,
+            "name": "",
+            "placeholder": "",
+            "required": false,
+            "type": "email"
+          },
+          {
+            "label": null,
+            "name": "",
+            "placeholder": "",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": null,
+            "name": "",
+            "placeholder": "",
+            "required": false,
+            "type": "textarea"
+          },
+          {
+            "label": null,
+            "name": "",
+            "placeholder": null,
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Nature de la demande",
+            "name": "",
+            "placeholder": null,
+            "required": true,
+            "type": "select-one"
+          },
+          {
+            "label": null,
+            "name": "message-yui_6628bc3a-ba16-4759-9feb-0c79d5133818-field",
+            "placeholder": null,
+            "required": false,
+            "type": "text"
+          }
+        ],
+        "marketing": false,
+        "options": [
+          "Choisir une prestation",
+          "Maintenance Essentiel : 2 visites par an",
+          "Maintenance Suivi : 4 visites par an",
+          "Maintenance Continuité : 12 visites par an",
+          "Maintenance : périmètre à définir",
+          "Travaux TCE",
+          "Intervention ponctuelle"
+        ],
+        "submit": "Envoyer ma demandeEnvoyer ma demande"
+      }
+    ],
+    "frame": {
+      "bottom": 687.6000366210938,
+      "height": 616.6000366210938,
+      "right": 1510.4000244140625,
+      "width": 1168.4000244140625,
+      "x": 342,
+      "y": 71
+    },
+    "h1": [
+      "Contact GROUPE ATC"
+    ],
+    "images": [],
+    "mailto": [
+      "mailto:contact@anelecgroupe.com",
+      "mailto:contact@anelecgroupe.com",
+      "mailto:contact@anelecgroupe.com"
+    ],
+    "oldEmail": false,
+    "overlaps": [],
+    "placeholderFooter": false,
+    "scrollWidth": 1154,
+    "scrollY": 0,
+    "sections": 4,
+    "width": 1154
+  },
+  "mobile": {
+    "clipping": [],
+    "form": [
+      {
+        "fields": [
+          {
+            "label": null,
+            "name": "fname",
+            "placeholder": null,
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": null,
+            "name": "lname",
+            "placeholder": null,
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": null,
+            "name": "",
+            "placeholder": "",
+            "required": false,
+            "type": "email"
+          },
+          {
+            "label": null,
+            "name": "",
+            "placeholder": "",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": null,
+            "name": "",
+            "placeholder": "",
+            "required": false,
+            "type": "textarea"
+          },
+          {
+            "label": null,
+            "name": "",
+            "placeholder": null,
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Nature de la demande",
+            "name": "",
+            "placeholder": null,
+            "required": true,
+            "type": "select-one"
+          },
+          {
+            "label": null,
+            "name": "message-yui_6628bc3a-ba16-4759-9feb-0c79d5133818-field",
+            "placeholder": null,
+            "required": false,
+            "type": "text"
+          }
+        ],
+        "marketing": false,
+        "options": [
+          "Choisir une prestation",
+          "Maintenance Essentiel : 2 visites par an",
+          "Maintenance Suivi : 4 visites par an",
+          "Maintenance Continuité : 12 visites par an",
+          "Maintenance : périmètre à définir",
+          "Travaux TCE",
+          "Intervention ponctuelle"
+        ],
+        "submit": "Envoyer ma demandeEnvoyer ma demande"
+      }
+    ],
+    "frame": {
+      "bottom": 687.6000366210938,
+      "height": 616.6000366210938,
+      "right": 1140.2000122070312,
+      "width": 428,
+      "x": 712.2000122070312,
+      "y": 71
+    },
+    "h1": [
+      "Contact GROUPE ATC"
+    ],
+    "images": [],
+    "mailto": [
+      "mailto:contact@anelecgroupe.com",
+      "mailto:contact@anelecgroupe.com",
+      "mailto:contact@anelecgroupe.com"
+    ],
+    "oldEmail": false,
+    "overlaps": [],
+    "placeholderFooter": false,
+    "scrollWidth": 413,
+    "scrollY": 2616,
+    "sections": 4,
+    "width": 413
+  }
+}

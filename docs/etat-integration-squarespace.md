@@ -1,6 +1,6 @@
 # GROUPE ATC : état d’intégration dans Squarespace
 
-Mise à jour du 29 octobre 2026, après la seconde reprise. Les six compositions natives sont enregistrées, avec vingt-six sections, un pied de page personnalisé, deux blocs image et un formulaire dont les six choix ont maintenant été corrigés et relus après réouverture de Contact. La finalisation graphique n’est toutefois pas complète : Comet a de nouveau perdu la liaison pendant la passe d’harmonisation et de contrôle ; la tentative de reconnexion a également échoué.
+Mise à jour du 29 octobre 2026, après la reprise graphique et votre demande GitHub/Hostinger. Les six compositions natives sont enregistrées et harmonisées, avec vingt-six sections, un pied de page personnalisé, deux blocs image et un formulaire corrigé ; les affichages bureau/mobile ont été contrôlés sur les six pages. Le dépôt privé est créé et alimenté pour conserver aussi une version autonome destinée à Hostinger ultérieurement, sans publication aujourd’hui.
 
 ## Réalisé et enregistré
 
@@ -9,7 +9,8 @@ Mise à jour du 29 octobre 2026, après la seconde reprise. Les six compositions
 - **Coordonnées :** 01 84 80 93 85 et 9 RUE DES COLONNES, 75002 PARIS ; le domaine demandé reste anelecgroupe.com.
 - **Pied de page :** « Titre de votre site », l’adresse d’exemple et « Conçu avec Squarespace » sont remplacés par la marque, l’intitulé complet, l’adresse postale, le courriel cliquable et le téléphone.
 - **Images :** illustration d’architecture sur Accueil avec texte alternatif et légende visible ; logo ANELEC original sur Groupe, présenté comme historique et affiché sans recadrage du signe.
-- **Espacements natifs :** lignes inutilisées réduites dans les réglages de section, par les contrôles Squarespace. Les vues bureau et mobile ont été parcourues pour ces réglages ; cela ne constitue pas une réception visuelle complète des six pages.
+- **Espacements natifs :** lignes inutilisées réduites dans les réglages de section, par les contrôles Squarespace. Les vues bureau/mobile ont ensuite été contrôlées sur les six pages.
+- **Styles communs :** les copies répétées de CSS ont été remplacées par une seule version enregistrée par page, comprenant la présentation du bouton du formulaire.
 
 ANELEC est l’ancien nom communiqué par l’entreprise, et non une filiale distincte. Cette identité de marque ne vaut pas vérification d’une modification de dénomination sociale au registre.
 
@@ -75,27 +76,39 @@ Cette lecture du paramétrage n’est pas un test de transmission. Aucun formula
 - **Enregistrements :** les six compositions ont été sauvegardées et quittées ; Contact et Informations ne sont plus des reprises non confirmées.
 - **En-tête :** un débordement horizontal a été corrigé par le dimensionnement de son conteneur ; Contact a ensuite été observé avec une largeur de document et de défilement de 1154 px.
 - **Accueil :** premier contrôle au bureau à 1154 px et en vue mobile à 413 px, sans ancien courriel, texte générique de pied de page ni chevauchement mesuré. Ce contrôle a révélé une illustration trop aplatie.
-- **Correction de l’illustration :** hauteur ensuite réajustée dans la grille native et enregistrée ; hauteur observée après sauvegarde d’environ 501 px, au lieu des 23 px du contrôle initial.
+- **Correction de l’illustration :** hauteur réajustée dans la grille native et enregistrée ; après harmonisation finale, hauteur observée d’environ 468 px au bureau et 199 px sur mobile, au lieu des 23 px du contrôle initial.
 - **Logo historique :** image native chargée, texte alternatif saisi et option Ajuster vérifiée ; son cadre a ensuite été agrandi et sauvegardé sans recadrer le signe.
-- **Désactivation :** Accueil a été relu avec « Activer la page » décoché pendant cette reprise. Les six pages avaient été désactivées lors de leur création et aucune activation n’a été effectuée ; la relecture collective finale reste à réaliser.
+- **Désactivation :** les six pages ont été retrouvées désactivées pendant les contrôles de cette reprise ; aucune activation n’a été effectuée.
 
-Les captures disponibles de cette reprise sont partielles et antérieures à certaines corrections. Elles ne constituent pas une validation finale des six pages sur ordinateur et mobile. Les derniers raffinements CSS, dont l’harmonisation du bouton du formulaire, sont préparés localement mais ne sont pas encore réappliqués uniformément aux six pages.
+Les nouveaux relevés `native-final-*.json` et les captures de cette dernière reprise couvrent les six pages à 1 154 px au bureau et 413 px dans la vue téléphone native. Ils montrent un seul H1 par page, les nombres de sections attendus, aucune ancienne adresse électronique, aucun pied de page générique, aucun débordement horizontal ou chevauchement de blocs détecté, ainsi que les images chargées avec leurs textes alternatifs.
 
-La seconde reprise a terminé les corrections de configuration du formulaire. La nouvelle passe de styles et de contrôle a ensuite échoué avant de produire un relevé ou une capture de Contact ; aucune application CSS supplémentaire ni réception visuelle ne doit être déduite de cette tentative.
+Les six choix du formulaire ont aussi été sélectionnés au clavier ; une saisie locale de 2 040 caractères a été contrôlée à 413 px sans débordement, puis effacée en quittant et rouvrant Contact. Les liens Accueil → Maintenance → Contact → Métiers ont ouvert les bons contenus dans la prévisualisation authentifiée, sans activation des pages.
+
+Des copies DOM natives, débarrassées des scripts et conservées hors du site public, ont été vérifiées à 375 et 1 440 px avec Playwright. Les douze rendus n’ont montré ni débordement horizontal ni texte dépassant sa section ; ce contrôle complémentaire ne prouve pas les scripts natifs, le menu ou la transmission d’un formulaire.
+
+Le menu mobile natif n’a pas pu être validé : son ouverture dans l’éditeur n’a pas été confirmée, puis le passage en aperçu plein écran et le contrôle direct à 375 px ont rencontré un blocage de Comet. La simulation de dimensions a été retirée avec succès et le contrôle du navigateur a été arrêté ; aucune réussite de ce test n’est revendiquée.
 
 ### Prévisualisation privée distincte
 
 La prévisualisation privée, corrigée avec contact@anelecgroupe.com, avait déjà été contrôlée sur six pages à 1440 × 1000 et 375 × 812. Ses parcours de menu, accordéons, choix des formules, préparation locale d’une demande et récapitulatif avaient été testés sans envoi externe ; ces résultats ne valident pas le formulaire Squarespace.
 
-Les quatre tests automatisés locaux passent lors de cette reprise. Les deux versions restent distinctes et ne doivent pas être confondues.
+Les quatre tests automatisés locaux passent lors de cette reprise. Les deux versions restent distinctes et ne doivent pas être confondues ; le dépôt garde les sources autonomes pour votre hébergement Hostinger futur.
 
-## À terminer dès le retour de Comet
+## Limites de réception restantes
 
-- **Styles :** appliquer la dernière révision CSS aux six pages, puis vérifier les espacements, la hauteur de l’image et le bouton du formulaire.
-- **Réception native :** contrôler chaque page au bureau et sur mobile, les liens entre brouillons, les images, le formulaire, le pied de page et l’absence de débordement ou de chevauchement.
-- **Sécurité de publication :** relire les six réglages « Activer la page » et leur maintien hors navigation après sauvegarde.
+- **Menu visiteur :** vérifier son cycle d’ouverture/fermeture dans le contexte natif réel après rétablissement de Comet. Ce contrôle n’est pas remplacé par les copies DOM sans scripts.
+- **Transmission :** la configuration du formulaire est relue et la saisie locale est testée, mais aucun envoi ni réception de message n’a été vérifié.
+- **Périmètre :** les contrôles d’affichage ne sont ni un audit exhaustif d’accessibilité, ni un audit de la console et des scripts tiers de Squarespace.
 
-Le dernier état fonctionnel relu est Contact, avec les six prestations corrigées après réouverture. L’état exact atteint par la tentative de contrôle suivante n’a pas pu être relu ; il ne faut ni recréer les six pages ni réajouter un formulaire.
+Les six pages et le formulaire existants doivent être conservés. Il ne faut ni recréer ces pages ni ajouter à nouveau les choix ou le bloc de formulaire.
+
+## GitHub et déploiement Hostinger différé
+
+Le nouveau dépôt [groupe-atc-squarespace](https://github.com/zehair-louzza/groupe-atc-squarespace) est privé et sa branche `main` contient les sources du site, les éléments natifs et la documentation. Les dépôts précédents n’ont pas été modifiés.
+
+Votre consigne est un déploiement sur Hostinger plus tard. Le dossier `site/` est la version autonome à utiliser ; les blocs natifs Squarespace ne sont pas automatiquement exportés dans ce dossier et le formulaire autonome reste un récapitulatif local, sans réception serveur.
+
+La procédure différée et les validations de lancement figurent dans `docs/deploiement-hostinger.md`. Aucun transfert Hostinger ni changement du domaine `anelecgroupe.com` n’a été exécuté.
 
 ## Conditions avant une ouverture publique
 
@@ -106,4 +119,4 @@ Le dernier état fonctionnel relu est Contact, avec les six prestations corrigé
 
 Les rythmes Essentiel, Suivi et Continuité restent des propositions de 2, 4 et 12 visites par an, sur une base d’un site, un technicien et deux heures maximum sur place par visite. Aucun tarif, astreinte permanente ou délai d’intervention garanti n’est inventé.
 
-Aucun bouton de publication n’a été utilisé. Aucun DNS, domaine ou abonnement n’a été modifié, aucun code n’a été envoyé au dépôt GitHub distant et aucun déploiement Vercel n’a été lancé ; les changements globaux d’identité et de nettoyage de l’en-tête/pied de page sont distincts de l’activation des nouvelles pages.
+Aucun bouton de publication n’a été utilisé. Aucun DNS, domaine ou abonnement n’a été modifié, aucun déploiement Vercel ou Hostinger n’a été lancé ; seul le nouveau dépôt GitHub privé a reçu les sources selon votre demande, sans modification des dépôts existants.

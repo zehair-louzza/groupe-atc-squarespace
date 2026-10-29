@@ -32,7 +32,8 @@
     "Do not recreate the form or add more options.",
     "Six correct options observed in the rendered list after leaving Contact, opening Groupe and reopening Contact.",
     "Destination, unchecked marketing signup and post-submit message reread in the native editor on 2026-10-29.",
-    "Final desktop/mobile styling and visual QA remain pending after another Comet disconnect.",
+    "Latest common CSS saved once per page; desktop/mobile display checks and long local form input passed on 2026-10-29.",
+    "All six choices were selected with real keyboard input; test values were cleared by leaving and reopening Contact, without any submission.",
     "Pages must remain disabled and off navigation."
   ]
 }

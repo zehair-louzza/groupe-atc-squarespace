@@ -103,3 +103,18 @@ Cette section remplace les points précédents concernant le défaut de liste et
 - **Graphisme :** tentative de passe Contact interrompue avant la production d’un relevé ou d’une capture. Ne pas conclure que la dernière CSS a été sauvegardée, ni que la réception ordinateur/mobile a été faite.
 
 La réception visuelle complète et la relecture collective des six pages désactivées restent en attente. La connexion a échoué une seconde fois après la tentative de reprise, et l’incident de liaison a été signalé.
+
+## Dernière reprise du 29 octobre : styles et affichages contrôlés
+
+Cette section remplace les validations graphiques encore en attente dans les sections historiques précédentes. Les six pages ont été revues, avec une seule version de la CSS commune enregistrée par page, en conservant leur désactivation et leur placement hors navigation.
+
+- **Douze vues natives :** 1 154 px et 413 px sur Accueil, Maintenance, Métiers, Groupe, Contact et Informations ; un H1 par page, 26 sections au total, aucune ancienne adresse électronique ni pied de page générique.
+- **Mise en page :** aucun débordement horizontal, contenu Markdown dépassant latéralement ou chevauchement entre blocs détecté ; images chargées et textes alternatifs présents.
+- **Source du défaut de styles :** le champ accessible de CodeMirror est un tampon d’entrée, pas le document entier. Le remplacement a été fait en ciblant une ligne visible, sélectionnant tout le document par clavier, puis saisissant une seule feuille avant sauvegarde.
+- **Navigation réelle :** clics Accueil → Maintenance → Contact → Métiers réussis dans la prévisualisation authentifiée, sans activer les pages.
+- **Saisie réelle :** six choix de prestation parcourus au clavier ; texte de 2 040 caractères à 413 px, sans débordement ; champs de test vides après sortie puis réouverture de Contact. Aucun envoi.
+- **Douze rendus complémentaires :** copies DOM natives sans scripts à 375 et 1 440 px, avec un H1, une seule feuille de page, images chargées, aucune largeur excédentaire ni dépassement vertical de texte. Ce sont des vérifications de rendu, pas des preuves de fonctionnement natif.
+- **Limite menu :** ouverture/fermeture non validée dans l’éditeur, puis blocage lors du passage en aperçu plein écran et du contrôle direct à 375 px. La simulation de dimensions a été retirée avec succès ; le contrôle Comet a été arrêté.
+- **Limites générales :** aucune transmission ni délivrabilité testée ; pas d’audit exhaustif des scripts tiers, de la console Squarespace ou d’accessibilité.
+
+Les relevés actuels sont `native-final-*.json`, `native-detached-qa.json` et `native-interaction-verification.json`. Le dépôt GitHub privé dédié a été créé et alimenté ; le futur hébergement Hostinger est préparé documentairement, sans déploiement, bascule DNS ni modification des dépôts antérieurs.

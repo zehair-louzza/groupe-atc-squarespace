@@ -1,0 +1,140 @@
+{
+  "page": "Maintenance",
+  "file": "maintenance",
+  "disabled": {
+    "page": "Maintenance",
+    "enabled": false,
+    "title": "GROUPE ATC | Maintenance"
+  },
+  "desktop": {
+    "page": "Maintenance",
+    "design": true,
+    "emailLinks": [
+      "mailto:contact@anelecgroupe.com"
+    ],
+    "formCount": 0,
+    "h1": [
+      "Maintenance multitechnique"
+    ],
+    "headerLinks": [
+      {
+        "href": "#page",
+        "text": "Passer au contenu"
+      },
+      {
+        "href": "/",
+        "text": "GROUPE ATC"
+      },
+      {
+        "href": "/mentions-legales",
+        "text": "Mentions légales"
+      },
+      {
+        "href": "/services-content",
+        "text": "Services"
+      },
+      {
+        "href": "/about",
+        "text": "À propos"
+      },
+      {
+        "href": "/contact",
+        "text": "Contact"
+      },
+      {
+        "href": "/",
+        "text": "GROUPE ATC"
+      },
+      {
+        "href": "/mentions-legales",
+        "text": "Mentions légales"
+      },
+      {
+        "href": "/services-content",
+        "text": "Services"
+      },
+      {
+        "href": "/about",
+        "text": "À propos"
+      },
+      {
+        "href": "/contact",
+        "text": "Contact"
+      },
+      {
+        "href": "/mentions-legales",
+        "text": "Mentions légales"
+      },
+      {
+        "href": "/services-content",
+        "text": "Services"
+      },
+      {
+        "href": "/about",
+        "text": "À propos"
+      },
+      {
+        "href": "/contact",
+        "text": "Contact"
+      }
+    ],
+    "images": [],
+    "oldEmail": false,
+    "overflow": false,
+    "placeholderFooter": false,
+    "sections": 4,
+    "width": 1154
+  },
+  "desktopMetrics": {
+    "clipping": [],
+    "form": [],
+    "frame": {
+      "bottom": 687.6000366210938,
+      "height": 616.6000366210938,
+      "right": 1510.4000244140625,
+      "width": 1168.4000244140625,
+      "x": 342,
+      "y": 71
+    },
+    "h1": [
+      "Maintenance multitechnique"
+    ],
+    "images": [],
+    "mailto": [
+      "mailto:contact@anelecgroupe.com"
+    ],
+    "oldEmail": false,
+    "overlaps": [],
+    "placeholderFooter": false,
+    "scrollWidth": 1154,
+    "scrollY": 0,
+    "sections": 4,
+    "width": 1154
+  },
+  "mobile": {
+    "clipping": [],
+    "form": [],
+    "frame": {
+      "bottom": 687.6000366210938,
+      "height": 616.6000366210938,
+      "right": 1140.2000122070312,
+      "width": 428,
+      "x": 712.2000122070312,
+      "y": 71
+    },
+    "h1": [
+      "Maintenance multitechnique"
+    ],
+    "images": [],
+    "mailto": [
+      "mailto:contact@anelecgroupe.com"
+    ],
+    "oldEmail": false,
+    "overlaps": [],
+    "placeholderFooter": false,
+    "scrollWidth": 413,
+    "scrollY": 3906.39990234375,
+    "sections": 4,
+    "width": 413
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-29",
+  "context": "Authenticated native Squarespace preview in Comet, no page activation",
+  "method": "Real clicks, keyboard choices and input tools; results observed in rendered DOM",
+  "navigationPassed": [
+    {"from": "Accueil", "to": "/groupe-atc-maintenance", "h1": "Maintenance multitechnique"},
+    {"from": "Maintenance", "to": "/groupe-atc-contact", "h1": "Contact GROUPE ATC"},
+    {"from": "Contact", "to": "/groupe-atc-metiers", "h1": "Travaux TCE et métiers"}
+  ],
+  "sixServiceOptionsSelectedWithKeyboard": true,
+  "localLongRequestCharacters": 2040,
+  "longRequestMobileWidth": 413,
+  "longRequestScrollWidth": 413,
+  "longRequestOverlapsObserved": [],
+  "testFieldsClearedAfterLeavingAndReopening": true,
+  "formSubmitted": false,
+  "emailDeliveryVerified": false,
+  "mobileMenuOpenCloseVerified": false,
+  "mobileMenuLimitation": "Editor preview did not open the menu; later fullscreen/375 attempt made frame zero-sized and navigation/runtime commands timed out. Device metrics override was successfully cleared and browser control stopped."
+}

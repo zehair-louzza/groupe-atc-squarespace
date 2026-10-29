@@ -1,6 +1,6 @@
 # GROUPE ATC : cahier de création du nouveau site Squarespace
 
-Version actualisée le 29 octobre 2026 après vos confirmations et la reprise de la mise en page native des six brouillons autorisés. Ce dossier réunit le positionnement, l’architecture, les textes, une direction graphique indépendante des anciennes couleurs et les instructions de réalisation dans le site Squarespace existant.
+Version actualisée le 29 octobre 2026 après la mise en forme des six brouillons natifs et votre demande d’un dépôt GitHub avec hébergement Hostinger ultérieur. Ce dossier réunit le positionnement, l’architecture, les textes, une direction graphique indépendante des anciennes couleurs et les instructions de réalisation dans le site Squarespace existant, sans confondre cette version native avec les sources autonomes.
 
 ## Décision de conception
 
@@ -9,6 +9,12 @@ Le nouveau site présente **GROUPE ATC**, développé exactement en « GROUPE AN
 Les coordonnées confirmées sont `+33184809385`, `contact@anelecgroupe.com` et `9 RUE DES COLONNES, 75002 PARIS`. L’utilisateur a corrigé explicitement l’ancienne saisie du courriel ; le domaine de messagerie correspond à celui du site.
 
 La recommandation est un site vitrine natif Squarespace 7.1, administrable dans Fluid Engine, et non la conversion intégrale d’un projet React en un grand bloc de code. Fluid Engine est l’éditeur principal de la version 7.1 ; le dispositif historique Developer Platform et son accès aux fichiers de modèles concernent la version 7.0, pas la création de modèles 7.1 ([documentation Fluid Engine](https://support.squarespace.com/hc/en-us/articles/6421525446541-Edit-your-site-with-Fluid-Engine), [limites de Developer Platform](https://support.squarespace.com/hc/en-us/articles/206545717-Squarespace-Developer-Platform-FAQ)).
+
+### Évolution demandée : GitHub et Hostinger
+
+Un nouveau dépôt privé dédié, [groupe-atc-squarespace](https://github.com/zehair-louzza/groupe-atc-squarespace), a été créé et alimenté sur sa branche `main`, sans modifier les dépôts existants. Il conserve la version autonome dans `site/` ainsi que les éléments natifs Squarespace ; vous avez demandé de déployer sur Hostinger plus tard, pas maintenant.
+
+La migration prévue utilisera les sources autonomes, pas un export automatique des blocs Fluid Engine. Le formulaire autonome reste un récapitulatif local à raccorder à un traitement réel avant lancement ; aucun transfert, changement de DNS ni déploiement Hostinger n’a été exécuté.
 
 ### Objectifs du site
 
@@ -330,11 +336,11 @@ Les blocs de code acceptent du HTML et du CSS ; l’exécution de JavaScript dé
 
 GitHub peut servir à versionner le cahier de création, les textes validés et les éventuels compléments CSS/JavaScript. Il ne faut pas confondre cet usage avec un déploiement automatique des pages Fluid Engine ; l’accès Git aux modèles décrit par Developer Platform relève de la version 7.0 ([documentation Developer Platform](https://support.squarespace.com/hc/en-us/articles/206545717-Squarespace-Developer-Platform-FAQ)).
 
-Vercel peut être conservé comme environnement de maquette distinct si cela devient utile. Pour ce projet, la cible recommandée reste Squarespace ; aucun changement d’hébergement, redirection de domaine ou bascule DNS n’est nécessaire au stade du présent dossier.
+Vercel peut être conservé comme environnement de maquette distinct si cela devient utile. La mise en page native reste dans Squarespace, tandis que vous avez choisi Hostinger pour un déploiement ultérieur de la version autonome ; aucune migration ni bascule DNS n’est effectuée à ce stade.
 
 État d’avancement au 29 octobre 2026 :
 
-- **GitHub :** le dépôt Groupe-ATC-new a été cloné pour préparer une branche locale ; aucun envoi de ces nouveaux contenus vers le dépôt public n’est effectué sans accord ([dépôt cible](https://github.com/zehair-louzza/Groupe-ATC-new)).
+- **GitHub :** le nouveau [dépôt privé dédié](https://github.com/zehair-louzza/groupe-atc-squarespace) est alimenté sur `main`. Le dépôt public précédemment cloné et les autres dépôts existants ne sont pas modifiés.
 - **Vercel :** la configuration consultée référence un projet `groupe-atc` lié au dépôt existant ; la récupération publique de son alias n’a pas permis de vérifier le rendu du site.
 - **Squarespace :** le connecteur expose le commerce ; [l’éditeur du site existant](https://mandolin-jaguar-flrs.squarespace.com/config/pages) a ensuite été retrouvé dans Comet, en version 7.1.
 - **Pages Squarespace :** six compositions natives enregistrées, avec illustration, logo historique et formulaire ; les nouvelles pages restent hors navigation et aucune activation n’a été effectuée.
@@ -344,7 +350,9 @@ Vercel peut être conservé comme environnement de maquette distinct si cela dev
 
 Votre autorisation de créer les brouillons et d’afficher GROUPE ATC a donc été appliquée. Le formulaire natif est configuré avec la destination corrigée, sans inscription marketing automatique ; aucun envoi test n’a été effectué. La publication des nouvelles pages reste une décision séparée.
 
-Les contrôles finaux du bureau, du mobile, des visuels, des espacements et de la désactivation sont suivis dans le compte rendu d’intégration actualisé. Une seconde reprise a permis de corriger et relire le formulaire, puis la liaison Comet s’est de nouveau interrompue pendant la passe graphique et la reconnexion a échoué. Les résultats de la maquette privée ne sont pas utilisés comme preuve de réception du site natif.
+Les six pages disposent maintenant d’une seule version de la CSS commune enregistrée ; leurs affichages bureau/mobile ont été contrôlés dans Squarespace, avec un H1 par page et sans débordement ni chevauchement détecté. La navigation Accueil → Maintenance → Contact → Métiers et la saisie longue du formulaire ont été testées sans envoi ; le menu mobile natif en aperçu plein écran n’a toutefois pas pu être validé après un blocage de Comet.
+
+Des copies DOM natives ont aussi été vérifiées à 375 et 1 440 px, uniquement pour l’affichage. Elles ne prouvent ni les scripts natifs, ni le menu, ni la transmission du formulaire ; les six pages restent désactivées.
 
 ## Formulaire de devis et traitement des demandes
 
@@ -369,7 +377,7 @@ Le bloc Form permet de définir les champs et d’afficher des questions complé
 
 Le formulaire natif préparé comporte Nom, Courriel professionnel, Site et commune, Votre besoin, Téléphone facultatif et Nature de la demande. Le champ de site accepte un logement comme un lieu professionnel ; le nom de l’entreprise n’est demandé que s’il est utile. Les six choix ont été corrigés puis relus après fermeture et réouverture de Contact : Essentiel 2 visites, Suivi 4 visites, Continuité 12 visites, maintenance à définir, Travaux TCE et Intervention ponctuelle. Aucun dépôt de fichier n’est ajouté.
 
-Le bouton est « Envoyer ma demande » et la destination contact@anelecgroupe.com a été relue dans l’éditeur. Le message post-envoi a également été retrouvé, avec la réserve précisant qu’une demande ne vaut ni commande, ni devis accepté, ni confirmation d’intervention ; l’inscription aux e-mails a été observée décochée. La réception réelle reste à tester avec votre autorisation, et la réception graphique du formulaire reste à terminer.
+Le bouton est « Envoyer ma demande » et la destination contact@anelecgroupe.com a été relue dans l’éditeur. Le message post-envoi a également été retrouvé, avec la réserve précisant qu’une demande ne vaut ni commande, ni devis accepté, ni confirmation d’intervention ; l’inscription aux e-mails a été observée décochée. L’affichage du formulaire, ses six choix au clavier et une saisie longue ont été contrôlés sans transmission ; la réception réelle reste à tester avec votre autorisation.
 
 Dans la prévisualisation privée distincte, le bouton « Préparer ma demande » crée seulement un récapitulatif local ; aucun envoi automatique ni stockage serveur n’est simulé. Le tableau ci-dessus décrit des évolutions possibles, pas une liste de champs tous activés dans le formulaire natif.
 
@@ -419,7 +427,7 @@ Contrôler les contenus, le mobile, les liens, le formulaire, les coordonnées e
 
 ### Publication
 
-La mise en ligne et toute modification de domaine ou de DNS constituent une étape distincte à autoriser. L’ancien site et les dépôts existants restent inchangés tant qu’un plan de transition n’a pas été confirmé.
+La mise en ligne et toute modification de domaine ou de DNS constituent une étape distincte à autoriser. L’accueil, la navigation et les anciennes pages ne sont pas remplacés ; seuls les changements globaux d’identité et le nettoyage déjà autorisés ont été appliqués, tandis que les dépôts antérieurs restent inchangés.
 
 | Critère | Résultat attendu |
 |---|---|
@@ -445,6 +453,6 @@ Vous avez confirmé le renommage d’ANELEC, la signification du sigle et le mai
 - **Maintenance :** trois propositions de fréquence et un document de périmètre et de conditions ont été préparés, sans contrat activé.
 - **Réalisations :** architecture présente dans le code, données vides, publication désactivée.
 - **Brouillons autorisés :** six pages créées, contenus enregistrés et désactivation confirmée ; GROUPE ATC est configuré comme nom affiché.
-- **Validation restante :** homogénéiser la dernière révision de style et terminer les contrôles natifs après rétablissement de Comet ; compléter ensuite les mentions juridiques, la confidentialité et les moyens de l’offre, autoriser un test réel de réception du formulaire, puis décider séparément de la publication. Les six choix du formulaire et les réglages de destination, marketing et message post-envoi sont désormais relus ; aucun test d’envoi n’a été effectué.
+- **Validation restante :** contrôler le menu mobile natif en aperçu visiteur, compléter les mentions juridiques, la confidentialité et les moyens de l’offre, puis autoriser un test réel de réception du formulaire avant une éventuelle publication. La CSS et les affichages des six pages sont désormais harmonisés et contrôlés ; les six choix et les réglages du formulaire sont relus, sans envoi de test. Le déploiement Hostinger est reporté selon votre demande, et son formulaire serveur reste à préparer.
 
 La prévisualisation et les six brouillons natifs constituent deux versions distinctes. La mise en page native est réellement enregistrée dans Fluid Engine, avec ses propres styles, images et formulaire ; le compte rendu d’intégration précise la réception observée et les conditions restant à traiter avant une ouverture publique.
