@@ -68,7 +68,7 @@ Cette mise à jour remplace les anciennes indications sur le courriel et la cons
 - **Hors parcours :** demande longue, balises inertes, paramètres inconnus et repli d’image indisponible contrôlés ; aucune exception JavaScript et aucun message externe envoyé.
 - **Tests :** quatre tests automatisés passent ; le script reproductible est `tests/browser-qa.mjs`, avec les résultats dans `browser-results-updated.json`.
 - **Version hébergée :** les douze affichages et l’ensemble des parcours ci-dessus ont également été rejoués dans un contexte neuf après le déploiement privé, sans exception JavaScript ni envoi externe.
-- **Nettoyage natif :** panier et Réserver retirés ; Boutique hors navigation, mais pas désactivée et aucune donnée supprimée.
+- **Ajustements natifs :** panier et Réserver retirés ; Boutique hors navigation, mais pas désactivée et aucune donnée supprimée.
 - **Mise en page native :** Accueil, Maintenance, Métiers et Groupe enregistrés avec respectivement quatre, quatre, cinq et quatre sections ; image native sur Accueil.
 - **Limite de connexion :** déconnexion de Comet pendant Contact ; la tentative de récupération échoue également. Contact, Informations, pied de page, formulaire, placement du logo et réception native finale ne sont pas déclarés terminés.
 
@@ -118,3 +118,11 @@ Cette section remplace les validations graphiques encore en attente dans les sec
 - **Limites générales :** aucune transmission ni délivrabilité testée ; pas d’audit exhaustif des scripts tiers, de la console Squarespace ou d’accessibilité.
 
 Les relevés actuels sont `native-final-*.json`, `native-detached-qa.json` et `native-interaction-verification.json`. Le dépôt GitHub privé dédié a été créé et alimenté ; le futur hébergement Hostinger est préparé documentairement, sans déploiement, bascule DNS ni modification des dépôts antérieurs.
+
+## Correction métier suivante
+
+Les textes du site autonome et les sources natives sont limités aux métiers confirmés. Le cinquième test protège les six pages HTML, les six textes natifs, le fichier de sections et les deux documents commerciaux contre le retour des spécialités écartées.
+
+Le module `runPreviewQA` a été rejoué après reconstruction : douze rendus, six parcours, aucune erreur JavaScript ni message externe. Les résultats sont dans `browser-results-updated.json` ; les captures Maintenance à 375 et 1 440 px ont été relues.
+
+La liaison Comet a empêché toute modification native : la page Services existante et le brouillon Maintenance gardent encore leur formulation antérieure. Ces deux retraits ne sont pas validés et la recette native précédente reste historique.

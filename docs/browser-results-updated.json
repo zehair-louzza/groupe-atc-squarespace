@@ -1,5 +1,5 @@
 {
-  "base": "hosted-private-preview",
+  "base": "http://127.0.0.1:3000/",
   "pages": [
     {
       "file": "index",

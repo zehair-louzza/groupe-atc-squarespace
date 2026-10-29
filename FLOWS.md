@@ -30,7 +30,7 @@ Les six pages restent désactivées pendant les modifications. Le travail couvre
 - Tester les choix de prestation et la saisie locale sans déclencher « Envoyer ma demande » ; ne pas prétendre vérifier la délivrabilité.
 - Ne pas envoyer de test externe sans autorisation.
 
-## Nettoyage du site vitrine
+## Ajustements du site vitrine
 
 - Retirer le panier et l’action de réservation de l’en-tête.
 - Masquer la boutique et les éléments de commerce non pertinents, sans supprimer leur contenu ni leurs données.
@@ -60,3 +60,16 @@ Les six pages ont une version unique de la CSS enregistrée et ont été retrouv
 - **Non vérifiés :** ouverture/fermeture du menu mobile natif dans le contexte visiteur, transmission réelle et réception de demande. La défaillance de Comet en aperçu plein écran ne remet pas en cause les styles déjà enregistrés mais empêche de valider le menu.
 - **GitHub :** dépôt privé dédié créé et alimenté sur `main`, sans modification des anciens dépôts.
 - **Hostinger :** préparation documentaire uniquement ; aucun transfert, déploiement ou changement DNS. Le formulaire autonome doit encore être relié à un traitement réel.
+
+## Correction du périmètre métier
+
+La dernière demande limite l’offre à la plomberie, l’électricité, la serrurerie et la rénovation/finitions intérieures. Retirer les spécialités non exercées des textes, exclusions conditionnelles, formulaires et descriptions ; les notes de recette ne doivent pas être présentées comme des prestations.
+
+- **Sources :** vérifier les textes natifs, les gabarits HTML, la structure des sections et les documents commerciaux, puis reconstruire les six pages.
+- **Squarespace :** corriger la phrase de la page Services existante et les exclusions de Maintenance ; parcourir aussi les autres pages, sans activer les six nouveaux brouillons.
+- **Non-régression :** conserver les coordonnées, les trois fréquences proposées, les six choix natifs, les liens, les accordéons et le récapitulatif local sans envoi.
+- **Publication :** aucun déploiement Hostinger/Vercel ni changement DNS ; le retrait ciblé sur la page Services existante ne vaut pas activation des nouvelles pages.
+
+Les cinq tests automatisés et les douze affichages du site autonome passent après correction. Les six parcours du module de recette passent également, sans erreur JavaScript ni message transmis ; le menu natif Squarespace n’est pas concerné par ce résultat.
+
+Le retrait natif reste en attente sur Services et Maintenance, car Comet a perdu la liaison avant toute saisie. Le simple passage dans l’éditeur n’a modifié ni enregistré aucun texte.

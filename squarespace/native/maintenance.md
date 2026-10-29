@@ -50,7 +50,7 @@ Repérage des dégradations de peinture, plaques de plâtre et carrelage. Les re
 
 ## Ce qui n’est pas inclus par défaut
 
-Pièces, consommables, dépannage correctif, remplacement d’équipements, recherches destructives et travaux de rénovation. Les lots chauffage, climatisation, sécurité incendie, ascenseurs, toiture et structure sont exclus sauf étude et accord spécifiques.
+Pièces, consommables, dépannage correctif, remplacement d’équipements, recherches destructives et travaux de rénovation. Seuls les lots explicitement retenus au contrat parmi la plomberie, l’électricité, la serrurerie et les finitions intérieures sont concernés ; aucune autre spécialité technique n’est proposée.
 
 ## Organisation et compte rendu
 

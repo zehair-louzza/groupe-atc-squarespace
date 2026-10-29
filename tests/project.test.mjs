@@ -30,3 +30,16 @@ test('Schedules are proposals, with explicit bounded time',()=>{
   assert.equal(config.publicationApproved,false);
   assert.equal(config.formMode,'local-summary');
 });
+
+test('Rendered offers and native sources stay within the confirmed trade scope',()=>{
+  const excluded=/\bcvc\b|chauffage|ventilation|climatis|nettoy|netyage|propret[eé]|g[eé]nie climatique|facility\s*management|d[eé]senfum|frigor|pompe [aà] chaleur/i;
+  for(const page of ['index','maintenance','metiers','groupe','contact','informations']){
+    assert.doesNotMatch(fs.readFileSync(`site/${page}.html`,'utf8'),excluded,`Unexpected trade in ${page}.html`);
+  }
+  for(const page of ['accueil','maintenance','metiers','groupe','contact','informations']){
+    assert.doesNotMatch(fs.readFileSync(`squarespace/native/${page}.md`,'utf8'),excluded,`Unexpected trade in native ${page}`);
+  }
+  for(const file of ['squarespace/native/layout.json','docs/offre-maintenance-proposee.md','docs/cahier-creation-squarespace.md']){
+    assert.doesNotMatch(fs.readFileSync(file,'utf8'),excluded,`Unexpected trade in ${file}`);
+  }
+});

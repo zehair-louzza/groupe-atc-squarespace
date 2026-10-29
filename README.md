@@ -2,6 +2,12 @@
 
 GROUPE ATC signifie « GROUPE ANELEC TECHNIQUE ET CONCEPTE », selon l’orthographe communiquée le 28 octobre 2026. ANELEC a simplement été renommée ; aucune filiale nouvelle n’est présentée.
 
+## Dernière correction de périmètre
+
+Les textes du site autonome, les sources natives et les documents commerciaux sont limités à la plomberie, l’électricité, la serrurerie et la rénovation/finitions intérieures. Un test de non-régression contrôle l’absence des spécialités écartées.
+
+La répercussion de cette correction dans Squarespace reste en attente : Comet a perdu la connexion avant toute saisie ou sauvegarde. Les deux cibles sont le paragraphe de maintenance de `/services-content` et les exclusions de `/groupe-atc-maintenance` ; les sources de remplacement sont conservées dans `squarespace/native/`, sans activation des six brouillons.
+
 ## Structure
 
 - `data/site.json` : marque, intitulé complet, coordonnées et propositions de maintenance.

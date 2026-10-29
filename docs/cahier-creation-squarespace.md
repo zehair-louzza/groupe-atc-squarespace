@@ -4,6 +4,8 @@ Version actualisée le 29 octobre 2026 après la mise en forme des six brouillon
 
 ## Décision de conception
 
+Le dernier périmètre confirmé se limite à la plomberie et aux sanitaires, à l’électricité, à la serrurerie et à la rénovation/finitions intérieures. Les sources et documents ont été corrigés ; deux textes correspondants dans Squarespace restent à enregistrer, car Comet a perdu la connexion avant toute saisie, sans activation des brouillons.
+
 Le nouveau site présente **GROUPE ATC**, développé exactement en « GROUPE ANELEC TECHNIQUE ET CONCEPTE ». Vous avez confirmé un simple renommage d’ANELEC, sans création de filiale, et le maintien du domaine `anelecgroupe.com` ; la dénomination juridique inscrite au registre reste à distinguer de cette marque.
 
 Les coordonnées confirmées sont `+33184809385`, `contact@anelecgroupe.com` et `9 RUE DES COLONNES, 75002 PARIS`. L’utilisateur a corrigé explicitement l’ancienne saisie du courriel ; le domaine de messagerie correspond à celui du site.
@@ -26,7 +28,7 @@ La migration prévue utilisera les sources autonomes, pas un export automatique 
 
 ### Ce qui est retenu de B3T
 
-L’analyse B3T apporte une logique utile : une entrée par le besoin du client, des pages métiers, une méthode d’intervention, des références et un accès clair au contact. En revanche, les engagements d’astreinte permanente, d’intervention sous quatre heures, de GMAO, de génie climatique ou de facility management publiés par B3T ne doivent pas être attribués à GROUPE ATC sans justification propre ([offre B3T examinée](https://www.b3t.fr/maintenance-multitechnique/)).
+L’analyse B3T apporte une logique utile : une entrée par le besoin du client, des pages métiers, une méthode d’intervention, des références et un accès clair au contact. En revanche, les engagements d’astreinte permanente, d’intervention sous quatre heures ou de GMAO publiés par B3T ne doivent pas être attribués à GROUPE ATC sans justification propre ([offre B3T examinée](https://www.b3t.fr/maintenance-multitechnique/)).
 
 | Principe de départ | Adaptation GROUPE ATC |
 |---|---|
@@ -224,7 +226,7 @@ La page peut proposer un appel au numéro confirmé, 01 84 80 93 85, et un formu
 
 ### Travaux TCE et rénovation
 
-Titre proposé : « Des travaux cohérents, du besoin aux finitions ». L’objectif est de présenter la complémentarité des métiers, sans promettre des études d’architecture, du gros œuvre complet ou des prestations CVC non documentées.
+Titre proposé : « Des travaux cohérents, du besoin aux finitions ». L’objectif est de présenter uniquement la complémentarité de la plomberie, de l’électricité, de la serrurerie et de la rénovation/finitions intérieures, sans promettre d’études d’architecture ni de gros œuvre complet.
 
 Texte de départ :
 
@@ -345,7 +347,7 @@ Vercel peut être conservé comme environnement de maquette distinct si cela dev
 - **Squarespace :** le connecteur expose le commerce ; [l’éditeur du site existant](https://mandolin-jaguar-flrs.squarespace.com/config/pages) a ensuite été retrouvé dans Comet, en version 7.1.
 - **Pages Squarespace :** six compositions natives enregistrées, avec illustration, logo historique et formulaire ; les nouvelles pages restent hors navigation et aucune activation n’a été effectuée.
 - **Identité affichée :** GROUPE ATC est enregistré dans l’en-tête, le titre du site et le pied de page ; l’intitulé complet et les coordonnées corrigées sont présents dans le pied de page.
-- **Nettoyage :** panier et bouton Réserver retirés de l’en-tête ; Boutique déplacée hors navigation. Les données commerciales et anciennes pages sont conservées. La boutique n’est pas déclarée désactivée.
+- **Ajustements du site :** panier et bouton Réserver retirés de l’en-tête ; Boutique déplacée hors navigation. Les données commerciales et anciennes pages sont conservées. La boutique n’est pas déclarée désactivée.
 - **Périmètre préservé :** aucun déploiement Vercel, envoi au dépôt public ou changement de domaine, de DNS ou d’abonnement ; les nouvelles pages n’ont pas remplacé l’accueil et le menu publics.
 
 Votre autorisation de créer les brouillons et d’afficher GROUPE ATC a donc été appliquée. Le formulaire natif est configuré avec la destination corrigée, sans inscription marketing automatique ; aucun envoi test n’a été effectué. La publication des nouvelles pages reste une décision séparée.
@@ -427,7 +429,7 @@ Contrôler les contenus, le mobile, les liens, le formulaire, les coordonnées e
 
 ### Publication
 
-La mise en ligne et toute modification de domaine ou de DNS constituent une étape distincte à autoriser. L’accueil, la navigation et les anciennes pages ne sont pas remplacés ; seuls les changements globaux d’identité et le nettoyage déjà autorisés ont été appliqués, tandis que les dépôts antérieurs restent inchangés.
+La mise en ligne et toute modification de domaine ou de DNS constituent une étape distincte à autoriser. L’accueil, la navigation et les anciennes pages ne sont pas remplacés ; seuls les changements globaux d’identité et les ajustements déjà autorisés ont été appliqués, tandis que les dépôts antérieurs restent inchangés.
 
 | Critère | Résultat attendu |
 |---|---|

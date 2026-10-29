@@ -4,6 +4,14 @@
   "layoutSavedAndHarmonized": true,
   "finalNativeDisplayChecksComplete": true,
   "publicLaunchReady": false,
+  "latestTradeScopeRevision": {
+    "sourceCorrected": true,
+    "appliedToSquarespace": false,
+    "pendingPaths": ["/services-content", "/groupe-atc-maintenance"],
+    "nativeTextChangedThisPass": false,
+    "reason": "Comet connection lost before any typing or save",
+    "earlierNativeDisplayChecksRemainHistorical": true
+  },
   "lastCssRevisionAppliedUniformly": true,
   "cssCopiesPerPage": 1,
   "nativeWidthsChecked": [1154, 413],

@@ -48,7 +48,7 @@ Les tâches ne sont incluses que pour les équipements accessibles, inventoriés
 | Serrurerie | Fonctionnement des serrures et ouvrants sélectionnés. | Réglage simple et lubrification compatible avec les préconisations. | Ouverture d’urgence, fourniture, remplacement, porte automatique et contrôle d’accès non prévus. |
 | Finitions intérieures | Repérage des dégradations de peinture, plaques de plâtre et carrelage. | Relevé et recommandation ; petites actions seulement si elles sont décrites au devis. | Remise en peinture, réfection de cloisons, carrelage et travaux de rénovation. |
 
-Les prestations de chauffage, climatisation, désenfumage, sécurité incendie, ascenseur, toiture et structure ne sont pas incluses. Leur éventuel ajout suppose une analyse des compétences, assurances et justificatifs nécessaires, puis une annexe et un prix spécifiques.
+L’offre est limitée aux quatre lots du tableau : plomberie et sanitaires, électricité, serrurerie, rénovation et finitions intérieures. Aucune autre spécialité technique n’entre dans les prestations proposées.
 
 ## Organisation des visites
 
