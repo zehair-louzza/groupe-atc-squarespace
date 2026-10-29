@@ -40,15 +40,16 @@ body { background: var(--atc-paper); color: var(--atc-ink); }
   font-family: var(--atc-body);
   font-size: var(--atc-small);
 }
-#header .header-inner { max-width: 1280px; margin-inline: auto; padding: var(--atc-space-6) var(--atc-gutter); }
+#header .header-inner { box-sizing: border-box; width: 100%; max-width: 1280px; margin-inline: auto; padding: var(--atc-space-6) var(--atc-gutter); }
 #page .page-section .content-wrapper {
   max-width: 1280px !important;
   padding-inline: var(--atc-gutter) !important;
 }
+#page .page-section:first-of-type .content-wrapper { padding-block: var(--atc-space-16) !important; }
 #page .page-section .section-background { background: var(--atc-paper) !important; }
 #page .page-section:nth-of-type(even) .section-background { background: var(--atc-white) !important; }
 #page .page-section:first-of-type .section-background { background: var(--atc-ink) !important; }
-#page .page-section:first-of-type .markdown-block :is(h1,h2,h3,p,li,a,strong) { color: var(--atc-white); }
+#page .page-section:first-of-type .markdown-block :is(h1,h2,h3,p,li,a,strong,small) { color: var(--atc-white); }
 #page .markdown-block { color: var(--atc-ink); }
 #page .markdown-block :is(p,li) {
   font-family: var(--atc-body);
@@ -74,7 +75,7 @@ body { background: var(--atc-paper); color: var(--atc-ink); }
 #page .markdown-block small { font-size: var(--atc-small); font-family: var(--atc-body); }
 #footer-sections .section-background { background: var(--atc-ink) !important; }
 #footer-sections :is(h2,h3,p,li,a,strong) { color: var(--atc-white); font-family: var(--atc-body); }
-#footer-sections h2 { font-family: var(--atc-display); font-weight: 600; }
+#footer-sections h2 { font-family: var(--atc-display); font-weight: 600; font-size: var(--atc-heading); letter-spacing: -.04em; }
 #footer-sections :is(p,li,a) { font-size: var(--atc-small); line-height: 1.7; }
 #footer-sections a { text-underline-offset: .2em; }
 #page .markdown-block :is(ul,ol) { padding-inline-start: var(--atc-space-6); }
@@ -87,17 +88,20 @@ body { background: var(--atc-paper); color: var(--atc-ink); }
 }
 #page .markdown-block p:has(> a:only-child[href^="/groupe-atc-"]) { margin-top: var(--atc-space-8); }
 #page .markdown-block p > a:only-child[href^="/groupe-atc-"] {
+  box-sizing: border-box;
   display: inline-flex;
   align-items: center;
   min-height: 48px;
-  padding: var(--atc-space-4) var(--atc-space-6);
+  padding: var(--atc-space-2) var(--atc-space-6);
   border: 1px solid currentColor;
   border-radius: 2px;
   font-size: var(--atc-small);
   font-weight: 600;
   text-decoration: none;
 }
-#page .sqs-block-button .sqs-block-button-element {
+#page .sqs-block-button .sqs-block-button-element,
+#page .form-wrapper .form-submit-button {
+  box-sizing: border-box;
   background: var(--atc-blue) !important;
   color: var(--atc-white) !important;
   border: 1px solid var(--atc-blue) !important;
@@ -105,6 +109,7 @@ body { background: var(--atc-paper); color: var(--atc-ink); }
   font-family: var(--atc-body);
   font-size: var(--atc-small);
   min-height: 48px;
+  padding: var(--atc-space-2) var(--atc-space-6);
 }
 #page .image-block figcaption { font-family: var(--atc-body); font-size: var(--atc-small); }
 #page .form-wrapper :is(label,input,textarea,select,button) { font-family: var(--atc-body); font-size: var(--atc-base); }
@@ -119,10 +124,12 @@ body { background: var(--atc-paper); color: var(--atc-ink); }
     column-gap: var(--atc-space-16);
   }
   #page .page-section:not(:first-of-type) .markdown-block h2 { column-span: all; }
+  #page .page-section:has(.image-block) .markdown-block .sqs-block-content { column-count: 1; }
   #page .markdown-block :is(h3,p,li) { break-inside: avoid; }
 }
 @media (max-width: 767px) {
   #header .header-inner { padding-block: var(--atc-space-4); }
+  #page .page-section:first-of-type .content-wrapper { padding-block: var(--atc-space-12) !important; }
   #page .markdown-block h1 { font-size: clamp(2.4rem, 9vw, 3.4rem); max-width: 16ch; }
   #page .markdown-block h2 { font-size: clamp(1.7rem, 6vw, 2.2rem); }
   #page .markdown-block p > a:only-child[href^="/groupe-atc-"] { max-width: 100%; }

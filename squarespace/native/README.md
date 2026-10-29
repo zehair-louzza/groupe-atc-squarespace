@@ -11,10 +11,12 @@ Ces six textes ont été enregistrés dans des blocs Markdown natifs de sections
 | `contact.md` | GROUPE ATC \| Contact | `/groupe-atc-contact` |
 | `informations.md` | GROUPE ATC \| Informations | `/groupe-atc-informations` |
 
-Le nom de site est GROUPE ATC et l’intitulé complet est GROUPE ANELEC TECHNIQUE ET CONCEPTE, selon l’orthographe demandée. Le courriel confirmé est contact@anelecgroupe.com. Le formulaire est en préparation, les formules de maintenance sont des propositions non activées et les mentions juridiques restent à compléter.
+Le nom de site est GROUPE ATC et l’intitulé complet est GROUPE ANELEC TECHNIQUE ET CONCEPTE, selon l’orthographe demandée. Le courriel confirmé est contact@anelecgroupe.com. Le formulaire natif est configuré sur la page Contact désactivée ; les formules de maintenance sont des propositions non activées et les mentions juridiques restent à compléter.
 
-La composition native est enregistrée pour Accueil (4 sections), Maintenance (4), Métiers (5) et Groupe (4). Un bloc image natif d’illustration est également enregistré sur Accueil ; il ne s’agit pas d’une référence de chantier.
+La composition native est enregistrée pour Accueil (4 sections), Maintenance (4), Métiers (5), Groupe (4), Contact (4) et Informations (5), soit 26 sections. Accueil possède une illustration native avec légende et texte alternatif ; Groupe possède le logo historique ANELEC conservé sans modification. Aucun de ces visuels n’est présenté comme une référence de chantier.
 
-La connexion à Comet a été interrompue pendant la reprise de Contact : son dernier état n’est pas confirmé. Informations, le pied de page, le formulaire, le placement natif du logo historique et la réception graphique finale restent à terminer. Aucun des six brouillons ne doit être activé sans accord distinct.
+Le pied de page générique est remplacé par GROUPE ATC, l’intitulé complet et les coordonnées corrigées. La destination du bloc Form de Contact est configurée à contact@anelecgroupe.com ; l’option d’inscription aux e-mails a été décochée pendant le paramétrage et aucun envoi test n’a été effectué. Le fichier `layout.json` porte les trois sections Markdown de Contact ; sa quatrième section est un bloc Form distinct, créé dans l’éditeur. Aucun des six brouillons ne doit être activé sans accord distinct.
+
+Le formulaire n’est pas finalisé : « Option 3 » et « Option 5 » ont été retrouvées dans son menu, avec Suivi manquant, avant une perte de connexion à Comet. Corriger les six options existantes selon `form-spec.json`, puis relire la destination, l’option marketing et le message post-envoi. La dernière révision CSS et la réception complète des six pages restent également à appliquer et vérifier.
 
 `prepare-layout.mjs` produit `layout.json` à partir des contenus ; ce fichier décrit 25 sections prévues, sans prouver leur présence dans Squarespace. `design.css` est appliqué dans les paramètres avancés de chaque page ; les textes restent éditables dans les blocs natifs. Consulter le rapport d’intégration avant toute reprise.

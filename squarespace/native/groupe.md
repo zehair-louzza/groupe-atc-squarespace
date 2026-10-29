@@ -29,6 +29,8 @@ ANELEC est désormais GROUPE ATC : GROUPE ANELEC TECHNIQUE ET CONCEPTE.
 
 Vous pouvez continuer à nous joindre sur anelecgroupe.com et à l’adresse contact@anelecgroupe.com.
 
+<small>Logo historique ANELEC, conservé sans modification.</small>
+
 ## Échangeons sur votre besoin
 
 [Prendre contact](/groupe-atc-contact)

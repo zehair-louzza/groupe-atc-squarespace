@@ -27,7 +27,9 @@ Aucune qualification, assurance, certification ou date de création n’est inve
 
 ## Données des demandes
 
-Le formulaire natif n’est pas activé dans ces brouillons. Avant sa mise en service, il faudra définir la finalité du traitement, les champs nécessaires, les destinataires, le stockage, la durée de conservation justifiée et les modalités d’exercice des droits.
+Le formulaire natif est préparé sur la page Contact désactivée, avec une réception configurée à contact@anelecgroupe.com. Il ne comporte pas d’inscription marketing automatique. Les informations demandées servent à étudier et traiter votre demande ; le téléphone est facultatif.
+
+Avant sa mise en service publique, il faudra valider l’identité du responsable de traitement, la base légale applicable, les destinataires et sous-traitants, le stockage, la durée de conservation justifiée et les modalités d’exercice des droits. Aucun envoi test n’a été effectué.
 
 Les outils et cookies effectivement utilisés par Squarespace devront être inventoriés et paramétrés. Aucune déclaration d’absence totale de cookies n’est faite sans contrôle du site final.
 

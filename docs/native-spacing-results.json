@@ -1,0 +1,143 @@
+[
+  {
+    "page": "Accueil",
+    "desktop": [
+      {
+        "section": 1,
+        "current": 17,
+        "minimum": 15
+      },
+      {
+        "section": 2,
+        "current": 11,
+        "minimum": 9
+      },
+      {
+        "section": 3,
+        "current": 13,
+        "minimum": 11
+      }
+    ],
+    "mobile": []
+  },
+  {
+    "page": "Maintenance",
+    "desktop": [
+      {
+        "section": 1,
+        "current": 17,
+        "minimum": 15
+      },
+      {
+        "section": 2,
+        "current": 17,
+        "minimum": 15
+      },
+      {
+        "section": 3,
+        "current": 13,
+        "minimum": 11
+      }
+    ],
+    "mobile": []
+  },
+  {
+    "page": "Métiers",
+    "desktop": [
+      {
+        "section": 1,
+        "current": 10,
+        "minimum": 8
+      },
+      {
+        "section": 2,
+        "current": 10,
+        "minimum": 8
+      },
+      {
+        "section": 3,
+        "current": 11,
+        "minimum": 9
+      },
+      {
+        "section": 4,
+        "current": 8,
+        "minimum": 6
+      }
+    ],
+    "mobile": []
+  },
+  {
+    "page": "Groupe",
+    "desktop": [
+      {
+        "section": 1,
+        "current": 12,
+        "minimum": 10
+      },
+      {
+        "section": 2,
+        "current": 15,
+        "minimum": 13
+      },
+      {
+        "section": 3,
+        "current": 8,
+        "minimum": 6
+      }
+    ],
+    "mobile": []
+  },
+  {
+    "page": "Contact",
+    "desktop": [
+      {
+        "section": 0,
+        "current": 12,
+        "minimum": 10
+      },
+      {
+        "section": 1,
+        "current": 17,
+        "minimum": 15
+      },
+      {
+        "section": 2,
+        "current": 13,
+        "minimum": 11
+      }
+    ],
+    "mobile": []
+  },
+  {
+    "page": "Informations",
+    "desktop": [
+      {
+        "section": 0,
+        "current": 13,
+        "minimum": 10
+      },
+      {
+        "section": 1,
+        "current": 12,
+        "minimum": 10
+      },
+      {
+        "section": 2,
+        "current": 16,
+        "minimum": 14
+      },
+      {
+        "section": 3,
+        "current": 12,
+        "minimum": 10
+      },
+      {
+        "section": 4,
+        "current": 8,
+        "minimum": 6
+      }
+    ],
+    "mobile": []
+  }
+]

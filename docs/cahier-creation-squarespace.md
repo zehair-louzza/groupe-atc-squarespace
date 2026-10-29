@@ -1,6 +1,6 @@
 # GROUPE ATC : cahier de création du nouveau site Squarespace
 
-Version actualisée le 28 octobre 2026 après vos confirmations, l’envoi des logos et l’enregistrement des six brouillons autorisés. Ce dossier réunit le positionnement, l’architecture, les textes, une direction graphique indépendante des anciennes couleurs et les instructions de réalisation dans le site Squarespace existant.
+Version actualisée le 29 octobre 2026 après vos confirmations et la reprise de la mise en page native des six brouillons autorisés. Ce dossier réunit le positionnement, l’architecture, les textes, une direction graphique indépendante des anciennes couleurs et les instructions de réalisation dans le site Squarespace existant.
 
 ## Décision de conception
 
@@ -130,10 +130,10 @@ Les six pages ci-dessous sont maintenant créées dans l’éditeur Squarespace 
 | GROUPE ATC \| Maintenance | `/groupe-atc-maintenance` | Essentiel, Suivi, Continuité, périmètre et conditions proposées. |
 | GROUPE ATC \| Métiers | `/groupe-atc-metiers` | Quatre métiers et rubrique dépannage. |
 | GROUPE ATC \| Groupe | `/groupe-atc-groupe` | Intitulé complet, renommage et présentation. |
-| GROUPE ATC \| Contact | `/groupe-atc-contact` | Coordonnées et informations nécessaires pour qualifier une demande ; pas de formulaire actif. |
+| GROUPE ATC \| Contact | `/groupe-atc-contact` | Coordonnées et formulaire natif préparé, avec réception configurée à contact@anelecgroupe.com ; page désactivée. |
 | GROUPE ATC \| Informations | `/groupe-atc-informations` | Cadre de préparation, mentions et données à compléter avant ouverture publique. |
 
-Les textes sont enregistrés dans des blocs Markdown natifs de sections Fluid Engine. La mise en page graphique complète de la prévisualisation, les blocs d’image, les boutons dédiés et le formulaire natif ne sont pas encore reproduits ; la prévisualisation conserve ses fichiers `.html` et le domaine final demandé reste `anelecgroupe.com`.
+Les six compositions enregistrées représentent vingt-six sections Fluid Engine : Accueil 4, Maintenance 4, Métiers 5, Groupe 4, Contact 4 et Informations 5. Les textes sont dans des blocs Markdown natifs ; l’illustration d’accueil, le logo historique et le formulaire utilisent leurs blocs Squarespace dédiés. Les appels à l’action des contenus sont des liens mis en forme par CSS. La prévisualisation privée conserve ses fichiers `.html` et reste distincte des pages natives ; le domaine final demandé reste `anelecgroupe.com`.
 
 ### Évolutions possibles de l’arborescence
 
@@ -332,18 +332,19 @@ GitHub peut servir à versionner le cahier de création, les textes validés et 
 
 Vercel peut être conservé comme environnement de maquette distinct si cela devient utile. Pour ce projet, la cible recommandée reste Squarespace ; aucun changement d’hébergement, redirection de domaine ou bascule DNS n’est nécessaire au stade du présent dossier.
 
-État d’avancement au 28 octobre 2026 :
+État d’avancement au 29 octobre 2026 :
 
 - **GitHub :** le dépôt Groupe-ATC-new a été cloné pour préparer une branche locale ; aucun envoi de ces nouveaux contenus vers le dépôt public n’est effectué sans accord ([dépôt cible](https://github.com/zehair-louzza/Groupe-ATC-new)).
 - **Vercel :** la configuration consultée référence un projet `groupe-atc` lié au dépôt existant ; la récupération publique de son alias n’a pas permis de vérifier le rendu du site.
 - **Squarespace :** le connecteur expose le commerce ; [l’éditeur du site existant](https://mandolin-jaguar-flrs.squarespace.com/config/pages) a ensuite été retrouvé dans Comet, en version 7.1.
-- **Pages Squarespace :** six pages créées et leurs textes enregistrés ; toutes sont hors navigation, avec « Activer la page » désactivé dans leurs paramètres.
-- **Identité affichée :** le titre générique a été remplacé par GROUPE ATC dans l’en-tête et le titre du site ; l’intitulé complet est présent dans les nouveaux contenus.
-- **Périmètre préservé :** aucune suppression ni réorganisation de la navigation existante, aucun déploiement Vercel et aucune modification de domaine ou de DNS ; aucune des six nouvelles pages n’a été activée.
+- **Pages Squarespace :** six compositions natives enregistrées, avec illustration, logo historique et formulaire ; les nouvelles pages restent hors navigation et aucune activation n’a été effectuée.
+- **Identité affichée :** GROUPE ATC est enregistré dans l’en-tête, le titre du site et le pied de page ; l’intitulé complet et les coordonnées corrigées sont présents dans le pied de page.
+- **Nettoyage :** panier et bouton Réserver retirés de l’en-tête ; Boutique déplacée hors navigation. Les données commerciales et anciennes pages sont conservées. La boutique n’est pas déclarée désactivée.
+- **Périmètre préservé :** aucun déploiement Vercel, envoi au dépôt public ou changement de domaine, de DNS ou d’abonnement ; les nouvelles pages n’ont pas remplacé l’accueil et le menu publics.
 
-Votre autorisation de créer les brouillons et d’afficher GROUPE ATC a donc été appliquée. La prochaine étape est la mise en page native complète, puis la configuration et le test autorisé du formulaire ; la publication des nouvelles pages reste une décision séparée.
+Votre autorisation de créer les brouillons et d’afficher GROUPE ATC a donc été appliquée. Le formulaire natif est configuré avec la destination corrigée, sans inscription marketing automatique ; aucun envoi test n’a été effectué. La publication des nouvelles pages reste une décision séparée.
 
-Le contenu et la désactivation des six pages ont été relus après enregistrement, avec un titre principal par page et sans débordement horizontal détecté au bureau. Le contrôle structurel mobile natif est réalisé pour Accueil et Contact seulement ; les captures Comet ayant échoué et le changement de vue n’étant pas stable sur Maintenance, la réception graphique complète des six pages reste à effectuer.
+Les contrôles finaux du bureau, du mobile, des visuels, des espacements et de la désactivation sont suivis dans le compte rendu d’intégration actualisé. Les captures directes de Comet ont fonctionné au début de cette reprise, puis la liaison s’est interrompue et la reconnexion a échoué. Les résultats de la maquette privée ne sont pas utilisés comme preuve de réception du site natif.
 
 ## Formulaire de devis et traitement des demandes
 
@@ -366,7 +367,11 @@ Le bloc Form permet de définir les champs et d’afficher des questions complé
 | Photos ou documents | Facultatif, seulement si l’option est utile et correctement configurée. |
 | Information sur les données | Notice concise avec lien vers la confidentialité ; aucun abonnement commercial précoché. |
 
-Pour le futur formulaire Squarespace réellement configuré, le bouton proposé est « Envoyer ma demande », avec un message après réception effective. Dans la prévisualisation, le bouton « Préparer ma demande » crée seulement un récapitulatif local ; aucun envoi automatique ni stockage serveur n’est simulé.
+Le formulaire natif préparé comporte Nom, Courriel professionnel, Site et commune, Votre besoin, Téléphone facultatif et Nature de la demande. Le champ de site accepte un logement comme un lieu professionnel ; le nom de l’entreprise n’est demandé que s’il est utile. La liste de prestations doit encore être corrigée : le dernier contrôle a retrouvé « Option 3 », « Option 5 » et l’absence du choix Suivi, avant une perte de connexion à Comet. La cible reste les trois rythmes de maintenance, une maintenance à définir, les travaux TCE et une intervention ponctuelle ; aucun dépôt de fichier n’est ajouté.
+
+Le bouton est « Envoyer ma demande » et la destination contact@anelecgroupe.com a été relue dans l’éditeur. Un message post-envoi a été saisi pour préciser qu’une demande ne vaut pas commande ni confirmation d’intervention ; sa persistance et le paramètre marketing doivent encore être relus. La réception réelle reste à tester avec votre autorisation, et le formulaire ne doit pas être considéré comme finalisé.
+
+Dans la prévisualisation privée distincte, le bouton « Préparer ma demande » crée seulement un récapitulatif local ; aucun envoi automatique ni stockage serveur n’est simulé. Le tableau ci-dessus décrit des évolutions possibles, pas une liste de champs tous activés dans le formulaire natif.
 
 ### Paramétrage à vérifier
 
@@ -440,6 +445,6 @@ Vous avez confirmé le renommage d’ANELEC, la signification du sigle et le mai
 - **Maintenance :** trois propositions de fréquence et un document de périmètre et de conditions ont été préparés, sans contrat activé.
 - **Réalisations :** architecture présente dans le code, données vides, publication désactivée.
 - **Brouillons autorisés :** six pages créées, contenus enregistrés et désactivation confirmée ; GROUPE ATC est configuré comme nom affiché.
-- **Validation restante :** confirmer le domaine de messagerie, finaliser les mentions juridiques et les moyens de l’offre, terminer la mise en page et les contrôles, puis autoriser séparément la publication.
+- **Validation restante :** corriger les options du formulaire, homogénéiser la dernière révision de style et terminer les contrôles natifs après rétablissement de Comet ; compléter ensuite les mentions juridiques, la confidentialité et les moyens de l’offre, autoriser un test réel de réception du formulaire, puis décider séparément de la publication. Le courriel contact@anelecgroupe.com est déjà confirmé.
 
-La prévisualisation reste la référence graphique ; les six brouillons natifs constituent désormais une base éditoriale réellement enregistrée dans Fluid Engine, et non sa reproduction graphique achevée. Ce dossier, le compte rendu d’intégration et l’offre de maintenance précisent les éléments réalisés et ceux qui restent à finaliser.
+La prévisualisation et les six brouillons natifs constituent deux versions distinctes. La mise en page native est réellement enregistrée dans Fluid Engine, avec ses propres styles, images et formulaire ; le compte rendu d’intégration précise la réception observée et les conditions restant à traiter avant une ouverture publique.

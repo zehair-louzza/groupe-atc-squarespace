@@ -27,7 +27,7 @@ Les formules de maintenance sont des propositions non activées. Aucun tarif, d�
 
 ## Limites de la prévisualisation
 
-Le formulaire prépare localement un récapitulatif et un lien de messagerie. Il ne stocke et ne transmet aucune demande ; le visiteur reste responsable de l’envoi dans son logiciel de messagerie. La version Squarespace doit utiliser un bloc Form natif et une destination validée.
+Le formulaire de la prévisualisation prépare localement un récapitulatif et un lien de messagerie. Il ne stocke et ne transmet aucune demande ; le visiteur reste responsable de l’envoi dans son logiciel de messagerie. Le formulaire Squarespace distinct utilise désormais un bloc Form natif avec réception configurée à contact@anelecgroupe.com sur une page désactivée ; aucun envoi réel n’a été testé.
 
 Le site inclut `noindex,nofollow`. Les mentions légales finales doivent être complétées avant publication publique ; la page Informations actuelle n’est pas une politique définitive.
 
@@ -39,8 +39,10 @@ Six pages ont été créées dans le site Squarespace existant avec les textes d
 
 Les slugs réels des brouillons portent le préfixe `/groupe-atc-` pour préserver les adresses existantes. Leur contenu et leur désactivation ont été vérifiés ; les contrôles et leurs limites sont documentés dans `docs/QA.md` et `docs/native-squarespace-results.json`.
 
-La reprise graphique native est enregistrée pour Accueil (4 sections), Maintenance (4), Métiers (5) et Groupe (4), avec des styles propres aux pages et un bloc image natif sur Accueil. La connexion à Comet a été interrompue pendant Contact ; les dernières modifications de cette page ne sont pas confirmées, et Informations, le pied de page, le formulaire et la réception native finale restent à terminer.
+La composition native est enregistrée pour Accueil (4 sections), Maintenance (4), Métiers (5), Groupe (4), Contact (4) et Informations (5), soit 26 sections. Les styles sont propres aux pages ; l’illustration d’accueil, le logo historique de Groupe et le formulaire de Contact sont des blocs natifs. Le pied de page générique a été remplacé par l’identité et les coordonnées corrigées.
+
+La finalisation reste incomplète : le dernier contrôle a retrouvé des options de gabarit dans le menu du formulaire, puis Comet a perdu sa connexion de contrôle. La liste doit être corrigée selon `squarespace/native/form-spec.json`, la dernière révision CSS doit être réappliquée uniformément et la réception native complète reste à effectuer. Ne pas activer les pages.
 
 Le panier et le bouton Réserver ont été retirés de l’en-tête. La boutique est hors navigation, sans suppression de données ; sa désactivation n’a pas été obtenue. Les six nouvelles pages n’ont pas été activées.
 
-`squarespace/native/design.css` et `layout.json` décrivent la composition préparée, pas une preuve d’enregistrement de toutes les pages. Le rapport `docs/etat-integration-squarespace.md` fait foi sur l’avancement réel ; la prévisualisation privée reste distincte de l’intégration native.
+`squarespace/native/design.css` et `layout.json` décrivent les styles et les contenus Markdown ; Contact comporte en plus une section de formulaire configurée dans l’éditeur. Le rapport `docs/etat-integration-squarespace.md` et les relevés de réception font foi sur l’avancement réel ; la prévisualisation privée reste distincte de l’intégration native.

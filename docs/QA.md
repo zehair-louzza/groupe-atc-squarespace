@@ -73,3 +73,20 @@ Cette mise à jour remplace les anciennes indications sur le courriel et la cons
 - **Limite de connexion :** déconnexion de Comet pendant Contact ; la tentative de récupération échoue également. Contact, Informations, pied de page, formulaire, placement du logo et réception native finale ne sont pas déclarés terminés.
 
 L’état détaillé actuel est dans `etat-integration-squarespace.md` et `native-layout-status.json`. Les captures de la prévisualisation ne constituent pas une réception graphique des pages natives.
+
+## Reprise native du 29 octobre 2026
+
+Cette section remplace l’état natif partiel du 28 octobre. Comet a d’abord fonctionné, puis a perdu la liaison avec un message `keepalive_timeout` lors du dernier contrôle du formulaire ; le redémarrage du navigateur de contrôle n’a pas rétabli les lectures.
+
+- **Composition enregistrée :** Accueil 4 sections, Maintenance 4, Métiers 5, Groupe 4, Contact 4 et Informations 5, soit 26 sections.
+- **Pied de page :** identité et coordonnées corrigées enregistrées ; aucun texte générique de titre, courriel d’exemple ou crédit de création dans le premier contrôle d’Accueil.
+- **Images :** illustration d’accueil et logo historique natifs, avec textes alternatifs ; la hauteur trop faible de l’illustration a été corrigée et observée à environ 501 px après sauvegarde.
+- **Espacements :** lignes inutilisées réduites par les réglages natifs ; les relevés sont dans `native-spacing-results.json`.
+- **Formulaire :** bloc natif créé, destination contact@anelecgroupe.com relue ; le champ Site et commune a été retrouvé après fermeture et réouverture de Contact.
+- **Défaut identifié :** la liste rendue contient encore Option 3 et Option 5, et Suivi manque ; ne pas considérer le formulaire comme finalisé. La cible est dans `squarespace/native/form-spec.json`.
+- **Contrôle partiel :** Accueil vérifié à 1154 px et dans la vue mobile à 413 px avant la correction de hauteur de l’image ; absence de débordement horizontal et de chevauchement mesuré à ce stade.
+- **Désactivation :** Accueil relu désactivé lors de cette reprise ; aucune activation effectuée. La relecture collective finale des six pages reste à faire.
+- **Styles :** dernière révision locale non encore réappliquée uniformément aux six pages ; ne pas l’assimiler à une preuve de réception.
+- **Tests locaux :** quatre tests unitaires passent ; aucun envoi externe.
+
+La réception visuelle native complète des six pages, les liens, la liste du formulaire, le message post-envoi et l’état final des réglages ne sont pas validés. Les captures natives de cette reprise sont partielles et antérieures à certaines corrections ; aucun résultat de la prévisualisation privée ne remplace ces contrôles.

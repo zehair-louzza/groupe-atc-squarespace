@@ -1,38 +1,65 @@
 {
-  "date": "2026-10-28",
+  "date": "2026-10-29",
   "complete": false,
+  "compositionSavedForAllSix": true,
+  "savedSectionTotal": 26,
   "publicationPerformed": false,
-  "blocker": "Comet extension gone (ws_closed); recovery also failed.",
+  "blocker": "Comet extension gone (keepalive_timeout); browser_start returned inherited tab but read_tree failed again.",
   "cleanup": {
     "headerCartRemoved": true,
     "headerBookingButtonRemoved": true,
     "shopMovedOffNavigation": true,
     "shopDisabled": false,
-    "commerceDataDeleted": false
+    "commerceDataDeleted": false,
+    "genericFooterReplaced": true
   },
   "email": {
     "confirmed": "contact@anelecgroupe.com",
     "sourceFilesCorrected": true,
     "previewPagesCorrected": true,
-    "nativeEmailSaved": ["Accueil", "Groupe"],
-    "nativeFinalCheckPending": ["Contact", "Informations", "Pied de page"]
+    "nativeContactAndFooterSaved": true,
+    "nativeFormDestinationObserved": "contact@anelecgroupe.com"
   },
   "nativePages": [
-    {"name": "Accueil", "savedSections": 4, "nativeImage": true, "finalVisualQA": false},
-    {"name": "Maintenance", "savedSections": 4, "finalVisualQA": false},
-    {"name": "Métiers", "savedSections": 5, "desktopH1AndOverflowCheck": true, "finalVisualQA": false},
-    {"name": "Groupe", "savedSections": 4, "desktopH1AndOverflowCheck": true, "finalVisualQA": false},
-    {"name": "Contact", "status": "Interrupted during edit; latest persistence unconfirmed"},
-    {"name": "Informations", "status": "Previous editorial draft; new composition pending"}
+    {"name":"Accueil","savedSections":4,"nativeImage":true,"visibleIllustrationCaption":true,"imageHeightCorrectedAfterInitialQA":true,"enabledLastObserved":false,"finalVisualQA":false},
+    {"name":"Maintenance","savedSections":4,"nativeSpacingAdjusted":true,"finalVisualQA":false},
+    {"name":"Métiers","savedSections":5,"nativeSpacingAdjusted":true,"finalVisualQA":false},
+    {"name":"Groupe","savedSections":4,"historicalLogoSaved":true,"logoFitObserved":"Ajuster","nativeSpacingAdjusted":true,"finalVisualQA":false},
+    {"name":"Contact","savedSections":4,"nativeFormSaved":true,"siteFieldReopenedAndObserved":true,"finalVisualQA":false},
+    {"name":"Informations","savedSections":5,"nativeSpacingAdjusted":true,"finalVisualQA":false}
   ],
+  "form": {
+    "testSent": false,
+    "dropdownRequiresCorrection": true,
+    "observedOptionsWithoutPlaceholder": [
+      "Maintenance Essentiel : 2 visites par an",
+      "Maintenance Continuité : 12 visites par an",
+      "Option 3",
+      "Travaux TCE",
+      "Option 5",
+      "Intervention ponctuelle"
+    ],
+    "intendedOptionsWithoutPlaceholder": [
+      "Maintenance Essentiel : 2 visites par an",
+      "Maintenance Suivi : 4 visites par an",
+      "Maintenance Continuité : 12 visites par an",
+      "Maintenance : périmètre à définir",
+      "Travaux TCE",
+      "Intervention ponctuelle"
+    ],
+    "marketingSignupClickedOff": true,
+    "marketingFinalRereadPending": true,
+    "postSubmitMessageEntered": true,
+    "postSubmitMessagePersistenceRereadPending": true
+  },
   "remaining": [
-    "Reconcile and save Contact",
-    "Recompose Informations and verify email",
-    "Replace generic footer content",
-    "Apply latest Accueil style and visible illustration caption",
-    "Place historical logo natively without modification",
-    "Create and configure native form",
-    "Final desktop and mobile QA and disabled-state check"
+    "Correct existing native dropdown options, remove Option 3 and Option 5, restore Suivi",
+    "Reread native form destination, marketing checkbox and post-submit message",
+    "Apply latest local CSS uniformly to all six pages",
+    "Complete native desktop/mobile visual and link QA",
+    "Reread all six disabled and off-navigation states",
+    "Complete legal/privacy content before any public launch",
+    "Obtain separate authorization for an external test submission and publication"
   ],
   "remoteGitPush": false,
   "vercelDeployment": false,
