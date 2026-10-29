@@ -39,7 +39,12 @@ test('Rendered offers and native sources stay within the confirmed trade scope',
   for(const page of ['accueil','maintenance','metiers','groupe','contact','informations']){
     assert.doesNotMatch(fs.readFileSync(`squarespace/native/${page}.md`,'utf8'),excluded,`Unexpected trade in native ${page}`);
   }
-  for(const file of ['squarespace/native/layout.json','docs/offre-maintenance-proposee.md','docs/cahier-creation-squarespace.md']){
+  for(const file of ['squarespace/native/layout.json','squarespace/native/existing-services.json','squarespace/native/existing-services-maintenance.md','docs/offre-maintenance-proposee.md','docs/cahier-creation-squarespace.md']){
     assert.doesNotMatch(fs.readFileSync(file,'utf8'),excluded,`Unexpected trade in ${file}`);
   }
+  const services=JSON.parse(fs.readFileSync('squarespace/native/existing-services.json','utf8'));
+  assert.deepEqual(services.supportedTrades,['Plomberie','Électricité','Serrurerie','Rénovation intérieure']);
+  assert.equal(services.fields.length,8);
+  assert.equal(new Set(services.fields.map(f=>`${f.blockId}:${f.selector}:${f.index}`)).size,8);
+  assert.doesNotMatch(services.fields.map(f=>f.text).join('\n'),/extension|autorisations administratives|contrat annuel/i);
 });

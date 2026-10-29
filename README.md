@@ -6,7 +6,9 @@ GROUPE ATC signifie « GROUPE ANELEC TECHNIQUE ET CONCEPTE », selon l’orthogr
 
 Les textes du site autonome, les sources natives et les documents commerciaux sont limités à la plomberie, l’électricité, la serrurerie et la rénovation/finitions intérieures. Un test de non-régression contrôle l’absence des spécialités écartées.
 
-La répercussion de cette correction dans Squarespace reste en attente : Comet a perdu la connexion avant toute saisie ou sauvegarde. Les deux cibles sont le paragraphe de maintenance de `/services-content` et les exclusions de `/groupe-atc-maintenance` ; les sources de remplacement sont conservées dans `squarespace/native/`, sans activation des six brouillons.
+La correction est enregistrée et relue dans Squarespace sur `/services-content` et `/groupe-atc-maintenance`. La page Services reprend uniquement les prestations concrètes de la présentation ANELEC ; ses huit champs édités sont conservés dans `squarespace/native/existing-services.json`, et le brouillon Maintenance est désactivé.
+
+La dernière passe a relu le réglage d’activation de Maintenance, pas celui des cinq autres nouveaux brouillons. Les résultats graphiques spécifiques et cette limite de contrôle sont consignés dans `docs/native-scope-verification.json`.
 
 ## Structure
 

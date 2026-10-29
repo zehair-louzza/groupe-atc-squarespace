@@ -4,7 +4,7 @@ Version actualisée le 29 octobre 2026 après la mise en forme des six brouillon
 
 ## Décision de conception
 
-Le dernier périmètre confirmé se limite à la plomberie et aux sanitaires, à l’électricité, à la serrurerie et à la rénovation/finitions intérieures. Les sources et documents ont été corrigés ; deux textes correspondants dans Squarespace restent à enregistrer, car Comet a perdu la connexion avant toute saisie, sans activation des brouillons.
+Le dernier périmètre confirmé se limite à la plomberie et aux sanitaires, à l’électricité, à la serrurerie et à la rénovation/finitions intérieures. Les corrections sont enregistrées et relues dans Squarespace ; la page Services reprend les prestations concrètes de la présentation ANELEC, et le brouillon Maintenance reste désactivé.
 
 Le nouveau site présente **GROUPE ATC**, développé exactement en « GROUPE ANELEC TECHNIQUE ET CONCEPTE ». Vous avez confirmé un simple renommage d’ANELEC, sans création de filiale, et le maintien du domaine `anelecgroupe.com` ; la dénomination juridique inscrite au registre reste à distinguer de cette marque.
 

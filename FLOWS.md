@@ -72,4 +72,4 @@ La dernière demande limite l’offre à la plomberie, l’électricité, la ser
 
 Les cinq tests automatisés et les douze affichages du site autonome passent après correction. Les six parcours du module de recette passent également, sans erreur JavaScript ni message transmis ; le menu natif Squarespace n’est pas concerné par ce résultat.
 
-Le retrait natif reste en attente sur Services et Maintenance, car Comet a perdu la liaison avant toute saisie. Le simple passage dans l’éditeur n’a modifié ni enregistré aucun texte.
+La reprise suivante a terminé et enregistré les deux corrections natives. Services contient huit champs actualisés selon la présentation ANELEC et Maintenance un périmètre limité aux quatre métiers ; la désactivation de Maintenance a été relue après sauvegarde, puis les deux pages rouvertes pour vérifier la persistance des textes.

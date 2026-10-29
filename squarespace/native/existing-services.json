@@ -1,0 +1,60 @@
+{
+  "pagePath": "/services-content",
+  "pageTitle": "Services",
+  "brand": "GROUPE ATC",
+  "formerBrand": "ANELEC",
+  "evidence": "PRESENTATION-ANELEC.png fourni par l’utilisateur",
+  "nativeSaved": true,
+  "verifiedAfterReopening": true,
+  "supportedTrades": ["Plomberie", "Électricité", "Serrurerie", "Rénovation intérieure"],
+  "fields": [
+    {
+      "blockId": "block-407fa853972aff5c9314",
+      "selector": "h1",
+      "index": 0,
+      "text": "Nos services"
+    },
+    {
+      "blockId": "block-2ed96225d1d5059261d3",
+      "selector": "p",
+      "index": 0,
+      "text": "GROUPE ATC, anciennement ANELEC, accompagne les particuliers et les professionnels en Île-de-France en plomberie, électricité, serrurerie et rénovation intérieure."
+    },
+    {
+      "blockId": "block-2ed96225d1d5059261d3",
+      "selector": "p",
+      "index": 1,
+      "text": "Nos prestations couvrent le dépannage, les installations et les travaux de remise en état. Le contenu de l’intervention est défini avec vous selon le besoin et les contraintes du site."
+    },
+    {
+      "blockId": "block-35fbeff8d4a2714a6796",
+      "selector": "h3",
+      "index": 0,
+      "text": "Plomberie, électricité et serrurerie"
+    },
+    {
+      "blockId": "block-1775835d910154aa4c27",
+      "selector": "p",
+      "index": 0,
+      "text": "Dépannage et installation en plomberie et électricité, recherche de fuite, tableaux, levée de réserves ; ouverture de porte, remplacement de serrure et mise en sécurité."
+    },
+    {
+      "blockId": "block-29abe6a400f74d35b0f7",
+      "selector": "h3",
+      "index": 0,
+      "text": "Rénovation et finitions intérieures"
+    },
+    {
+      "blockId": "block-39501c4b7ad730a185a6",
+      "selector": "p",
+      "index": 0,
+      "text": "Peinture, plaques de plâtre (placo), carrelage et petits travaux de bricolage, pour remettre vos espaces intérieurs en état."
+    },
+    {
+      "blockId": "block-1cd31f9e203e03894386",
+      "selector": "p",
+      "index": 0,
+      "text": "Décrivez votre besoin en plomberie, électricité, serrurerie ou rénovation intérieure, ainsi que la commune d’intervention, pour préparer une proposition adaptée."
+    }
+  ]
+}

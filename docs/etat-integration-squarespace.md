@@ -1,18 +1,20 @@
 # GROUPE ATC : état d’intégration dans Squarespace
 
-Mise à jour du 29 octobre 2026, après la reprise graphique et la correction de périmètre demandée. Les six compositions natives restent enregistrées et harmonisées, mais le dernier retrait de spécialités est appliqué aux sources et à la prévisualisation privée uniquement : les deux corrections correspondantes dans Squarespace restent à enregistrer après rétablissement de Comet.
+Mise à jour du 29 octobre 2026, après reprise dans Comet. Les deux corrections métier sont désormais enregistrées et relues dans Squarespace ; la page Services présente uniquement les prestations concrètes de la présentation ANELEC et le brouillon Maintenance reste désactivé.
 
-## Dernière correction : sources prêtes, Squarespace en attente
+## Corrections métier enregistrées et contrôlées
 
 L’offre est limitée à la plomberie et aux sanitaires, à l’électricité, à la serrurerie et à la rénovation/finitions intérieures. Les gabarits, les six pages HTML, les textes natifs, la structure des sections et les documents commerciaux ne proposent plus d’autre spécialité ; une ambiguïté « entretien intérieur » est remplacée par « finitions intérieures ».
 
 - **Sources corrigées :** cinq tests automatisés passent ; les douze affichages du site autonome à 375 et 1 440 px et ses six parcours de recette passent, sans erreur JavaScript ni envoi de message.
 - **Prévisualisation privée :** mise à jour au même emplacement, puis les douze affichages et six parcours ont été rejoués dans un nouveau contexte navigateur avec le même résultat. Aucun déploiement Hostinger/Vercel ni changement du domaine public.
-- **Page Services existante :** le bloc `block-1775835d910154aa4c27`, sur `/services-content`, conserve sa phrase antérieure ; son remplacement figure dans `squarespace/native/existing-services-maintenance.md`.
-- **Brouillon Maintenance :** le dernier paragraphe du périmètre conserve sa formulation antérieure ; le texte définitif est dans `squarespace/native/maintenance.md` et la structure correspondante dans `layout.json`.
-- **Blocage :** la liaison Comet a été perdue avant toute saisie ou sauvegarde. Aucun des deux retraits natifs n’est déclaré réalisé ; les pages n’ont pas été activées et aucun domaine n’a été modifié.
+- **Page Services existante :** titre, introduction, deux encarts métier et paragraphe de demande corrigés, soit huit champs. Les seules activités présentées sont le dépannage et les installations en plomberie/électricité, la serrurerie et la rénovation/finitions intérieures, sans ancienne promesse non confirmée.
+- **Source ANELEC :** la présentation fournie confirme la recherche de fuite, les sanitaires, les tableaux électriques et levées de réserves, l’ouverture de porte et le remplacement de serrure, ainsi que peinture, placo, carrelage et bricolage. Les textes exacts et identifiants des champs sont dans `squarespace/native/existing-services.json`.
+- **Brouillon Maintenance :** le dernier paragraphe du périmètre est corrigé et enregistré. Il limite explicitement l’offre aux quatre métiers retenus ; le réglage « Activer la page » a été relu décoché après sauvegarde.
+- **Contrôle natif :** les deux pages ont été rouvertes après enregistrement ; les anciennes spécialités et anciennes promesses ont disparu des textes. Relevés à 1 154 et 413 px sans débordement horizontal ou texte dépassant sa section ; les coordonnées, la navigation et les formulaires n’ont pas été modifiés.
+- **Publication :** la correction ciblée de Services concerne une page existante ; elle ne vaut pas activation des nouveaux brouillons. Aucun bouton Publier, déploiement Hostinger/Vercel, changement DNS ni envoi de formulaire.
 
-Les contrôles natifs détaillés ci-dessous sont ceux de la reprise graphique antérieure à cette dernière correction. Ils ne prouvent pas son application dans Squarespace.
+Les contrôles natifs généraux détaillés ci-dessous restent ceux de la reprise graphique antérieure. La relecture des deux corrections métier est complémentaire ; elle ne remplace pas les contrôles encore ouverts du menu natif ou d’une transmission réelle de formulaire.
 
 ## Réalisé et enregistré
 
@@ -90,7 +92,7 @@ Cette lecture du paramétrage n’est pas un test de transmission. Aucun formula
 - **Accueil :** premier contrôle au bureau à 1154 px et en vue mobile à 413 px, sans ancien courriel, texte générique de pied de page ni chevauchement mesuré. Ce contrôle a révélé une illustration trop aplatie.
 - **Correction de l’illustration :** hauteur réajustée dans la grille native et enregistrée ; après harmonisation finale, hauteur observée d’environ 468 px au bureau et 199 px sur mobile, au lieu des 23 px du contrôle initial.
 - **Logo historique :** image native chargée, texte alternatif saisi et option Ajuster vérifiée ; son cadre a ensuite été agrandi et sauvegardé sans recadrer le signe.
-- **Désactivation :** les six pages ont été retrouvées désactivées pendant les contrôles de cette reprise ; aucune activation n’a été effectuée.
+- **Désactivation :** Maintenance a été remis en état désactivé, puis son réglage a été relu après sauvegarde. Les cinq autres réglages de page n’ont pas été relus dans cette dernière passe ; aucune nouvelle page n’a été activée.
 
 Les nouveaux relevés `native-final-*.json` et les captures de cette dernière reprise couvrent les six pages à 1 154 px au bureau et 413 px dans la vue téléphone native. Ils montrent un seul H1 par page, les nombres de sections attendus, aucune ancienne adresse électronique, aucun pied de page générique, aucun débordement horizontal ou chevauchement de blocs détecté, ainsi que les images chargées avec leurs textes alternatifs.
 

@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-29",
+  "nativeCorrectionsSaved": true,
+  "reopenedAfterSaving": ["/services-content", "/groupe-atc-maintenance"],
+  "services": {
+    "basis": "Présentation ANELEC fournie par l’utilisateur",
+    "source": "squarespace/native/existing-services.json",
+    "editedFields": 8,
+    "supportedTrades": ["Plomberie", "Électricité", "Serrurerie", "Rénovation intérieure"],
+    "desktop": {
+      "viewportWidth": 1154,
+      "scrollWidth": 1154,
+      "excludedTradePresent": false,
+      "textPastSection": [],
+      "textPastBlock": []
+    },
+    "mobile": {
+      "viewportWidth": 413,
+      "scrollWidth": 413,
+      "excludedTradePresent": false,
+      "textPastSection": [],
+      "textPastBlock": []
+    },
+    "metadataExcludedTradePresent": false
+  },
+  "maintenance": {
+    "correctedParagraphSavedAndReopened": true,
+    "desktop": {
+      "viewportWidth": 1154,
+      "scrollWidth": 1154,
+      "excludedTradePresent": false,
+      "textPastSection": []
+    },
+    "mobile": {
+      "viewportWidth": 413,
+      "scrollWidth": 413,
+      "excludedTradePresent": false,
+      "textPastSection": []
+    },
+    "enabledObservedBeforeCorrection": true,
+    "enabledObservedAfterSavingSettings": false,
+    "otherFivePageEnableStatesRecheckedInThisPass": false
+  },
+  "formSubmitted": false,
+  "publishButtonUsed": false,
+  "newPagesActivated": false,
+  "dnsChanged": false,
+  "hostingerDeployment": false,
+  "vercelDeployment": false,
+  "nativeMobileMenuRetested": false
+}

@@ -6,10 +6,12 @@
   "publicLaunchReady": false,
   "latestTradeScopeRevision": {
     "sourceCorrected": true,
-    "appliedToSquarespace": false,
-    "pendingPaths": ["/services-content", "/groupe-atc-maintenance"],
-    "nativeTextChangedThisPass": false,
-    "reason": "Comet connection lost before any typing or save",
+    "appliedToSquarespace": true,
+    "pendingPaths": [],
+    "nativeTextChangedThisPass": true,
+    "verifiedBy": "Reopened saved Services and Maintenance; exact Services copy matches supplied ANELEC presentation scope",
+    "maintenanceEnabledAfterSave": false,
+    "servicesEditedFields": 8,
     "earlierNativeDisplayChecksRemainHistorical": true
   },
   "lastCssRevisionAppliedUniformly": true,

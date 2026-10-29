@@ -127,4 +127,14 @@ Le module `runPreviewQA` a été rejoué après reconstruction : douze rendus, s
 
 La prévisualisation privée existante a été actualisée, puis le même module a été rejoué sur la version hébergée dans un nouveau contexte navigateur. Les douze rendus et six parcours passent également ; le relevé final conserve le libellé `hosted-private-preview`, sans URL temporaire ni jeton d’accès.
 
-La liaison Comet a empêché toute modification native : la page Services existante et le brouillon Maintenance gardent encore leur formulation antérieure. Ces deux retraits ne sont pas validés et la recette native précédente reste historique.
+La première tentative Comet avait empêché toute modification native. Cette limite a été levée lors de la reprise suivante : les deux corrections sont maintenant enregistrées, sans activation de nouveau brouillon.
+
+## Reprise native terminée
+
+Le paragraphe d’exclusions de Maintenance a été remplacé dans l’éditeur Markdown, sans dupliquer le titre ni modifier les autres sections. La désactivation de la page a été enregistrée puis relue décochée dans ses paramètres.
+
+La page Services contient huit champs corrigés selon la présentation ANELEC fournie. Les promesses non confirmées ont été remplacées par les tâches concrètes de plomberie, d’électricité, de serrurerie et de rénovation intérieure ; les balises de titres et les deux paragraphes d’introduction sont conservés.
+
+Les deux pages ont été rouvertes après sauvegarde. Aucune spécialité écartée, ancien encart non confirmé ou dépassement de texte sur sa section n’a été détecté lors des relevés ; aucun formulaire n’a été envoyé.
+
+Le relevé de cette passe est `native-scope-verification.json` : Services et Maintenance à 1 154/413 px, sans débordement horizontal, puis désactivation de Maintenance relue. Les cinq autres réglages d’activation n’ont pas été recontrôlés, et aucun test du menu natif ou de transmission n’est ajouté à cette recette ciblée.

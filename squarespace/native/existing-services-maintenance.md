@@ -1,11 +1,25 @@
-# Page Services existante : paragraphe de maintenance corrigé
+# Page Services existante : prestations ANELEC sous le nom GROUPE ATC
 
-Cette source remplace uniquement le paragraphe de maintenance du bloc `block-1775835d910154aa4c27`, sur la page existante `/services-content`. Son application dans Squarespace reste à faire : la liaison Comet a été interrompue avant toute saisie.
+La page `/services-content` est enregistrée dans Squarespace avec les prestations de la présentation ANELEC fournie par l’utilisateur. Huit champs de texte ont été relus après enregistrement et réouverture ; les identifiants des blocs et les textes exacts sont conservés dans `existing-services.json`.
 
-## Texte de remplacement
+## Nos services
 
-Des visites planifiées en plomberie, électricité, serrurerie et finitions intérieures. Périmètre et fréquence définis au devis ; pièces et travaux chiffrés séparément.
+GROUPE ATC, anciennement ANELEC, accompagne les particuliers et les professionnels en Île-de-France en plomberie, électricité, serrurerie et rénovation intérieure.
 
-## Limites
+Nos prestations couvrent le dépannage, les installations et les travaux de remise en état. Le contenu de l’intervention est défini avec vous selon le besoin et les contraintes du site.
 
-Ne pas changer les autres contenus ou la navigation et ne pas activer les six nouvelles pages. Le paragraphe ne garantit ni contrat déjà disponible ni remplacement de pièces compris dans une visite.
+### Plomberie, électricité et serrurerie
+
+Dépannage et installation en plomberie et électricité, recherche de fuite, tableaux, levée de réserves ; ouverture de porte, remplacement de serrure et mise en sécurité.
+
+### Rénovation et finitions intérieures
+
+Peinture, plaques de plâtre (placo), carrelage et petits travaux de bricolage, pour remettre vos espaces intérieurs en état.
+
+### Demande
+
+Décrivez votre besoin en plomberie, électricité, serrurerie ou rénovation intérieure, ainsi que la commune d’intervention, pour préparer une proposition adaptée.
+
+## État natif et limites
+
+Le paragraphe d’exclusions du brouillon Maintenance est également corrigé et enregistré ; sa désactivation a été relue dans les paramètres après sauvegarde. Aucun nouveau brouillon n’a été activé, aucun message de formulaire envoyé et aucun changement DNS ou déploiement Hostinger effectué.
