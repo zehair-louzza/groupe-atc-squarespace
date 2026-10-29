@@ -2,7 +2,16 @@
 
 Mise à jour du 29 octobre 2026 : les informations légales, la continuité de la société et l’expérience des équipes sont renseignées dans les pages Squarespace et les sources autonomes. La page Services conserve ses six rubriques et sa grille de trois colonnes sur ordinateur.
 
-## Informations légales et expérience de l’équipe
+## Nouveau logo principal
+
+Le lettrage du logo fourni est remplacé par « GROUPE ATC », en conservant les tracés et les trois couleurs du symbole d’origine. Cette demande explicite remplace l’ancienne consigne de ne pas modifier le lettrage ; les fichiers ANELEC originaux restent archivés sans modification.
+
+- **Squarespace :** logo global téléversé dans le contrôle natif Titre du site et logo, puis enregistré. L’image est servie par le CDN Squarespace, son texte alternatif est GROUPE ATC et les hauteurs observées après sauvegarde sont de 48 px sur ordinateur et 40 px sur mobile.
+- **Sources autonomes :** le nouveau logo SVG est présent dans les six en-têtes et pieds de page, ainsi que dans la présentation du groupe. PNG transparent disponible pour les éditeurs qui n’acceptent pas le SVG.
+- **Archives :** les fichiers originaux restent inchangés. L’image historique native du corps de page Groupe n’est pas le logo principal ; elle reste explicitement identifiée comme ancienne.
+- **Palette et périmètre :** les couleurs de la mise en page ne changent pas. Aucun réglage de visibilité, DNS, domaine ou hébergement n’est modifié.
+
+## Identité et équipe enregistrées
 
 GROUPE ATC est la nouvelle dénomination sociale de la même entreprise auparavant connue comme ANELEC, avec une nouvelle présidence, sans création d’une société ou d’une filiale. La dénomination actuelle et les identifiants ont été recoupés avec l’[Annuaire des Entreprises](https://annuaire-entreprises.data.gouv.fr/entreprise/933108607) et la [fiche Pappers](https://www.pappers.fr/entreprise/anelec-technique-et-concept-933108607).
 

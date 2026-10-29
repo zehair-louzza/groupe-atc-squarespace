@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-29",
+  "saved": true,
+  "desktop": {
+    "logoNotice": true,
+    "logos": [
+      {
+        "alt": "GROUPE ATC",
+        "height": 48,
+        "loaded": true,
+        "src": "https://images.squarespace-cdn.com/content/v1/6ae0c8a7d4a29a78c6f38f28/f9eb9325-f97d-49bb-9b30-8c02ddee170c/groupe-atc-logo.png?format=1500w",
+        "width": 202
+      }
+    ],
+    "scrollWidth": 1531,
+    "visibilityNotice": true,
+    "width": 1550
+  },
+  "mobile": {
+    "logoNotice": true,
+    "logos": [
+      {
+        "alt": "GROUPE ATC",
+        "height": 40,
+        "loaded": true,
+        "src": "https://images.squarespace-cdn.com/content/v1/6ae0c8a7d4a29a78c6f38f28/f9eb9325-f97d-49bb-9b30-8c02ddee170c/groupe-atc-logo.png?format=1500w",
+        "width": 168
+      }
+    ],
+    "scrollWidth": 409,
+    "visibilityNotice": true,
+    "width": 428
+  },
+  "activationChanged": false
+}

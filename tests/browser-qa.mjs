@@ -29,6 +29,17 @@ export async function runPreviewQA(browser, base='http://127.0.0.1:3000/') {
       }));
       assert.equal(state.h1,1);assert.equal(state.overflow,false);assert.equal(state.wrongEmail,false);assert.equal(state.brokenImages,0);
       assert.ok(state.email.length>0&&state.email.every(v=>v==='mailto:contact@anelecgroupe.com'));
+      const logos=page.locator('.brand-logo');
+      assert.equal(await logos.count(),2);
+      for(const logo of await logos.all()){
+        assert.equal(await logo.getAttribute('alt'),'GROUPE ATC');
+        assert.equal(await logo.getAttribute('src'),'./assets/groupe-atc-logo.svg');
+        const dimensions=await logo.evaluate(e=>({width:e.clientWidth,height:e.clientHeight}));
+        assert.ok(Math.abs(dimensions.width/dimensions.height-4.2)<.12,'Undistorted logo');
+        assert.ok(dimensions.width>=190&&dimensions.width<=240,'Readable responsive logo');
+      }
+      assert.equal(await page.locator('img[src*="anelec-original"]').count(),0);
+      if(file==='index'&&width===1440)result.flows.push('Logo GROUPE ATC chargé dans les six en-têtes et pieds de page, lisible et non déformé aux deux largeurs.');
       if(file==='informations'){
         const text=await page.locator('main').innerText();
         for(const value of ['933 108 607 00021','FR20933108607','3 000 €','Najoua Boughrara','21 août 2024','8 novembre 2024','même société','nouvelle présidence'])assert.ok(text.includes(value),value);
@@ -70,6 +81,12 @@ export async function runPreviewQA(browser, base='http://127.0.0.1:3000/') {
   result.flows.push('Les six liens métier préremplissent le contact avec la bonne prestation.');
   result.carousel=await runCarouselQA(browser,base);
   result.flows.push('Six carrousels : flèches, boucle, indépendance, clavier, tactile et replis.');
+  await page.goto(url('groupe.html'));
+  await page.locator('.site-header .brand').click();
+  await page.waitForURL(url('index.html'));
+  await page.locator('.site-footer .brand').click();
+  await page.waitForURL(url('index.html'));
+  result.flows.push('Les logos de l’en-tête et du pied de page ramènent à l’accueil.');
   await page.setViewportSize({width:375,height:812});
   await page.goto(url('index.html'));
   const menu=page.locator('.menu-toggle');

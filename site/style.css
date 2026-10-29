@@ -12,6 +12,14 @@ body{font-family:var(--font-body);font-size:var(--text-base);line-height:1.6;col
 .company-identification dt{color:var(--muted);font-size:var(--text-sm)}
 .company-identification dd{margin:0;min-width:0;overflow-wrap:anywhere;font-weight:500}
 .registry-links a{overflow-wrap:anywhere}
+.brand{flex-shrink:0}
+.brand .brand-logo{display:block;width:230px;height:auto;max-width:100%;object-fit:contain}
+.site-footer .brand{padding:var(--space-3);background:var(--white);width:max-content;max-width:100%}
+.site-footer .brand .brand-logo{width:210px}
+.company-brand{padding:var(--space-8);background:var(--white)}
+.company-brand img{display:block;width:100%;height:auto;object-fit:contain;margin-block:var(--space-8)}
+.company-brand figcaption{font-size:var(--text-sm);color:var(--muted);border-top:1px solid var(--line);padding-top:var(--space-5)}
+@media(max-width:620px){.brand .brand-logo{width:195px}.site-footer .brand .brand-logo{width:210px}}
 .hero .hero-detail{margin-bottom:var(--space-6)}
 .team-experience{max-width:44ch;margin:0 0 var(--space-6);padding-left:var(--space-4);border-left:2px solid var(--accent);font-size:var(--text-sm);line-height:1.6}
 @media(max-width:600px){.company-identification>div{grid-template-columns:1fr;gap:var(--space-1)}}

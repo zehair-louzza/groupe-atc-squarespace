@@ -1,5 +1,12 @@
 # Inventaire de réception
 
+## Dernière passe : logo GROUPE ATC
+
+- **Fichiers :** symbole original extrait sans redessin, nouveau lettrage vectorisé GROUPE ATC, SVG autonome sans ressource externe et PNG transparent 2 100 × 500 px, 43 323 octets. Les originaux ANELEC sont conservés.
+- **Tests locaux :** onze tests automatisés passent. Les douze rendus de six pages à 1 440 et 375 px passent, ainsi que quinze groupes de parcours, dont les logos chargés, leurs proportions et les liens de retour à l’accueil.
+- **Squarespace :** logo principal enregistré dans l’en-tête natif ; texte alternatif GROUPE ATC, hauteur constatée 48 px sur ordinateur et 40 px en vue mobile, image chargée depuis le CDN Squarespace. Le résultat est consigné dans `docs/native-logo-verification.json`.
+- **Cohérence :** mentions de logo et de visibilité corrigées dans les paragraphes natifs de Groupe et Informations. Les fichiers historiques restent identifiés comme tels ; aucun réglage d’activation ne change.
+
 ## Identité légale, continuité et expérience : 29 octobre 2026
 
 Les nouvelles pièces et les confirmations utilisateur renseignent l’entreprise et l’expérience des personnes. Le nom GROUPE ATC correspond à un changement de dénomination sociale de la même société, avec une nouvelle présidence, non à une création d’entreprise ou de filiale.
@@ -53,7 +60,7 @@ Prévisualisation privée seulement. Aucun formulaire externe, envoi, DNS ou dé
 - Vérifier qu’aucun message n’est transmis et que les coordonnées exactes sont conservées.
 - Vérifier le bouton de copie et son repli par sélection manuelle.
 - Vérifier absence de réalisations inventées, absence de menu Réalisations et absence de page publiée.
-- Vérifier logo historique inchangé, marque GROUPE ATC principale et légende des illustrations.
+- Vérifier le nouveau logo principal GROUPE ATC, issu des tracés du symbole fourni, les archives ANELEC inchangées et les légendes des illustrations. La consigne explicite du 29 octobre remplace l’ancien maintien du lettrage ANELEC sur le logo principal.
 - Vérifier absence de débordement horizontal, texte inférieur à 12 px, erreurs console et images défectueuses.
 - Scénarios hors parcours : paramètre de formule inconnu ; contenu utilisateur contenant des balises ; image indisponible.
 - Après déploiement privé, ouvrir un nouveau contexte et tester le parcours maintenance → contact → récapitulatif.

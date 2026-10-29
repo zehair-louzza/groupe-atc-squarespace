@@ -12,6 +12,15 @@
 - Vérifier l'enregistrement et la réouverture des quatre pages natives, leur affichage bureau/mobile et l'absence d'adresse, TVA, téléphone ou courriel d'exemple dans les mentions.
 - Rejouer les douze rendus et les parcours du site autonome, redéployer la même prévisualisation, puis synchroniser uniquement le dépôt privé dédié.
 
+## Logo GROUPE ATC à partir du fichier fourni
+
+- Nouvelle demande explicite : conserver le symbole du logo ANELEC et remplacer son lettrage par « GROUPE ATC » ; l’ancienne instruction de ne pas modifier le logo ne s’applique plus à cette nouvelle déclinaison.
+- Ne pas redessiner le symbole, ne pas inventer une marque : extraire ses tracés vectoriels du fichier fourni et conserver le fichier original en archive.
+- Vérifier le texte visible, le fond transparent, les contours et les couleurs d’origine du symbole ; la palette globale du site ne change pas.
+- Employer la nouvelle version dans l’en-tête, le pied de page et la présentation du groupe. Vérifier les liens vers l’accueil, la taille mobile et l’absence de déformation.
+- Dans Squarespace, remplacer le logo global par le fichier dérivé, uniquement depuis les contrôles natifs et avec un point de sauvegarde avant tout téléversement.
+- Si le téléversement local échoue de nouveau, ne pas prétendre qu’il est enregistré : conserver les sources et expliquer précisément ce qui reste à faire.
+
 ## Carrousels photo par service
 
 - Choix confirmé : un carrousel avec flèches pour chacun des six services, et non un défilement des services eux-mêmes.

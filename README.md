@@ -53,7 +53,7 @@ La procédure différée et les points de validation figurent dans [`docs/deploi
 
 Le domaine final est `anelecgroupe.com`. Le courriel confirmé et corrigé par l’utilisateur est `contact@anelecgroupe.com` ; l’ancienne saisie avec deux « g » est à écarter.
 
-Le logo ANELEC est préservé sans modification et présenté comme historique. La palette du site est indépendante des couleurs de cet ancien logo. Les photographies sont des illustrations et ne sont pas des références de chantier.
+Le logo GROUPE ATC reprend les tracés du symbole ANELEC fourni et remplace le lettrage par « GROUPE ATC », à la demande explicite de l’entreprise du 29 octobre 2026. Les fichiers originaux restent archivés. La palette du site reste indépendante des couleurs du symbole. Les photographies sont des illustrations et ne sont pas des références de chantier.
 
 La fonction réalisations est désactivée. Elle n’émet ni page, ni navigation, ni données structurées tant qu’elle reste désactivée ; lorsqu’elle sera activée, seuls les projets approuvés avec droits et attribution confirmés seront retenus.
 

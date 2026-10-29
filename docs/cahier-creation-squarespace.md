@@ -289,7 +289,7 @@ Ne pas créer de fausses agences locales ou de pages répétitives par ville pou
 
 Vous confirmez que les chantiers seront ajoutés ultérieurement. Leur architecture est conservée dans le code, avec une liste vide, un schéma de données et un indicateur de publication désactivé ; aucune réalisation fictive n’est créée.
 
-Les deux logos fournis portent toujours ANELEC et sont conservés sans modification, comme actifs historiques. Les photographies de la plaquette ne sont pas requalifiées en chantiers ; les visuels de la prévisualisation sont des illustrations identifiées comme telles.
+À la demande explicite du 29 octobre 2026, le logo principal reprend les tracés du symbole fourni et remplace le lettrage ANELEC par « GROUPE ATC ». Une version vectorielle à lettres tracées et un PNG transparent sont préparés ; les deux fichiers ANELEC originaux restent conservés sans modification. Les photographies de la plaquette ne sont pas requalifiées en chantiers ; les visuels de la prévisualisation sont des illustrations identifiées comme telles.
 
 Une fiche validée comprendra le lieu à une précision appropriée, le besoin, les travaux réellement réalisés, les photographies autorisées et le nom de l’entité intervenante. Si un chantier a été réalisé sous le nom ANELEC, cette attribution historique restera explicite dans le contexte du renommage confirmé.
 
@@ -315,7 +315,7 @@ Cette palette est une proposition, pas une identité définitivement approuvée.
 - **Titres :** une sans-sérif structurée, par exemple Archivo si disponible dans le catalogue de l’éditeur.
 - **Lecture :** une sans-sérif sobre, par exemple Source Sans 3, ou une famille native de caractéristiques proches.
 - **Composition :** alternance de texte et de photographie, lignes de séparation fines, grilles simples ; pas d’accumulation de cartes arrondies.
-- **Marque :** utiliser le nom typographique GROUPE ATC et son intitulé complet dans la présentation ; conserver le logo ANELEC fourni, sans modification, avec une attribution historique.
+- **Marque :** utiliser le nouveau logo GROUPE ATC dérivé du symbole fourni et l’intitulé complet dans la présentation. Conserver les fichiers ANELEC originaux en archive et attribuer explicitement toute image historique conservée.
 - **Images :** privilégier des photographies originales autorisées ; une image d’illustration ne doit jamais être présentée comme une réalisation ou un membre de l’équipe.
 - **Mouvement :** apparitions discrètes si nécessaires, sans animation obligatoire pour lire ou utiliser le site.
 

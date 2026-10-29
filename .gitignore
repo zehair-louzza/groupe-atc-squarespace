@@ -1,6 +1,7 @@
 node_modules/
 *.png
 !site/assets/anelec-original.png
+!site/assets/groupe-atc-logo.png
 !site/assets/photo-*-a-ajouter.png
 *.log
 .DS_Store

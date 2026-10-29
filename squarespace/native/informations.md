@@ -38,7 +38,7 @@ Aucune qualification, assurance, certification ou ancienneté non justifiée n�
 
 ## Données des demandes
 
-Le formulaire natif est préparé sur la page Contact désactivée, avec une réception configurée à contact@anelecgroupe.com. Il ne comporte pas d’inscription marketing automatique. Les informations demandées servent à étudier et traiter votre demande ; le téléphone est facultatif.
+Le formulaire natif est préparé sur la page Contact hors navigation, avec une réception configurée à contact@anelecgroupe.com. Il ne comporte pas d’inscription marketing automatique. Les informations demandées servent à étudier et traiter votre demande ; le téléphone est facultatif.
 
 Avant sa mise en service publique, il faudra valider l’identité du responsable de traitement, la base légale applicable, les destinataires et sous-traitants, le stockage, la durée de conservation justifiée et les modalités d’exercice des droits. Aucun envoi test n’a été effectué.
 
@@ -46,7 +46,7 @@ Les outils et cookies effectivement utilisés par Squarespace devront être inve
 
 ## Visuels et références
 
-Les illustrations de la prévisualisation ne sont pas des références de chantiers GROUPE ATC. L’ancien logo ANELEC est un élément historique, conservé sans modification.
+Les illustrations de la prévisualisation ne sont pas des références de chantiers GROUPE ATC. Le logo principal du site conserve le symbole fourni avec le nouveau lettrage GROUPE ATC. Les fichiers ANELEC originaux restent archivés ; l’image historique de la page Groupe reste identifiée comme telle.
 
 Les futurs cas de chantier nécessitent une description exacte, la bonne attribution et les droits de publication. Aucun exemple fictif n’est publié.
 
@@ -58,4 +58,4 @@ Aucun service permanent, délai d’intervention ou de réparation n’est garan
 
 ## Statut de préparation
 
-Les nouvelles pages sont enregistrées hors navigation et désactivées. Leur publication, le remplacement de l’accueil et les modifications de navigation feront l’objet d’un accord distinct.
+Les nouvelles pages sont enregistrées hors navigation. Accueil, Groupe et Informations étaient déjà activées lors du contrôle du 29 octobre 2026 ; hors navigation ne signifie pas désactivé. Aucun réglage d’activation n’a été modifié. Le remplacement de l’accueil et les modifications de navigation feront l’objet d’un accord distinct.
