@@ -1,4 +1,4 @@
-# GROUPE ATC : préparation du site Squarespace
+# GROUPE ATC : site web et intégration Squarespace
 
 GROUPE ATC signifie « GROUPE ANELEC TECHNIQUE ET CONCEPTE », selon l’orthographe communiquée le 28 octobre 2026. ANELEC a simplement été renommée ; aucune filiale nouvelle n’est présentée.
 
@@ -14,6 +14,15 @@ GROUPE ATC signifie « GROUPE ANELEC TECHNIQUE ET CONCEPTE », selon l’orthogr
 ## Commandes
 
 Exécuter `npm run build`, puis `npm test`. La prévisualisation fonctionne avec `npm run preview` sur le port 3000.
+
+## Dépôt privé et futur hébergement Hostinger
+
+Le dépôt dédié est [groupe-atc-squarespace](https://github.com/zehair-louzza/groupe-atc-squarespace), privé. Son nom rappelle le chantier natif actuel, mais les sources autonomes sont conservées pour un futur hébergement sur Hostinger demandé par l’utilisateur.
+
+- **Version autonome :** `site/`, générée par `npm run build`, avec les six pages HTML, leurs styles, scripts et images.
+- **Version native :** `squarespace/native/`, textes, style commun et paramètres de référence des blocs Squarespace.
+- **Hostinger :** préparation pour plus tard, sans connexion au compte Hostinger, transfert, publication ni modification du domaine aujourd’hui.
+- **Formulaire :** le bloc Squarespace ne migre pas avec les pages HTML ; la version autonome nécessite un vrai traitement de demande avant son lancement commercial.
 
 ## Contraintes conservées
 
