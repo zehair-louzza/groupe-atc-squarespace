@@ -159,12 +159,14 @@ Les pages spécialisées suivantes restent des pistes pour une seconde étape, p
 | Électricité | `/electricite` | Détailler dépannage, installation et tableau. |
 | Serrurerie | `/serrurerie` | Détailler accès, serrures et mise en sécurité. |
 | Rénovation intérieure | `/renovation-interieure` | Peinture, plaques de plâtre, carrelage et travaux associés. |
+| Maçonnerie | `/maconnerie` | Métier documenté page 2 du PDF ; périmètre à définir après étude. |
+| Menuiserie | `/menuiserie` | Métier documenté page 2 du PDF ; périmètre à définir après étude. |
 | Le groupe | `/groupe-atc` | Présenter l’organisation réelle, sans organigramme inventé. |
 | Zone d’intervention | `/ile-de-france` | Définir les conditions de couverture locale. |
 | Contact | `/contact` | Recueillir une demande qualifiée. |
 | Réalisations | `/realisations` | À publier seulement lorsque des cas validés sont disponibles. |
 
-Pour un lancement plus compact, les quatre métiers peuvent d’abord être réunis sur une page « Nos métiers », puis être développés séparément lorsque les textes et visuels sont prêts. Il vaut mieux une page utile et complète que quatre pages presque identiques.
+Pour le lancement compact retenu, les six familles sont réunies sur la page Services, à raison de trois par ligne sur ordinateur. Les éventuelles pages métier du tableau sont des évolutions possibles, pas des pages supplémentaires créées ou activées lors de cette passe.
 
 ## Composition de la page d’accueil
 

@@ -4,15 +4,16 @@ GROUPE ATC signifie « GROUPE ANELEC TECHNIQUE ET CONCEPTE », selon l’orthogr
 
 ## Dernière correction de périmètre
 
-Les textes du site autonome, les sources natives et les documents commerciaux sont limités à la plomberie, l’électricité, la serrurerie et la rénovation/finitions intérieures. Un test de non-régression contrôle l’absence des spécialités écartées.
+La page Services présente six familles documentées : plomberie, électricité, serrurerie, rénovation intérieure, maçonnerie et menuiserie. Les deux derniers métiers sont explicitement nommés page 2 du PDF ANELEC. Un test de non-régression contrôle l’absence des spécialités écartées par l’utilisateur.
 
-La correction est enregistrée et relue dans Squarespace sur `/services-content` et `/groupe-atc-maintenance`. La page Services reprend uniquement les prestations concrètes de la présentation ANELEC ; ses huit champs édités sont conservés dans `squarespace/native/existing-services.json`, et le brouillon Maintenance est désactivé.
+La page `/services-content` est enregistrée et relue avec trente champs, six listes métier et six blocs image natifs à compléter. En consultation : trois services par ligne, soit deux rangées sur ordinateur, puis une colonne sur mobile. Le contenu et les identifiants sont dans `squarespace/native/existing-services.json`, et la mise en page spécifique dans `squarespace/native/services.css`. Les six tests unitaires et les neuf parcours du site autonome passent.
 
-La dernière passe a relu le réglage d’activation de Maintenance, pas celui des cinq autres nouveaux brouillons. Les résultats graphiques spécifiques et cette limite de contrôle sont consignés dans `docs/native-scope-verification.json`.
+La correction précédente de Maintenance reste conservée et son dernier réglage observé est désactivé. Cette passe ne réactive aucun nouveau brouillon et ne recontrôle pas leurs interrupteurs. Les relevés actuels de Services sont `docs/native-services-desktop-verification.json` et `docs/native-services-mobile-verification.json` ; le contrôle précédent reste historique dans `docs/native-scope-verification.json`.
 
 ## Structure
 
 - `data/site.json` : marque, intitulé complet, coordonnées et propositions de maintenance.
+- `data/services.json` : six familles et dix-sept lignes de prestations documentées.
 - `src/templates.mjs` : contenus et gabarits éditables.
 - `site/` : prévisualisation statique privée, six pages.
 - `data/projects.json` et `data/project.schema.json` : architecture de réalisations différées, sans exemples inventés.

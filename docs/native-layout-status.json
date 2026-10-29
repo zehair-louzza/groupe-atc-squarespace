@@ -17,6 +17,8 @@
     "servicesDesktopColumns": 3,
     "servicesDesktopRows": 2,
     "servicesMobileColumns": 1,
+    "servicesNativeWidthsChecked": [1531,409],
+    "servicesPageSpecificCss": "squarespace/native/services.css",
     "earlierNativeDisplayChecksRemainHistorical": true
   },
   "lastCssRevisionAppliedUniformly": true,

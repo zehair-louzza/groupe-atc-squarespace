@@ -9,6 +9,7 @@
 - **Consultation native mobile :** fenêtre de 409 px, six réservations de 361 × 270,75 px sur une seule colonne ; aucun débordement horizontal.
 - **Sources autonomes :** six tests unitaires passent ; les six pages sont contrôlées à 1 440 et 375 px. Les six liens métier préremplissent le bon métier et « Travaux » dans le contact.
 - **Non-régression :** neuf parcours de recette incluant la nouvelle grille, le menu, huit accordéons, les trois formules, la validation, la copie, les entrées longues/inertes et le repli image. Aucune erreur JavaScript ni transmission externe.
+- **Prévisualisation hébergée :** même application privée mise à jour, puis douze affichages et les neuf parcours rejoués dans un contexte neuf. Les six préremplissages métier sont contrôlés après chargement effectif du formulaire ; aucune erreur JavaScript ni transmission.
 - **Limites :** le CSS de consultation recompose les trois groupes techniques de l’éditeur natif ; ses outils restent accessibles sans cette recomposition pendant l’édition. Les contrôles du menu natif et de la réception réelle des formulaires ne sont pas étendus par cette passe. Aucun nouveau brouillon, déploiement Hostinger/Vercel ou changement DNS.
 
 Les relevés de cette passe sont `native-services-desktop-verification.json`, `native-services-mobile-verification.json`, le manifeste `squarespace/native/existing-services.json` et la recette `browser-results-updated.json`. Les captures du site autonome sont conservées localement hors du dossier déployé.

@@ -49,6 +49,8 @@ export async function runPreviewQA(browser, base='http://127.0.0.1:3000/') {
   for(const f of serviceFamilies){
     await page.goto(url('metiers.html'));
     await page.locator(`#${f.id}`).getByRole('link',{name:'Décrire mon besoin'}).click();
+    await page.waitForLoadState('load');
+    await page.waitForFunction(value=>document.querySelector('#trade')?.value===value,f.formValue);
     assert.equal(await page.locator('#trade').inputValue(),f.formValue);
     assert.equal(await page.locator('#need').inputValue(),'Travaux');
   }
