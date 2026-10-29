@@ -30,9 +30,30 @@ export async function runPreviewQA(browser, base='http://127.0.0.1:3000/') {
       assert.equal(state.h1,1);assert.equal(state.overflow,false);assert.equal(state.wrongEmail,false);assert.equal(state.brokenImages,0);
       assert.ok(state.email.length>0&&state.email.every(v=>v==='mailto:contact@anelecgroupe.com'));
       result.pages.push({file,width,...state});
+      if(file==='metiers'){
+        const cards=await page.locator('.service-card').evaluateAll(es=>es.map(e=>{const r=e.getBoundingClientRect();return{x:r.x,y:r.y}}));
+        assert.equal(cards.length,6);
+        if(width===1440){
+          assert.ok(Math.abs(cards[0].y-cards[2].y)<1);
+          assert.ok(Math.abs(cards[3].y-cards[5].y)<1);
+          assert.ok(cards[3].y>cards[0].y);
+          assert.ok(cards[0].x<cards[1].x&&cards[1].x<cards[2].x);
+        }else assert.ok(cards.every(c=>Math.abs(c.x-cards[0].x)<1));
+        result.flows.push(`Six services et six photos : ${width===1440?'trois colonnes, deux rangées':'une colonne mobile'}.`);
+      }
       await page.screenshot({path:`${directory}/updated-${file}-${width}.png`,fullPage:true});
     }
   }
+  const serviceFamilies=JSON.parse(await fs.readFile('/home/user/workspace/groupe-atc-site/data/services.json','utf8')).families;
+  await page.setViewportSize({width:1440,height:1000});
+  for(const f of serviceFamilies){
+    await page.goto(url('metiers.html'));
+    await page.locator(`#${f.id}`).getByRole('link',{name:'Décrire mon besoin'}).click();
+    assert.equal(await page.locator('#trade').inputValue(),f.formValue);
+    assert.equal(await page.locator('#need').inputValue(),'Travaux');
+  }
+  result.flows.push('Les six liens métier préremplissent le contact avec la bonne prestation.');
+  await page.setViewportSize({width:375,height:812});
   await page.goto(url('index.html'));
   const menu=page.locator('.menu-toggle');
   await menu.click();assert.equal(await menu.getAttribute('aria-expanded'),'true');

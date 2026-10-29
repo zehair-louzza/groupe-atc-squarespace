@@ -1,5 +1,18 @@
 # Inventaire de réception
 
+## Complétude de Services et demande de trois colonnes
+
+- **Documents relus :** présentation ANELEC et PDF de sept pages ; la page 2 établit aussi les métiers de maçonnerie et menuiserie.
+- **Contenu natif :** six familles, dix-sept lignes de prestations dont quinze tâches détaillées et deux intitulés généraux ; trente champs relus sur la page sauvegardée, un H1 et six H2 métier.
+- **Photos natives :** six blocs image conservés, vides, et six zones 4:3 « PHOTO À AJOUTER ». Aucune photo de chantier non fournie n’est inventée.
+- **Consultation native bureau :** six réservations de 360 × 270 px dans une fenêtre de 1 531 px ; trois abscisses distinctes et deux ordonnées de rangée communes. Aucun débordement horizontal.
+- **Consultation native mobile :** fenêtre de 409 px, six réservations de 361 × 270,75 px sur une seule colonne ; aucun débordement horizontal.
+- **Sources autonomes :** six tests unitaires passent ; les six pages sont contrôlées à 1 440 et 375 px. Les six liens métier préremplissent le bon métier et « Travaux » dans le contact.
+- **Non-régression :** neuf parcours de recette incluant la nouvelle grille, le menu, huit accordéons, les trois formules, la validation, la copie, les entrées longues/inertes et le repli image. Aucune erreur JavaScript ni transmission externe.
+- **Limites :** le CSS de consultation recompose les trois groupes techniques de l’éditeur natif ; ses outils restent accessibles sans cette recomposition pendant l’édition. Les contrôles du menu natif et de la réception réelle des formulaires ne sont pas étendus par cette passe. Aucun nouveau brouillon, déploiement Hostinger/Vercel ou changement DNS.
+
+Les relevés de cette passe sont `native-services-desktop-verification.json`, `native-services-mobile-verification.json`, le manifeste `squarespace/native/existing-services.json` et la recette `browser-results-updated.json`. Les captures du site autonome sont conservées localement hors du dossier déployé.
+
 Prévisualisation privée seulement. Aucun formulaire externe, envoi, DNS ou déploiement Vercel à réaliser pendant les tests.
 
 - Vérifier les six pages, un titre principal par page, ordinateur 1440 × 1000 et mobile 375 × 812.

@@ -1,60 +1,326 @@
 {
-  "pagePath": "/services-content",
-  "pageTitle": "Services",
-  "brand": "GROUPE ATC",
-  "formerBrand": "ANELEC",
-  "evidence": "PRESENTATION-ANELEC.png fourni par l’utilisateur",
-  "nativeSaved": true,
-  "verifiedAfterReopening": true,
-  "supportedTrades": ["Plomberie", "Électricité", "Serrurerie", "Rénovation intérieure"],
+  "banned": false,
+  "cards": [
+    {
+      "detailBlockId": "block-1775835d910154aa4c27",
+      "headingBlockId": "block-35fbeff8d4a2714a6796",
+      "items": [
+        "Dépannage",
+        "Recherche de fuite",
+        "Installation sanitaire",
+        "Mise en sécurité"
+      ],
+      "photo": {
+        "blockId": "block-05a37454ce9d818c2848",
+        "nativeBlockEmpty": true,
+        "placeholderLabel": "PHOTO À AJOUTER",
+        "replaceInNativeEditor": true
+      },
+      "sectionId": "6ae0c92bbed7c15b44ce69d0",
+      "title": "Plomberie",
+      "id": "plomberie"
+    },
+    {
+      "detailBlockId": "block-39501c4b7ad730a185a6",
+      "headingBlockId": "block-29abe6a400f74d35b0f7",
+      "items": [
+        "Dépannage électrique",
+        "Installation électrique",
+        "Tableau électrique",
+        "Levée de réserves"
+      ],
+      "photo": {
+        "blockId": "block-bea98c6e57440fe15cd1",
+        "nativeBlockEmpty": true,
+        "placeholderLabel": "PHOTO À AJOUTER",
+        "replaceInNativeEditor": true
+      },
+      "sectionId": "6ae0c92bbed7c15b44ce69d0",
+      "title": "Électricité",
+      "id": "electricite"
+    },
+    {
+      "detailBlockId": "block-2c3e88c6e5476da18b46",
+      "headingBlockId": "block-c96300004be6379d3d2d",
+      "items": [
+        "Ouverture de porte",
+        "Remplacement de serrure",
+        "Mise en sécurité"
+      ],
+      "photo": {
+        "blockId": "block-732210088b93e5d2c972",
+        "nativeBlockEmpty": true,
+        "placeholderLabel": "PHOTO À AJOUTER",
+        "replaceInNativeEditor": true
+      },
+      "sectionId": "6ae34bad4858d9256ac282a9",
+      "title": "Serrurerie",
+      "id": "serrurerie"
+    },
+    {
+      "detailBlockId": "block-2f6bc0cf1eba4e58490a",
+      "headingBlockId": "block-c8f18fcedf2dedf414cd",
+      "items": [
+        "Peinture",
+        "Plaques de plâtre (placo)",
+        "Carrelage",
+        "Petits travaux de bricolage"
+      ],
+      "photo": {
+        "blockId": "block-f1a41cd571c2bf7aaffe",
+        "nativeBlockEmpty": true,
+        "placeholderLabel": "PHOTO À AJOUTER",
+        "replaceInNativeEditor": true
+      },
+      "sectionId": "6ae34bad4858d9256ac282a9",
+      "title": "Rénovation intérieure",
+      "id": "renovation"
+    },
+    {
+      "detailBlockId": "block-c986a4be5b76abc436e3",
+      "headingBlockId": "block-b725c897818151f2a68d",
+      "items": [
+        "Travaux de maçonnerie"
+      ],
+      "photo": {
+        "blockId": "block-5b0b61f5160be282441e",
+        "nativeBlockEmpty": true,
+        "placeholderLabel": "PHOTO À AJOUTER",
+        "replaceInNativeEditor": true
+      },
+      "sectionId": "6ae34ba2ccd08d4d61511090",
+      "title": "Maçonnerie",
+      "id": "maconnerie"
+    },
+    {
+      "detailBlockId": "block-2fe8fae1fb05e7a3a302",
+      "headingBlockId": "block-4dea032964b4f126fd39",
+      "items": [
+        "Travaux de menuiserie"
+      ],
+      "photo": {
+        "blockId": "block-b353e73e4bd9553e903b",
+        "nativeBlockEmpty": true,
+        "placeholderLabel": "PHOTO À AJOUTER",
+        "replaceInNativeEditor": true
+      },
+      "sectionId": "6ae34ba2ccd08d4d61511090",
+      "title": "Menuiserie",
+      "id": "menuiserie"
+    }
+  ],
   "fields": [
     {
       "blockId": "block-407fa853972aff5c9314",
-      "selector": "h1",
       "index": 0,
+      "selector": "h1",
       "text": "Nos services"
     },
     {
       "blockId": "block-2ed96225d1d5059261d3",
-      "selector": "p",
       "index": 0,
-      "text": "GROUPE ATC, anciennement ANELEC, accompagne les particuliers et les professionnels en Île-de-France en plomberie, électricité, serrurerie et rénovation intérieure."
+      "selector": "p",
+      "text": "GROUPE ATC, anciennement ANELEC, intervient en Île-de-France auprès des particuliers et des professionnels : plomberie, électricité, serrurerie, rénovation intérieure, maçonnerie et menuiserie."
     },
     {
       "blockId": "block-2ed96225d1d5059261d3",
-      "selector": "p",
       "index": 1,
-      "text": "Nos prestations couvrent le dépannage, les installations et les travaux de remise en état. Le contenu de l’intervention est défini avec vous selon le besoin et les contraintes du site."
+      "selector": "p",
+      "text": "Retrouvez ci-dessous le détail de nos prestations. Chaque intervention est définie avec vous selon le besoin et les contraintes du site."
     },
     {
       "blockId": "block-35fbeff8d4a2714a6796",
-      "selector": "h3",
       "index": 0,
-      "text": "Plomberie, électricité et serrurerie"
+      "selector": "h2",
+      "text": "Plomberie"
     },
     {
       "blockId": "block-1775835d910154aa4c27",
-      "selector": "p",
       "index": 0,
-      "text": "Dépannage et installation en plomberie et électricité, recherche de fuite, tableaux, levée de réserves ; ouverture de porte, remplacement de serrure et mise en sécurité."
+      "selector": "li",
+      "text": "Dépannage"
+    },
+    {
+      "blockId": "block-1775835d910154aa4c27",
+      "index": 1,
+      "selector": "li",
+      "text": "Recherche de fuite"
+    },
+    {
+      "blockId": "block-1775835d910154aa4c27",
+      "index": 2,
+      "selector": "li",
+      "text": "Installation sanitaire"
+    },
+    {
+      "blockId": "block-1775835d910154aa4c27",
+      "index": 3,
+      "selector": "li",
+      "text": "Mise en sécurité"
     },
     {
       "blockId": "block-29abe6a400f74d35b0f7",
-      "selector": "h3",
       "index": 0,
-      "text": "Rénovation et finitions intérieures"
+      "selector": "h2",
+      "text": "Électricité"
     },
     {
       "blockId": "block-39501c4b7ad730a185a6",
-      "selector": "p",
       "index": 0,
-      "text": "Peinture, plaques de plâtre (placo), carrelage et petits travaux de bricolage, pour remettre vos espaces intérieurs en état."
+      "selector": "li",
+      "text": "Dépannage électrique"
+    },
+    {
+      "blockId": "block-39501c4b7ad730a185a6",
+      "index": 1,
+      "selector": "li",
+      "text": "Installation électrique"
+    },
+    {
+      "blockId": "block-39501c4b7ad730a185a6",
+      "index": 2,
+      "selector": "li",
+      "text": "Tableau électrique"
+    },
+    {
+      "blockId": "block-39501c4b7ad730a185a6",
+      "index": 3,
+      "selector": "li",
+      "text": "Levée de réserves"
+    },
+    {
+      "blockId": "block-c96300004be6379d3d2d",
+      "index": 0,
+      "selector": "h2",
+      "text": "Serrurerie"
+    },
+    {
+      "blockId": "block-2c3e88c6e5476da18b46",
+      "index": 0,
+      "selector": "li",
+      "text": "Ouverture de porte"
+    },
+    {
+      "blockId": "block-2c3e88c6e5476da18b46",
+      "index": 1,
+      "selector": "li",
+      "text": "Remplacement de serrure"
+    },
+    {
+      "blockId": "block-2c3e88c6e5476da18b46",
+      "index": 2,
+      "selector": "li",
+      "text": "Mise en sécurité"
+    },
+    {
+      "blockId": "block-c8f18fcedf2dedf414cd",
+      "index": 0,
+      "selector": "h2",
+      "text": "Rénovation intérieure"
+    },
+    {
+      "blockId": "block-2f6bc0cf1eba4e58490a",
+      "index": 0,
+      "selector": "li",
+      "text": "Peinture"
+    },
+    {
+      "blockId": "block-2f6bc0cf1eba4e58490a",
+      "index": 1,
+      "selector": "li",
+      "text": "Plaques de plâtre (placo)"
+    },
+    {
+      "blockId": "block-2f6bc0cf1eba4e58490a",
+      "index": 2,
+      "selector": "li",
+      "text": "Carrelage"
+    },
+    {
+      "blockId": "block-2f6bc0cf1eba4e58490a",
+      "index": 3,
+      "selector": "li",
+      "text": "Petits travaux de bricolage"
+    },
+    {
+      "blockId": "block-b725c897818151f2a68d",
+      "index": 0,
+      "selector": "h2",
+      "text": "Maçonnerie"
+    },
+    {
+      "blockId": "block-c986a4be5b76abc436e3",
+      "index": 0,
+      "selector": "li",
+      "text": "Travaux de maçonnerie"
+    },
+    {
+      "blockId": "block-c986a4be5b76abc436e3",
+      "index": 1,
+      "selector": "p",
+      "text": "Périmètre défini après étude de votre besoin."
+    },
+    {
+      "blockId": "block-4dea032964b4f126fd39",
+      "index": 0,
+      "selector": "h2",
+      "text": "Menuiserie"
+    },
+    {
+      "blockId": "block-2fe8fae1fb05e7a3a302",
+      "index": 0,
+      "selector": "li",
+      "text": "Travaux de menuiserie"
+    },
+    {
+      "blockId": "block-2fe8fae1fb05e7a3a302",
+      "index": 1,
+      "selector": "p",
+      "text": "Périmètre défini après étude de votre besoin."
     },
     {
       "blockId": "block-1cd31f9e203e03894386",
-      "selector": "p",
       "index": 0,
-      "text": "Décrivez votre besoin en plomberie, électricité, serrurerie ou rénovation intérieure, ainsi que la commune d’intervention, pour préparer une proposition adaptée."
+      "selector": "h2",
+      "text": "Demander une étude personnalisée"
+    },
+    {
+      "blockId": "block-1cd31f9e203e03894386",
+      "index": 0,
+      "selector": "p",
+      "text": "Décrivez votre besoin en plomberie, électricité, serrurerie, rénovation intérieure, maçonnerie ou menuiserie, ainsi que la commune d’intervention, pour préparer une proposition adaptée."
     }
-  ]
+  ],
+  "path": "/services-content",
+  "supportedTrades": [
+    "Plomberie",
+    "Électricité",
+    "Serrurerie",
+    "Rénovation intérieure",
+    "Maçonnerie",
+    "Menuiserie"
+  ],
+  "sourceDocuments": [
+    {
+      "file": "PRESENTATION-ANELEC.png",
+      "scope": "Quatre familles détaillées et travaux de bricolage"
+    },
+    {
+      "file": "01022026-2.pdf",
+      "pages": [
+        2,
+        3
+      ],
+      "scope": "Métiers et détail des interventions ; maçonnerie et menuiserie nommées page 2"
+    }
+  ],
+  "verifiedSaved": true,
+  "verificationDate": "2026-10-29",
+  "layout": {
+    "desktopColumns": 3,
+    "desktopRows": 2,
+    "mobileColumns": 1
+  },
+  "stylingFile": "squarespace/native/services.css",
+  "editorNote": "Textes, listes et six blocs image natifs. Trois groupes techniques de deux métiers sont conservés dans l’éditeur ; le CSS de consultation compose deux lignes de trois, sans masquer les outils natifs pendant l’édition."
 }

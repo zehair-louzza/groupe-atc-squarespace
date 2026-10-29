@@ -1,24 +1,61 @@
 # Page Services existante : prestations ANELEC sous le nom GROUPE ATC
 
-La page `/services-content` est enregistrée dans Squarespace avec les prestations de la présentation ANELEC fournie par l’utilisateur. Huit champs de texte ont été relus après enregistrement et réouverture ; les identifiants des blocs et les textes exacts sont conservés dans `existing-services.json`.
+La page `/services-content` est enregistrée dans Squarespace avec les prestations des deux documents ANELEC fournis. Trente champs de texte, six listes et six blocs image natifs sont conservés dans `existing-services.json`. Les détails des quatre premières familles proviennent de la présentation et de la page 3 du PDF ; la maçonnerie et la menuiserie sont explicitement nommées page 2.
 
 ## Nos services
 
-GROUPE ATC, anciennement ANELEC, accompagne les particuliers et les professionnels en Île-de-France en plomberie, électricité, serrurerie et rénovation intérieure.
+GROUPE ATC, anciennement ANELEC, intervient en Île-de-France auprès des particuliers et des professionnels : plomberie, électricité, serrurerie, rénovation intérieure, maçonnerie et menuiserie.
 
-Nos prestations couvrent le dépannage, les installations et les travaux de remise en état. Le contenu de l’intervention est défini avec vous selon le besoin et les contraintes du site.
+Retrouvez ci-dessous le détail de nos prestations. Chaque intervention est définie avec vous selon le besoin et les contraintes du site.
 
-### Plomberie, électricité et serrurerie
+### Plomberie
 
-Dépannage et installation en plomberie et électricité, recherche de fuite, tableaux, levée de réserves ; ouverture de porte, remplacement de serrure et mise en sécurité.
+- Dépannage
+- Recherche de fuite
+- Installation sanitaire
+- Mise en sécurité
 
-### Rénovation et finitions intérieures
+### Électricité
 
-Peinture, plaques de plâtre (placo), carrelage et petits travaux de bricolage, pour remettre vos espaces intérieurs en état.
+- Dépannage électrique
+- Installation électrique
+- Tableau électrique
+- Levée de réserves
+
+### Serrurerie
+
+- Ouverture de porte
+- Remplacement de serrure
+- Mise en sécurité
+
+### Rénovation intérieure
+
+- Peinture
+- Plaques de plâtre (placo)
+- Carrelage
+- Petits travaux de bricolage
+
+### Maçonnerie
+
+- Travaux de maçonnerie
+
+Périmètre défini après étude de votre besoin.
+
+### Menuiserie
+
+- Travaux de menuiserie
+
+Périmètre défini après étude de votre besoin.
 
 ### Demande
 
-Décrivez votre besoin en plomberie, électricité, serrurerie ou rénovation intérieure, ainsi que la commune d’intervention, pour préparer une proposition adaptée.
+Décrivez votre besoin en plomberie, électricité, serrurerie, rénovation intérieure, maçonnerie ou menuiserie, ainsi que la commune d’intervention, pour préparer une proposition adaptée.
+
+## Mise en page et futures photos
+
+L’affichage de consultation présente trois services par ligne sur ordinateur, soit deux lignes, et une colonne sur mobile. Le CSS est limité à cette page et conservé dans `services.css`. Les titres, listes et six blocs image restent natifs. Le regroupement technique en trois sections est conservé pendant l’édition afin de ne pas neutraliser les outils Squarespace ; le CSS recompose l’affichage de consultation.
+
+Chaque bloc image est vide, avec une zone au format 4:3 indiquant « PHOTO À AJOUTER ». Dans l’éditeur, sélectionner le bloc image du métier puis « Ajouter une image ». Cette mention disparaît automatiquement dès qu’une image est présente. Aucun visuel générique n’est présenté comme un chantier de GROUPE ATC. Les six fichiers illustrant ces réservations dans le site autonome sont des emplacements graphiques, pas des photographies de référence.
 
 ## État natif et limites
 

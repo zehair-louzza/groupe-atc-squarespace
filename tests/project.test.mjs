@@ -43,8 +43,24 @@ test('Rendered offers and native sources stay within the confirmed trade scope',
     assert.doesNotMatch(fs.readFileSync(file,'utf8'),excluded,`Unexpected trade in ${file}`);
   }
   const services=JSON.parse(fs.readFileSync('squarespace/native/existing-services.json','utf8'));
-  assert.deepEqual(services.supportedTrades,['Plomberie','Électricité','Serrurerie','Rénovation intérieure']);
-  assert.equal(services.fields.length,8);
-  assert.equal(new Set(services.fields.map(f=>`${f.blockId}:${f.selector}:${f.index}`)).size,8);
+  assert.deepEqual(services.supportedTrades,['Plomberie','Électricité','Serrurerie','Rénovation intérieure','Maçonnerie','Menuiserie']);
+  assert.equal(services.fields.length,30);
+  assert.equal(services.cards.length,6);
+  assert.ok(services.cards.every(c=>c.photo.nativeBlockEmpty===true));
+  assert.equal(new Set(services.fields.map(f=>`${f.blockId}:${f.selector}:${f.index}`)).size,30);
   assert.doesNotMatch(services.fields.map(f=>f.text).join('\n'),/extension|autorisations administratives|contrat annuel/i);
+});
+
+test('les six métiers et leurs emplacements photo sont complets dans la page autonome', () => {
+  const data=JSON.parse(fs.readFileSync(new URL('../data/services.json',import.meta.url),'utf8'));
+  const html=fs.readFileSync(new URL('../site/metiers.html',import.meta.url),'utf8');
+  assert.equal(data.families.length,6);
+  assert.equal(data.families.reduce((n,f)=>n+f.items.length,0),17);
+  for(const f of data.families){
+    assert.ok(html.includes(`id="${f.id}"`));
+    assert.ok(html.includes(`photo-${f.id}-a-ajouter.png`));
+    for(const item of f.items)assert.ok(html.includes(item));
+    fs.accessSync(new URL(`../site/assets/photo-${f.id}-a-ajouter.png`,import.meta.url));
+  }
+  assert.equal(data.photosAreClientReferences,false);
 });

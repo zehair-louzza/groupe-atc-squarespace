@@ -1,5 +1,5 @@
 {
-  "base": "hosted-private-preview",
+  "base": "http://127.0.0.1:3000/",
   "pages": [
     {
       "file": "index",
@@ -139,6 +139,9 @@
     }
   ],
   "flows": [
+    "Six services et six photos : trois colonnes, deux rangées.",
+    "Six services et six photos : une colonne mobile.",
+    "Les six liens métier préremplissent le contact avec la bonne prestation.",
     "Menu mobile : ouverture, fermeture, navigation et retour au bureau.",
     "8 accordéons ouverts et refermés.",
     "Trois formules : préremplissage correct du contact.",

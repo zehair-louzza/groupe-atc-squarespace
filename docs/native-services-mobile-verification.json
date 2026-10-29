@@ -1,0 +1,55 @@
+{
+  "h1": 1,
+  "photos": [
+    {
+      "h": 270.75,
+      "id": "block-05a37454ce9d818c2848",
+      "label": "\"PHOTO À AJOUTER\"",
+      "w": 361,
+      "x": 24,
+      "y": 456.46875
+    },
+    {
+      "h": 270.75,
+      "id": "block-bea98c6e57440fe15cd1",
+      "label": "\"PHOTO À AJOUTER\"",
+      "w": 361,
+      "x": 24,
+      "y": 915.15625
+    },
+    {
+      "h": 270.75,
+      "id": "block-732210088b93e5d2c972",
+      "label": "\"PHOTO À AJOUTER\"",
+      "w": 361,
+      "x": 24,
+      "y": 1405.84375
+    },
+    {
+      "h": 270.75,
+      "id": "block-f1a41cd571c2bf7aaffe",
+      "label": "\"PHOTO À AJOUTER\"",
+      "w": 361,
+      "x": 24,
+      "y": 1837.34375
+    },
+    {
+      "h": 270.75,
+      "id": "block-5b0b61f5160be282441e",
+      "label": "\"PHOTO À AJOUTER\"",
+      "w": 361,
+      "x": 24,
+      "y": 2328.03125
+    },
+    {
+      "h": 270.75,
+      "id": "block-b353e73e4bd9553e903b",
+      "label": "\"PHOTO À AJOUTER\"",
+      "w": 361,
+      "x": 24,
+      "y": 2748.34375
+    }
+  ],
+  "scroll": 409,
+  "width": 409
+}

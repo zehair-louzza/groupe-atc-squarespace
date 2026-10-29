@@ -4,7 +4,9 @@ Version actualisée le 29 octobre 2026 après la mise en forme des six brouillon
 
 ## Décision de conception
 
-Le dernier périmètre confirmé se limite à la plomberie et aux sanitaires, à l’électricité, à la serrurerie et à la rénovation/finitions intérieures. Les corrections sont enregistrées et relues dans Squarespace ; la page Services reprend les prestations concrètes de la présentation ANELEC, et le brouillon Maintenance reste désactivé.
+La page Services reprend les six familles documentées dans les pièces ANELEC : plomberie, électricité, serrurerie, rénovation intérieure, maçonnerie et menuiserie. Les deux derniers métiers sont expressément nommés page 2 du PDF ; leur omission lors de la première passe est corrigée sans inventer de sous-prestations. La page est enregistrée dans Squarespace avec les listes détaillées et six blocs image natifs à compléter.
+
+Votre dernière demande est appliquée à l’affichage de consultation : trois services par ligne sur ordinateur, soit deux lignes pour les six familles, et une colonne sur mobile. Les emplacements indiquent « PHOTO À AJOUTER » jusqu’à l’insertion de vos images. L’offre récurrente et les conditions restent des propositions distinctes à valider ; le brouillon Maintenance n’est pas activé.
 
 Le nouveau site présente **GROUPE ATC**, développé exactement en « GROUPE ANELEC TECHNIQUE ET CONCEPTE ». Vous avez confirmé un simple renommage d’ANELEC, sans création de filiale, et le maintien du domaine `anelecgroupe.com` ; la dénomination juridique inscrite au registre reste à distinguer de cette marque.
 

@@ -1,0 +1,187 @@
+/* Page Services existante uniquement. Les textes et images restent des blocs natifs. */
+#collection-6ae0c92bbed7c15b44ce698f article .page-section {
+  min-height: 0 !important;
+}
+#collection-6ae0c92bbed7c15b44ce698f article .page-section > .content-wrapper {
+  width: 100% !important;
+  max-width: 1200px !important;
+  min-height: 0 !important;
+  box-sizing: border-box;
+  padding: 28px 32px !important;
+  margin-inline: auto !important;
+}
+#collection-6ae0c92bbed7c15b44ce698f [data-section-id="6ae0c92bbed7c15b44ce69c3"] > .content-wrapper {
+  padding-top: 64px !important;
+  padding-bottom: 40px !important;
+}
+#collection-6ae0c92bbed7c15b44ce698f [data-section-id="6ae0c92bbed7c15b44ce69c3"] .fluid-engine {
+  display: grid !important;
+  grid-template-columns: 1fr 1.3fr !important;
+  grid-template-rows: auto !important;
+  gap: 40px !important;
+}
+#collection-6ae0c92bbed7c15b44ce698f [data-section-id="6ae0c92bbed7c15b44ce69c3"] .fe-block {
+  grid-area: auto !important;
+  align-self: start;
+}
+#collection-6ae0c92bbed7c15b44ce698f #block-407fa853972aff5c9314 h1 {
+  margin: 0;
+  font-size: clamp(44px, 5vw, 68px);
+  line-height: 1.06;
+}
+#collection-6ae0c92bbed7c15b44ce698f :is(
+  [data-section-id="6ae0c92bbed7c15b44ce69d0"],
+  [data-section-id="6ae34bad4858d9256ac282a9"],
+  [data-section-id="6ae34ba2ccd08d4d61511090"]
+) .fluid-engine {
+  display: grid !important;
+  width: 100% !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  grid-template-rows: auto auto 1fr !important;
+  grid-auto-flow: column !important;
+  column-gap: 40px !important;
+  row-gap: 16px !important;
+}
+#collection-6ae0c92bbed7c15b44ce698f :is(
+  [data-section-id="6ae0c92bbed7c15b44ce69d0"],
+  [data-section-id="6ae34bad4858d9256ac282a9"],
+  [data-section-id="6ae34ba2ccd08d4d61511090"]
+) .fe-block {
+  grid-area: auto !important;
+  height: auto !important;
+  min-height: 0 !important;
+  min-width: 0;
+  align-self: start;
+}
+#collection-6ae0c92bbed7c15b44ce698f article :is(h2, h3) {
+  font-size: clamp(26px, 2.4vw, 34px);
+  line-height: 1.2;
+  margin: 0;
+}
+#collection-6ae0c92bbed7c15b44ce698f article p,
+#collection-6ae0c92bbed7c15b44ce698f article li {
+  font-size: 17px;
+  line-height: 1.6;
+}
+#collection-6ae0c92bbed7c15b44ce698f article ul {
+  margin: 0;
+  padding-left: 1.25em;
+}
+#collection-6ae0c92bbed7c15b44ce698f article li p {
+  margin: 0;
+}
+#collection-6ae0c92bbed7c15b44ce698f :is(
+  .fe-block-05a37454ce9d818c2848,
+  .fe-block-bea98c6e57440fe15cd1,
+  .fe-block-732210088b93e5d2c972,
+  .fe-block-f1a41cd571c2bf7aaffe,
+  .fe-block-5b0b61f5160be282441e,
+  .fe-block-b353e73e4bd9553e903b
+) {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  align-self: stretch !important;
+}
+/* Un nouvel ajout d’image fait disparaître automatiquement cette indication. */
+#collection-6ae0c92bbed7c15b44ce698f article .fe-block:not(:has(img)):has(.sqs-block-image) {
+  background: #edf0f2;
+  outline: 1px dashed #b7c3cc;
+  outline-offset: -14px;
+}
+#collection-6ae0c92bbed7c15b44ce698f article .fe-block:not(:has(img)):has(.sqs-block-image)::after {
+  content: "PHOTO À AJOUTER";
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  color: #536b7d;
+  font: 500 14px/1.5 Arial, sans-serif;
+  letter-spacing: 2px;
+}
+@media (max-width: 767px) {
+  #collection-6ae0c92bbed7c15b44ce698f article .page-section > .content-wrapper {
+    padding: 24px !important;
+  }
+  body#collection-6ae0c92bbed7c15b44ce698f article .page-section .fluid-engine {
+    grid-template-columns: minmax(0, 1fr) !important;
+    grid-template-rows: none !important;
+    grid-auto-flow: row !important;
+    gap: 16px !important;
+  }
+  #collection-6ae0c92bbed7c15b44ce698f article .fe-block {
+    grid-area: auto !important;
+    min-width: 0;
+  }
+  #collection-6ae0c92bbed7c15b44ce698f article .sqs-block-form {
+    margin-top: 16px;
+  }
+}
+/* Trois métiers par ligne en consultation. La géométrie d’édition reste native. */
+@media (min-width: 768px) {
+  #collection-6ae0c92bbed7c15b44ce698f:not(:has(.sqs-block-editable)) article {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px 28px;
+    max-width: 1200px;
+    padding-inline: 32px;
+    margin-inline: auto;
+    box-sizing: border-box;
+    align-items: start;
+  }
+  #collection-6ae0c92bbed7c15b44ce698f:not(:has(.sqs-block-editable)) article > .region {
+    display: contents !important;
+  }
+  #collection-6ae0c92bbed7c15b44ce698f:not(:has(.sqs-block-editable)) article .page-section {
+    grid-column: 1 / -1;
+  }
+  #collection-6ae0c92bbed7c15b44ce698f:not(:has(.sqs-block-editable)) [data-section-id="6ae0c92bbed7c15b44ce69c3"] {
+    grid-row: 1;
+  }
+  #collection-6ae0c92bbed7c15b44ce698f:not(:has(.sqs-block-editable)) [data-section-id="6ae0c92bbed7c15b44ce69d5"] {
+    grid-row: 8;
+  }
+  #collection-6ae0c92bbed7c15b44ce698f:not(:has(.sqs-block-editable)) article .page-section > .content-wrapper {
+    padding-inline: 0 !important;
+  }
+  #collection-6ae0c92bbed7c15b44ce698f:not(:has(.sqs-block-editable)) :is(
+    [data-section-id="6ae0c92bbed7c15b44ce69d0"],
+    [data-section-id="6ae34bad4858d9256ac282a9"],
+    [data-section-id="6ae34ba2ccd08d4d61511090"]
+  ),
+  #collection-6ae0c92bbed7c15b44ce698f:not(:has(.sqs-block-editable)) :is(
+    [data-section-id="6ae0c92bbed7c15b44ce69d0"],
+    [data-section-id="6ae34bad4858d9256ac282a9"],
+    [data-section-id="6ae34ba2ccd08d4d61511090"]
+  ) :is(.content-wrapper, .content, [data-fluid-engine], .fluid-engine) {
+    display: contents !important;
+  }
+  #collection-6ae0c92bbed7c15b44ce698f:not(:has(.sqs-block-editable)) :is(
+    [data-section-id="6ae0c92bbed7c15b44ce69d0"],
+    [data-section-id="6ae34bad4858d9256ac282a9"],
+    [data-section-id="6ae34ba2ccd08d4d61511090"]
+  ) :is(.section-border, .section-background) {
+    display: none !important;
+  }
+  .fe-block-05a37454ce9d818c2848, .fe-block-35fbeff8d4a2714a6796, .fe-block-1775835d910154aa4c27 { --atc-col: 1; --atc-row: 2; }
+  .fe-block-bea98c6e57440fe15cd1, .fe-block-29abe6a400f74d35b0f7, .fe-block-39501c4b7ad730a185a6 { --atc-col: 2; --atc-row: 2; }
+  .fe-block-732210088b93e5d2c972, .fe-block-c96300004be6379d3d2d, .fe-block-2c3e88c6e5476da18b46 { --atc-col: 3; --atc-row: 2; }
+  .fe-block-f1a41cd571c2bf7aaffe, .fe-block-c8f18fcedf2dedf414cd, .fe-block-2f6bc0cf1eba4e58490a { --atc-col: 1; --atc-row: 5; }
+  .fe-block-5b0b61f5160be282441e, .fe-block-b725c897818151f2a68d, .fe-block-c986a4be5b76abc436e3 { --atc-col: 2; --atc-row: 5; }
+  .fe-block-b353e73e4bd9553e903b, .fe-block-4dea032964b4f126fd39, .fe-block-2fe8fae1fb05e7a3a302 { --atc-col: 3; --atc-row: 5; }
+  #collection-6ae0c92bbed7c15b44ce698f:not(:has(.sqs-block-editable)) :is(
+    [data-section-id="6ae0c92bbed7c15b44ce69d0"],
+    [data-section-id="6ae34bad4858d9256ac282a9"],
+    [data-section-id="6ae34ba2ccd08d4d61511090"]
+  ) .fe-block {
+    grid-column: var(--atc-col) !important;
+    grid-row: var(--atc-row) !important;
+  }
+  #collection-6ae0c92bbed7c15b44ce698f:not(:has(.sqs-block-editable)) :is([data-section-id="6ae0c92bbed7c15b44ce69d0"], [data-section-id="6ae34bad4858d9256ac282a9"], [data-section-id="6ae34ba2ccd08d4d61511090"]) .fe-block:has(h2) {
+    grid-row: calc(var(--atc-row) + 1) !important;
+  }
+  #collection-6ae0c92bbed7c15b44ce698f:not(:has(.sqs-block-editable)) :is([data-section-id="6ae0c92bbed7c15b44ce69d0"], [data-section-id="6ae34bad4858d9256ac282a9"], [data-section-id="6ae34ba2ccd08d4d61511090"]) .fe-block:has(ul) {
+    grid-row: calc(var(--atc-row) + 2) !important;
+    margin-bottom: 32px;
+  }
+}

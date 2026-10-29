@@ -1,5 +1,15 @@
 # Parcours et réception de la finalisation native
 
+## Complétude de Services et zones photo
+
+- Sur la page Services existante, retrouver six rubriques distinctes : Plomberie, Électricité, Serrurerie, Rénovation intérieure, Maçonnerie et Menuiserie.
+- Reprendre les quinze prestations détaillées de la présentation et les deux métiers supplémentaires explicitement nommés page 2 du PDF, sans inventer leur détail.
+- Prévoir six images natives remplaçables, identifiées comme emplacements de futures photos et non comme réalisations.
+- Contrôler les six rubriques et leurs images au bureau et à 375 px, leur enregistrement puis leur réouverture.
+- Dernière demande : trois services par ligne sur ordinateur, soit deux rangées, et une colonne sur mobile.
+- Préserver la demande de contact existante, les coordonnées, la navigation et l’état des nouveaux brouillons ; aucun transfert Hostinger ni changement DNS.
+- Synchroniser la page Métiers du site autonome et les sources du dépôt privé ; rejouer les parcours de prévisualisation existants et les six liens métier vers le contact.
+
 Les six pages restent désactivées pendant les modifications. Le travail couvre la correction du courriel, la mise en page native et le retrait des éléments commerciaux non pertinents, sans suppression de produits, commandes ou anciennes pages.
 
 ## Identité et coordonnées

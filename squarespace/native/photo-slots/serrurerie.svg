@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="720" viewBox="0 0 960 720">
+  <rect width="960" height="720" fill="#edf0f2"/>
+  <rect x="32" y="32" width="896" height="656" fill="none" stroke="#b7c3cc" stroke-width="2" stroke-dasharray="10 10"/>
+  <g fill="none" stroke="#536b7d" stroke-width="3">
+    <rect x="436" y="242" width="88" height="66" rx="4"/>
+    <circle cx="498" cy="263" r="8"/>
+    <path d="m440 299 27-27 23 23 12-12 18 18"/>
+  </g>
+  <text x="480" y="382" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="35" fill="#142536">Serrurerie</text>
+  <text x="480" y="432" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="20" letter-spacing="3" fill="#536b7d">PHOTO À AJOUTER</text>
+  <text x="480" y="600" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#536b7d">Emplacement réservé à votre future photo</text>
+</svg>

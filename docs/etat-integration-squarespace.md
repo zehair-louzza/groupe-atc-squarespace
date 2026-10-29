@@ -1,10 +1,18 @@
 # GROUPE ATC : état d’intégration dans Squarespace
 
-Mise à jour du 29 octobre 2026, après reprise dans Comet. Les deux corrections métier sont désormais enregistrées et relues dans Squarespace ; la page Services présente uniquement les prestations concrètes de la présentation ANELEC et le brouillon Maintenance reste désactivé.
+Mise à jour du 29 octobre 2026 : la page Services existante est complétée et enregistrée dans Squarespace avec six rubriques, six emplacements photo et un affichage de trois services par ligne sur ordinateur. La maçonnerie et la menuiserie, présentes page 2 du PDF mais omises dans la première passe, sont désormais prises en compte.
 
-## Corrections métier enregistrées et contrôlées
+## Services complets et photos
 
-L’offre est limitée à la plomberie et aux sanitaires, à l’électricité, à la serrurerie et à la rénovation/finitions intérieures. Les gabarits, les six pages HTML, les textes natifs, la structure des sections et les documents commerciaux ne proposent plus d’autre spécialité ; une ambiguïté « entretien intérieur » est remplacée par « finitions intérieures ».
+- **Prestations :** Plomberie, Électricité, Serrurerie, Rénovation intérieure, Maçonnerie et Menuiserie. Les quinze tâches détaillées des quatre premières familles sont conservées ; aucun détail non documenté n’est inventé pour les deux autres métiers.
+- **Photos :** six blocs image Squarespace natifs, vides et remplaçables depuis l’éditeur. La mention « PHOTO À AJOUTER » disparaît lorsqu’une image est ajoutée. Les visuels génériques précédents ne sont plus affichés.
+- **Affichage :** trois colonnes et deux rangées sur ordinateur ; une colonne sur mobile, sans débordement. Les textes, listes, images et formulaire restent natifs ; seul l’agencement de consultation est défini par un CSS spécifique à Services.
+- **Sources :** `data/services.json`, `squarespace/native/existing-services.json`, `squarespace/native/services.css` et la page autonome Métiers contiennent la même offre. Les identifiants et trente champs natifs relus sont enregistrés dans le dépôt.
+- **Périmètre préservé :** aucun nouveau brouillon activé, aucun envoi de formulaire, aucun changement de domaine ou de DNS, aucun déploiement Hostinger ou Vercel.
+
+## Historique avant relecture complète du PDF
+
+La première correction couvrait la plomberie et les sanitaires, l’électricité, la serrurerie et la rénovation/finitions intérieures. La présente passe ajoute les deux métiers documentés dans le PDF ; les spécialités écartées par l’utilisateur ne sont pas réintroduites et l’offre de maintenance reste une proposition à périmètre écrit.
 
 - **Sources corrigées :** cinq tests automatisés passent ; les douze affichages du site autonome à 375 et 1 440 px et ses six parcours de recette passent, sans erreur JavaScript ni envoi de message.
 - **Prévisualisation privée :** mise à jour au même emplacement, puis les douze affichages et six parcours ont été rejoués dans un nouveau contexte navigateur avec le même résultat. Aucun déploiement Hostinger/Vercel ni changement du domaine public.
