@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-29",
+  "page": "groupe-atc-contact",
+  "method": "Native editor controls and rendered DOM after exiting editor, navigating to Groupe, then reopening Contact",
+  "formRecreated": false,
+  "optionsAdded": false,
+  "renderedOptions": [
+    "Choisir une prestation",
+    "Maintenance Essentiel : 2 visites par an",
+    "Maintenance Suivi : 4 visites par an",
+    "Maintenance Continuité : 12 visites par an",
+    "Maintenance : périmètre à définir",
+    "Travaux TCE",
+    "Intervention ponctuelle"
+  ],
+  "destinationObservedInEditor": "contact@anelecgroupe.com",
+  "professionalEmailRequiredObserved": true,
+  "marketingSignupObservedChecked": false,
+  "postSubmitMessageObservedInEditor": "Merci, votre demande a bien été transmise à GROUPE ATC. Nous reviendrons vers vous après étude. Cet envoi ne vaut ni commande, ni devis accepté, ni confirmation d’intervention. Pour une urgence présentant un danger, contactez les services de secours compétents.",
+  "testSubmissionSent": false,
+  "actualEmailDeliveryVerified": false,
+  "newPagesActivatedOrPublished": false,
+  "fullNativeVisualQaComplete": false
+}

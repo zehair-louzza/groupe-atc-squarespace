@@ -1,6 +1,6 @@
 # GROUPE ATC : état d’intégration dans Squarespace
 
-Mise à jour du 29 octobre 2026. Les six compositions natives sont enregistrées, avec vingt-six sections, un pied de page personnalisé, deux blocs image et un formulaire préparé. La finalisation n’est toutefois pas complète : le dernier contrôle a identifié des options de gabarit dans la liste du formulaire, puis la connexion à Comet s’est interrompue. Une tentative de reconnexion a échoué avec le même message de perte de liaison.
+Mise à jour du 29 octobre 2026, après la seconde reprise. Les six compositions natives sont enregistrées, avec vingt-six sections, un pied de page personnalisé, deux blocs image et un formulaire dont les six choix ont maintenant été corrigés et relus après réouverture de Contact. La finalisation graphique n’est toutefois pas complète : Comet a de nouveau perdu la liaison pendant la passe d’harmonisation et de contrôle ; la tentative de reconnexion a également échoué.
 
 ## Réalisé et enregistré
 
@@ -38,31 +38,35 @@ Les brouillons se trouvent dans [l’éditeur Squarespace du site existant](http
 
 Les contenus utilisent des sections Fluid Engine, des blocs Markdown, des blocs Image et un bloc Form natifs, pas un site entier collé dans un bloc HTML. Les appels à l’action dans les textes sont des liens mis en forme ; les styles propres aux pages associent bleu nuit, blanc minéral et accent bleu, indépendamment des couleurs des pièces ANELEC.
 
-## Formulaire : préparé, mais correction nécessaire
+## Formulaire : configuration corrigée et relue
 
-Le bloc « GROUPE ATC | Demande technique » est présent sur Contact. La destination contact@anelecgroupe.com a été relue dans son éditeur ; les champs et l’intitulé « Site et commune » ont ensuite été retrouvés après avoir quitté Contact, ouvert Groupe et rouvert Contact.
+Le bloc « GROUPE ATC | Demande technique » est présent sur Contact. La destination contact@anelecgroupe.com a été relue dans son éditeur ; les champs et l’intitulé « Site et commune » ont été retrouvés après avoir quitté Contact, ouvert Groupe et rouvert Contact.
 
 - **Nom :** prénom et nom de famille obligatoires.
 - **Courriel professionnel :** champ de réponse obligatoire ; aucune restriction de domaine professionnel n’a été ajoutée.
 - **Site et commune :** obligatoire, avec une aide acceptant logement, commerce, bureaux ou copropriété ; le nom de l’entreprise n’est demandé que s’il est utile.
 - **Votre besoin :** obligatoire, avec une aide sur les équipements, contraintes et calendrier ; rappel de ne pas fournir de données sensibles.
 - **Téléphone :** facultatif.
-- **Nature de la demande :** choix obligatoire, mais liste à corriger avant toute activation.
+- **Nature de la demande :** choix obligatoire, avec six prestations corrigées et retrouvées dans la liste rendue après fermeture de l’éditeur, passage sur Groupe et réouverture de Contact.
 
-### Liste constatée au dernier contrôle
+### Liste corrigée, constatée après réouverture
 
-| Position après « Choisir une prestation » | Valeur observée | Valeur cible |
-|---|---|---|
-| 1 | Maintenance Essentiel : 2 visites par an | Identique |
-| 2 | Maintenance Continuité : 12 visites par an | Maintenance Suivi : 4 visites par an |
-| 3 | Option 3 | Maintenance Continuité : 12 visites par an |
-| 4 | Travaux TCE | Maintenance : périmètre à définir |
-| 5 | Option 5 | Travaux TCE |
-| 6 | Intervention ponctuelle | Identique |
+| Position après « Choisir une prestation » | Valeur observée |
+|---|---|
+| 1 | Maintenance Essentiel : 2 visites par an |
+| 2 | Maintenance Suivi : 4 visites par an |
+| 3 | Maintenance Continuité : 12 visites par an |
+| 4 | Maintenance : périmètre à définir |
+| 5 | Travaux TCE |
+| 6 | Intervention ponctuelle |
 
-La dernière tentative de rouvrir l’éditeur pour corriger ces valeurs a échoué avant de permettre la correction. Il faut modifier les six options existantes, sans en ajouter à nouveau rapidement, puis relire la liste rendue après fermeture et réouverture de la page.
+Les anciennes options génériques ont été remplacées en modifiant les champs existants, sans recréer le formulaire ni ajouter d’options. La liste correcte a été relue dans la page rendue ; ce contrôle confirme la persistance de ces valeurs.
 
-L’inscription aux e-mails a été décochée lors du paramétrage ; sa relecture finale reste à faire. Un message post-envoi a été saisi pour préciser qu’une demande ne vaut ni commande ni confirmation d’intervention, mais sa persistance doit également être relue. Aucun test d’envoi externe ni contrôle de réception réelle n’a été effectué.
+L’inscription aux e-mails a été retrouvée décochée dans les réglages du champ Courriel professionnel. Le message post-envoi a également été relu dans son éditeur :
+
+> Merci, votre demande a bien été transmise à GROUPE ATC. Nous reviendrons vers vous après étude. Cet envoi ne vaut ni commande, ni devis accepté, ni confirmation d’intervention. Pour une urgence présentant un danger, contactez les services de secours compétents.
+
+Cette lecture du paramétrage n’est pas un test de transmission. Aucun formulaire n’a été envoyé, aucun courriel de test n’a été transmis et la réception réelle n’a pas été contrôlée.
 
 ## Contrôles réalisés et limites
 
@@ -77,6 +81,8 @@ L’inscription aux e-mails a été décochée lors du paramétrage ; sa relectu
 
 Les captures disponibles de cette reprise sont partielles et antérieures à certaines corrections. Elles ne constituent pas une validation finale des six pages sur ordinateur et mobile. Les derniers raffinements CSS, dont l’harmonisation du bouton du formulaire, sont préparés localement mais ne sont pas encore réappliqués uniformément aux six pages.
 
+La seconde reprise a terminé les corrections de configuration du formulaire. La nouvelle passe de styles et de contrôle a ensuite échoué avant de produire un relevé ou une capture de Contact ; aucune application CSS supplémentaire ni réception visuelle ne doit être déduite de cette tentative.
+
 ### Prévisualisation privée distincte
 
 La prévisualisation privée, corrigée avec contact@anelecgroupe.com, avait déjà été contrôlée sur six pages à 1440 × 1000 et 375 × 812. Ses parcours de menu, accordéons, choix des formules, préparation locale d’une demande et récapitulatif avaient été testés sans envoi externe ; ces résultats ne valident pas le formulaire Squarespace.
@@ -85,13 +91,11 @@ Les quatre tests automatisés locaux passent lors de cette reprise. Les deux ver
 
 ## À terminer dès le retour de Comet
 
-- **Priorité formulaire :** remplacer les options de gabarit, rétablir Suivi et le choix de maintenance à définir, puis vérifier les six valeurs réellement rendues.
-- **Réglages du formulaire :** relire destination, inscription marketing et message post-envoi, sans transmettre de demande.
 - **Styles :** appliquer la dernière révision CSS aux six pages, puis vérifier les espacements, la hauteur de l’image et le bouton du formulaire.
 - **Réception native :** contrôler chaque page au bureau et sur mobile, les liens entre brouillons, les images, le formulaire, le pied de page et l’absence de débordement ou de chevauchement.
 - **Sécurité de publication :** relire les six réglages « Activer la page » et leur maintien hors navigation après sauvegarde.
 
-La dernière page constatée avant la perte de liaison est Contact, après sa réouverture et la lecture des champs. Les modifications de composition et d’espacement précédentes sont enregistrées ; il ne faut ni recréer les six pages ni réajouter un formulaire.
+Le dernier état fonctionnel relu est Contact, avec les six prestations corrigées après réouverture. L’état exact atteint par la tentative de contrôle suivante n’a pas pu être relu ; il ne faut ni recréer les six pages ni réajouter un formulaire.
 
 ## Conditions avant une ouverture publique
 

@@ -4,7 +4,7 @@
   "compositionSavedForAllSix": true,
   "savedSectionTotal": 26,
   "publicationPerformed": false,
-  "blocker": "Comet extension gone (keepalive_timeout); browser_start returned inherited tab but read_tree failed again.",
+  "blocker": "Second resumed connection worked for form correction and persisted-list verification, then Comet keepalive_timeout interrupted CSS/QA. Immediate browser_start returned inherited tab but read_tree failed again; no new Contact snapshot or final QA result was produced.",
   "cleanup": {
     "headerCartRemoved": true,
     "headerBookingButtonRemoved": true,
@@ -30,13 +30,14 @@
   ],
   "form": {
     "testSent": false,
-    "dropdownRequiresCorrection": true,
+    "dropdownRequiresCorrection": false,
+    "dropdownPersistenceVerifiedAfterReopening": true,
     "observedOptionsWithoutPlaceholder": [
       "Maintenance Essentiel : 2 visites par an",
+      "Maintenance Suivi : 4 visites par an",
       "Maintenance Continuité : 12 visites par an",
-      "Option 3",
+      "Maintenance : périmètre à définir",
       "Travaux TCE",
-      "Option 5",
       "Intervention ponctuelle"
     ],
     "intendedOptionsWithoutPlaceholder": [
@@ -48,13 +49,12 @@
       "Intervention ponctuelle"
     ],
     "marketingSignupClickedOff": true,
-    "marketingFinalRereadPending": true,
+    "marketingFinalRereadPending": false,
+    "marketingSignupObservedChecked": false,
     "postSubmitMessageEntered": true,
-    "postSubmitMessagePersistenceRereadPending": true
+    "postSubmitMessagePersistenceRereadPending": false
   },
   "remaining": [
-    "Correct existing native dropdown options, remove Option 3 and Option 5, restore Suivi",
-    "Reread native form destination, marketing checkbox and post-submit message",
     "Apply latest local CSS uniformly to all six pages",
     "Complete native desktop/mobile visual and link QA",
     "Reread all six disabled and off-navigation states",

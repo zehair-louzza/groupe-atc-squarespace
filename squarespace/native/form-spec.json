@@ -1,5 +1,5 @@
 {
-  "status": "target-specification-not-proof-of-native-completion",
+  "status": "native-options-and-settings-observed-no-external-delivery-test",
   "page": "/groupe-atc-contact",
   "nativeFormName": "GROUPE ATC | Demande technique",
   "destination": "contact@anelecgroupe.com",
@@ -30,8 +30,9 @@
   "externalTestSent":false,
   "resumeNotes":[
     "Do not recreate the form or add more options.",
-    "Edit the six existing option inputs, commit each value, and inspect the rendered list after reopening Contact.",
-    "Final destination, marketing and confirmation-text persistence checks remain pending.",
+    "Six correct options observed in the rendered list after leaving Contact, opening Groupe and reopening Contact.",
+    "Destination, unchecked marketing signup and post-submit message reread in the native editor on 2026-10-29.",
+    "Final desktop/mobile styling and visual QA remain pending after another Comet disconnect.",
     "Pages must remain disabled and off navigation."
   ]
 }

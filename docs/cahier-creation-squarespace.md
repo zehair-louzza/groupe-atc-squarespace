@@ -344,7 +344,7 @@ Vercel peut être conservé comme environnement de maquette distinct si cela dev
 
 Votre autorisation de créer les brouillons et d’afficher GROUPE ATC a donc été appliquée. Le formulaire natif est configuré avec la destination corrigée, sans inscription marketing automatique ; aucun envoi test n’a été effectué. La publication des nouvelles pages reste une décision séparée.
 
-Les contrôles finaux du bureau, du mobile, des visuels, des espacements et de la désactivation sont suivis dans le compte rendu d’intégration actualisé. Les captures directes de Comet ont fonctionné au début de cette reprise, puis la liaison s’est interrompue et la reconnexion a échoué. Les résultats de la maquette privée ne sont pas utilisés comme preuve de réception du site natif.
+Les contrôles finaux du bureau, du mobile, des visuels, des espacements et de la désactivation sont suivis dans le compte rendu d’intégration actualisé. Une seconde reprise a permis de corriger et relire le formulaire, puis la liaison Comet s’est de nouveau interrompue pendant la passe graphique et la reconnexion a échoué. Les résultats de la maquette privée ne sont pas utilisés comme preuve de réception du site natif.
 
 ## Formulaire de devis et traitement des demandes
 
@@ -367,9 +367,9 @@ Le bloc Form permet de définir les champs et d’afficher des questions complé
 | Photos ou documents | Facultatif, seulement si l’option est utile et correctement configurée. |
 | Information sur les données | Notice concise avec lien vers la confidentialité ; aucun abonnement commercial précoché. |
 
-Le formulaire natif préparé comporte Nom, Courriel professionnel, Site et commune, Votre besoin, Téléphone facultatif et Nature de la demande. Le champ de site accepte un logement comme un lieu professionnel ; le nom de l’entreprise n’est demandé que s’il est utile. La liste de prestations doit encore être corrigée : le dernier contrôle a retrouvé « Option 3 », « Option 5 » et l’absence du choix Suivi, avant une perte de connexion à Comet. La cible reste les trois rythmes de maintenance, une maintenance à définir, les travaux TCE et une intervention ponctuelle ; aucun dépôt de fichier n’est ajouté.
+Le formulaire natif préparé comporte Nom, Courriel professionnel, Site et commune, Votre besoin, Téléphone facultatif et Nature de la demande. Le champ de site accepte un logement comme un lieu professionnel ; le nom de l’entreprise n’est demandé que s’il est utile. Les six choix ont été corrigés puis relus après fermeture et réouverture de Contact : Essentiel 2 visites, Suivi 4 visites, Continuité 12 visites, maintenance à définir, Travaux TCE et Intervention ponctuelle. Aucun dépôt de fichier n’est ajouté.
 
-Le bouton est « Envoyer ma demande » et la destination contact@anelecgroupe.com a été relue dans l’éditeur. Un message post-envoi a été saisi pour préciser qu’une demande ne vaut pas commande ni confirmation d’intervention ; sa persistance et le paramètre marketing doivent encore être relus. La réception réelle reste à tester avec votre autorisation, et le formulaire ne doit pas être considéré comme finalisé.
+Le bouton est « Envoyer ma demande » et la destination contact@anelecgroupe.com a été relue dans l’éditeur. Le message post-envoi a également été retrouvé, avec la réserve précisant qu’une demande ne vaut ni commande, ni devis accepté, ni confirmation d’intervention ; l’inscription aux e-mails a été observée décochée. La réception réelle reste à tester avec votre autorisation, et la réception graphique du formulaire reste à terminer.
 
 Dans la prévisualisation privée distincte, le bouton « Préparer ma demande » crée seulement un récapitulatif local ; aucun envoi automatique ni stockage serveur n’est simulé. Le tableau ci-dessus décrit des évolutions possibles, pas une liste de champs tous activés dans le formulaire natif.
 
@@ -445,6 +445,6 @@ Vous avez confirmé le renommage d’ANELEC, la signification du sigle et le mai
 - **Maintenance :** trois propositions de fréquence et un document de périmètre et de conditions ont été préparés, sans contrat activé.
 - **Réalisations :** architecture présente dans le code, données vides, publication désactivée.
 - **Brouillons autorisés :** six pages créées, contenus enregistrés et désactivation confirmée ; GROUPE ATC est configuré comme nom affiché.
-- **Validation restante :** corriger les options du formulaire, homogénéiser la dernière révision de style et terminer les contrôles natifs après rétablissement de Comet ; compléter ensuite les mentions juridiques, la confidentialité et les moyens de l’offre, autoriser un test réel de réception du formulaire, puis décider séparément de la publication. Le courriel contact@anelecgroupe.com est déjà confirmé.
+- **Validation restante :** homogénéiser la dernière révision de style et terminer les contrôles natifs après rétablissement de Comet ; compléter ensuite les mentions juridiques, la confidentialité et les moyens de l’offre, autoriser un test réel de réception du formulaire, puis décider séparément de la publication. Les six choix du formulaire et les réglages de destination, marketing et message post-envoi sont désormais relus ; aucun test d’envoi n’a été effectué.
 
 La prévisualisation et les six brouillons natifs constituent deux versions distinctes. La mise en page native est réellement enregistrée dans Fluid Engine, avec ses propres styles, images et formulaire ; le compte rendu d’intégration précise la réception observée et les conditions restant à traiter avant une ouverture publique.

@@ -41,7 +41,7 @@ Les slugs réels des brouillons portent le préfixe `/groupe-atc-` pour préserv
 
 La composition native est enregistrée pour Accueil (4 sections), Maintenance (4), Métiers (5), Groupe (4), Contact (4) et Informations (5), soit 26 sections. Les styles sont propres aux pages ; l’illustration d’accueil, le logo historique de Groupe et le formulaire de Contact sont des blocs natifs. Le pied de page générique a été remplacé par l’identité et les coordonnées corrigées.
 
-La finalisation reste incomplète : le dernier contrôle a retrouvé des options de gabarit dans le menu du formulaire, puis Comet a perdu sa connexion de contrôle. La liste doit être corrigée selon `squarespace/native/form-spec.json`, la dernière révision CSS doit être réappliquée uniformément et la réception native complète reste à effectuer. Ne pas activer les pages.
+La liste du formulaire a été corrigée selon `squarespace/native/form-spec.json` et les six choix ont été retrouvés après réouverture de Contact. La destination, l’inscription marketing décochée et le message post-envoi ont été relus ; aucun test de transmission n’a été effectué. La finalisation graphique reste incomplète après une nouvelle perte de connexion de Comet : la dernière révision CSS doit être réappliquée uniformément et la réception native complète reste à effectuer. Ne pas activer les pages.
 
 Le panier et le bouton Réserver ont été retirés de l’en-tête. La boutique est hors navigation, sans suppression de données ; sa désactivation n’a pas été obtenue. Les six nouvelles pages n’ont pas été activées.
 

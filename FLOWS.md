@@ -25,6 +25,9 @@ Les six pages restent désactivées pendant les modifications. Le travail couvre
 
 - Retrouver les coordonnées corrigées et les champs de qualification.
 - Vérifier le formulaire natif, sa destination et son message de confirmation si sa configuration est possible.
+- Retrouver exactement six choix après « Choisir une prestation » : Essentiel 2 visites, Suivi 4 visites, Continuité 12 visites, maintenance à définir, Travaux TCE et Intervention ponctuelle.
+- Vérifier l’absence d’options génériques, l’inscription aux e-mails décochée et la persistance après avoir quitté puis rouvert Contact.
+- Tester les choix de prestation et la saisie locale sans déclencher « Envoyer ma demande » ; ne pas prétendre vérifier la délivrabilité.
 - Ne pas envoyer de test externe sans autorisation.
 
 ## Nettoyage du site vitrine
@@ -37,6 +40,8 @@ Les six pages restent désactivées pendant les modifications. Le travail couvre
 
 - Contrôler les six pages au bureau et sur mobile, avec un seul H1, des marges cohérentes et aucun contenu tronqué.
 - Contrôler les images, leurs légendes et les boutons ; les illustrations ne sont pas des références de chantier.
+- Contrôler la largeur téléphone native, puis un rendu de contrôle à 375 px sans publier les brouillons.
+- Vérifier deux cas limites : texte long dans le formulaire sans transmission ; retour téléphone → bureau sans image aplatie ni contenu masqué.
 - Enregistrer les modifications et vérifier leur persistance, puis relire l’état désactivé des six pages.
 - Ne pas activer les pages, changer les DNS, pousser vers le dépôt public ou déployer sur Vercel sans accord distinct.
 

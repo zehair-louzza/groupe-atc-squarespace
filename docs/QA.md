@@ -90,3 +90,16 @@ Cette section remplace l’état natif partiel du 28 octobre. Comet a d’abord 
 - **Tests locaux :** quatre tests unitaires passent ; aucun envoi externe.
 
 La réception visuelle native complète des six pages, les liens, la liste du formulaire, le message post-envoi et l’état final des réglages ne sont pas validés. Les captures natives de cette reprise sont partielles et antérieures à certaines corrections ; aucun résultat de la prévisualisation privée ne remplace ces contrôles.
+
+## Seconde reprise du 29 octobre : formulaire corrigé
+
+Cette section remplace les points précédents concernant le défaut de liste et les relectures de configuration en attente. La connexion à Comet a fonctionné pour ces modifications, puis s’est interrompue de nouveau pendant la passe graphique suivante.
+
+- **Choix :** les six entrées existantes ont été corrigées, sans recréer le bloc ni ajouter d’options. Essentiel 2 visites, Suivi 4 visites, Continuité 12 visites, maintenance à définir, Travaux TCE et Intervention ponctuelle ont été relus dans le menu rendu après sortie de l’éditeur, ouverture de Groupe et réouverture de Contact.
+- **Destination :** contact@anelecgroupe.com retrouvée dans l’éditeur du formulaire.
+- **Marketing :** inscription aux e-mails observée décochée ; champ de courriel toujours obligatoire.
+- **Post-envoi :** message complet relu dans son éditeur, avec les réserves sur commande, devis et confirmation d’intervention.
+- **Limite :** aucun envoi ni test de délivrabilité ; le message n’a pas été déclenché par transmission réelle.
+- **Graphisme :** tentative de passe Contact interrompue avant la production d’un relevé ou d’une capture. Ne pas conclure que la dernière CSS a été sauvegardée, ni que la réception ordinateur/mobile a été faite.
+
+La réception visuelle complète et la relecture collective des six pages désactivées restent en attente. La connexion a échoué une seconde fois après la tentative de reprise, et l’incident de liaison a été signalé.
