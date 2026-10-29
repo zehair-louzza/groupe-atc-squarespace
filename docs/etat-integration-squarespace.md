@@ -1,12 +1,13 @@
 # GROUPE ATC : état d’intégration dans Squarespace
 
-Mise à jour du 29 octobre 2026, après la reprise graphique et la correction de périmètre demandée. Les six compositions natives restent enregistrées et harmonisées, mais le dernier retrait de spécialités est appliqué aux sources uniquement : les deux corrections correspondantes dans Squarespace restent à enregistrer après rétablissement de Comet.
+Mise à jour du 29 octobre 2026, après la reprise graphique et la correction de périmètre demandée. Les six compositions natives restent enregistrées et harmonisées, mais le dernier retrait de spécialités est appliqué aux sources et à la prévisualisation privée uniquement : les deux corrections correspondantes dans Squarespace restent à enregistrer après rétablissement de Comet.
 
 ## Dernière correction : sources prêtes, Squarespace en attente
 
 L’offre est limitée à la plomberie et aux sanitaires, à l’électricité, à la serrurerie et à la rénovation/finitions intérieures. Les gabarits, les six pages HTML, les textes natifs, la structure des sections et les documents commerciaux ne proposent plus d’autre spécialité ; une ambiguïté « entretien intérieur » est remplacée par « finitions intérieures ».
 
 - **Sources corrigées :** cinq tests automatisés passent ; les douze affichages du site autonome à 375 et 1 440 px et ses six parcours de recette passent, sans erreur JavaScript ni envoi de message.
+- **Prévisualisation privée :** mise à jour au même emplacement, puis les douze affichages et six parcours ont été rejoués dans un nouveau contexte navigateur avec le même résultat. Aucun déploiement Hostinger/Vercel ni changement du domaine public.
 - **Page Services existante :** le bloc `block-1775835d910154aa4c27`, sur `/services-content`, conserve sa phrase antérieure ; son remplacement figure dans `squarespace/native/existing-services-maintenance.md`.
 - **Brouillon Maintenance :** le dernier paragraphe du périmètre conserve sa formulation antérieure ; le texte définitif est dans `squarespace/native/maintenance.md` et la structure correspondante dans `layout.json`.
 - **Blocage :** la liaison Comet a été perdue avant toute saisie ou sauvegarde. Aucun des deux retraits natifs n’est déclaré réalisé ; les pages n’ont pas été activées et aucun domaine n’a été modifié.

@@ -125,4 +125,6 @@ Les textes du site autonome et les sources natives sont limités aux métiers co
 
 Le module `runPreviewQA` a été rejoué après reconstruction : douze rendus, six parcours, aucune erreur JavaScript ni message externe. Les résultats sont dans `browser-results-updated.json` ; les captures Maintenance à 375 et 1 440 px ont été relues.
 
+La prévisualisation privée existante a été actualisée, puis le même module a été rejoué sur la version hébergée dans un nouveau contexte navigateur. Les douze rendus et six parcours passent également ; le relevé final conserve le libellé `hosted-private-preview`, sans URL temporaire ni jeton d’accès.
+
 La liaison Comet a empêché toute modification native : la page Services existante et le brouillon Maintenance gardent encore leur formulation antérieure. Ces deux retraits ne sont pas validés et la recette native précédente reste historique.
