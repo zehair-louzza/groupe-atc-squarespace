@@ -53,6 +53,7 @@ function organization(config, base) {
     foundingDate: legal.sireneRegistrationDate,
     vatID: legal.vatNumber,
     taxID: legal.siren,
+    numberOfEmployees: { '@type': 'QuantitativeValue', value: legal.employees },
     identifier: [
       { '@type': 'PropertyValue', propertyID: 'SIREN', value: legal.siren },
       { '@type': 'PropertyValue', propertyID: 'SIRET', value: legal.headquartersSiret },
@@ -149,6 +150,7 @@ export function llmsTxt(config, pages) {
 - Métiers : ${services.families.map(f => f.title.toLowerCase()).join(', ')}.
 - Clientèle : professionnels (B2B : entreprises, bureaux, commerces, secteur tertiaire, gestionnaires de biens) et particuliers (B2C : appartements et maisons).
 - Zone d’intervention : Île-de-France — ${departementsText()}.
+- Effectif : ${legal.employeesDisplay}.
 - Siège : ${config.address}.
 - Téléphone : ${config.phoneDisplay} · Courriel : ${config.email}
 - Demande de devis : ${base}/contact.html

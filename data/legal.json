@@ -56,11 +56,13 @@
     "La convention collective présentée comme déduite ne prouve pas un effectif.",
     "Le code APE ne vaut pas preuve de certifications, qualifications, assurances ou prestations supplémentaires.",
     "La présidence ne vaut pas confirmation fournie du rôle de direction de publication.",
-    "L’intitulé développé de marque reste celui demandé par l’utilisateur ; il ne remplace pas la dénomination sociale.",
-    "L’effectif déclaré (Pappers, donnée 2026) n’est pas publié sur le site."
+    "L’intitulé développé de marque reste celui demandé par l’utilisateur ; il ne remplace pas la dénomination sociale."
   ],
   "rcsRegistrationDate": "2025-03-27",
   "rcsRegistrationDisplay": "27 mars 2025 (greffe de Paris)",
   "presidentSince": "2026-09-23",
-  "headquartersIsDomiciliation": true
+  "headquartersIsDomiciliation": true,
+  "employees": 10,
+  "employeesDisplay": "10 salariés",
+  "employeesSource": "Déclaration de l’entreprise (2 novembre 2026). Pappers affichait 0 salarié à cette date."
 }

@@ -29,6 +29,7 @@ const identityRows=config=>[
   ['RCS',legal.rcs],
   ['TVA intracommunautaire',legal.vatNumber],
   ['Présidente',legal.president],
+  ['Effectif',legal.employeesDisplay],
   ['Code APE / NAF',`${legal.apeCode} · ${legal.apeLabel}`],
   ['Activité principale déclarée',legal.declaredActivity],
   ['Inscription Sirene (Insee)',legal.sireneRegistrationDisplay],
