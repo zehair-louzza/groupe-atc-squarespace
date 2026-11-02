@@ -7,7 +7,7 @@
 import { robotsTxt, sitemapXml, llmsTxt } from './src/seo.mjs';
 import fs from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
-import { shell, home, maintenance, trades, partnership, group, contact, information, notFound, esc } from './src/templates.mjs';
+import { shell, home, maintenance, trades, partnership, legalNotice, group, contact, information, notFound, esc } from './src/templates.mjs';
 
 const root = new URL('./', import.meta.url);
 const read = async (p) => JSON.parse(await fs.readFile(new URL(p, root), 'utf8'));
@@ -24,7 +24,8 @@ export const pages = [
   { file: 'partenariat.html', title: 'Partenariat B2B : maintenance et travaux TCE en Île-de-France', description: 'Partenaire multitechnique des professionnels : directeur des travaux +15 ans d’expérience, techniciens +10 ans par métier, contrat cadre multi-sites. Île-de-France.', content: partnership },
   { file: 'groupe.html', title: 'ANELEC devient GROUPE ATC', description: 'GROUPE ATC est la nouvelle dénomination sociale d’ANELEC : même société (SIREN 933 108 607), nouvelle présidence, mêmes métiers en Île-de-France.', content: group },
   { file: 'contact.html', title: 'Demande de devis travaux et dépannage en Île-de-France', description: 'Demandez un devis à GROUPE ATC : dépannage, travaux ou maintenance à Paris et en Île-de-France. Professionnels et particuliers. 01 84 80 93 85.', content: contact },
-  { file: 'informations.html', title: 'Informations légales et confidentialité', description: 'Identité de GROUPE ATC (SASU, SIREN 933 108 607), coordonnées, données du formulaire et conditions de la proposition de maintenance.', content: information }
+  { file: 'informations.html', title: 'Informations légales et confidentialité', description: 'Identité de GROUPE ATC (SASU, SIREN 933 108 607), coordonnées, données du formulaire et conditions de la proposition de maintenance.', content: information },
+  { file: 'mentions-legales.html', title: 'Mentions légales', description: 'Mentions légales de GROUPE ATC (SASU, SIREN 933 108 607) : éditeur, directrice de la publication, hébergeur, médiation, données personnelles et cookies.', content: legalNotice }
 ];
 
 function htaccess(config) {
@@ -75,6 +76,8 @@ export async function build({ assets = false } = {}) {
     await Promise.all([buildIcons(), downloadFonts()]);
   }
   const config = await read('./data/site.json');
+  const legalData = await read('./data/legal.json');
+  if (config.publicationApproved && !legalData.consumerMediator?.name) throw new Error('Publication bloquée : médiateur de la consommation manquant dans data/legal.json (obligatoire pour les clients particuliers).');
   const projects = await read('./data/projects.json');
   const visible = publishableProjects(projects, config.features.projects);
   const site = new URL('./site/', root);

@@ -439,3 +439,14 @@ input[readonly]{background:#F6F3EE;color:#2E2520;cursor:not-allowed}
 /* Page partenariat : descriptions des engagements toujours visibles sur mobile */
 @media (max-width:900px){.page-partenariat .value-card p{display:block;max-width:none}.page-partenariat .value-card{padding:var(--space-5) var(--space-4)}}
 @media (max-width:560px){.page-partenariat .value-grid{grid-template-columns:1fr}.partner-actions{gap:var(--space-2) var(--space-6)}}
+
+/* --- Mentions légales --- */
+.legal-page{display:grid;grid-template-columns:minmax(0,250px) minmax(0,1fr);gap:var(--space-6);align-items:start}
+.legal-page .prose{margin-inline:0;max-width:none}
+.legal-page .prose h2{scroll-margin-top:110px}
+.legal-toc{position:sticky;top:100px;padding:var(--space-5);border-radius:var(--radius)}
+.legal-toc ol{margin:0;padding-left:1.2em;display:grid;gap:var(--space-2);font-size:var(--text-sm)}
+.legal-toc a{color:var(--ink);text-decoration:none}.legal-toc a:hover{color:var(--accent-text);text-decoration:underline}
+.legal-page .notice{margin-bottom:var(--space-4)}
+.footer-bottom a{color:inherit}
+@media (max-width:900px){.legal-page{grid-template-columns:1fr}.legal-toc{position:static;margin-inline:var(--gutter)}.legal-page .prose{margin-inline:var(--gutter)}}

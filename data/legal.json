@@ -22,7 +22,11 @@
   "sireneRegistrationDisplay": "21 août 2024",
   "rneRegistrationDate": "2024-11-08",
   "rneRegistrationDisplay": "8 novembre 2024",
-  "publicationDirector": null,
+  "publicationDirector": {
+    "name": "Najoua Boughrara",
+    "role": "Présidente, représentante légale",
+    "basis": "Loi n° 82-652 du 29 juillet 1982, art. 93-2 : le directeur de la publication est le représentant légal de la personne morale."
+  },
   "finalHostingLegalDetails": null,
   "sources": {
     "official": "https://annuaire-entreprises.data.gouv.fr/entreprise/933108607",
@@ -64,5 +68,18 @@
   "headquartersIsDomiciliation": true,
   "employees": 10,
   "employeesDisplay": "10 salariés",
-  "employeesSource": "Déclaration de l’entreprise (2 novembre 2026). Pappers affichait 0 salarié à cette date."
+  "employeesSource": "Déclaration de l’entreprise (2 novembre 2026). Pappers affichait 0 salarié à cette date.",
+  "host": {
+    "name": "HOSTINGER INTERNATIONAL LIMITED",
+    "form": "Société de droit chypriote",
+    "registration": "HE 301365",
+    "address": "61 Lordou Vironos Street, Lumiel Building, 4e étage, 6023 Larnaca, Chypre",
+    "website": "https://www.hostinger.fr",
+    "contact": "https://www.hostinger.fr/contacts",
+    "source": "https://www.hostinger.com/fr/legal/termes-universels-de-contrat-de-service",
+    "checkedOn": "2026-11-02",
+    "note": "Hébergeur prévu pour la mise en ligne sur anelecgroupe.com."
+  },
+  "consumerMediator": null,
+  "consumerMediatorNote": "Obligatoire pour les clients particuliers (Code de la consommation, art. L612-1). Nom, adresse et site du médiateur à fournir par l’entreprise avant publication."
 }

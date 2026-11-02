@@ -89,5 +89,18 @@
       "button",
       "form-where-applicable"
     ]
+  },
+  {
+    "file": "mentions-legales.html",
+    "title": "Mentions légales",
+    "description": "Mentions légales de GROUPE ATC (SASU, SIREN 933 108 607) : éditeur, directrice de la publication, hébergeur, médiation, données personnelles et cookies.",
+    "slug": "/mentions-legales",
+    "status": "draft",
+    "suggestedBlocks": [
+      "text",
+      "image",
+      "button",
+      "form-where-applicable"
+    ]
   }
 ]

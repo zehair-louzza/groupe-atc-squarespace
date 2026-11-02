@@ -97,7 +97,7 @@ export function faqFrom(html) {
   return out;
 }
 
-const pageName = { 'index.html': 'Accueil', 'maintenance.html': 'Maintenance', 'metiers.html': 'Métiers', 'partenariat.html': 'Partenariat B2B', 'groupe.html': 'Le groupe', 'contact.html': 'Contact et devis', 'informations.html': 'Informations', 'realisations.html': 'Réalisations' };
+const pageName = { 'index.html': 'Accueil', 'maintenance.html': 'Maintenance', 'metiers.html': 'Métiers', 'partenariat.html': 'Partenariat B2B', 'groupe.html': 'Le groupe', 'contact.html': 'Contact et devis', 'informations.html': 'Informations', 'mentions-legales.html': 'Mentions légales', 'realisations.html': 'Réalisations' };
 
 export function structuredData(config, page, body = '') {
   const base = `https://${config.domain}`;

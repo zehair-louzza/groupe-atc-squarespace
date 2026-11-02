@@ -43,7 +43,7 @@ test('Identité légale : même société, identifiants et dates distinctes',()=
   assert.equal(legal.president,'Najoua Boughrara');
   assert.equal(legal.sireneRegistrationDate,'2024-08-21');
   assert.equal(legal.rneRegistrationDate,'2024-11-08');
-  assert.equal(legal.publicationDirector,null);
+  assert.equal(legal.publicationDirector.name,legal.president);
   const html=fs.readFileSync('site/informations.html','utf8');
   for(const value of ['933 108 607','933 108 607 00021','FR20933108607','3 000 €','Najoua Boughrara','21 août 2024','8 novembre 2024','même société','nouvelle présidence'])assert.ok(html.includes(value),value);
   assert.ok(html.includes(legal.sources.official));
@@ -186,4 +186,11 @@ test('Page Partenariat B2B : expérience confirmée, navigation et SEO',()=>{
   assert.doesNotMatch(html,/42 €|40 €|1 200|7j\/7|48 ?h/,'Engagements commerciaux non validés pour publication');
   for(const page of ['index','contact','metiers'])assert.ok(fs.readFileSync(`site/${page}.html`,'utf8').includes('href="/partenariat.html"'),page);
   assert.ok(fs.readFileSync('site/llms.txt','utf8').includes('/partenariat.html'));
+});
+
+test('Mentions légales : page dédiée, liens sur toutes les pages, éléments LCEN',()=>{
+  const html=fs.readFileSync('site/mentions-legales.html','utf8');
+  for(const s of ['Éditeur du site','Directrice de la publication','Najoua Boughrara','HOSTINGER INTERNATIONAL LIMITED','61 Lordou Vironos','HE 301365','933 108 607 RCS Paris','FR20933108607','Médiation de la consommation','Données personnelles','CNIL','aucun cookie','OpenStreetMap'])assert.ok(html.includes(s),s);
+  for(const page of ['index','maintenance','metiers','partenariat','groupe','contact','informations','404'])assert.ok(fs.readFileSync(`site/${page}.html`,'utf8').includes('href="/mentions-legales.html"'),page);
+  assert.ok(!fs.readFileSync('site/informations.html','utf8').includes('Mentions restant à finaliser'));
 });
