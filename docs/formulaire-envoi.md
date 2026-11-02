@@ -35,3 +35,9 @@ Le vrai fichier n'est **jamais** versionné (`.gitignore`).
 - Les 8 pages du sitemap répondent 200, `index,follow`, sans X-Robots-Tag, canonique exacte ; 404 réelle en `noindex`.
 - PageSpeed Insights (mobile) : SEO 100, performances 97, accessibilité 91, bonnes pratiques 100.
 - Un faux Googlebot (user-agent imité) reçoit 403 : filtre anti-robots d'Hostinger ; à confirmer avec l'inspection d'URL de Google Search Console.
+
+## Google Search Console (02/11/2026) – réussi
+- Propriété de type Domaine `anelecgroupe.com` validée par un enregistrement DNS TXT (`google-site-verification=0Ulgdkxa13SNzi9mDqb3bQwR6UUefjd3C2WPV9VMGXE`) ajouté dans la zone DNS Hostinger. **À conserver.** MX Zoho, SPF et NS intacts (vérifiés via dns.google).
+- Sitemap `https://anelecgroupe.com/sitemap.xml` envoyé : « Opération effectuée », 8 pages découvertes.
+- Inspection de `https://anelecgroupe.com/` : le test en direct indique « Google a accès à cette URL » et « La page peut être indexée ». Indexation demandée (file prioritaire).
+- Ancienne exploration du 23/10 (avant mise en ligne) : Google avait retenu `www.anelecgroupe.com` comme URL canonique. Le www redirige désormais en 301 vers l'adresse sans www, ce qui sera corrigé à la prochaine exploration.
