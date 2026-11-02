@@ -418,7 +418,7 @@ input[readonly]{background:#F6F3EE;color:#2E2520;cursor:not-allowed}
 /* --- Page Partenariat B2B --- */
 .partner-actions{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-4) var(--space-6)}
 .partner-experience h2{margin-bottom:var(--space-8)}
-.partner-stats{list-style:none;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--space-4);margin-bottom:var(--space-6)}
+.partner-stats{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-4);margin-bottom:var(--space-6)}
 .partner-stats li{display:grid;gap:var(--space-2);padding:var(--space-6) var(--space-5);border:1px solid var(--glass-dark-border);background:var(--glass-dark);border-radius:var(--radius)}
 .partner-stats strong{font-family:var(--font-display);font-size:clamp(2.25rem,1.6rem + 2.4vw,3.5rem);line-height:1;letter-spacing:-.03em;color:#fff}
 .partner-stats span{font-size:var(--text-sm);color:var(--on-navy-muted)}
@@ -453,3 +453,7 @@ input[readonly]{background:#F6F3EE;color:#2E2520;cursor:not-allowed}
 .hp-field{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
 #request-sent{padding:clamp(1.5rem,4vw,2.5rem);border-radius:var(--radius,20px)}
 #request-sent:focus{outline:none}
+.key-commitments{list-style:none;display:flex;flex-wrap:wrap;gap:var(--space-2,.5rem);margin:0 0 var(--space-6,1.5rem);padding:0}
+.key-commitments li{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .75rem;border-radius:999px;background:color-mix(in srgb,var(--accent) 12%,transparent);border:1px solid color-mix(in srgb,var(--accent) 35%,transparent);font-size:var(--text-sm,.875rem);line-height:1.2}
+.key-commitments li svg{color:var(--accent);flex:none}
+.key-commitments strong{font-weight:700}

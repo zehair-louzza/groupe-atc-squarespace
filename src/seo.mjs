@@ -152,6 +152,7 @@ export function llmsTxt(config, pages) {
 - Zone d’intervention : Île-de-France — ${departementsText()}.
 - Effectif : ${legal.employeesDisplay}.
 - Équipe : ${config.teamExperienceStatement}
+- Engagements : ${config.keyCommitments.map(k => k.value + " " + k.label).join(" ; ")}
 - Partenariat professionnel (B2B, contrat cadre multi-sites) : ${base}/partenariat.html
 - Siège : ${config.address}.
 - Téléphone : ${config.phoneDisplay} · Courriel : ${config.email}

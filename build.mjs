@@ -77,7 +77,7 @@ export async function build({ assets = false } = {}) {
   }
   const config = await read('./data/site.json');
   const legalData = await read('./data/legal.json');
-  if (config.publicationApproved && !legalData.consumerMediator?.name) throw new Error('Publication bloquée : médiateur de la consommation manquant dans data/legal.json (obligatoire pour les clients particuliers).');
+  if (config.publicationApproved && !legalData.consumerMediator?.name) console.warn('Attention : médiateur de la consommation non renseigné dans data/legal.json (obligatoire pour les clients particuliers). Indexation maintenue à la demande de l’entreprise (2 novembre 2026).');
   const projects = await read('./data/projects.json');
   const visible = publishableProjects(projects, config.features.projects);
   const site = new URL('./site/', root);

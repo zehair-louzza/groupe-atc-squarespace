@@ -28,8 +28,8 @@ test('A complete approved project remains hidden while feature is disabled',()=>
 test('Schedules are proposals, with explicit bounded time',()=>{
   assert.deepEqual(config.plans.map(p=>p.frequency),[2,4,12]);
   assert.ok(config.plans.every(p=>p.hoursPerVisit===2));
-  assert.equal(config.publicationApproved,false);
-  assert.equal(config.formMode,'local-summary');
+  assert.equal(config.publicationApproved,true);
+  assert.equal(config.formMode,'email');
 });
 
 test('Identité légale : même société, identifiants et dates distinctes',()=>{
@@ -183,7 +183,8 @@ test('Formulaire : case « Intervention urgente » et option Partenariat',()=>{
 test('Page Partenariat B2B : expérience confirmée, navigation et SEO',()=>{
   const html=fs.readFileSync('site/partenariat.html','utf8');
   for(const s of ['+15 ans','+10 ans','6 techniciens, 4 administratifs','Contrat cadre multi-sites','Assurance décennale','Références anonymisées','besoin=Partenariat&amp;profil=Professionnel'])assert.ok(html.includes(s),s);
-  assert.doesNotMatch(html,/42 €|40 €|1 200|7j\/7|48 ?h/,'Engagements commerciaux non validés pour publication');
+  assert.doesNotMatch(html,/42 €|40 €|€ HT/,'Tarifs à ne pas publier');
+  for(const s of ['+1 200','6j/7','moins de 48 h'])assert.ok(html.includes(s),s);
   for(const page of ['index','contact','metiers'])assert.ok(fs.readFileSync(`site/${page}.html`,'utf8').includes('href="/partenariat.html"'),page);
   assert.ok(fs.readFileSync('site/llms.txt','utf8').includes('/partenariat.html'));
 });

@@ -12,8 +12,8 @@
   "address": "9 RUE DES COLONNES, 75002 PARIS",
   "territory": "Île-de-France",
   "squarespaceSite": "https://mandolin-jaguar-flrs.squarespace.com",
-  "publicationApproved": false,
-  "formMode": "local-summary",
+  "publicationApproved": true,
+  "formMode": "email",
   "features": {
     "projects": false
   },
@@ -63,11 +63,26 @@
       "Habilitations électriques"
     ],
     "source": "Présentation ANELEC GROUPE fournie par l’entreprise (2 novembre 2026)",
-    "pendingConfirmation": [
-      "Urgences 7j/7",
-      "Devis sous 48 h",
-      "+1 200 interventions par an",
-      "Tarifs (déplacement 40 € HT, main-d’œuvre 42 € HT/h)"
+    "confirmedOn": "2026-11-02",
+    "notPublished": [
+      "Tarifs (déplacement, main-d’œuvre) : à ne pas mentionner sur le site, décision du 2 novembre 2026"
     ]
-  }
+  },
+  "keyCommitments": [
+    {
+      "icon": "Siren",
+      "value": "6j/7",
+      "label": "urgences et astreinte"
+    },
+    {
+      "icon": "FileCheck",
+      "value": "< 48 h",
+      "label": "pour recevoir votre devis"
+    },
+    {
+      "icon": "Wrench",
+      "value": "+1 200",
+      "label": "interventions par an"
+    }
+  ]
 }
