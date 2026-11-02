@@ -138,3 +138,10 @@ test('Carte interactive : composant, données locales et pré-remplissage du dev
   const app=fs.readFileSync(new URL('../site/app.js',import.meta.url),'utf8');
   assert.ok(app.includes('Intervention demandée pour la commune de')&&app.includes("city.readOnly=true"));
 });
+
+test('Contact : champs entreprise et SIRET pour les professionnels', () => {
+  const contact=fs.readFileSync(new URL('../site/contact.html',import.meta.url),'utf8');
+  assert.ok(contact.includes('id="pro-fields"')&&contact.includes('id="siret"')&&contact.includes('name="entreprise"'));
+  const app=fs.readFileSync(new URL('../site/app.js',import.meta.url),'utf8');
+  assert.ok(app.includes('siretValid')&&app.includes("profile.value==='Professionnel'"));
+});

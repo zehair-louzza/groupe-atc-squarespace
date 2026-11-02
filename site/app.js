@@ -99,9 +99,15 @@ if(form){
   }
   function planVisibility(){document.querySelector('#plan-field').hidden=need.value!=='Maintenance'}
   planVisibility();need.addEventListener('change',planVisibility);
+  // Étape 2 : entreprise et SIRET demandés uniquement pour un professionnel
+  const profile=document.querySelector('#profile'),proFields=document.querySelector('#pro-fields'),siret=document.querySelector('#siret'),company=document.querySelector('#company');
+  function siretValid(v){const n=v.replace(/\s/g,'');if(!/^\d{14}$/.test(n))return false;if(n.startsWith('356000000'))return [...n].reduce((s,c)=>s+ +c,0)%5===0;let s=0;for(let i=0;i<14;i++){let x=+n[13-i];if(i%2){x*=2;if(x>9)x-=9}s+=x}return s%10===0}
+  function proVisibility(){const pro=profile.value==='Professionnel';proFields.hidden=!pro;[siret,company].forEach(el=>{el.required=pro;el.disabled=!pro;if(!pro){el.removeAttribute('aria-invalid');const e=el.closest('.field').querySelector('.field-error');if(e)e.textContent=''}})}
+  proVisibility();profile.addEventListener('change',proVisibility);
+  siret.addEventListener('input',()=>{const n=siret.value.replace(/\D/g,'').slice(0,14);siret.value=n.replace(/^(\d{3})(\d{0,3})(\d{0,3})(\d{0,5}).*/,(m,a,b,c,d)=>[a,b,c,d].filter(Boolean).join(' '));siret.setCustomValidity(n.length===14&&!siretValid(n)?'invalid':'')});
   let step=1;
   function showStep(n){step=n;form.querySelectorAll('.form-step').forEach(el=>el.hidden=el.dataset.step!==String(n));form.querySelector('.form-progress').textContent=n===1?'Étape 1 / 2 · Votre besoin':'Étape 2 / 2 · Vos coordonnées';form.querySelector(`[data-step="${n}"] input, [data-step="${n}"] select`)?.focus()}
-  function validate(section){let valid=true;section.querySelectorAll('[required]').forEach(el=>{const message=!el.value.trim()?'Ce champ est nécessaire.':!el.validity.valid?'Vérifiez le format de votre courriel.':'';el.setAttribute('aria-invalid',String(Boolean(message)));const error=el.closest('.field').querySelector('.field-error');if(error)error.textContent=message;if(message)valid=false});if(!valid)section.querySelector('[aria-invalid="true"]')?.focus();return valid}
+  function validate(section){let valid=true;section.querySelectorAll('[required]').forEach(el=>{if(el.disabled)return;const message=!el.value.trim()?'Ce champ est nécessaire.':!el.validity.valid?(el.dataset.error||'Vérifiez le format de votre courriel.'):'';el.setAttribute('aria-invalid',String(Boolean(message)));const error=el.closest('.field').querySelector('.field-error');if(error)error.textContent=message;if(message)valid=false});if(!valid)section.querySelector('[aria-invalid="true"]')?.focus();return valid}
   document.querySelector('#next-step').addEventListener('click',()=>{if(validate(form.querySelector('[data-step="1"]')))showStep(2)});
   document.querySelector('#previous-step').addEventListener('click',()=>showStep(1));
   form.addEventListener('submit',e=>{
@@ -110,7 +116,7 @@ if(form){
     if(!validate(form.querySelector('[data-step="1"]'))){showStep(1);return}
     if(!validate(form.querySelector('[data-step="2"]')))return;
     const d=new FormData(form);
-    const text=`Bonjour GROUPE ATC,\n\nJe souhaite étudier la demande suivante.\n\nBesoin : ${d.get('besoin')}\nMétier : ${d.get('metier')}\nCommune : ${d.get('commune')}\n${chosenCity?`Ville sélectionnée sur la carte : ${chosenCity}\n`:''}${need.value==='Maintenance'&&d.get('formule')?`Formule à étudier : ${d.get('formule')}\n`:''}Description : ${d.get('description')}\n\nProfil : ${d.get('profil')}\nNom : ${d.get('nom')}\nCourriel : ${d.get('courriel')}\nTéléphone : ${d.get('telephone')||'Non renseigné'}\n\nMerci.`;
+    const text=`Bonjour GROUPE ATC,\n\nJe souhaite étudier la demande suivante.\n\nBesoin : ${d.get('besoin')}\nMétier : ${d.get('metier')}\nCommune : ${d.get('commune')}\n${chosenCity?`Ville sélectionnée sur la carte : ${chosenCity}\n`:''}${need.value==='Maintenance'&&d.get('formule')?`Formule à étudier : ${d.get('formule')}\n`:''}Description : ${d.get('description')}\n\nProfil : ${d.get('profil')}\n${profile.value==='Professionnel'?`Entreprise : ${d.get('entreprise')}\nSIRET : ${d.get('siret')}\n`:''}Nom : ${d.get('nom')}\nCourriel : ${d.get('courriel')}\nTéléphone : ${d.get('telephone')||'Non renseigné'}\n\nMerci.`;
     document.querySelector('#summary-text').value=text;
     const link=document.querySelector('#email-request');
     const recipient=link.getAttribute('href').split('?')[0];

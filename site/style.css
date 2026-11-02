@@ -378,3 +378,5 @@ input[readonly]{background:#F6F3EE;color:#2E2520;cursor:not-allowed}
   .idf-dept-chip{flex:none}
   .idf-search input{font-size:15px;padding-right:8px}
 }
+.pro-fields[hidden]{display:none}
+.field-help{display:block;margin-top:var(--space-1);color:var(--muted, #5b6b7a);font-size:var(--text-xs)}
