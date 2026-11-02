@@ -96,7 +96,7 @@ nav .nav-contact:hover{background:var(--accent-strong);color:#fff}
 .value-grid{list-style:none;margin:0;padding:var(--space-4);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--space-4);border-radius:var(--radius-lg);background:rgba(255,255,255,.35);border:1px solid rgba(255,255,255,.6)}
 .value-card{display:flex;flex-direction:column;align-items:center;text-align:center;gap:var(--space-2);padding:var(--space-6) var(--space-4);border-radius:var(--radius)}
 .value-icon{display:grid;place-items:center;width:48px;height:48px;border-radius:14px;background:var(--accent-soft);color:var(--accent-text);margin-bottom:var(--space-2)}
-.value-card h2{font-size:var(--text-lg);letter-spacing:-.01em}
+.value-card h2,.value-card h3{font-size:var(--text-lg);letter-spacing:-.01em}
 .value-card p{font-size:var(--text-sm);color:var(--muted);max-width:24ch}
 
 /* Bandeau expertises */
@@ -380,3 +380,26 @@ input[readonly]{background:#F6F3EE;color:#2E2520;cursor:not-allowed}
 }
 .pro-fields[hidden]{display:none}
 .field-help{display:block;margin-top:var(--space-1);color:var(--muted, #5b6b7a);font-size:var(--text-xs)}
+/* Titre principal : accroche mots-clés + badges B2B / B2C */
+.hero-card h1 .h1-kicker{display:flex;color:var(--accent-text);font-family:var(--font-body);font-size:var(--text-xs);font-weight:600;letter-spacing:.14em;line-height:1.4;margin-bottom:var(--space-4);text-wrap:wrap}
+.audience-badges{display:flex;flex-wrap:wrap;gap:var(--space-2);margin:0 0 var(--space-5)}
+.audience-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:var(--radius-pill);background:var(--accent-soft);color:var(--accent-text);font-size:var(--text-xs);font-weight:600;letter-spacing:.02em}
+/* Section Professionnels / Particuliers */
+.clientele{margin-top:var(--section)}
+.clientele-head{max-width:70ch;margin-bottom:var(--space-6)}
+.clientele-head h2 span{color:var(--ink-2)}
+.clientele-head>p{color:var(--muted);margin-top:var(--space-4)}
+.clientele-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-5)}
+.clientele-card{display:flex;flex-direction:column;gap:var(--space-3);padding:clamp(var(--space-5),3vw,var(--space-8));border-radius:var(--radius-lg)}
+.clientele-card .value-icon{margin-bottom:0}
+.clientele-tag{align-self:flex-start;padding:2px 10px;border-radius:var(--radius-pill);border:1px solid var(--accent);color:var(--accent-text);font-size:var(--text-xs);font-weight:700;letter-spacing:.12em}
+.clientele-card h3{margin:0}
+.clientele-card>p:not(.clientele-tag){color:var(--muted);font-size:var(--text-sm)}
+.clientele-list{margin:0;padding-left:1.1em;color:var(--ink);font-size:var(--text-sm);display:grid;gap:4px}
+.clientele-list li::marker{color:var(--accent)}
+.clientele-card .text-link{margin-top:auto;padding-top:var(--space-2)}
+.territory-map .territory-list{font-size:var(--text-sm);margin-top:var(--space-3)}
+@media(max-width:760px){.clientele-grid{grid-template-columns:1fr}}
+.hero-card h1 .h1-kicker{display:block}
+.hero-card h1 .h1-kicker::before{display:inline-block;vertical-align:middle;margin-right:.75em;margin-top:-2px}
+.hero-card h1 .h1-kicker .nowrap{white-space:nowrap;color:inherit}

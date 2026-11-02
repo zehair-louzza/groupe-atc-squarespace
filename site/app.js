@@ -103,6 +103,7 @@ if(form){
   const profile=document.querySelector('#profile'),proFields=document.querySelector('#pro-fields'),siret=document.querySelector('#siret'),company=document.querySelector('#company');
   function siretValid(v){const n=v.replace(/\s/g,'');if(!/^\d{14}$/.test(n))return false;if(n.startsWith('356000000'))return [...n].reduce((s,c)=>s+ +c,0)%5===0;let s=0;for(let i=0;i<14;i++){let x=+n[13-i];if(i%2){x*=2;if(x>9)x-=9}s+=x}return s%10===0}
   function proVisibility(){const pro=profile.value==='Professionnel';proFields.hidden=!pro;[siret,company].forEach(el=>{el.required=pro;el.disabled=!pro;if(!pro){el.removeAttribute('aria-invalid');const e=el.closest('.field').querySelector('.field-error');if(e)e.textContent=''}})}
+  applySelect(profile,query.get('profil'));
   proVisibility();profile.addEventListener('change',proVisibility);
   siret.addEventListener('input',()=>{const n=siret.value.replace(/\D/g,'').slice(0,14);siret.value=n.replace(/^(\d{3})(\d{0,3})(\d{0,3})(\d{0,5}).*/,(m,a,b,c,d)=>[a,b,c,d].filter(Boolean).join(' '));siret.setCustomValidity(n.length===14&&!siretValid(n)?'invalid':'')});
   let step=1;

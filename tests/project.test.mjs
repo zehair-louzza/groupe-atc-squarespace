@@ -145,3 +145,27 @@ test('Contact : champs entreprise et SIRET pour les professionnels', () => {
   const app=fs.readFileSync(new URL('../site/app.js',import.meta.url),'utf8');
   assert.ok(app.includes('siretValid')&&app.includes("profile.value==='Professionnel'"));
 });
+
+test('SEO : données structurées, B2B/B2C, robots et llms.txt', async () => {
+  const { robotsTxt, llmsTxt, sitemapXml } = await import('../src/seo.mjs');
+  const pagesHtml=['index.html','metiers.html','maintenance.html','contact.html','groupe.html','informations.html'];
+  for(const f of pagesHtml){
+    const h=fs.readFileSync(new URL('../site/'+f,import.meta.url),'utf8');
+    const m=h.match(/<script type="application\/ld\+json">(.*?)<\/script>/);assert.ok(m,f+' sans JSON-LD');
+    const g=JSON.parse(m[1])['@graph'];
+    assert.ok(g.some(n=>[].concat(n['@type']).includes('HomeAndConstructionBusiness')));
+    assert.ok(!JSON.stringify(g).match(/aggregateRating|review|priceRange|openingHours/),'aucune donnée inventée');
+    const title=h.match(/<title>(.*?)<\/title>/)[1];assert.ok(title.length<=70,f+' titre trop long');
+    const d=h.match(/name="description" content="(.*?)"/)[1];assert.ok(d.length>=110&&d.length<=160,f+' description '+d.length);
+    assert.equal((h.match(/<h1[\s>]/g)||[]).length,1);
+    if(!config.publicationApproved)assert.ok(h.includes('noindex,nofollow'));
+  }
+  const home=fs.readFileSync(new URL('../site/index.html',import.meta.url),'utf8');
+  assert.ok(home.includes('id="clientele"')&&home.includes('B2B')&&home.includes('B2C'));
+  const maint=fs.readFileSync(new URL('../site/maintenance.html',import.meta.url),'utf8');assert.ok(maint.includes('"FAQPage"'));
+  assert.match(robotsTxt({...config,publicationApproved:false}),/Disallow: \//);
+  const pub=robotsTxt({...config,publicationApproved:true});
+  assert.ok(pub.includes('GPTBot')&&pub.includes('PerplexityBot')&&pub.includes('Sitemap: https://anelecgroupe.com/sitemap.xml'));
+  assert.ok(llmsTxt(config,[{file:'index.html',title:'A',description:'B'}]).includes('B2B'));
+  assert.ok(sitemapXml(['https://anelecgroupe.com/'],'2026-11-02').includes('<lastmod>2026-11-02</lastmod>'));
+});

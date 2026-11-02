@@ -4,6 +4,7 @@
    - Produit les fichiers d'hébergement : .htaccess, robots.txt, sitemap.xml, 404.html
    - Icônes et polices sont versionnées ; les régénérer avec `npm run build:assets`
    ========================================================================== */
+import { robotsTxt, sitemapXml, llmsTxt } from './src/seo.mjs';
 import fs from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { shell, home, maintenance, trades, group, contact, information, notFound, esc } from './src/templates.mjs';
@@ -17,12 +18,12 @@ export function publishableProjects(items, enabled) {
 }
 
 export const pages = [
-  { file: 'index.html', title: 'Maintenance & travaux en Île-de-France', description: 'GROUPE ATC, anciennement ANELEC : plomberie, électricité, serrurerie, rénovation intérieure, maçonnerie et menuiserie en Île-de-France.', content: home },
-  { file: 'maintenance.html', title: 'Maintenance multitechnique', description: 'Proposition de maintenance avec 2, 4 ou 12 visites par an, périmètre écrit et suivi. Offre à adapter après audit.', content: maintenance },
-  { file: 'metiers.html', title: 'Travaux TCE, dépannage et métiers', description: 'Plomberie, électricité, serrurerie, rénovation intérieure, maçonnerie et menuiserie : des prestations définies selon votre besoin.', content: trades },
-  { file: 'groupe.html', title: 'ANELEC devient GROUPE ATC', description: 'GROUPE ATC est la nouvelle dénomination sociale d’ANELEC : même société, nouvelle présidence.', content: group },
-  { file: 'contact.html', title: 'Contact et demande de devis', description: 'Décrivez votre besoin de dépannage, de travaux ou de maintenance en Île-de-France.', content: contact },
-  { file: 'informations.html', title: 'Informations et confidentialité', description: 'Identité de l’entreprise, coordonnées, données du formulaire et conditions de la proposition de maintenance.', content: information }
+  { file: 'index.html', title: 'Plomberie, électricité, rénovation en Île-de-France', description: 'GROUPE ATC (ex-ANELEC) : maintenance, dépannage et travaux TCE à Paris et en Île-de-France, pour professionnels (B2B) et particuliers (B2C). Devis.', content: home },
+  { file: 'maintenance.html', title: 'Contrat de maintenance multitechnique en Île-de-France', description: 'Maintenance multitechnique pour bureaux, commerces et logements : 2, 4 ou 12 visites par an, périmètre écrit et compte rendu. Paris et Île-de-France.', content: maintenance },
+  { file: 'metiers.html', title: 'Plombier, électricien, serrurier en Île-de-France', description: 'Dépannage et travaux TCE à Paris et en Île-de-France : plomberie, électricité, serrurerie, rénovation intérieure, maçonnerie, menuiserie. B2B et B2C.', content: trades },
+  { file: 'groupe.html', title: 'ANELEC devient GROUPE ATC', description: 'GROUPE ATC est la nouvelle dénomination sociale d’ANELEC : même société (SIREN 933 108 607), nouvelle présidence, mêmes métiers en Île-de-France.', content: group },
+  { file: 'contact.html', title: 'Demande de devis travaux et dépannage en Île-de-France', description: 'Demandez un devis à GROUPE ATC : dépannage, travaux ou maintenance à Paris et en Île-de-France. Professionnels et particuliers. 01 84 80 93 85.', content: contact },
+  { file: 'informations.html', title: 'Informations légales et confidentialité', description: 'Identité de GROUPE ATC (SAS, SIREN 933 108 607), coordonnées, données du formulaire et conditions de la proposition de maintenance.', content: information }
 ];
 
 function htaccess(config) {
@@ -91,11 +92,10 @@ export async function build({ assets = false } = {}) {
   const base = `https://${config.domain}`;
   const urls = pages.map(p => p.file === 'index.html' ? `${base}/` : `${base}/${p.file}`);
   await fs.writeFile(new URL('.htaccess', site), htaccess(config));
-  await fs.writeFile(new URL('robots.txt', site), config.publicationApproved
-    ? `User-agent: *\nAllow: /\n\nSitemap: ${base}/sitemap.xml\n`
-    : `# Préparation : indexation désactivée tant que publicationApproved=false\nUser-agent: *\nDisallow: /\n`);
+  await fs.writeFile(new URL('robots.txt', site), robotsTxt(config));
+  await fs.writeFile(new URL('llms.txt', site), llmsTxt(config, pages));
   if (config.publicationApproved) {
-    await fs.writeFile(new URL('sitemap.xml', site), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(u => `  <url><loc>${u}</loc></url>`).join('\n')}\n</urlset>\n`);
+    await fs.writeFile(new URL('sitemap.xml', site), sitemapXml(urls, new Date().toISOString().slice(0, 10)));
   } else await fs.rm(new URL('sitemap.xml', site), { force: true });
 
   const manifest = pages.map(({ file, title, description }) => ({ file, title, description, slug: file === 'index.html' ? '/' : '/' + file.replace('.html', ''), status: 'draft', suggestedBlocks: ['text', 'image', 'button', 'form-where-applicable'] }));

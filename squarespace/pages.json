@@ -1,8 +1,8 @@
 [
   {
     "file": "index.html",
-    "title": "Maintenance & travaux en Île-de-France",
-    "description": "GROUPE ATC, anciennement ANELEC : plomberie, électricité, serrurerie, rénovation intérieure, maçonnerie et menuiserie en Île-de-France.",
+    "title": "Plomberie, électricité, rénovation en Île-de-France",
+    "description": "GROUPE ATC (ex-ANELEC) : maintenance, dépannage et travaux TCE à Paris et en Île-de-France, pour professionnels (B2B) et particuliers (B2C). Devis.",
     "slug": "/",
     "status": "draft",
     "suggestedBlocks": [
@@ -14,8 +14,8 @@
   },
   {
     "file": "maintenance.html",
-    "title": "Maintenance multitechnique",
-    "description": "Proposition de maintenance avec 2, 4 ou 12 visites par an, périmètre écrit et suivi. Offre à adapter après audit.",
+    "title": "Contrat de maintenance multitechnique en Île-de-France",
+    "description": "Maintenance multitechnique pour bureaux, commerces et logements : 2, 4 ou 12 visites par an, périmètre écrit et compte rendu. Paris et Île-de-France.",
     "slug": "/maintenance",
     "status": "draft",
     "suggestedBlocks": [
@@ -27,8 +27,8 @@
   },
   {
     "file": "metiers.html",
-    "title": "Travaux TCE, dépannage et métiers",
-    "description": "Plomberie, électricité, serrurerie, rénovation intérieure, maçonnerie et menuiserie : des prestations définies selon votre besoin.",
+    "title": "Plombier, électricien, serrurier en Île-de-France",
+    "description": "Dépannage et travaux TCE à Paris et en Île-de-France : plomberie, électricité, serrurerie, rénovation intérieure, maçonnerie, menuiserie. B2B et B2C.",
     "slug": "/metiers",
     "status": "draft",
     "suggestedBlocks": [
@@ -41,7 +41,7 @@
   {
     "file": "groupe.html",
     "title": "ANELEC devient GROUPE ATC",
-    "description": "GROUPE ATC est la nouvelle dénomination sociale d’ANELEC : même société, nouvelle présidence.",
+    "description": "GROUPE ATC est la nouvelle dénomination sociale d’ANELEC : même société (SIREN 933 108 607), nouvelle présidence, mêmes métiers en Île-de-France.",
     "slug": "/groupe",
     "status": "draft",
     "suggestedBlocks": [
@@ -53,8 +53,8 @@
   },
   {
     "file": "contact.html",
-    "title": "Contact et demande de devis",
-    "description": "Décrivez votre besoin de dépannage, de travaux ou de maintenance en Île-de-France.",
+    "title": "Demande de devis travaux et dépannage en Île-de-France",
+    "description": "Demandez un devis à GROUPE ATC : dépannage, travaux ou maintenance à Paris et en Île-de-France. Professionnels et particuliers. 01 84 80 93 85.",
     "slug": "/contact",
     "status": "draft",
     "suggestedBlocks": [
@@ -66,8 +66,8 @@
   },
   {
     "file": "informations.html",
-    "title": "Informations et confidentialité",
-    "description": "Identité de l’entreprise, coordonnées, données du formulaire et conditions de la proposition de maintenance.",
+    "title": "Informations légales et confidentialité",
+    "description": "Identité de GROUPE ATC (SAS, SIREN 933 108 607), coordonnées, données du formulaire et conditions de la proposition de maintenance.",
     "slug": "/informations",
     "status": "draft",
     "suggestedBlocks": [
