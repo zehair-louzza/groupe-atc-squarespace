@@ -23,7 +23,7 @@ export const pages = [
   { file: 'metiers.html', title: 'Plombier, électricien, serrurier en Île-de-France', description: 'Dépannage et travaux TCE à Paris et en Île-de-France : plomberie, électricité, serrurerie, rénovation intérieure, maçonnerie, menuiserie. B2B et B2C.', content: trades },
   { file: 'groupe.html', title: 'ANELEC devient GROUPE ATC', description: 'GROUPE ATC est la nouvelle dénomination sociale d’ANELEC : même société (SIREN 933 108 607), nouvelle présidence, mêmes métiers en Île-de-France.', content: group },
   { file: 'contact.html', title: 'Demande de devis travaux et dépannage en Île-de-France', description: 'Demandez un devis à GROUPE ATC : dépannage, travaux ou maintenance à Paris et en Île-de-France. Professionnels et particuliers. 01 84 80 93 85.', content: contact },
-  { file: 'informations.html', title: 'Informations légales et confidentialité', description: 'Identité de GROUPE ATC (SAS, SIREN 933 108 607), coordonnées, données du formulaire et conditions de la proposition de maintenance.', content: information }
+  { file: 'informations.html', title: 'Informations légales et confidentialité', description: 'Identité de GROUPE ATC (SASU, SIREN 933 108 607), coordonnées, données du formulaire et conditions de la proposition de maintenance.', content: information }
 ];
 
 function htaccess(config) {

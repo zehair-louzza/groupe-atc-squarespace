@@ -60,7 +60,7 @@ function organization(config, base) {
     knowsLanguage: 'fr',
     knowsAbout: ['Maintenance multitechnique', 'Travaux tous corps d’état (TCE)', 'Dépannage', ...services.families.map(f => f.title)],
     contactPoint: [{ '@type': 'ContactPoint', contactType: 'customer service', telephone: config.phone, email: config.email, areaServed: 'FR-IDF', availableLanguage: 'French' }],
-    sameAs: [legal.sources.official],
+    sameAs: [legal.sources.official, legal.sources.registryAggregator],
     hasOfferCatalog: {
       '@type': 'OfferCatalog', name: 'Prestations GROUPE ATC',
       itemListElement: services.families.map(f => ({ '@type': 'Offer', itemOffered: { '@id': `${base}/metiers.html#service-${f.id}` } })),

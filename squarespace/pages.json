@@ -67,7 +67,7 @@
   {
     "file": "informations.html",
     "title": "Informations légales et confidentialité",
-    "description": "Identité de GROUPE ATC (SAS, SIREN 933 108 607), coordonnées, données du formulaire et conditions de la proposition de maintenance.",
+    "description": "Identité de GROUPE ATC (SASU, SIREN 933 108 607), coordonnées, données du formulaire et conditions de la proposition de maintenance.",
     "slug": "/informations",
     "status": "draft",
     "suggestedBlocks": [
