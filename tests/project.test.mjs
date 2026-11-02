@@ -194,3 +194,21 @@ test('Mentions légales : page dédiée, liens sur toutes les pages, éléments 
   for(const page of ['index','maintenance','metiers','partenariat','groupe','contact','informations','404'])assert.ok(fs.readFileSync(`site/${page}.html`,'utf8').includes('href="/mentions-legales.html"'),page);
   assert.ok(!fs.readFileSync('site/informations.html','utf8').includes('Mentions restant à finaliser'));
 });
+
+test('Formulaire : envoi automatique vers contact@ via SMTP Zoho, sans secret dans le dépôt', async () => {
+  const { readFile } = await import('node:fs/promises');
+  const php = await readFile(new URL('../site/api/demande.php', import.meta.url), 'utf8');
+  const js = await readFile(new URL('../site/app.js', import.meta.url), 'utf8');
+  const contact = await readFile(new URL('../site/contact.html', import.meta.url), 'utf8');
+  assert.match(php, /smtppro\.zoho\.eu/);
+  assert.match(php, /atc-mail-config\.php/);
+  assert.match(php, /dirname\(__DIR__, 2\)/);
+  assert.match(php, /URGENT – /);
+  assert.match(php, /site_web/);
+  assert.doesNotMatch(php, /'password'\s*=>\s*'[^C]/);
+  assert.match(js, /\/api\/demande\.php/);
+  assert.match(contact, /id="request-sent"/);
+  assert.match(contact, /name="site_web"/);
+  const ignore = await readFile(new URL('../.gitignore', import.meta.url), 'utf8');
+  assert.match(ignore, /atc-mail-config\.php/);
+});

@@ -111,7 +111,7 @@ if(form){
   applySelect(profile,query.get('profil'));
   proVisibility();profile.addEventListener('change',proVisibility);
   siret.addEventListener('input',()=>{const n=siret.value.replace(/\D/g,'').slice(0,14);siret.value=n.replace(/^(\d{3})(\d{0,3})(\d{0,3})(\d{0,5}).*/,(m,a,b,c,d)=>[a,b,c,d].filter(Boolean).join(' '));siret.setCustomValidity(n.length===14&&!siretValid(n)?'invalid':'')});
-  let step=1;
+  let step=1;const openedAt=Date.now();
   function showStep(n){step=n;form.querySelectorAll('.form-step').forEach(el=>el.hidden=el.dataset.step!==String(n));form.querySelector('.form-progress').textContent=n===1?'Étape 1 / 2 · Votre besoin':'Étape 2 / 2 · Vos coordonnées';form.querySelector(`[data-step="${n}"] input, [data-step="${n}"] select`)?.focus()}
   function validate(section){let valid=true;section.querySelectorAll('[required]').forEach(el=>{if(el.disabled)return;const message=!el.value.trim()?'Ce champ est nécessaire.':!el.validity.valid?(el.dataset.error||'Vérifiez le format de votre courriel.'):'';el.setAttribute('aria-invalid',String(Boolean(message)));const error=el.closest('.field').querySelector('.field-error');if(error)error.textContent=message;if(message)valid=false});if(!valid)section.querySelector('[aria-invalid="true"]')?.focus();return valid}
   document.querySelector('#next-step').addEventListener('click',()=>{if(validate(form.querySelector('[data-step="1"]')))showStep(2)});
@@ -127,7 +127,17 @@ if(form){
     const link=document.querySelector('#email-request');
     const recipient=link.getAttribute('href').split('?')[0];
     link.setAttribute('href',recipient+'?subject='+encodeURIComponent((urgent.checked?'URGENT – ':'')+'Demande GROUPE ATC : '+d.get('besoin'))+'&body='+encodeURIComponent(text));
-    form.hidden=true;const summary=document.querySelector('#request-summary');summary.hidden=false;summary.focus();
+    const sendBtn=document.querySelector('#send-request'),status=document.querySelector('#send-status');
+    const fallback=reason=>{if(reason)document.querySelector('#summary-reason').textContent=reason;form.hidden=true;const summary=document.querySelector('#request-summary');summary.hidden=false;summary.focus()};
+    if(location.protocol==='file:'){fallback();return}
+    const payload=Object.fromEntries(d.entries());payload.urgence=urgent.checked?'Oui':'Non';payload.ville_carte=chosenCity;payload.elapsed=Date.now()-openedAt;if(need.value!=='Maintenance')payload.formule='';
+    sendBtn.disabled=true;status.textContent='Envoi en cours…';
+    fetch('/api/demande.php',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
+      .then(r=>r.json().catch(()=>({ok:false})).then(j=>({status:r.status,j})))
+      .then(({status:code,j})=>{if(j&&j.ok){form.hidden=true;const sent=document.querySelector('#request-sent');sent.hidden=false;sent.focus();return}
+        fallback(code===429?'Trop de demandes envoyées récemment : aucun message n’a été transmis. Envoyez-la depuis votre messagerie ou appelez-nous.':undefined)})
+      .catch(()=>fallback())
+      .finally(()=>{sendBtn.disabled=false;status.textContent=''});
   });
   document.querySelector('#edit-request').addEventListener('click',()=>{document.querySelector('#request-summary').hidden=true;form.hidden=false;showStep(2)});
   document.querySelector('#copy-request').addEventListener('click',async()=>{const field=document.querySelector('#summary-text');try{await navigator.clipboard.writeText(field.value);document.querySelector('#copy-status').textContent='Texte copié. Aucun message n’a été envoyé.'}catch{field.focus();field.select();document.querySelector('#copy-status').textContent='Sélectionnez puis copiez ce texte avec votre appareil.'}});

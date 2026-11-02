@@ -450,3 +450,6 @@ input[readonly]{background:#F6F3EE;color:#2E2520;cursor:not-allowed}
 .legal-page .notice{margin-bottom:var(--space-4)}
 .footer-bottom a{color:inherit}
 @media (max-width:900px){.legal-page{grid-template-columns:1fr}.legal-toc{position:static;margin-inline:var(--gutter)}.legal-page .prose{margin-inline:var(--gutter)}}
+.hp-field{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+#request-sent{padding:clamp(1.5rem,4vw,2.5rem);border-radius:var(--radius,20px)}
+#request-sent:focus{outline:none}
