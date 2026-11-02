@@ -1,0 +1,45 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "nom": "Paris", "code": "75" },
+      "geometry": { "type": "Polygon", "coordinates": [[[2.224199,48.815573],[2.469920,48.815573],[2.469920,48.902145],[2.224199,48.902145],[2.224199,48.815573]]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nom": "Seine-et-Marne", "code": "77" },
+      "geometry": { "type": "Polygon", "coordinates": [[[2.55,48.15],[3.35,48.15],[3.35,48.95],[2.55,48.95],[2.55,48.15]]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nom": "Yvelines", "code": "78" },
+      "geometry": { "type": "Polygon", "coordinates": [[[1.75,48.55],[2.35,48.55],[2.35,49.05],[1.75,49.05],[1.75,48.55]]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nom": "Essonne", "code": "91" },
+      "geometry": { "type": "Polygon", "coordinates": [[[2.05,48.30],[2.65,48.30],[2.65,48.75],[2.05,48.75],[2.05,48.30]]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nom": "Hauts-de-Seine", "code": "92" },
+      "geometry": { "type": "Polygon", "coordinates": [[[2.10,48.75],[2.35,48.75],[2.35,48.90],[2.10,48.90],[2.10,48.75]]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nom": "Seine-Saint-Denis", "code": "93" },
+      "geometry": { "type": "Polygon", "coordinates": [[[2.30,48.85],[2.55,48.85],[2.55,49.00],[2.30,49.00],[2.30,48.85]]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nom": "Val-de-Marne", "code": "94" },
+      "geometry": { "type": "Polygon", "coordinates": [[[2.35,48.70],[2.60,48.70],[2.60,48.85],[2.35,48.85],[2.35,48.70]]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nom": "Val-d'Oise", "code": "95" },
+      "geometry": { "type": "Polygon", "coordinates": [[[1.95,48.95],[2.50,48.95],[2.50,49.20],[1.95,49.20],[1.95,48.95]]] }
+    }
+  ]
+}

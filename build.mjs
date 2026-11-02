@@ -2,7 +2,7 @@
    Build Principal — SSG Statique
    Génère site/ à partir de templates.mjs + données JSON
    ========================================================================== */
-import { readFileSync, writeFileSync, mkdirSync, existsSync, cpSync } from 'fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync, cpSync, readdirSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, resolve } from 'path';
 import { buildIcons } from './scripts/build-icons.mjs';
@@ -17,14 +17,14 @@ async function build() {
   console.log('🏗️  Build GROUPE ATC — Démarrage');
   const start = Date.now();
 
-  // 1. Copier assets statiques (images, fonts, icons, data)
+  // 1. Générer sprite SVG + fonts (async parallel)
+  await Promise.all([buildIcons(), downloadFonts()]);
+
+  // 2. Copier assets statiques (images, fonts, icons, data)
   copyAssets();
 
-  // 2. Générer pages HTML
+  // 3. Générer pages HTML
   await generatePages();
-
-  // 3. Copier base.css, style.css, app.js (déjà en place)
-  // 4. Copier sprite.svg et fonts (déjà générés par scripts séparés)
 
   console.log(`✅ Build terminé en ${((Date.now() - start) / 1000).toFixed(1)}s`);
   console.log(`📁 Site généré dans: ${SITE_DIR}`);
@@ -34,10 +34,10 @@ function copyAssets() {
   console.log('📦 Copie assets...');
   
   // Créer dossiers cibles
-  ['assets/images', 'assets/fonts', 'assets/icons', 'assets/data'].forEach(dir => {
-    const path = `site/assets/${dir.split('/').pop()}`;
-    if (!require('fs').existsSync(path)) {
-      require('fs').mkdirSync(`site/assets/${dir.split('/').pop()}`, { recursive: true });
+  ['images', 'fonts', 'icons', 'data'].forEach(dir => {
+    const path = `site/assets/${dir}`;
+    if (!existsSync(path)) {
+      mkdirSync(path, { recursive: true });
     }
   });
 
@@ -49,10 +49,9 @@ function copyAssets() {
 }
 
 function copyDir(src, dest) {
-  const fs = require('fs');
   if (!existsSync(src)) return;
   if (!existsSync(dest)) mkdirSync(dest, { recursive: true });
-  for (const entry of require('fs').readdirSync(src, { withFileTypes: true })) {
+  for (const entry of readdirSync(src, { withFileTypes: true })) {
     const srcPath = resolve(src, entry.name);
     const destPath = resolve(dest, entry.name);
     if (entry.isDirectory()) {
@@ -68,7 +67,6 @@ async function generatePages() {
   
   // Import dynamique du module templates
   const templates = await import('./src/templates.mjs');
-  const { readFileSync } = require('fs');
   const siteConfig = JSON.parse(readFileSync('./data/site.json', 'utf8'));
   const services = JSON.parse(readFileSync('./data/services.json', 'utf8'));
   const legal = JSON.parse(readFileSync('./data/legal.json', 'utf8'));

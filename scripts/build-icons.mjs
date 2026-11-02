@@ -204,4 +204,8 @@ async function build() {
   console.log(`   Ignorées: ${skipped}`);
 }
 
+export async function buildIcons() {
+  return build();
+}
+
 build().catch(console.error);

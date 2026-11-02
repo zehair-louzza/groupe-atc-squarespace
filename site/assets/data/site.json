@@ -1,0 +1,46 @@
+{
+  "brand": "GROUPE ATC",
+  "brandFull": "GROUPE ANELEC TECHNIQUE ET CONCEPTE",
+  "formerBrand": "ANELEC",
+  "teamExperienceStatement": "Nos techniciens et notre directeur de travaux disposent de plus de 10 ans d’expérience dans leur domaine.",
+  "teamExperienceEvidence": "Confirmation explicite de l’entreprise le 29 octobre 2026 ; expérience des personnes, non ancienneté de la société.",
+  "domain": "anelecgroupe.com",
+  "phone": "+33184809385",
+  "phoneDisplay": "01 84 80 93 85",
+  "email": "contact@anelecgroupe.com",
+  "emailStatus": "confirmed-by-user",
+  "address": "9 RUE DES COLONNES, 75002 PARIS",
+  "territory": "Île-de-France",
+  "squarespaceSite": "https://mandolin-jaguar-flrs.squarespace.com",
+  "publicationApproved": false,
+  "formMode": "local-summary",
+  "features": {
+    "projects": false
+  },
+  "plans": [
+    {
+      "id": "essentiel",
+      "name": "Essentiel",
+      "frequency": 2,
+      "cadence": "Deux passages par an",
+      "audience": "Pour organiser les vérifications de base d’un site.",
+      "hoursPerVisit": 2
+    },
+    {
+      "id": "suivi",
+      "name": "Suivi",
+      "frequency": 4,
+      "cadence": "Un passage par trimestre",
+      "audience": "Pour suivre régulièrement les besoins et les actions.",
+      "hoursPerVisit": 2
+    },
+    {
+      "id": "continuite",
+      "name": "Continuité",
+      "frequency": 12,
+      "cadence": "Un passage par mois",
+      "audience": "Pour un site nécessitant un suivi plus rapproché.",
+      "hoursPerVisit": 2
+    }
+  ]
+}
