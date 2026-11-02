@@ -23,3 +23,8 @@ Le vrai fichier n'est **jamais** versionné (`.gitignore`).
 - Ni les DNS ni les serveurs de noms (NS) n'ont été modifiés ; les MX Zoho sont intacts.
 - `atc-mail-config.php` a été créé dans le gestionnaire de fichiers, à la racine du site (à côté de `public_html`), avec l'emplacement du mot de passe à remplir.
 - Mot de passe d'application Zoho renseigné par l'utilisateur ; test réel du 02/11/2026 à 17:45 : réponse {ok:true} et demande reçue dans la boîte de réception de contact@anelecgroupe.com.
+
+## Indexation et engagements (2 novembre 2026)
+- Indexation activée à la demande de l'entreprise (`publicationApproved: true`), malgré l'absence du médiateur de la consommation, qui reste à renseigner dans `data/legal.json`.
+- Engagements confirmés et publiés : urgences et astreinte 6j/7, devis en moins de 48 h, +1 200 interventions par an. Tarifs : à ne pas publier.
+- Auto-déploiement Hostinger actif. Le workflow pousse désormais sans réécrire l'historique de la branche (le push forcé provoquait « shallow file has changed » chez Hostinger).

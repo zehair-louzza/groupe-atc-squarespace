@@ -16,13 +16,17 @@ jobs:
       - run: npm install --no-audit --no-fund
       - run: npm test
       - run: node build.mjs
-      - name: Publier site/ sur la branche hostinger-deploy
+      - name: Publier site/ sur la branche hostinger-deploy (historique conservé, sans force)
         run: |
           rm -f site/api/*.example.php
-          cd site
-          git init -q -b hostinger-deploy
+          url="https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
+          git clone -q --branch hostinger-deploy --single-branch "$url" /tmp/deploy || { mkdir /tmp/deploy && git -C /tmp/deploy init -q -b hostinger-deploy; }
+          find /tmp/deploy -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          cp -a site/. /tmp/deploy/
+          cd /tmp/deploy
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
           git add -A
+          git diff --cached --quiet && { echo "Aucun changement"; exit 0; }
           git commit -qm "Publication depuis ${GITHUB_SHA::7}"
-          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" hostinger-deploy
+          git push "$url" hostinger-deploy
