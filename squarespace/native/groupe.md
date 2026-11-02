@@ -14,7 +14,7 @@ Travaux d’aménagement et de rénovation, maintenance TCE pour les espaces ter
 
 Les métiers concernés sont la plomberie, l’électricité, la serrurerie, la rénovation intérieure, la maçonnerie et la menuiserie, dans le périmètre défini avec vous.
 
-Nos techniciens et notre directeur de travaux disposent de plus de 10 ans d’expérience dans leur domaine.
+Notre directeur des travaux cumule plus de 15 ans d’expérience, et chacun de nos techniciens plus de 10 ans dans son métier.
 
 ## Notre approche
 

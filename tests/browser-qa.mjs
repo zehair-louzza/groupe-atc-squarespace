@@ -49,7 +49,7 @@ export async function runPreviewQA(browser, base='http://127.0.0.1:3000/') {
       }
       if(['index','groupe'].includes(file)){
         const text=await page.locator('main').innerText();
-        assert.ok(text.includes('Nos techniciens et notre directeur de travaux disposent de plus de 10 ans d’expérience dans leur domaine.'));
+        assert.ok(text.includes('Notre directeur des travaux cumule plus de 15 ans d’expérience, et chacun de nos techniciens plus de 10 ans dans son métier.'));
         if(file==='groupe'){assert.ok(text.includes('la même société'));assert.ok(text.includes('nouvelle présidence'))}
         if(width===1440)result.flows.push(`${file==='index'?'Accueil':'Groupe'} : expérience des personnes et contenu confirmé.`);
       }

@@ -39,6 +39,19 @@
     ]
   },
   {
+    "file": "partenariat.html",
+    "title": "Partenariat B2B : maintenance et travaux TCE en Île-de-France",
+    "description": "Partenaire multitechnique des professionnels : directeur des travaux +15 ans d’expérience, techniciens +10 ans par métier, contrat cadre multi-sites. Île-de-France.",
+    "slug": "/partenariat",
+    "status": "draft",
+    "suggestedBlocks": [
+      "text",
+      "image",
+      "button",
+      "form-where-applicable"
+    ]
+  },
+  {
     "file": "groupe.html",
     "title": "ANELEC devient GROUPE ATC",
     "description": "GROUPE ATC est la nouvelle dénomination sociale d’ANELEC : même société (SIREN 933 108 607), nouvelle présidence, mêmes métiers en Île-de-France.",

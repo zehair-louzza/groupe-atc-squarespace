@@ -97,6 +97,11 @@ if(form){
     if(/^\d{5}$/.test(insee))back.href=back.getAttribute('href').replace('#carte',`?carte=${dept}&ville=${insee}&cp=${code}#carte`);
     setTimeout(()=>{(trade.value?description:trade).focus()},0);
   }
+  // Intervention urgente : case à cocher, note d'appel et marquage dans le récapitulatif
+  const urgent=document.querySelector('#urgent'),urgentNote=document.querySelector('#urgent-note');
+  if(['1','oui','true'].includes((query.get('urgence')||'').toLowerCase()))urgent.checked=true;
+  function urgentVisibility(){urgentNote.hidden=!urgent.checked;urgent.closest('.urgent-field').classList.toggle('is-checked',urgent.checked)}
+  urgentVisibility();urgent.addEventListener('change',urgentVisibility);
   function planVisibility(){document.querySelector('#plan-field').hidden=need.value!=='Maintenance'}
   planVisibility();need.addEventListener('change',planVisibility);
   // Étape 2 : entreprise et SIRET demandés uniquement pour un professionnel
@@ -117,11 +122,11 @@ if(form){
     if(!validate(form.querySelector('[data-step="1"]'))){showStep(1);return}
     if(!validate(form.querySelector('[data-step="2"]')))return;
     const d=new FormData(form);
-    const text=`Bonjour GROUPE ATC,\n\nJe souhaite étudier la demande suivante.\n\nBesoin : ${d.get('besoin')}\nMétier : ${d.get('metier')}\nCommune : ${d.get('commune')}\n${chosenCity?`Ville sélectionnée sur la carte : ${chosenCity}\n`:''}${need.value==='Maintenance'&&d.get('formule')?`Formule à étudier : ${d.get('formule')}\n`:''}Description : ${d.get('description')}\n\nProfil : ${d.get('profil')}\n${profile.value==='Professionnel'?`Entreprise : ${d.get('entreprise')}\nSIRET : ${d.get('siret')}\n`:''}Nom : ${d.get('nom')}\nCourriel : ${d.get('courriel')}\nTéléphone : ${d.get('telephone')||'Non renseigné'}\n\nMerci.`;
+    const text=`Bonjour GROUPE ATC,\n\n${urgent.checked?'⚠ INTERVENTION URGENTE DEMANDÉE\n\n':''}Je souhaite étudier la demande suivante.\n\nBesoin : ${d.get('besoin')}\nMétier : ${d.get('metier')}\nUrgence : ${urgent.checked?'Oui':'Non'}\nCommune : ${d.get('commune')}\n${chosenCity?`Ville sélectionnée sur la carte : ${chosenCity}\n`:''}${need.value==='Maintenance'&&d.get('formule')?`Formule à étudier : ${d.get('formule')}\n`:''}Description : ${d.get('description')}\n\nProfil : ${d.get('profil')}\n${profile.value==='Professionnel'?`Entreprise : ${d.get('entreprise')}\nSIRET : ${d.get('siret')}\n`:''}Nom : ${d.get('nom')}\nCourriel : ${d.get('courriel')}\nTéléphone : ${d.get('telephone')||'Non renseigné'}\n\nMerci.`;
     document.querySelector('#summary-text').value=text;
     const link=document.querySelector('#email-request');
     const recipient=link.getAttribute('href').split('?')[0];
-    link.setAttribute('href',recipient+'?subject='+encodeURIComponent('Demande GROUPE ATC : '+d.get('besoin'))+'&body='+encodeURIComponent(text));
+    link.setAttribute('href',recipient+'?subject='+encodeURIComponent((urgent.checked?'URGENT – ':'')+'Demande GROUPE ATC : '+d.get('besoin'))+'&body='+encodeURIComponent(text));
     form.hidden=true;const summary=document.querySelector('#request-summary');summary.hidden=false;summary.focus();
   });
   document.querySelector('#edit-request').addEventListener('click',()=>{document.querySelector('#request-summary').hidden=true;form.hidden=false;showStep(2)});

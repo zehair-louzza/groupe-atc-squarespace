@@ -54,8 +54,8 @@ test('Identité légale : même société, identifiants et dates distinctes',()=
   assert.doesNotMatch(native.publicLegal.rows.map(r=>r.value).join(' '),/exemple|FRXX|12345|555555/i);
 });
 
-test('Plus de dix ans : expérience des techniciens et du directeur, non de la société',()=>{
-  const statement='Nos techniciens et notre directeur de travaux disposent de plus de 10 ans d’expérience dans leur domaine.';
+test('Expérience : directeur des travaux +15 ans, techniciens +10 ans (personnes, non société)',()=>{
+  const statement='Notre directeur des travaux cumule plus de 15 ans d’expérience, et chacun de nos techniciens plus de 10 ans dans son métier.';
   assert.equal(config.teamExperienceStatement,statement);
   for(const file of ['site/index.html','site/groupe.html','squarespace/native/accueil.md','squarespace/native/groupe.md'])assert.ok(fs.readFileSync(file,'utf8').includes(statement),file);
   const native=JSON.parse(fs.readFileSync('squarespace/native/company-profile.json','utf8'));
@@ -65,7 +65,7 @@ test('Plus de dix ans : expérience des techniciens et du directeur, non de la s
 
 test('Rendered offers and native sources stay within the confirmed trade scope',()=>{
   const excluded=/\bcvc\b|chauffage|ventilation|climatis|nettoy|netyage|propret[eé]|g[eé]nie climatique|facility\s*management|d[eé]senfum|frigor|pompe [aà] chaleur/i;
-  for(const page of ['index','maintenance','metiers','groupe','contact','informations']){
+  for(const page of ['index','maintenance','metiers','partenariat','groupe','contact','informations']){
     assert.doesNotMatch(fs.readFileSync(`site/${page}.html`,'utf8'),excluded,`Unexpected trade in ${page}.html`);
   }
   for(const page of ['accueil','maintenance','metiers','groupe','contact','informations']){
@@ -168,4 +168,22 @@ test('SEO : données structurées, B2B/B2C, robots et llms.txt', async () => {
   assert.ok(pub.includes('GPTBot')&&pub.includes('PerplexityBot')&&pub.includes('Sitemap: https://anelecgroupe.com/sitemap.xml'));
   assert.ok(llmsTxt(config,[{file:'index.html',title:'A',description:'B'}]).includes('B2B'));
   assert.ok(sitemapXml(['https://anelecgroupe.com/'],'2026-11-02').includes('<lastmod>2026-11-02</lastmod>'));
+});
+
+test('Formulaire : case « Intervention urgente » et option Partenariat',()=>{
+  const html=fs.readFileSync('site/contact.html','utf8');
+  assert.match(html,/<input type="checkbox" id="urgent" name="urgence" value="Oui"/);
+  assert.match(html,/id="urgent-note"[^>]*hidden/);
+  assert.match(html,/<option value="Partenariat">/);
+  const js=fs.readFileSync('site/app.js','utf8');
+  assert.match(js,/Urgence : \$\{urgent\.checked\?'Oui':'Non'\}/);
+  assert.match(js,/'URGENT – '/);
+});
+
+test('Page Partenariat B2B : expérience confirmée, navigation et SEO',()=>{
+  const html=fs.readFileSync('site/partenariat.html','utf8');
+  for(const s of ['+15 ans','+10 ans','6 techniciens, 4 administratifs','Contrat cadre multi-sites','Assurance décennale','Références anonymisées','besoin=Partenariat&amp;profil=Professionnel'])assert.ok(html.includes(s),s);
+  assert.doesNotMatch(html,/42 €|40 €|1 200|7j\/7|48 ?h/,'Engagements commerciaux non validés pour publication');
+  for(const page of ['index','contact','metiers'])assert.ok(fs.readFileSync(`site/${page}.html`,'utf8').includes('href="/partenariat.html"'),page);
+  assert.ok(fs.readFileSync('site/llms.txt','utf8').includes('/partenariat.html'));
 });

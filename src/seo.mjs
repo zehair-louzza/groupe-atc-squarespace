@@ -97,7 +97,7 @@ export function faqFrom(html) {
   return out;
 }
 
-const pageName = { 'index.html': 'Accueil', 'maintenance.html': 'Maintenance', 'metiers.html': 'Métiers', 'groupe.html': 'Le groupe', 'contact.html': 'Contact et devis', 'informations.html': 'Informations', 'realisations.html': 'Réalisations' };
+const pageName = { 'index.html': 'Accueil', 'maintenance.html': 'Maintenance', 'metiers.html': 'Métiers', 'partenariat.html': 'Partenariat B2B', 'groupe.html': 'Le groupe', 'contact.html': 'Contact et devis', 'informations.html': 'Informations', 'realisations.html': 'Réalisations' };
 
 export function structuredData(config, page, body = '') {
   const base = `https://${config.domain}`;
@@ -151,11 +151,13 @@ export function llmsTxt(config, pages) {
 - Clientèle : professionnels (B2B : entreprises, bureaux, commerces, secteur tertiaire, gestionnaires de biens) et particuliers (B2C : appartements et maisons).
 - Zone d’intervention : Île-de-France — ${departementsText()}.
 - Effectif : ${legal.employeesDisplay}.
+- Équipe : ${config.teamExperienceStatement}
+- Partenariat professionnel (B2B, contrat cadre multi-sites) : ${base}/partenariat.html
 - Siège : ${config.address}.
 - Téléphone : ${config.phoneDisplay} · Courriel : ${config.email}
 - Demande de devis : ${base}/contact.html
 - ${config.formerBrand} et ${config.brand} sont la même société (changement de dénomination sociale, sans création d’une nouvelle entreprise).
-- Aucun délai d’intervention garanti ni service d’urgence permanent n’est annoncé ; chaque intervention fait l’objet d’une proposition.
+- Les demandes urgentes peuvent être signalées dans le formulaire ; la disponibilité est confirmée par téléphone. Chaque intervention fait l’objet d’une proposition.
 
 ## Pages
 

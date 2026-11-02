@@ -6,7 +6,7 @@ Entretenir, dépanner, rénover. Les métiers du bâtiment, avec un suivi clair.
 
 Plomberie, électricité, serrurerie, rénovation intérieure, maçonnerie et menuiserie, pour les professionnels et les particuliers en Île-de-France.
 
-Nos techniciens et notre directeur de travaux disposent de plus de 10 ans d’expérience dans leur domaine.
+Notre directeur des travaux cumule plus de 15 ans d’expérience, et chacun de nos techniciens plus de 10 ans dans son métier.
 
 [Présenter mon besoin](/groupe-atc-contact)
 

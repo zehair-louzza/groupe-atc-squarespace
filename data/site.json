@@ -2,8 +2,8 @@
   "brand": "GROUPE ATC",
   "brandFull": "GROUPE ANELEC TECHNIQUE ET CONCEPTE",
   "formerBrand": "ANELEC",
-  "teamExperienceStatement": "Nos techniciens et notre directeur de travaux disposent de plus de 10 ans d’expérience dans leur domaine.",
-  "teamExperienceEvidence": "Confirmation explicite de l’entreprise le 29 octobre 2026 ; expérience des personnes, non ancienneté de la société.",
+  "teamExperienceStatement": "Notre directeur des travaux cumule plus de 15 ans d’expérience, et chacun de nos techniciens plus de 10 ans dans son métier.",
+  "teamExperienceEvidence": "Confirmation explicite de l’entreprise le 2 novembre 2026 (directeur des travaux +15 ans, techniciens +10 ans par métier) ; expérience des personnes, non ancienneté de la société.",
   "domain": "anelecgroupe.com",
   "phone": "+33184809385",
   "phoneDisplay": "01 84 80 93 85",
@@ -42,5 +42,32 @@
       "audience": "Pour un site nécessitant un suivi plus rapproché.",
       "hoursPerVisit": 2
     }
-  ]
+  ],
+  "team": {
+    "total": 10,
+    "technicians": 6,
+    "administrative": 4,
+    "source": "Présentation ANELEC GROUPE fournie par l’entreprise (2 novembre 2026)"
+  },
+  "partnership": {
+    "references": [
+      "Grande distribution alimentaire",
+      "Galeries commerciales",
+      "Collectivité territoriale (Hauts-de-Seine)",
+      "Enseigne de distribution spécialisée"
+    ],
+    "referencesNote": "Références anonymisées — détails et contacts communiqués sur demande.",
+    "insurances": [
+      "Assurance décennale",
+      "RC professionnelle",
+      "Habilitations électriques"
+    ],
+    "source": "Présentation ANELEC GROUPE fournie par l’entreprise (2 novembre 2026)",
+    "pendingConfirmation": [
+      "Urgences 7j/7",
+      "Devis sous 48 h",
+      "+1 200 interventions par an",
+      "Tarifs (déplacement 40 € HT, main-d’œuvre 42 € HT/h)"
+    ]
+  }
 }

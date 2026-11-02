@@ -7,7 +7,7 @@
 - Distinguer l'inscription Sirene du 21 août 2024 et l'immatriculation RNE du 8 novembre 2024 ; ne pas les fusionner en une date de création ambiguë.
 - Mettre à jour les pages existantes Mentions légales et À propos, ainsi que les brouillons Informations et Groupe, sans activer les nouveaux brouillons.
 - Retirer les affirmations non justifiées de vingt ans d'expérience et de certification ISO dans À propos ; ne pas déduire un effectif de la convention collective présentée comme « déduite ».
-- Ajouter la confirmation utilisateur : « Nos techniciens et notre directeur de travaux disposent de plus de 10 ans d’expérience dans leur domaine. » L'expérience appartient aux personnes ; ne pas présenter l'entreprise comme existant depuis plus de dix ans.
+- Ajouter la confirmation utilisateur : « Notre directeur des travaux cumule plus de 15 ans d’expérience, et chacun de nos techniciens plus de 10 ans dans son métier. » L'expérience appartient aux personnes ; ne pas présenter l'entreprise comme existant depuis plus de dix ans.
 - Préserver les six services autorisés, les propositions de maintenance, le formulaire et les carrousels du site autonome ; ne pas prétendre que ces derniers sont installés dans Squarespace.
 - Vérifier l'enregistrement et la réouverture des quatre pages natives, leur affichage bureau/mobile et l'absence d'adresse, TVA, téléphone ou courriel d'exemple dans les mentions.
 - Rejouer les douze rendus et les parcours du site autonome, redéployer la même prévisualisation, puis synchroniser uniquement le dépôt privé dédié.
