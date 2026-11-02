@@ -16,3 +16,9 @@ le SPF du domaine (`v=spf1 include:zohomail.eu ~all`) n'autorise que Zoho à env
 3. Créer `atc-mail-config.php` à partir de `deploy/atc-mail-config.example.php` et y coller le mot de passe d'application.
 
 Le vrai fichier n'est **jamais** versionné (`.gitignore`).
+
+## État de la mise en ligne (2 novembre 2026)
+- hPanel → Advanced → GIT : dépôt `groupe-atc-squarespace`, branche `hostinger-deploy`, dossier `public_html` ; déploiement terminé.
+- https://anelecgroupe.com sert le site (en-tête `X-Robots-Tag: noindex, nofollow`).
+- Ni les DNS ni les serveurs de noms (NS) n'ont été modifiés ; les MX Zoho sont intacts.
+- `atc-mail-config.php` a été créé dans le gestionnaire de fichiers, à la racine du site (à côté de `public_html`), avec l'emplacement du mot de passe à remplir.
