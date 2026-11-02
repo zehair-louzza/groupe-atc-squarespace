@@ -1,98 +1,108 @@
 /* ==========================================================================
-   Build Principal — SSG Statique
-   Génère site/ à partir de templates.mjs + données JSON
+   Build principal — site statique GROUPE ATC (anelecgroupe.com)
+   - Génère les pages complètes (head, en-tête, pied de page) via shell()
+   - Produit les fichiers d'hébergement : .htaccess, robots.txt, sitemap.xml, 404.html
+   - Icônes et polices sont versionnées ; les régénérer avec `npm run build:assets`
    ========================================================================== */
-import { readFileSync, writeFileSync, mkdirSync, existsSync, cpSync, readdirSync } from 'fs';
-import { fileURLToPath } from 'url';
-import { dirname, resolve } from 'path';
-import { buildIcons } from './scripts/build-icons.mjs';
-import { downloadFonts } from './scripts/download-fonts.mjs';
+import fs from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
+import { shell, home, maintenance, trades, group, contact, information, notFound, esc } from './src/templates.mjs';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-const SITE_DIR = resolve(__dirname, 'site');
-const DATA_DIR = resolve(__dirname, 'data');
+const root = new URL('./', import.meta.url);
+const read = async (p) => JSON.parse(await fs.readFile(new URL(p, root), 'utf8'));
 
-async function build() {
-  console.log('🏗️  Build GROUPE ATC — Démarrage');
+export function publishableProjects(items, enabled) {
+  if (!enabled) return [];
+  return items.filter(p => p.approved === true && p.rightsConfirmed === true && p.attribution && p.title && p.slug && p.photos?.length && p.photos.every(photo => photo.src && photo.alt));
+}
+
+export const pages = [
+  { file: 'index.html', title: 'Maintenance & travaux en Île-de-France', description: 'GROUPE ATC, anciennement ANELEC : plomberie, électricité, serrurerie, rénovation intérieure, maçonnerie et menuiserie en Île-de-France.', content: home },
+  { file: 'maintenance.html', title: 'Maintenance multitechnique', description: 'Proposition de maintenance avec 2, 4 ou 12 visites par an, périmètre écrit et suivi. Offre à adapter après audit.', content: maintenance },
+  { file: 'metiers.html', title: 'Travaux TCE, dépannage et métiers', description: 'Plomberie, électricité, serrurerie, rénovation intérieure, maçonnerie et menuiserie : des prestations définies selon votre besoin.', content: trades },
+  { file: 'groupe.html', title: 'ANELEC devient GROUPE ATC', description: 'GROUPE ATC est la nouvelle dénomination sociale d’ANELEC : même société, nouvelle présidence.', content: group },
+  { file: 'contact.html', title: 'Contact et demande de devis', description: 'Décrivez votre besoin de dépannage, de travaux ou de maintenance en Île-de-France.', content: contact },
+  { file: 'informations.html', title: 'Informations et confidentialité', description: 'Identité de l’entreprise, coordonnées, données du formulaire et conditions de la proposition de maintenance.', content: information }
+];
+
+function htaccess(config) {
+  const host = config.domain.replace(/\./g, '\\.');
+  return `# GROUPE ATC — ${config.domain} (Hostinger / LiteSpeed)
+Options -Indexes
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# www -> domaine nu (le HTTPS est géré par Hostinger)
+RewriteCond %{HTTP_HOST} ^www\\.${host}$ [NC]
+RewriteRule ^(.*)$ https://${config.domain}/$1 [R=301,L]
+# Adresses sans .html : /maintenance -> maintenance.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
+# Fichiers techniques jamais servis
+RewriteRule (^|/)\\.(?!well-known) - [F]
+</IfModule>
+
+<IfModule mod_headers.c>
+Header always set X-Content-Type-Options "nosniff"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set X-Frame-Options "SAMEORIGIN"
+Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+${config.publicationApproved ? '' : 'Header always set X-Robots-Tag "noindex, nofollow"\n'}</IfModule>
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType text/html "access plus 0 seconds"
+ExpiresByType text/css "access plus 7 days"
+ExpiresByType application/javascript "access plus 7 days"
+ExpiresByType image/svg+xml "access plus 30 days"
+ExpiresByType image/webp "access plus 30 days"
+ExpiresByType image/png "access plus 30 days"
+ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+`;
+}
+
+export async function build({ assets = false } = {}) {
   const start = Date.now();
-
-  // 1. Générer sprite SVG + fonts (async parallel)
-  await Promise.all([buildIcons(), downloadFonts()]);
-
-  // 2. Copier assets statiques (images, fonts, icons, data)
-  copyAssets();
-
-  // 3. Générer pages HTML
-  await generatePages();
-
-  console.log(`✅ Build terminé en ${((Date.now() - start) / 1000).toFixed(1)}s`);
-  console.log(`📁 Site généré dans: ${SITE_DIR}`);
-}
-
-function copyAssets() {
-  console.log('📦 Copie assets...');
-  
-  // Créer dossiers cibles
-  ['images', 'fonts', 'icons', 'data'].forEach(dir => {
-    const path = `site/assets/${dir}`;
-    if (!existsSync(path)) {
-      mkdirSync(path, { recursive: true });
-    }
-  });
-
-  // Copier images
-  copyDir('assets/images', 'site/assets/images');
-  // Copier data
-  copyDir('data', 'site/assets/data');
-  console.log('  ✅ Assets copiés');
-}
-
-function copyDir(src, dest) {
-  if (!existsSync(src)) return;
-  if (!existsSync(dest)) mkdirSync(dest, { recursive: true });
-  for (const entry of readdirSync(src, { withFileTypes: true })) {
-    const srcPath = resolve(src, entry.name);
-    const destPath = resolve(dest, entry.name);
-    if (entry.isDirectory()) {
-      copyDir(srcPath, destPath);
-    } else {
-      cpSync(srcPath, destPath);
-    }
+  if (assets) {
+    const [{ buildIcons }, { downloadFonts }] = await Promise.all([import('./scripts/build-icons.mjs'), import('./scripts/download-fonts.mjs')]);
+    await Promise.all([buildIcons(), downloadFonts()]);
   }
+  const config = await read('./data/site.json');
+  const projects = await read('./data/projects.json');
+  const visible = publishableProjects(projects, config.features.projects);
+  const site = new URL('./site/', root);
+  await fs.mkdir(site, { recursive: true });
+
+  for (const p of pages) await fs.writeFile(new URL(p.file, site), shell(config, p, p.content(config), visible.length > 0));
+  await fs.writeFile(new URL('404.html', site), shell(config, { file: '404.html', title: 'Page introuvable', description: 'Cette page n’existe pas ou a été déplacée.' }, notFound(config)));
+
+  if (visible.length) {
+    const body = `<section class="container page-intro"><h1>Nos réalisations</h1>${visible.map(p => `<article><h2>${esc(p.title)}</h2><p>${esc(p.location)} · ${esc(p.attribution)}</p><p>${esc(p.description)}</p>${p.photos.map(photo => `<img src="${esc(photo.src)}" alt="${esc(photo.alt)}" loading="lazy">`).join('')}</article>`).join('')}</section>`;
+    await fs.writeFile(new URL('realisations.html', site), shell(config, { file: 'realisations.html', title: 'Réalisations', description: 'Projets validés de GROUPE ATC.' }, body, true));
+  } else await fs.rm(new URL('realisations.html', site), { force: true });
+  // Ancienne page générée sans gabarit ni script associé : retirée.
+  await fs.rm(new URL('carte.html', site), { force: true });
+
+  const base = `https://${config.domain}`;
+  const urls = pages.map(p => p.file === 'index.html' ? `${base}/` : `${base}/${p.file}`);
+  await fs.writeFile(new URL('.htaccess', site), htaccess(config));
+  await fs.writeFile(new URL('robots.txt', site), config.publicationApproved
+    ? `User-agent: *\nAllow: /\n\nSitemap: ${base}/sitemap.xml\n`
+    : `# Préparation : indexation désactivée tant que publicationApproved=false\nUser-agent: *\nDisallow: /\n`);
+  if (config.publicationApproved) {
+    await fs.writeFile(new URL('sitemap.xml', site), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(u => `  <url><loc>${u}</loc></url>`).join('\n')}\n</urlset>\n`);
+  } else await fs.rm(new URL('sitemap.xml', site), { force: true });
+
+  const manifest = pages.map(({ file, title, description }) => ({ file, title, description, slug: file === 'index.html' ? '/' : '/' + file.replace('.html', ''), status: 'draft', suggestedBlocks: ['text', 'image', 'button', 'form-where-applicable'] }));
+  await fs.writeFile(new URL('./squarespace/pages.json', root), JSON.stringify(manifest, null, 2) + '\n');
+  console.log(`Built ${pages.length} pages + 404 in ${((Date.now() - start) / 1000).toFixed(1)}s. Projects published: ${visible.length}. Publication approved: ${config.publicationApproved}.`);
 }
 
-async function generatePages() {
-  console.log('📄 Génération pages HTML...');
-  
-  // Import dynamique du module templates
-  const templates = await import('./src/templates.mjs');
-  const siteConfig = JSON.parse(readFileSync('./data/site.json', 'utf8'));
-  const services = JSON.parse(readFileSync('./data/services.json', 'utf8'));
-  const legal = JSON.parse(readFileSync('./data/legal.json', 'utf8'));
-
-  const config = { ...siteConfig, plans: siteConfig.plans || [], teamExperienceStatement: siteConfig.teamExperienceStatement };
-  const servicesData = { ...services, families: services.families };
-
-  const pages = [
-    { file: 'index.html', title: 'Accueil', description: 'Maintenance multitechnique et travaux en Île-de-France. GROUPE ATC — Entretenir, dépanner, rénover.', content: templates.home({ ...config, services: servicesData }) },
-    { file: 'maintenance.html', title: 'Maintenance', description: 'Maintenance multitechnique : visites planifiées, périmètre écrit, suivi des actions.', content: templates.maintenance({ ...config, plans: config.plans, services: servicesData }) },
-    { file: 'metiers.html', title: 'Travaux & métiers', description: 'Plomberie, électricité, serrurerie, rénovation, maçonnerie, menuiserie.', content: templates.trades({ ...config, services: servicesData }) },
-    { file: 'groupe.html', title: 'Le groupe', description: 'GROUPE ATC — Nouvelle dénomination d\'ANELEC. Même société, nouvelle présidence.', content: templates.group({ ...config, legal }) },
-    { file: 'contact.html', title: 'Contact & devis', description: 'Demande de devis : dépannage, travaux, maintenance. Île-de-France.', content: templates.contact({ ...config, plans: config.plans || [], services: servicesData }) },
-    { file: 'informations.html', title: 'Informations', description: 'Identité, coordonnées, mentions légales, données, formulaire.', content: templates.information({ ...config, legal }) },
-    // Page carte
-    { file: 'carte.html', title: 'Carte interactive Île-de-France', description: 'Carte interactive des départements et communes d\'Île-de-France pour demande de devis localisée.', content: `<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Carte interactive Île-de-France | GROUPE ATC</title><meta name="description" content="Carte interactive des départements et communes d'Île-de-France pour demande de devis localisée."><meta name="theme-color" content="#1E3A5F"><link rel="preconnect" href="https://api.fontshare.com"><link href="https://api.fontshare.com/v2/css?f[]=league-spartan@400,500,600,700&f[]=poppins@400,500,600,700&display=swap" rel="stylesheet"><link rel="stylesheet" href="./base.css"><link rel="stylesheet" href="./style.css"><script src="./app.js" defer></script></head><body class="map-page"><a class="skip-link" href="#contenu">Aller au contenu</a><header class="site-header"><div class="container header-inner"><a class="brand" href="./index.html" aria-label="GROUPE ATC, accueil"><img class="brand-logo" src="./assets/groupe-atc-logo.svg" alt="GROUPE ATC" width="1050" height="250" decoding="async"></a><button class="menu-toggle" aria-controls="navigation" aria-expanded="false" aria-label="Ouvrir le menu">Menu <span aria-hidden="true">+</span></button><nav id="navigation" aria-label="Navigation principale"><a href="./index.html">Accueil</a><a href="./maintenance.html">Maintenance</a><a href="./metiers.html">Travaux & métiers</a><a href="./groupe.html">Le groupe</a><a class="nav-contact" href="./contact.html">Parlons de votre projet <svg class="icon" aria-hidden="true"><use xlink:href="/assets/icons/sprite.svg#lucide-arrow-right"></use></svg></a></nav></div></header><main id="contenu"><div class="map-breadcrumb" id="map-breadcrumb"></div><div class="map-container" id="map-container"><div class="map-libre" id="map-libre"></div><div class="map-overlay"><div class="map-search" id="map-search"><form class="search-form" role="search"><svg class="search-form__icon" aria-hidden="true"><use xlink:href="/assets/icons/sprite.svg#lucide-search"></use></svg><input type="search" class="search-form__input" id="map-search-input" placeholder="Rechercher une commune (ex. Créteil, 94000)..." autocomplete="off" aria-label="Rechercher une commune"><div id="map-search-results" class="search-results" hidden></div></form></div><div class="map-controls" id="map-controls"><button class="icon-btn icon-btn-primary" id="map-zoom-in" aria-label="Zoom avant" title="Zoom avant"><svg class="icon" aria-hidden="true"><use xlink:href="/assets/icons/sprite.svg#lucide-zoom-in"></use></svg></button><button class="icon-btn icon-btn-primary" id="map-zoom-out" aria-label="Zoom arrière" title="Zoom arrière"><svg class="icon" aria-hidden="true"><use xlink:href="/assets/icons/sprite.svg#lucide-zoom-out"></use></svg></button><button class="icon-btn icon-btn-outline" id="map-reset" aria-label="Réinitialiser la vue" title="Réinitialiser"><svg class="icon" aria-hidden="true"><use xlink:href="/assets/icons/sprite.svg#lucide-rotate-ccw"></use></svg></button></div><div class="map-breadcrumb" id="map-breadcrumb"></div></div></main><footer class="site-footer"><div class="container footer-grid"><div><a class="brand" href="./index.html" aria-label="GROUPE ATC, accueil"><img class="brand-logo" src="./assets/groupe-atc-logo.svg" alt="GROUPE ATC" width="1050" height="250" decoding="async"></a><p>Maintenance multitechnique.<br>Travaux et rénovation en Île-de-France.</p></div><div><p class="eyebrow">Contact</p><a href="tel:+33123456789">01 23 45 67 89</a><a class="email" href="mailto:contact@groupe-atc.fr">contact@groupe-atc.fr</a><p>123 Rue de la Paix, 75001 Paris</p></div><div><p class="eyebrow">À explorer</p><a href="./maintenance.html">Nos propositions de maintenance</a><a href="./metiers.html">Nos métiers</a><a href="./groupe.html">ANELEC devient GROUPE ATC</a><a href="./informations.html">Informations & confidentialité</a></div></div><div class="container footer-bottom"><span>© 2025 GROUPE ATC</span><span>groupe-atc.fr</span></div></footer><script src="./app.js" defer></script></body></html>` }
-  ];
-
-  for (const page of pages) {
-    const html = page.content;
-    writeFileSync(`site/${page.file}`, html);
-    console.log(`  ✅ ${page.file}`);
-  }
-  
-  // Page carte spéciale (map-page)
-  console.log('  ✅ carte.html (map-page)');
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  build({ assets: process.argv.includes('--assets') }).catch(err => { console.error(err); process.exit(1); });
 }
-
-build().catch(console.error);

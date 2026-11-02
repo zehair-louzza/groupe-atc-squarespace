@@ -1,0 +1,3 @@
+# Préparation : indexation désactivée tant que publicationApproved=false
+User-agent: *
+Disallow: /

@@ -2,7 +2,7 @@
   {
     "file": "index.html",
     "title": "Maintenance & travaux en Île-de-France",
-    "description": "GROUPE ATC, anciennement ANELEC : plomberie, électricité, serrurerie et rénovation intérieure en Île-de-France.",
+    "description": "GROUPE ATC, anciennement ANELEC : plomberie, électricité, serrurerie, rénovation intérieure, maçonnerie et menuiserie en Île-de-France.",
     "slug": "/",
     "status": "draft",
     "suggestedBlocks": [
@@ -28,7 +28,7 @@
   {
     "file": "metiers.html",
     "title": "Travaux TCE, dépannage et métiers",
-    "description": "Plomberie, électricité, serrurerie et rénovation intérieure : des prestations définies selon votre besoin.",
+    "description": "Plomberie, électricité, serrurerie, rénovation intérieure, maçonnerie et menuiserie : des prestations définies selon votre besoin.",
     "slug": "/metiers",
     "status": "draft",
     "suggestedBlocks": [
@@ -41,7 +41,7 @@
   {
     "file": "groupe.html",
     "title": "ANELEC devient GROUPE ATC",
-    "description": "Notre marque évolue. Découvrez GROUPE ATC et son approche de la maintenance et des travaux en Île-de-France.",
+    "description": "GROUPE ATC est la nouvelle dénomination sociale d’ANELEC : même société, nouvelle présidence.",
     "slug": "/groupe",
     "status": "draft",
     "suggestedBlocks": [
@@ -67,7 +67,7 @@
   {
     "file": "informations.html",
     "title": "Informations et confidentialité",
-    "description": "Cadre de la prévisualisation, données du formulaire et conditions de la proposition de maintenance.",
+    "description": "Identité de l’entreprise, coordonnées, données du formulaire et conditions de la proposition de maintenance.",
     "slug": "/informations",
     "status": "draft",
     "suggestedBlocks": [
