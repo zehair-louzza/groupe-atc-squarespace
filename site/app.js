@@ -3,7 +3,7 @@ const nav=document.querySelector('#navigation');
 function closeMenu(){nav?.classList.remove('open');menuButton?.setAttribute('aria-expanded','false');menuButton?.setAttribute('aria-label','Ouvrir le menu')}
 menuButton?.addEventListener('click',()=>{const open=menuButton.getAttribute('aria-expanded')!=='true';nav.classList.toggle('open',open);menuButton.setAttribute('aria-expanded',String(open));menuButton.setAttribute('aria-label',open?'Fermer le menu':'Ouvrir le menu')});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});
-window.matchMedia('(min-width: 861px)').addEventListener('change',closeMenu);
+window.matchMedia('(min-width: 901px)').addEventListener('change',closeMenu);
 nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
 function showUnavailableImage(img){
   if(!img.isConnected)return;
@@ -103,3 +103,34 @@ if(form){
   document.querySelector('#edit-request').addEventListener('click',()=>{document.querySelector('#request-summary').hidden=true;form.hidden=false;showStep(2)});
   document.querySelector('#copy-request').addEventListener('click',async()=>{const field=document.querySelector('#summary-text');try{await navigator.clipboard.writeText(field.value);document.querySelector('#copy-status').textContent='Texte copié. Aucun message n’a été envoyé.'}catch{field.focus();field.select();document.querySelector('#copy-status').textContent='Sélectionnez puis copiez ce texte avec votre appareil.'}});
 }
+
+/* --- Apparition au défilement (le contenu reste visible sans JavaScript) --- */
+document.documentElement.classList.add('js');
+(()=>{
+  const items=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){items.forEach(el=>el.classList.add('is-visible'));return}
+  const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  items.forEach((el,i)=>{el.style.transitionDelay=`${(i%4)*70}ms`;io.observe(el)});
+})();
+
+/* --- Curseur « Nos métiers » (défilement horizontal sur tablette et mobile) --- */
+(()=>{
+  const track=document.querySelector('#trade-track');
+  if(!track)return;
+  const prev=document.querySelector('[data-slide="-1"]'),next=document.querySelector('[data-slide="1"]');
+  const dotsBox=document.querySelector('.slider-dots');
+  const cards=[...track.children];
+  const dots=cards.map(()=>{const s=document.createElement('span');dotsBox?.append(s);return s});
+  const step=()=>cards[0]?(cards[0].getBoundingClientRect().width+parseFloat(getComputedStyle(track).columnGap||16)):track.clientWidth;
+  const update=()=>{
+    const max=track.scrollWidth-track.clientWidth-2;
+    if(prev)prev.disabled=track.scrollLeft<=2;
+    if(next)next.disabled=track.scrollLeft>=max;
+    const idx=Math.min(cards.length-1,Math.round(track.scrollLeft/step()));
+    dots.forEach((d,i)=>d.classList.toggle('active',i===idx));
+  };
+  [prev,next].forEach(b=>b?.addEventListener('click',()=>track.scrollBy({left:Number(b.dataset.slide)*step(),behavior:'smooth'})));
+  track.addEventListener('scroll',()=>requestAnimationFrame(update),{passive:true});
+  window.addEventListener('resize',update);
+  update();
+})();
