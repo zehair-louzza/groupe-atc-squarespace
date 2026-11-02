@@ -81,6 +81,22 @@ if(form){
   function applySelect(el,value){if([...el.options].some(o=>o.value===value))el.value=value}
   applySelect(need,query.get('besoin'));applySelect(trade,query.get('metier'));applySelect(plan,query.get('formule'));
   if(knownPlans.includes(query.get('formule')))need.value='Maintenance';
+  // Ville choisie sur la carte : commune pré-remplie et verrouillée
+  const city=document.querySelector('#city'),description=document.querySelector('#description');
+  const depts={'75':'Paris','77':'Seine-et-Marne','78':'Yvelines','91':'Essonne','92':'Hauts-de-Seine','93':'Seine-Saint-Denis','94':'Val-de-Marne','95':"Val-d'Oise"};
+  const ville=(query.get('ville')||'').trim().slice(0,80),code=query.get('code')||'',dept=query.get('dept')||'',insee=query.get('insee')||'';
+  let chosenCity='';
+  if(ville&&/^\d{5}$/.test(code)&&depts[dept]&&!/[<>]/.test(ville)){
+    const deptName=depts[dept];
+    chosenCity=`${ville} (${code}) — ${deptName} (${dept})`;
+    city.value=`${ville} (${code})`;city.readOnly=true;city.setAttribute('aria-readonly','true');
+    if(!description.value)description.value=`Intervention demandée pour la commune de ${ville} (${code}), ${deptName}. `;
+    if(!query.get('besoin'))applySelect(need,'Travaux');
+    const box=document.querySelector('#city-chosen');box.hidden=false;document.querySelector('#city-chosen-name').textContent=`${ville} (${code}) — ${deptName}`;
+    const back=document.querySelector('#city-change');
+    if(/^\d{5}$/.test(insee))back.href=back.getAttribute('href').replace('#carte',`?carte=${dept}&ville=${insee}&cp=${code}#carte`);
+    setTimeout(()=>{(trade.value?description:trade).focus()},0);
+  }
   function planVisibility(){document.querySelector('#plan-field').hidden=need.value!=='Maintenance'}
   planVisibility();need.addEventListener('change',planVisibility);
   let step=1;
@@ -94,7 +110,7 @@ if(form){
     if(!validate(form.querySelector('[data-step="1"]'))){showStep(1);return}
     if(!validate(form.querySelector('[data-step="2"]')))return;
     const d=new FormData(form);
-    const text=`Bonjour GROUPE ATC,\n\nJe souhaite étudier la demande suivante.\n\nBesoin : ${d.get('besoin')}\nMétier : ${d.get('metier')}\nCommune : ${d.get('commune')}\n${need.value==='Maintenance'&&d.get('formule')?`Formule à étudier : ${d.get('formule')}\n`:''}Description : ${d.get('description')}\n\nProfil : ${d.get('profil')}\nNom : ${d.get('nom')}\nCourriel : ${d.get('courriel')}\nTéléphone : ${d.get('telephone')||'Non renseigné'}\n\nMerci.`;
+    const text=`Bonjour GROUPE ATC,\n\nJe souhaite étudier la demande suivante.\n\nBesoin : ${d.get('besoin')}\nMétier : ${d.get('metier')}\nCommune : ${d.get('commune')}\n${chosenCity?`Ville sélectionnée sur la carte : ${chosenCity}\n`:''}${need.value==='Maintenance'&&d.get('formule')?`Formule à étudier : ${d.get('formule')}\n`:''}Description : ${d.get('description')}\n\nProfil : ${d.get('profil')}\nNom : ${d.get('nom')}\nCourriel : ${d.get('courriel')}\nTéléphone : ${d.get('telephone')||'Non renseigné'}\n\nMerci.`;
     document.querySelector('#summary-text').value=text;
     const link=document.querySelector('#email-request');
     const recipient=link.getAttribute('href').split('?')[0];

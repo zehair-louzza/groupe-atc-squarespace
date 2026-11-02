@@ -1,3 +1,5 @@
+// Contrôle de mise en page : chevauchements, débordements, blocs cachés, sur toutes les pages et largeurs.
+// Usage : node scripts/audit-mise-en-page.mjs   (W=1280,375 pour choisir les largeurs, SHOTS=index@1280 pour des captures)
 import { chromium } from 'playwright';
 import http from 'node:http'; import fs from 'node:fs'; import path from 'node:path';
 const root=process.cwd()+'/site';

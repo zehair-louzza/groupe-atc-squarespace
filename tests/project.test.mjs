@@ -123,3 +123,18 @@ test('Carrousels : six galeries indépendantes et aucune photo non autorisée',(
   }
   assert.ok(serviceGallery({...family,photos:[photo,photo]}).includes('Photo 1 / 2'));
 });
+
+test('Carte interactive : composant, données locales et pré-remplissage du devis', () => {
+  const home=fs.readFileSync(new URL('../site/index.html',import.meta.url),'utf8');
+  assert.ok(home.includes('data-idf-map')&&home.includes('id="carte"')&&home.includes('/assets/carte/carte.js'));
+  assert.ok(home.includes('placeholder="Rechercher une ville… (ex. Créteil, 94000)"'));
+  assert.ok(home.includes('idf-fallback'),'le SVG statique reste en repli');
+  assert.ok(!/fonts\.googleapis|api\.fontshare/.test(home));
+  const data=fs.readFileSync(new URL('../site/assets/carte/donnees-idf.js',import.meta.url),'utf8');
+  for(const d of ['75','77','78','91','92','93','94','95'])assert.ok(data.includes(`"${d}"`));
+  assert.ok(data.includes('"Créteil"'));
+  const contact=fs.readFileSync(new URL('../site/contact.html',import.meta.url),'utf8');
+  assert.ok(contact.includes('id="city-chosen"'));
+  const app=fs.readFileSync(new URL('../site/app.js',import.meta.url),'utf8');
+  assert.ok(app.includes('Intervention demandée pour la commune de')&&app.includes("city.readOnly=true"));
+});
