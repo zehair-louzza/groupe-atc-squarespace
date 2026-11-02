@@ -28,3 +28,10 @@ Le vrai fichier n'est **jamais** versionné (`.gitignore`).
 - Indexation activée à la demande de l'entreprise (`publicationApproved: true`), malgré l'absence du médiateur de la consommation, qui reste à renseigner dans `data/legal.json`.
 - Engagements confirmés et publiés : urgences et astreinte 6j/7, devis en moins de 48 h, +1 200 interventions par an. Tarifs : à ne pas publier.
 - Auto-déploiement Hostinger actif. Le workflow pousse désormais sans réécrire l'historique de la branche (le push forcé provoquait « shallow file has changed » chez Hostinger).
+
+## Vérification de l'indexation (2 novembre 2026, 18 h 20)
+- Le CDN Hostinger servait encore l'ancien robots.txt (`Disallow: /`, statut HIT). Cache vidé dans hPanel → Performance → CDN → Flush cache ; robots.txt correct depuis.
+- À refaire après tout changement de robots.txt ou de sitemap : vider le cache CDN.
+- Les 8 pages du sitemap répondent 200, `index,follow`, sans X-Robots-Tag, canonique exacte ; 404 réelle en `noindex`.
+- PageSpeed Insights (mobile) : SEO 100, performances 97, accessibilité 91, bonnes pratiques 100.
+- Un faux Googlebot (user-agent imité) reçoit 403 : filtre anti-robots d'Hostinger ; à confirmer avec l'inspection d'URL de Google Search Console.
