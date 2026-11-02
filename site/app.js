@@ -38,7 +38,8 @@ document.querySelectorAll('[data-carousel]').forEach(gallery=>{
     img.hidden=false;
     img.alt=frames[index].alt;
     img.src=frames[index].src;
-    counter.textContent=`${placeholder?'Emplacement':'Photo'} ${index+1} / ${frames.length}`;
+    counter.textContent=`${placeholder?'Visuel':'Photo'} ${index+1} / ${frames.length}`;
+    counter.hidden=placeholder;
     if(caption)caption.textContent=frames[index].caption||'';
     if(img.complete&&img.naturalWidth===0)failed();
   }
@@ -109,7 +110,12 @@ document.documentElement.classList.add('js');
 (()=>{
   const items=document.querySelectorAll('.reveal');
   if(!('IntersectionObserver' in window)){items.forEach(el=>el.classList.add('is-visible'));return}
-  const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  const show=el=>{el.classList.add('is-visible');io.unobserve(el)};
+  const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting||e.boundingClientRect.top<0)show(e.target)}),{rootMargin:'0px 0px -5% 0px',threshold:0});
+  // Filet de sécurité : rien ne reste caché (ancre, impression, défilement rapide)
+  const revealPassed=()=>items.forEach(el=>{if(!el.classList.contains('is-visible')&&el.getBoundingClientRect().top<innerHeight)show(el)});
+  addEventListener('scroll',revealPassed,{passive:true});addEventListener('hashchange',revealPassed);addEventListener('beforeprint',()=>items.forEach(show));
+  setTimeout(revealPassed,300);
   items.forEach((el,i)=>{el.style.transitionDelay=`${(i%4)*70}ms`;io.observe(el)});
 })();
 

@@ -174,7 +174,7 @@ export async function runCarouselQA(browser,base='http://127.0.0.1:3000/'){
     assert.equal(await galleries.count(),6);
     for(let i=0;i<6;i++){
       const g=galleries.nth(i),next=g.locator('.carousel-next'),previous=g.locator('.carousel-previous');
-      assert.equal(await g.locator('.carousel-counter').textContent(),'Emplacement 1 / 3');
+      assert.equal(await g.locator('.carousel-counter').textContent(),'Visuel 1 / 1');
       await next.click();assert.equal(await g.getAttribute('data-index'),'1');
       await next.click();assert.equal(await g.getAttribute('data-index'),'2');
       await next.click();assert.equal(await g.getAttribute('data-index'),'0');

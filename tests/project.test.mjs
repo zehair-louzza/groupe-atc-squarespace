@@ -90,7 +90,8 @@ test('les six métiers et leurs emplacements photo sont complets dans la page au
   assert.equal(data.families.reduce((n,f)=>n+f.items.length,0),17);
   for(const f of data.families){
     assert.ok(html.includes(`id="${f.id}"`));
-    assert.ok(html.includes(`photo-${f.id}-a-ajouter.png`));
+    assert.ok(html.includes(`visuels/metier-${f.id}.webp`));
+    assert.ok(html.includes('Visuel d’illustration'));
     for(const item of f.items)assert.ok(html.includes(item));
     fs.accessSync(new URL(`../site/assets/photo-${f.id}-a-ajouter.png`,import.meta.url));
   }
@@ -118,7 +119,7 @@ test('Carrousels : six galeries indépendantes et aucune photo non autorisée',(
     {...photo,src:'./assets/../prive.jpg'}
   ]){
     const markup=serviceGallery({...family,photos:[rejected]});
-    assert.ok(markup.includes('Emplacement 1 / 3'));
+    assert.ok(markup.includes('Visuel 1 / 1')&&markup.includes('Visuel d’illustration')&&!markup.includes('non-autorisee'));
   }
   assert.ok(serviceGallery({...family,photos:[photo,photo]}).includes('Photo 1 / 2'));
 });
