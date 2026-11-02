@@ -40,6 +40,7 @@
   let D, byCode, depts, deptBox = {};
   function prepareData() {
     D = window.GROUPE_ATC_IDF;
+    const r = D.region; D.regionGeo = r.type === 'FeatureCollection' ? r.features[0] : r.type === 'Feature' ? r : { type: 'Feature', properties: {}, geometry: r.type === 'GeometryCollection' ? { type: 'MultiPolygon', coordinates: r.geometries.flatMap(g => g.type === 'Polygon' ? [g.coordinates] : g.coordinates) } : r };
     depts = D.departements;
     byCode = Object.fromEntries(D.communes.map(c => [c.code, c]));
     D.communes.forEach(c => { c.n = norm(c.nom); });
@@ -52,7 +53,7 @@
     const walk = c => typeof c[0] === 'number' ? (a = [Math.min(a[0], c[0]), Math.min(a[1], c[1]), Math.max(a[2], c[0]), Math.max(a[3], c[1])]) : c.forEach(walk);
     walk(g.coordinates); return [[a[0], a[1]], [a[2], a[3]]];
   }
-  const regionBox = () => bbox(D.region.features[0].geometry);
+  const regionBox = () => bbox(D.regionGeo.geometry);
   const cpOf = (c, preferred) => (preferred && c.cp.includes(preferred)) ? preferred : (c.cp[0] || '');
 
   /* ---------- Lien vers le devis ---------- */
@@ -123,7 +124,7 @@
   }
 
   function addLayers() {
-    map.addSource('region', { type: 'geojson', data: D.region });
+    map.addSource('region', { type: 'geojson', data: D.regionGeo });
     map.addSource('depts', { type: 'geojson', data: D.depts, promoteId: 'dept' });
     map.addSource('communes', { type: 'geojson', data: D.communesGeo, promoteId: 'code' });
     map.addSource('points', { type: 'geojson', data: D.points, promoteId: 'code' });
