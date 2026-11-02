@@ -1,107 +1,127 @@
-"""Derive GROUPE ATC artwork from the user-supplied ANELEC vector mark.
+"""Construit les logos GROUPE ATC à partir des fichiers ANELEC fournis.
 
-Only the original coloured symbol is copied. Old lettering and embedded raster
-effects are not used. New lettering is outlined for portable exact rendering.
+Seul le texte change : « ANELEC / GROUPE » devient « GROUPE / ATC ».
+- Le symbole coloré, le soulignement et le petit carré sont repris du SVG original.
+- Les lettres proviennent du lettrage original (PNG 2000 px) : « GROUPE » est
+  recopié tel quel, « A » et « C » sont repris d'« ANELEC » ; le « T » est
+  construit avec le fût, la barre et les empattements du « E » d'origine.
+- Le lettrage est vectorisé (potrace) : aucun raster n'est intégré au SVG.
+
+Dépendances : pip install numpy pillow potracer
+Rendu PNG : node scripts/render-logos.mjs
 """
-from copy import deepcopy
 from pathlib import Path
 import re
 import xml.etree.ElementTree as ET
 
-from fontTools.pens.svgPathPen import SVGPathPen
-from fontTools.ttLib import TTFont
+import numpy as np
+import potrace
+from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / "site" / "assets"
 NS = "http://www.w3.org/2000/svg"
 ET.register_namespace("", NS)
 
-source = ET.parse(ASSETS / "anelec-original.svg").getroot()
-symbol_nodes = [deepcopy(n) for n in list(source)[1:12]]
-assert len(symbol_nodes) == 11
-assert {p.get("fill") for n in symbol_nodes for p in n.iter()
-        if p.tag.endswith("path")} == {"#ffde59", "#ff5757", "#00bf63"}
+# 1. Masque d'encre du lettrage d'origine (sans l'ombre portée grise)
+src = np.array(Image.open(ASSETS / "anelec-original.png").convert("RGBA")).astype(float)
+lum = src[:, :, :3].mean(2)
+ink = np.clip((175 - lum) / 150, 0, 1) * src[:, :, 3] / 255
+ink[ink < 0.04] = 0
 
-definitions = {n.get("id"): n for n in source.find(f"{{{NS}}}defs")}
-needed = set()
+Y0, Y1 = 828, 990            # ligne 1 d'origine (ANELEC)
+L2 = 195                     # décalage vertical entre les deux lignes
+A = ink[Y0:Y1, 745:901].copy()
+E = ink[Y0:Y1, 1045:1180].copy()
+C = ink[Y0:Y1, 1424:1575].copy()
 
-def require_references(nodes):
-    for node in nodes:
-        for descendant in node.iter():
-            for value in descendant.attrib.values():
-                for identifier in re.findall(r"url\(#([^)]+)\)", value):
-                    if identifier not in needed:
-                        needed.add(identifier)
-                        require_references([definitions[identifier]])
+# 2. Construction du T à partir du E
+H, W = E.shape
+s0, s1, c = 19, 42, 31       # fût du E et son axe
+sub = E[:, c:]
+mask = np.zeros_like(sub, bool)
+mask[:23, :] = True          # barre supérieure
+mask[:80, 100 - c:] = True   # bec de la barre supérieure
+R = np.delete(sub * mask, range(22, 44), axis=1)
+Wr = R.shape[1]
+T = np.zeros((H, 2 * Wr))
+T[:, Wr:] = R
+T[:, :Wr] = np.maximum(T[:, :Wr], R[:, ::-1])
+stem = E[:, s0:s1 + 1]
+off = Wr - (c - s0)
+T[:, off:off + stem.shape[1]] = np.maximum(T[:, off:off + stem.shape[1]], stem)
+foot = E[118:, :c]
+T[118:, Wr - c:Wr] = np.maximum(T[118:, Wr - c:Wr], foot)
+T[118:, Wr:Wr + c] = np.maximum(T[118:, Wr:Wr + c], foot[:, ::-1])
+cols = np.nonzero(T.max(0) > 0.05)[0]
+T = T[:, cols.min():cols.max() + 1]
 
-require_references(symbol_nodes)
+# 3. Composition : GROUPE en ligne 1, ATC en ligne 2
+canvas = np.zeros((2000, 2000))
+canvas[Y0:Y1, 736:1600] = ink[Y0 + L2:Y1 + L2, 736:1600]
+x, y = 748, Y0 + L2
+for g in (A, T, C):
+    h, w = g.shape
+    canvas[y:y + h, x:x + w] = np.maximum(canvas[y:y + h, x:x + w], g)
+    x += w + 12
 
-def mark_defs():
-    defs = ET.Element(f"{{{NS}}}defs")
-    for identifier in sorted(needed):
-        node = deepcopy(definitions[identifier])
-        assert node.tag.endswith("clipPath")
-        defs.append(node)
-    return defs
+# 4. Vectorisation (suréchantillonnage ×2, puis 2000 px -> viewBox 1500)
+big = np.array(Image.fromarray((canvas * 255).astype("uint8"))
+               .resize((4000, 4000), Image.BICUBIC)).astype(float) / 255
+curves = potrace.Bitmap(big < 0.5).trace(turdsize=20, alphamax=1.0,
+                                         opticurve=True, opttolerance=0.2)
+k = 0.375
+pt = lambda p: f"{p.x * k:.2f} {p.y * k:.2f}"
+d = ""
+for cv in curves:
+    d += f"M{pt(cv.start_point)}"
+    for sg in cv.segments:
+        d += (f"L{pt(sg.c)}L{pt(sg.end_point)}" if sg.is_corner
+              else f"C{pt(sg.c1)} {pt(sg.c2)} {pt(sg.end_point)}")
+    d += "Z"
 
-font_path = Path("/usr/share/fonts/truetype/liberation2/LiberationSerif-Bold.ttf")
-if not font_path.exists():
-    font_path = Path("/usr/share/fonts/truetype/liberation/LiberationSerif-Bold.ttf")
-font = TTFont(font_path)
-glyphs = font.getGlyphSet()
-mapping = font.getBestCmap()
-text = "GROUPE ATC"
-advance = sum(glyphs[mapping[ord(c)]].width for c in text)
-scale = 742 / advance
+rows = np.nonzero(ink[1205:1235, 680:1590].mean(1) > 0.5)[0] + 1205
+ux0 = np.nonzero(ink[1220, :1600] > 0.5)[0].min() * 0.75
+uy0, uh = rows.min() * 0.75, (rows.max() + 1 - rows.min()) * 0.75
 
-logo = ET.Element(f"{{{NS}}}svg", {
-    "viewBox": "0 0 1050 250", "width": "2100", "height": "500",
-    "role": "img", "aria-labelledby": "atc-logo-title",
-})
-ET.SubElement(logo, f"{{{NS}}}title", {"id": "atc-logo-title"}).text = text
-ET.SubElement(logo, f"{{{NS}}}desc").text = (
-    "Symbole original ANELEC conservé, lettrage remplacé par GROUPE ATC."
-)
-logo.append(mark_defs())
-mark = ET.SubElement(logo, f"{{{NS}}}g", {
-    "transform": "translate(20 20) scale(.6) translate(-237 -560)",
-    "data-original-mark": "anelec",
-})
-for node in symbol_nodes:
-    mark.append(deepcopy(node))
-lettering = ET.SubElement(logo, f"{{{NS}}}g", {
-    "fill": "#000000", "aria-label": text, "data-lettering": text,
-    "transform": f"translate(242 158) scale({scale:.9f} {-scale:.9f})",
-})
-x = 0
-for character in text:
-    glyph = glyphs[mapping[ord(character)]]
-    pen = SVGPathPen(glyphs)
-    glyph.draw(pen)
-    path = pen.getCommands()
-    if path:
-        ET.SubElement(lettering, f"{{{NS}}}path", {
-            "d": path, "transform": f"translate({x} 0)",
-        })
-    x += glyph.width
-ET.SubElement(logo, f"{{{NS}}}path", {
-    "d": "M238 199H1000", "stroke": "#000000", "stroke-width": "4",
-})
-ET.SubElement(logo, f"{{{NS}}}rect", {
-    "x": "990", "y": "187", "width": "24", "height": "24", "fill": "#000000",
-})
+# 5. Symbole et carré repris du SVG d'origine, avec leurs clipPaths
+root = ET.parse(ASSETS / "anelec-original.svg").getroot()
+defs = {e.get("id"): e for e in root[0].iter() if e.get("id")}
+keep = [root[i] for i in list(range(1, 12)) + [13]]
+refs = lambda el: {i for e in el.iter() for v in e.attrib.values()
+                   for i in re.findall(r"url\(#([^)]+)\)", v)}
+need, todo = set(), set().union(*map(refs, keep))
+while todo:
+    i = todo.pop()
+    if i not in need:
+        need.add(i)
+        todo |= refs(defs[i]) - need
+top = [e for e in root[0] if e.get("id") in need]
+assert all(e.tag.endswith("clipPath") for e in top)
 
-icon = ET.Element(f"{{{NS}}}svg", {
-    "viewBox": "230 552 320 356", "width": "320", "height": "356",
-})
-ET.SubElement(icon, f"{{{NS}}}title").text = "Symbole GROUPE ATC"
-icon.append(mark_defs())
-for node in symbol_nodes:
-    icon.append(deepcopy(node))
+def svg(viewbox, size):
+    out = ['<?xml version="1.0" encoding="UTF-8"?>',
+           f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{viewbox}" width="{size[0]}" height="{size[1]}" '
+           'role="img" aria-labelledby="atc-logo-title" data-original-mark="anelec" data-lettering="GROUPE ATC">',
+           '<title id="atc-logo-title">GROUPE ATC</title>',
+           '<desc>Symbole original ANELEC conservé ; seul le texte est remplacé par GROUPE ATC, dans le lettrage d’origine.</desc>',
+           '<defs><filter id="ombre" x="-10%" y="-10%" width="120%" height="130%">'
+           '<feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.18"/></filter>']
+    out += [ET.tostring(e, encoding="unicode") for e in top]
+    out.append("</defs>")
+    out += [ET.tostring(g, encoding="unicode") for g in keep]
+    out.append(f'<g filter="url(#ombre)" fill="#000"><path fill-rule="evenodd" d="{d}"/>'
+               f'<rect x="{ux0:.2f}" y="{uy0:.2f}" width="{1203.75 - ux0:.2f}" height="{uh:.2f}"/></g>')
+    out.append("</svg>\n")
+    s = "\n".join(out)
+    s = re.sub(r' xmlns:ns\d+="[^"]+"', "", s).replace(' xmlns="http://www.w3.org/2000/svg" id=', " id=")
+    s = re.sub(r'<(\w+) xmlns="http://www.w3.org/2000/svg"', r"<\1", s)
+    s = s.replace('<svg viewBox', '<svg xmlns="http://www.w3.org/2000/svg" viewBox')
+    assert not re.search(r"href=|<script|data:image|<image", s)
+    return s
 
-for filename, document in [("groupe-atc-logo.svg", logo), ("groupe-atc-mark.svg", icon)]:
-    serialized = ET.tostring(document, encoding="unicode")
-    assert "<script" not in serialized and "href=" not in serialized
-    assert "data:image" not in serialized
-    ET.ElementTree(document).write(ASSETS / filename, encoding="utf-8", xml_declaration=True)
-    print(f"{filename}: {len(serialized)} characters; no external resources")
+(ASSETS / "logos").mkdir(exist_ok=True)
+(ASSETS / "logos" / "groupe-atc-logo-carre.svg").write_text(svg("0 0 1500 1500", (2000, 2000)))
+# Version recadrée (même dessin, marges retirées) pour l'en-tête du site
+(ASSETS / "groupe-atc-logo.svg").write_text(svg("230 548 1020 400", (1020, 400)))
+print("logos écrits")
