@@ -21,7 +21,7 @@
   const $ = s => root.querySelector(s);
   const title = $('.idf-title'), backs = $('.idf-back'), stage = $('.idf-stage'), canvas = $('.idf-canvas');
   const tip = $('.idf-tooltip'), note = $('.idf-note'), input = $('#idf-q'), list = $('#idf-suggest');
-  const fmt = n => Number(n || 0).toLocaleString('fr-FR');
+  const fmt = n => String(Math.round(Number(n || 0))).replace(/\B(?=(\d{3})+(?!\d))/g, '\u00a0');
   const norm = s => String(s).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[-'’]/g, ' ').replace(/\s+/g, ' ').trim();
 
   /* ---------- Chargement paresseux (MapLibre + données) ---------- */
@@ -264,7 +264,7 @@
     Object.assign(state, readUrl());
     map = new maplibregl.Map({
       container: canvas, style, bounds: regionBox(), fitBoundsOptions: { padding: 24 },
-      minZoom: 7, maxZoom: 18, maxBounds: [[0.6, 47.9], [4.4, 49.6]], attributionControl: false,
+      minZoom: 5.5, maxZoom: 18, maxBounds: [[-0.6, 47.2], [5.6, 50.3]], attributionControl: false,
       dragRotate: false, pitchWithRotate: false, touchPitch: false, cooperativeGestures: false, renderWorldCopies: false,
     });
     map.touchZoomRotate.disableRotation();

@@ -368,3 +368,13 @@ input[aria-invalid=true],select[aria-invalid=true],textarea[aria-invalid=true]{b
 .city-chosen .icon{color:#B85C2E;flex:none}.city-chosen strong{font-weight:600}
 .city-chosen a{margin-left:auto;font-size:var(--text-xs);color:#8E4220}
 input[readonly]{background:#F6F3EE;color:#2E2520;cursor:not-allowed}
+.idf-explorer summary{display:block;min-height:0;padding:0;gap:0}
+.idf-explorer summary::after{content:none;display:none}
+.idf-explorer .maplibregl-ctrl-attrib-button{width:24px;height:24px;min-height:24px}
+#carte{scroll-margin-top:96px}
+@media(max-width:600px){
+  .idf-depts{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-inline:calc(-1 * var(--space-4));padding-inline:var(--space-4);-webkit-overflow-scrolling:touch}
+  .idf-depts::-webkit-scrollbar{display:none}
+  .idf-dept-chip{flex:none}
+  .idf-search input{font-size:15px;padding-right:8px}
+}
