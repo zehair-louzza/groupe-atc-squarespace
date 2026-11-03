@@ -1,6 +1,6 @@
 # Inventaire de réception
 
-## Dernière passe : logo GROUPE ATC
+## Passe du 29 octobre : logo GROUPE ATC (remplacée le 3 novembre par le logo ANELEC GROUPE conservé tel quel)
 
 - **Fichiers :** symbole original extrait sans redessin, nouveau lettrage vectorisé GROUPE ATC, SVG autonome sans ressource externe et PNG transparent 2 100 × 500 px, 43 323 octets. Les originaux ANELEC sont conservés.
 - **Tests locaux :** onze tests automatisés passent. Les douze rendus de six pages à 1 440 et 375 px passent, ainsi que quinze groupes de parcours, dont les logos chargés, leurs proportions et les liens de retour à l’accueil.
@@ -61,7 +61,7 @@ Prévisualisation privée seulement. Aucun formulaire externe, envoi, DNS ou dé
 - Vérifier qu’aucun message n’est transmis et que les coordonnées exactes sont conservées.
 - Vérifier le bouton de copie et son repli par sélection manuelle.
 - Vérifier absence de réalisations inventées, absence de menu Réalisations et absence de page publiée.
-- Vérifier le nouveau logo principal GROUPE ATC, issu des tracés du symbole fourni, les archives ANELEC inchangées et les légendes des illustrations. La consigne explicite du 29 octobre remplace l’ancien maintien du lettrage ANELEC sur le logo principal.
+- Vérifier que le logo principal est le logo ANELEC GROUPE tel que fourni (décision du 3 novembre 2026, qui remplace la déclinaison « GROUPE ATC » du 29 octobre), les archives inchangées et les légendes des illustrations.
 - Vérifier absence de débordement horizontal, texte inférieur à 12 px, erreurs console et images défectueuses.
 - Scénarios hors parcours : paramètre de formule inconnu ; contenu utilisateur contenant des balises ; image indisponible.
 - Après déploiement privé, ouvrir un nouveau contexte et tester le parcours maintenance → contact → récapitulatif.

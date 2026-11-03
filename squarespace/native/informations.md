@@ -46,7 +46,7 @@ Les outils et cookies effectivement utilisés par Squarespace devront être inve
 
 ## Visuels et références
 
-Les illustrations de la prévisualisation ne sont pas des références de chantiers GROUPE ATC. Le logo principal du site conserve le symbole fourni avec le nouveau lettrage GROUPE ATC. Les fichiers ANELEC originaux restent archivés ; l’image historique de la page Groupe reste identifiée comme telle.
+Les illustrations de la prévisualisation ne sont pas des références de chantiers GROUPE ATC. Le logo du site est le logo ANELEC GROUPE, conservé tel que fourni : GROUPE ATC signifie « GROUPE ANELEC TECHNIQUE ET CONCEPTE », la même société avec une nouvelle dénomination. Les fichiers originaux du logo restent archivés sans modification.
 
 Les futurs cas de chantier nécessitent une description exacte, la bonne attribution et les droits de publication. Aucun exemple fictif n’est publié.
 

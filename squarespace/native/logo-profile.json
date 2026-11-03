@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-29",
-  "request": "Conserver le symbole du logo fourni et remplacer le lettrage par GROUPE ATC, comme logo principal du site.",
+  "updated": "2026-11-03",
+  "request": "Utiliser le logo ANELEC GROUPE tel que fourni comme logo principal ; GROUPE ATC signifie GROUPE ANELEC TECHNIQUE ET CONCEPTE.",
   "originalSvg": "site/assets/anelec-original.svg",
   "originalPng": "site/assets/anelec-original.png",
   "derivedSvg": "site/assets/groupe-atc-logo.svg",
@@ -22,5 +22,8 @@
   "pageActivationChanged": false,
   "dnsChanged": false,
   "nativeGroupHistoricalImagePreservedAndLabelled": true,
-  "notes": "Import initial via chemin de fichier refusé à tort par Comet/Squarespace. Import via le même contrôle natif avec le fichier PNG réel de 43 323 octets réussi ; aucune API privée employée."
+  "notes": "Import initial via chemin de fichier refusé à tort par Comet/Squarespace. Import via le même contrôle natif avec le fichier PNG réel de 43 323 octets réussi ; aucune API privée employée.",
+  "currentSvg": "site/assets/logos/anelec-groupe-logo.svg",
+  "archivedLetteringVariant": true,
+  "squarespaceNativeLogoToReplace": true
 }

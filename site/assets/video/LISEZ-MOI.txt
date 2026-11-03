@@ -1,0 +1,9 @@
+Vidéos du bandeau d'accueil (boucle de 6 métiers, ~4 s par plan).
+
+Déposer ici six fichiers MP4 (H.264, sans son, 1920x1080, moins de 3 Mo chacun) :
+  electricite.mp4  plomberie.mp4  serrurerie.mp4
+  renovation.mp4   maconnerie.mp4 menuiserie.mp4
+
+Tant qu'un fichier est absent, la page affiche la photo du métier à la place.
+Sources libres de droits : Pexels (pexels.com/videos), Pixabay (pixabay.com/videos).
+Vérifier la licence de chaque vidéo et conserver la preuve du téléchargement.

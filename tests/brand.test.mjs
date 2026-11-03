@@ -19,6 +19,9 @@ test('Current logo replaces the old visible logo and wordmarks',()=>{
   const html=shell(config,{title:'Accueil',description:'Présentation',file:'index.html'},group(config));
   assert.equal((html.match(/class="brand-logo"/g)||[]).length,2);
   assert.equal(html.includes('src="./assets/anelec-original'),false);
-  assert.ok(html.includes('Le même symbole.'));
-  assert.ok(information(config).includes('les fichiers ANELEC originaux restent archivés'));
+  assert.equal(html.includes('Le même symbole.'),false);
+  assert.ok(html.includes('/assets/logos/anelec-groupe-logo.svg'));
+  assert.ok(information(config).includes('le logo ANELEC GROUPE, conservé tel que fourni'));
+  assert.ok(information(config).includes('GROUPE ANELEC TECHNIQUE ET CONCEPTE'));
+  assert.equal(information(config).includes('lettrage GROUPE ATC'),false);
 });

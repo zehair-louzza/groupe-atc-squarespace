@@ -1,5 +1,7 @@
 # Marque GROUPE ATC — logos et documentation
 
+> Depuis le 3 novembre 2026, le logo utilisé sur le site est le logo ANELEC GROUPE conservé tel que fourni (`site/assets/logos/anelec-groupe-logo.svg`). GROUPE ATC signifie « GROUPE ANELEC TECHNIQUE ET CONCEPTE ». Les déclinaisons « GROUPE ATC » ci-dessous restent archivées.
+
 Dossier de référence pour l'identité visuelle de **GROUPE ATC** (GROUPE ANELEC TECHNIQUE ET CONCEPTE), même société qu'ANELEC.
 
 ## Contenu

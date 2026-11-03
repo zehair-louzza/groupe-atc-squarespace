@@ -37,8 +37,6 @@ ANELEC est désormais GROUPE ATC : la même entreprise, avec une nouvelle dénom
 
 Vous pouvez continuer à nous joindre sur anelecgroupe.com et à l’adresse contact@anelecgroupe.com.
 
-<small>Logo historique ANELEC, conservé sans modification. Le logo principal du site reprend ce symbole avec le nouveau nom GROUPE ATC.</small>
-
 ## Échangeons sur votre besoin
 
 [Prendre contact](/groupe-atc-contact)

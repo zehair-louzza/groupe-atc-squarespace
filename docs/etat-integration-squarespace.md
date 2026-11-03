@@ -2,7 +2,11 @@
 
 Mise à jour du 29 octobre 2026 : les informations légales, la continuité de la société et l’expérience des équipes sont renseignées dans les pages Squarespace et les sources autonomes. La page Services conserve ses six rubriques et sa grille de trois colonnes sur ordinateur.
 
-## Nouveau logo principal
+## Logo principal
+
+**Mise à jour du 3 novembre 2026 :** le logo du site est désormais le logo ANELEC GROUPE, conservé tel que fourni (GROUPE ATC signifie « GROUPE ANELEC TECHNIQUE ET CONCEPTE »). Il remplace la déclinaison avec le lettrage « GROUPE ATC » décrite ci-dessous, qui reste archivée. Dans la version autonome, le logo est dans les en-têtes, les pieds de page et la page Groupe ; dans Squarespace, le logo global téléversé le 29 octobre n’a pas encore été remplacé.
+
+*Historique, 29 octobre 2026 :*
 
 Le lettrage du logo fourni est remplacé par « GROUPE ATC », en conservant les tracés et les trois couleurs du symbole d’origine. Cette demande explicite remplace l’ancienne consigne de ne pas modifier le lettrage ; les fichiers ANELEC originaux restent archivés sans modification.
 

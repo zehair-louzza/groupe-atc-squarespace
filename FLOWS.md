@@ -12,14 +12,13 @@
 - Vérifier l'enregistrement et la réouverture des quatre pages natives, leur affichage bureau/mobile et l'absence d'adresse, TVA, téléphone ou courriel d'exemple dans les mentions.
 - Rejouer les douze rendus et les parcours du site autonome, redéployer la même prévisualisation, puis synchroniser uniquement le dépôt privé dédié.
 
-## Logo GROUPE ATC à partir du fichier fourni
+## Logo ANELEC GROUPE conservé
 
-- Nouvelle demande explicite : conserver le symbole du logo ANELEC et remplacer son lettrage par « GROUPE ATC » ; l’ancienne instruction de ne pas modifier le logo ne s’applique plus à cette nouvelle déclinaison.
-- Ne pas redessiner le symbole, ne pas inventer une marque : extraire ses tracés vectoriels du fichier fourni et conserver le fichier original en archive.
-- Vérifier le texte visible, le fond transparent, les contours et les couleurs d’origine du symbole ; la palette globale du site ne change pas.
-- Employer la nouvelle version dans l’en-tête, le pied de page et la présentation du groupe. Vérifier les liens vers l’accueil, la taille mobile et l’absence de déformation.
-- Dans Squarespace, remplacer le logo global par le fichier dérivé, uniquement depuis les contrôles natifs et avec un point de sauvegarde avant tout téléversement.
-- Si le téléversement local échoue de nouveau, ne pas prétendre qu’il est enregistré : conserver les sources et expliquer précisément ce qui reste à faire.
+- Décision du 3 novembre 2026 : le logo du site est le logo ANELEC GROUPE, utilisé tel que fourni. GROUPE ATC signifie « GROUPE ANELEC TECHNIQUE ET CONCEPTE » ; le nom de marque affiché reste GROUPE ATC. Cette décision remplace la déclinaison avec le lettrage « GROUPE ATC » du 29 octobre.
+- Ne pas redessiner ni modifier le logo : utiliser `site/assets/logos/anelec-groupe-logo.svg` (recadrage du fichier fourni) et conserver les fichiers originaux en archive.
+- L’employer dans l’en-tête, le pied de page et la présentation du groupe, sans légende du type « même symbole ». Vérifier les liens vers l’accueil, la taille mobile et l’absence de déformation.
+- Dans Squarespace, remplacer le logo global par ce fichier uniquement depuis les contrôles natifs et avec un point de sauvegarde avant tout téléversement. Le logo déjà téléversé (lettrage GROUPE ATC) reste à remplacer.
+- Si le téléversement local échoue, ne pas prétendre qu’il est enregistré : conserver les sources et expliquer précisément ce qui reste à faire.
 
 ## Carrousels photo par service
 

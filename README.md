@@ -53,7 +53,7 @@ La procédure différée et les points de validation figurent dans [`docs/deploi
 
 Le domaine final est `anelecgroupe.com`. Le courriel confirmé et corrigé par l’utilisateur est `contact@anelecgroupe.com` ; l’ancienne saisie avec deux « g » est à écarter.
 
-Le logo GROUPE ATC reprend les tracés du symbole ANELEC fourni et remplace le lettrage par « GROUPE ATC », à la demande explicite de l’entreprise du 29 octobre 2026. Les fichiers originaux restent archivés. La palette du site reste indépendante des couleurs du symbole. Les photographies sont des illustrations et ne sont pas des références de chantier.
+Le logo du site est le logo ANELEC GROUPE, conservé tel que fourni (`site/assets/logos/anelec-groupe-logo.svg`) : GROUPE ATC signifie « GROUPE ANELEC TECHNIQUE ET CONCEPTE », la même société avec une nouvelle dénomination. Les fichiers originaux restent archivés ; la déclinaison avec le lettrage « GROUPE ATC » n’est plus utilisée sur le site. La palette du site reste indépendante des couleurs du symbole. Les photographies sont des illustrations et ne sont pas des références de chantier.
 
 La fonction réalisations est désactivée. Elle n’émet ni page, ni navigation, ni données structurées tant qu’elle reste désactivée ; lorsqu’elle sera activée, seuls les projets approuvés avec droits et attribution confirmés seront retenus.
 
@@ -73,7 +73,7 @@ Six pages ont été créées dans le site Squarespace existant avec les textes d
 
 Les slugs réels des brouillons portent le préfixe `/groupe-atc-` pour préserver les adresses existantes. Leur contenu et leur désactivation ont été vérifiés ; les contrôles et leurs limites sont documentés dans `docs/QA.md` et `docs/native-squarespace-results.json`.
 
-La composition native est enregistrée pour Accueil (4 sections), Maintenance (4), Métiers (5), Groupe (4), Contact (4) et Informations (5), soit 26 sections. Les styles sont propres aux pages ; l’illustration d’accueil, le logo historique de Groupe et le formulaire de Contact sont des blocs natifs. Le pied de page générique a été remplacé par l’identité et les coordonnées corrigées.
+La composition native est enregistrée pour Accueil (4 sections), Maintenance (4), Métiers (5), Groupe (4), Contact (4) et Informations (5), soit 26 sections. Les styles sont propres aux pages ; l’illustration d’accueil, le logo de Groupe et le formulaire de Contact sont des blocs natifs. Le pied de page générique a été remplacé par l’identité et les coordonnées corrigées.
 
 La liste du formulaire a été corrigée selon `squarespace/native/form-spec.json` et les six choix ont été retrouvés après réouverture de Contact. La destination, l’inscription marketing décochée et le message post-envoi ont été relus ; aucun test de transmission n’a été effectué. La dernière CSS a maintenant été enregistrée une seule fois sur chacune des six pages et leurs vues bureau/mobile ont été contrôlées, avec des captures et relevés `docs/native-final-*.json`. La navigation interne et une saisie longue sans envoi ont également été testées ; le menu mobile natif en aperçu plein écran n’a pas pu être validé après un blocage de Comet. Ne pas activer les pages.
 
