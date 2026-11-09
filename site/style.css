@@ -175,7 +175,7 @@ main{padding-bottom:var(--section)}
 .page-intro::after{content:"";position:absolute;right:-8%;top:-30%;width:45%;height:160%;background:radial-gradient(closest-side,rgba(10,165,168,.16),transparent);pointer-events:none}
 .page-intro h1{font-size:clamp(2.2rem,1.7rem + 2.2vw,3.75rem);margin-bottom:var(--space-5);max-width:20ch}
 .page-intro .lead{max-width:56ch}
-.notice{padding:var(--space-5) var(--space-6);border-radius:var(--radius);background:var(--accent-soft);color:var(--ink);font-size:var(--text-sm);max-width:none;margin-bottom:var(--space-10);border:1px solid rgba(10,165,168,.25)}
+.notice{display:flex;align-items:flex-start;gap:1rem;padding:1.15rem 1.4rem;border-radius:14px;background:#fff;border:1px solid rgba(0,192,96,.35);box-shadow:0 4px 16px rgba(0,0,0,.04);color:var(--ink);font-size:1.05rem;font-weight:600;line-height:1.55;max-width:none;margin-bottom:var(--space-8)}
 .section-heading{margin-bottom:var(--space-8)}.section-heading h2{margin-bottom:var(--space-4)}.section-heading>p:not(.eyebrow){color:var(--muted)}
 .offer-intro,.maintenance-scope,.faq,.prose,.contact-grid,.group-story,.contact-details,.services-grid{padding:clamp(var(--space-6),4vw,var(--space-12));border-radius:var(--radius-lg);background:var(--glass);border:1px solid var(--glass-border);box-shadow:var(--shadow)}
 .offer-intro,.maintenance-scope,.faq,.prose,.contact-grid,.group-story,.contact-details,.services-grid{max-width:calc(var(--content-wide) - 2*var(--gutter));margin-inline:auto}

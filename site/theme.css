@@ -158,9 +158,10 @@ h3{letter-spacing:.005em}
 .step-icon{background:rgba(0,192,96,.18);color:var(--g)}
 .dark-panel::before{background:radial-gradient(closest-side,rgba(0,192,96,.2),transparent)}
 .page-intro::after{background:radial-gradient(closest-side,rgba(0,192,96,.14),transparent)}
-.notice{display:flex;align-items:flex-start;gap:.85rem;padding:1rem 1.25rem;border-radius:12px;background:rgba(0,192,96,.08);border:1px solid rgba(0,192,96,.25);color:var(--ink);font-size:var(--text-sm);line-height:1.5;max-width:none;margin-bottom:var(--space-8)}
+.notice{display:flex;align-items:flex-start;gap:1rem;padding:1.15rem 1.4rem;border-radius:14px;background:#fff;border:1px solid rgba(0,192,96,.35);box-shadow:0 4px 16px rgba(0,0,0,.04);color:var(--ink);font-size:1.05rem;font-weight:600;line-height:1.55;max-width:none;margin-bottom:var(--space-8)}
 .notice .notice-icon{color:var(--g);flex-shrink:0;margin-top:2px;display:inline-flex}
-.notice strong{color:var(--ink);font-weight:600}
+.notice .notice-icon svg{width:22px;height:22px}
+.notice strong{color:var(--ink);font-weight:700}
 input:focus,select:focus,textarea:focus{border-color:var(--g);box-shadow:0 0 0 4px rgba(0,192,96,.18)}
 .dark-panel .eyebrow,.maintenance-delivery .eyebrow,.territory .eyebrow,.contact-aside .eyebrow{color:var(--y)}
 
