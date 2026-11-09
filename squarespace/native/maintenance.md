@@ -4,7 +4,7 @@
 
 Des visites planifiées, un périmètre écrit et un suivi des actions. Une proposition à adapter aux équipements et à l’usage de votre site en Île-de-France.
 
-Offre proposée, non encore contractualisée. Les fréquences ci-dessous sont une base de discussion ; aucune formule n’est activée automatiquement.
+Formules personnalisées : les fréquences présentées ci-dessous constituent une base de travail adaptable selon vos équipements. Chaque prestation est confirmée par un devis détaillé après visite préalable.
 
 ## Trois rythmes de suivi
 
